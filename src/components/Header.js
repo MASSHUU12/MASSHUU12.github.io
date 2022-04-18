@@ -2,18 +2,22 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header id="header">
-      <div class="header-title">
-        <a href="/">Maciej Gawrysiak</a>
+    <header>
+      <div className="header-title">
+        <a href="/">Maciej</a>
       </div>
-      <div id="header-elements" class="header-elem">
-        <div v-html="headerElements()"></div>
+      <div className="header-elem">
+        <div></div>
       </div>
-      <div class="header-hamburger" id="hamburger">
-        <span class="iconify" data-icon="ci:hamburger" data-width="42"></span>
+      <div className="header-hamburger" id="hamburger">
+        <span
+          className="iconify"
+          data-icon="ci:hamburger"
+          data-width="42"
+        ></span>
       </div>
-      <div class="header-dropdown" id="header-dropdown">
-        <div v-html="headerMobileElements()"></div>
+      <div className="header-dropdown" id="header-dropdown">
+        <div></div>
       </div>
     </header>
   );
