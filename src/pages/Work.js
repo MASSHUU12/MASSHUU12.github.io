@@ -1,4 +1,5 @@
 import React from "react";
+import CutIt from "../img/cutit-mockup.png";
 import Pralka from "../img/pralka-mockup.png";
 import WorkItem from "../components/WorkItem";
 import SendNote from "../img/sendnote-mockup.png";
@@ -6,7 +7,7 @@ import CutItMobile from "../img/cutit-mobile-mockup.png";
 import KolobrzegHotele from "../img/kolobrzeghotele-mockup.png";
 const Work = () => {
   return (
-    <div className="basic-layout work-container">
+    <div id="work" className="work-container">
       <WorkItem
         labels={["React Native", "Laravel API"]}
         title={"Cut.It Mobile"}
@@ -17,7 +18,14 @@ const Work = () => {
         mockup={CutItMobile}
       />
       <WorkItem
-        labels={["Laravel", "jQuery", "MariaDB"]}
+        labels={["Laravel", "MariaDB", "jQuery", "SCSS"]}
+        title={"Cut.It"}
+        description={"A simple link shortener available in English and Polish."}
+        repo={"https://github.com/MASSHUU12/Cut.It"}
+        mockup={CutIt}
+      />
+      <WorkItem
+        labels={["Laravel", "jQuery", "MariaDB", "SCSS"]}
         title={"SendNote"}
         description={
           "SendNote is a free online service that lets you share sensitive information quickly and securely."
@@ -26,7 +34,7 @@ const Work = () => {
         mockup={SendNote}
       />
       <WorkItem
-        labels={["Laravel", "Bing Maps API", "Kołobrzeg OpenData"]}
+        labels={["Laravel", "Bing Maps API", "Kołobrzeg OpenData", "SCSS"]}
         title={"KolobrzegHotele"}
         description={
           "Search engine for accommodation in Kolobrzeg. Based on user preferences such as distance from the sea or from playgrounds."
@@ -37,7 +45,7 @@ const Work = () => {
         teamwork={true}
       />
       <WorkItem
-        labels={["Pure PHP", "PayPal Integration"]}
+        labels={["Pure PHP", "PayPal Integration", "SCSS"]}
         title={"Pralka"}
         description={
           "A fully functional online store created during an internship at technical college."

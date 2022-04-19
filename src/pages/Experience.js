@@ -4,7 +4,7 @@ import ExperienceSection from "../components/ExperienceSection";
 const Experience = () => {
   return (
     <>
-      <div className="experience-container">
+      <div id="experience" className="experience-container">
         <ExperienceSection
           icon={"bi:code-slash"}
           title={"Front End"}

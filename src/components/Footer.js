@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-scroll";
+import { Icon } from "@iconify/react";
 
 const Footer = () => {
   return (
@@ -6,42 +8,38 @@ const Footer = () => {
       <div className="footer-left">
         <h1>Useful links</h1>
         <p>
-          <a href="/">Home</a>
+          <Link to="header" spy={true} smooth={true}>
+            <span>Home</span>
+          </Link>
         </p>
         <p>
-          <a href="/about">About</a>
+          <Link to="header" spy={true} smooth={true}>
+            <span>About</span>
+          </Link>
         </p>
         <p>
-          <a href="/work">Work</a>
+          <Link to="header" spy={true} smooth={true}>
+            <span>Work</span>
+          </Link>
         </p>
         <p>
-          <a href="/contact">Contact me</a>
+          <Link to="header" spy={true} smooth={true}>
+            <span>Contact me</span>
+          </Link>
         </p>
         <div className="footer-lang">
           <a href="#">
-            <span
-              className="iconify"
-              data-icon="twemoji:flag-for-flag-poland"
-              data-width="38"
-            ></span>
+            <Icon icon={"twemoji:flag-for-flag-poland"} width="38" />
           </a>
           <a href="#">
-            <span
-              className="iconify"
-              data-icon="twemoji:flag-for-flag-united-states"
-              data-width="38"
-            ></span>
+            <Icon icon={"twemoji:flag-for-flag-united-states"} width="38" />
           </a>
         </div>
       </div>
       <div className="footer-right">
         <h1>Contact</h1>
         <a href="mailto:gawrysiak.maciej@pm.me" className="footer-link">
-          <span
-            className="iconify"
-            data-icon="akar-icons:envelope"
-            data-width="32"
-          ></span>
+          <Icon icon={"akar-icons:envelope"} width="32" />
           gawrysiak.maciej@pm.me
         </a>
 
@@ -51,11 +49,7 @@ const Footer = () => {
           rel="noreferrer"
           className="footer-link"
         >
-          <span
-            className="iconify"
-            data-icon="bx:bxl-telegram"
-            data-width="32"
-          ></span>
+          <Icon icon={"bx:bxl-telegram"} width="32" />
           MASSHUU
         </a>
 
@@ -65,11 +59,7 @@ const Footer = () => {
           className="footer-link"
           rel="noreferrer"
         >
-          <span
-            className="iconify"
-            data-icon="akar-icons:github-fill"
-            data-width="32"
-          ></span>
+          <Icon icon={"akar-icons:github-fill"} width="32" />
           MASSHUU12
         </a>
 
@@ -79,55 +69,9 @@ const Footer = () => {
           className="footer-link"
           rel="noreferrer"
         >
-          <span
-            className="iconify"
-            data-icon="brandico:linkedin-rect"
-            data-width="32"
-          ></span>
+          <Icon icon={"brandico:linkedin-rect"} width="32" />
           LinkedIn
         </a>
-
-        <div className="footer-link-mobile">
-          <a
-            href="https://linkedin.com/in/maciej-gawrysiak"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span
-              className="iconify"
-              data-icon="brandico:linkedin-rect"
-              data-width="32"
-            ></span>
-          </a>
-
-          <a href="mailto:gawrysiak.maciej@pm.me">
-            <span
-              className="iconify"
-              data-icon="akar-icons:envelope"
-              data-width="32"
-            ></span>
-          </a>
-
-          <a href="https://t.me/MASSHUU" rel="noreferrer" target="_blank">
-            <span
-              className="iconify"
-              data-icon="bx:bxl-telegram"
-              data-width="32"
-            ></span>
-          </a>
-
-          <a
-            href="https://github.com/MASSHUU12"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <span
-              className="iconify"
-              data-icon="akar-icons:github-fill"
-              data-width="32"
-            ></span>
-          </a>
-        </div>
       </div>
     </footer>
   );

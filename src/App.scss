@@ -32,6 +32,28 @@ body {
   background: $color-second;
 }
 // end scrollbar
+
+// side bar
+.sidebar-container {
+  position: fixed;
+  top: 50%;
+  right: -250px;
+  transform: rotate(90deg) translateY(-50%);
+  display: flex;
+
+  span {
+    color: $color-white;
+    font-size: $fs-s;
+    letter-spacing: $p-xs;
+    margin: 0 $p-s;
+    cursor: pointer;
+  }
+
+  span:hover {
+    filter: brightness(75%);
+  }
+}
+// end side bar
 /* end custom elements*/
 
 /* header */
@@ -297,19 +319,17 @@ header {
 
 /* work */
 .work-container {
-  align-items: center;
-  padding: $p-xxb 0 $p-m 0;
+  margin: $p-xb 0 0 0;
 
   .work-section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
-    width: 75%;
     background-color: $color-transparent;
-    border-radius: $p-xs;
-    padding: $p-m $p-b;
-    margin: $p-s 0;
+    border-radius: $p-m;
+    padding: $p-b;
+    margin: 0 $p-m $p-b;
 
     .work-section-left {
       width: 50%;
@@ -353,17 +373,26 @@ header {
             font-weight: $fw-m;
           }
         }
-
-        p {
-          a {
-            color: $color-second;
-          }
-        }
       }
 
       .work-section-left-buttons {
         button {
           margin: 0;
+          border: none;
+          border-radius: $p-r;
+          padding: $p-s $p-m;
+          background-color: $color-transparent;
+
+          a {
+            text-decoration: none;
+            font-size: $fs-m;
+            color: $color-white;
+          }
+        }
+
+        button:hover {
+          cursor: pointer;
+          filter: brightness(75%);
         }
 
         button:first-child {
@@ -460,11 +489,12 @@ footer {
     cursor: pointer;
   }
 
-  a {
+  a,
+  span {
     font-size: $fs-r;
     text-decoration: none;
     color: $color-white;
-    padding: 0 0 $p-s;
+    padding: 0 0 $p-xs;
 
     display: flex;
     align-items: center;
@@ -474,8 +504,10 @@ footer {
     }
   }
 
-  a:hover {
-    color: $color-second;
+  a:hover,
+  span:hover {
+    filter: brightness(75%);
+    cursor: pointer;
   }
 
   .footer-lang {
@@ -487,10 +519,6 @@ footer {
       padding: 0 $p-r 0 0;
     }
   }
-}
-
-.footer-link-mobile {
-  display: none;
 }
 /* end footer */
 

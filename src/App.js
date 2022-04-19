@@ -1,6 +1,7 @@
 import "./App.scss";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import SideBar from "./components/SideBar";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Experience from "./pages/Experience";
@@ -15,7 +16,9 @@ function App() {
       <About />
       <Contact />
       <Experience />
+      <Work />
       <Footer />
+      <SideBar />
     </>
   );
 }

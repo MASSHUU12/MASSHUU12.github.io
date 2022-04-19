@@ -23,13 +23,13 @@ const WorkItem = ({
           <p>{description}</p>
         </div>
         <div className="work-section-left-buttons">
-          <button className="button-main button-main-alt">
+          <button className="work-btn">
             <a href={repo} target="_blank" rel="noreferrer">
               GitHub
             </a>
           </button>
           {site === false ? null : (
-            <button className="button-main button-main-alt">
+            <button className="work-btn">
               <a href={site} target="_blank" rel="noreferrer">
                 Visit site
               </a>

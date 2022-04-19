@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "../img/portfolio-home-sitting.png";
 import { Icon } from "@iconify/react";
+import { Link } from "react-scroll";
 
 const Home = () => {
   const [message, setMessage] = useState("Hello");
@@ -21,7 +22,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="home-container">
+      <div id="home" className="home-container">
         <div className="home-container-left">
           <h3>{message}, I am</h3>
           <h1>Maciej</h1>
@@ -33,7 +34,9 @@ const Home = () => {
         </div>
       </div>
       <div className="home-container-arrow">
-        <Icon icon="eva:arrowhead-down-fill" width="64" />
+        <Link to="about" spy={true} smooth={true}>
+          <Icon icon="eva:arrowhead-down-fill" width="64" />
+        </Link>
       </div>
     </>
   );

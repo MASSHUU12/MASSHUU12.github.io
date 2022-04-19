@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 
 const Contact = () => {
   return (
-    <div className="contact-container">
+    <div id="contact" className="contact-container">
       <div className="contact-content">
         <h1>Contact:</h1>
         <p>
