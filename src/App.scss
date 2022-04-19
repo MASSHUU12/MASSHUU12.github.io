@@ -43,11 +43,9 @@ header {
   flex-direction: row;
   align-items: center;
 
-  a {
+  span {
     font-size: $fs-r;
     color: $color-white;
-    cursor: pointer;
-    text-decoration: none;
     font-weight: $fw-b;
     padding: 0 0 0 $p-b;
   }
@@ -56,7 +54,7 @@ header {
 
 /* home */
 .home-container {
-  height: fit-content;
+  height: 85vh;
 
   display: flex;
   flex-direction: row;
@@ -110,7 +108,8 @@ header {
 
   svg {
     color: $color-white;
-    padding: $p-xb 0 $p-b;
+    padding: 0 0 $p-b;
+    cursor: pointer;
   }
 }
 /* end home */
@@ -200,10 +199,6 @@ header {
       }
     }
   }
-
-  button {
-    margin: 0;
-  }
 }
 /* end about */
 
@@ -214,6 +209,7 @@ header {
   justify-content: space-between;
 
   margin: 0 $p-m $p-b;
+  user-select: none;
 
   .experience-section {
     width: 400px;
@@ -283,10 +279,10 @@ header {
         svg {
           transition: transform 0.3s;
         }
+      }
 
-        .experience-btn-flip {
-          transform: rotate(-180deg);
-        }
+      .experience-btn-flip {
+        transform: rotate(-180deg);
       }
     }
   }

@@ -8,7 +8,7 @@ const Contact = () => {
         <h1>Contact:</h1>
         <p>
           <Icon icon="akar-icons:envelope" width="32" />
-          gawrysiakmaciej@pm.com
+          gawrysiak.maciej@pm.com
         </p>
         <p>
           <Icon icon="bx:bxl-telegram" width="32" />

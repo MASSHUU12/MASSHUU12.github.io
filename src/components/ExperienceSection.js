@@ -1,7 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import ExperienceItem from "./ExperienceItem";
-import ExperienceDescription from "./ExperienceDescription";
 
 const ExperienceSection = ({ icon, title, items }) => {
   return (
