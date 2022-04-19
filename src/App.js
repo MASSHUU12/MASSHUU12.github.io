@@ -1,23 +1,22 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Experience from "./pages/Experience";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/work" element={<Work />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        {/* <Route path="*" element={<NoPage />} /> -- 404 */}
-      </Routes>
+      <Home />
+      <About />
+      <Contact />
+      <Experience />
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 

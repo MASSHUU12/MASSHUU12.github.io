@@ -1,35 +1,23 @@
 import React from "react";
+import { Icon } from "@iconify/react";
 
 const Contact = () => {
   return (
-    <div className="basic-layout contact-container">
+    <div className="contact-container">
       <div className="contact-content">
-        <h1>Contact</h1>
-        <h2>Maciej Gawrysiak</h2>
+        <h1>Contact:</h1>
         <p>
-          <span
-            className="iconify"
-            data-icon="akar-icons:envelope"
-            data-width="32"
-          ></span>
+          <Icon icon="akar-icons:envelope" width="32" />
           gawrysiakmaciej@pm.com
         </p>
         <p>
-          <span
-            className="iconify"
-            data-icon="bx:bxl-telegram"
-            data-width="32"
-          ></span>
+          <Icon icon="bx:bxl-telegram" width="32" />
           <a href="https://t.me/MASSHUU" target="_blank" rel="noreferrer">
             t.me/MASSHUU
           </a>
         </p>
         <p>
-          <span
-            className="iconify"
-            data-icon="akar-icons:github-fill"
-            data-width="32"
-          ></span>
+          <Icon icon="akar-icons:github-fill" width="32" />
           <a
             href="https://github.com/MASSHUU12"
             target="_blank"
@@ -39,12 +27,14 @@ const Contact = () => {
           </a>
         </p>
         <p>
-          <span
-            className="iconify"
-            data-icon="brandico:linkedin-rect"
-            data-width="32"
-          ></span>
-          <a href="https://linkedin.com/in/maciej-gawrysiak">LinkedIn</a>
+          <Icon icon="brandico:linkedin-rect" width="32" />
+          <a
+            href="https://linkedin.com/in/maciej-gawrysiak"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
         </p>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "../img/portfolio-home-sitting.png";
+import { Icon } from "@iconify/react";
 
 const Home = () => {
   const [message, setMessage] = useState("Hello");
@@ -19,17 +20,22 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="basic-layout home-container">
-      <div className="home-container-left">
-        <h3>{message} I, am</h3>
-        <h1>Maciej</h1>
-        <h1>Gawrysiak</h1>
-        <p>Junior full-stack developer</p>
+    <>
+      <div className="home-container">
+        <div className="home-container-left">
+          <h3>{message}, I am</h3>
+          <h1>Maciej</h1>
+          <h1>Gawrysiak</h1>
+          <p>Junior full-stack developer</p>
+        </div>
+        <div className="home-container-right">
+          <img src={Image} alt="Home Banner" />
+        </div>
       </div>
-      <div className="home-container-right">
-        <img src={Image} alt="Home Banner" />
+      <div className="home-container-arrow">
+        <Icon icon="eva:arrowhead-down-fill" width="64" />
       </div>
-    </div>
+    </>
   );
 };
 

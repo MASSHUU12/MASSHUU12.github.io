@@ -37,6 +37,6 @@
     ]
   },
   "devDependencies": {
-    "react-router-dom": "^6.3.0"
+    "@iconify/react": "^3.2.1"
   }
 }
