@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Image from "../img/portfolio-home-sitting.png";
+import Image from "../img/portfolio-home-sitting.webp";
 import { Icon } from "@iconify/react";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";

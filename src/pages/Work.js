@@ -1,10 +1,10 @@
 import React from "react";
-import CutIt from "../img/cutit-mockup.png";
-import Pralka from "../img/pralka-mockup.png";
+import CutIt from "../img/cutit-mockup.webp";
+import Pralka from "../img/pralka-mockup.webp";
 import WorkItem from "../components/WorkItem";
-import SendNote from "../img/sendnote-mockup.png";
-import CutItMobile from "../img/cutit-mobile-mockup.png";
-import KolobrzegHotele from "../img/kolobrzeghotele-mockup.png";
+import SendNote from "../img/sendnote-mockup.webp";
+import CutItMobile from "../img/cutit-mobile-mockup.webp";
+import KolobrzegHotele from "../img/kolobrzeghotele-mockup.webp";
 import { useTranslation } from "react-i18next";
 
 const Work = () => {
