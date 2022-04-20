@@ -13,17 +13,17 @@ const Footer = () => {
           </Link>
         </p>
         <p>
-          <Link to="header" spy={true} smooth={true}>
+          <Link to="about" spy={true} smooth={true}>
             <span>About</span>
           </Link>
         </p>
         <p>
-          <Link to="header" spy={true} smooth={true}>
+          <Link to="work" spy={true} smooth={true}>
             <span>Work</span>
           </Link>
         </p>
         <p>
-          <Link to="header" spy={true} smooth={true}>
+          <Link to="contact" spy={true} smooth={true}>
             <span>Contact me</span>
           </Link>
         </p>

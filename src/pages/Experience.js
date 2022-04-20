@@ -9,7 +9,7 @@ const Experience = () => {
           icon={"bi:code-slash"}
           title={"Front End"}
           items={{
-            HTML: [],
+            "HTML 5": [],
             CSS: ["SCSS"],
             JavaScript: ["React*", "jQuery", "Vue.js*"],
           }}
@@ -20,7 +20,6 @@ const Experience = () => {
           items={{
             PHP: ["Laravel", "Composer"],
             "Node.js*": ["NPM", "React Native*"],
-            JavaScript: ["React", "jQuery", "Vue.js*"],
           }}
         />
         <ExperienceSection
@@ -44,9 +43,9 @@ const Experience = () => {
           }}
         />
       </div>
-      <span className="experience-disclaimer">
-        *I don't have much experience with such labeled items
-      </span>
+      <div className="experience-disclaimer">
+        <span>*I don't have much experience with such labeled items</span>
+      </div>
     </>
   );
 };

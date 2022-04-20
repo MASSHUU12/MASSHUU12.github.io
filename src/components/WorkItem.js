@@ -37,7 +37,7 @@ const WorkItem = ({
           )}
         </div>
       </div>
-      <div className="work-section-right mobile-mockup">
+      <div className="work-section-right">
         <img src={mockup} alt={title} />
       </div>
     </div>
