@@ -416,7 +416,7 @@ header {
 
       img {
         border-radius: $p-s;
-        max-width: 100%;
+        max-width: 60vh;
         height: auto;
       }
 
@@ -620,6 +620,12 @@ footer {
           button:last-child {
             margin: $p-r 0 0 0;
           }
+        }
+      }
+
+      .work-section-right {
+        img {
+          max-width: 100%;
         }
       }
     }
