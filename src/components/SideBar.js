@@ -1,23 +1,26 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 
 const SideBar = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="sidebar-container">
       <Link to="header" spy={true} smooth={true}>
         <span>Home</span>
       </Link>
       <Link to="about" spy={true} smooth={true}>
-        <span>About</span>
+        <span>{t("about")}</span>
       </Link>
       <Link to="contact" spy={true} smooth={true}>
-        <span>Contact</span>
+        <span>{t("contact")}</span>
       </Link>
       <Link to="experience" spy={true} smooth={true}>
-        <span>Experience</span>
+        <span>{t("experience")}</span>
       </Link>
       <Link to="work" spy={true} smooth={true}>
-        <span>Work</span>
+        <span>{t("work")}</span>
       </Link>
     </div>
   );

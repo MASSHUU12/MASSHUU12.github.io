@@ -508,6 +508,10 @@ footer {
     flex-direction: row;
     width: 100%;
 
+    span {
+      cursor: pointer;
+    }
+
     svg {
       padding: 0 $p-r 0 0;
     }
@@ -568,11 +572,11 @@ footer {
       padding: $p-m;
 
       h1 {
-        font-size: $fs-m;
+        font-size: $fs-r;
       }
 
       p {
-        font-size: $fs-r;
+        font-size: $fs-s;
         margin: 0 0 $p-s;
       }
     }
@@ -585,16 +589,36 @@ footer {
       padding: $p-m;
 
       h1 {
-        font-size: $fs-m;
+        font-size: $fs-r;
       }
 
       p {
-        font-size: $fs-r;
+        font-size: $fs-s;
         margin: 0 0 $p-s;
       }
     }
   }
   /* end contact */
+
+  /* experience */
+  .experience-container {
+    .experience-section {
+      .experience-head {
+        span {
+          font-size: $fs-r;
+        }
+      }
+
+      .experience-body {
+        .experience-item {
+          span {
+            font-size: $fs-r;
+          }
+        }
+      }
+    }
+  }
+  /* end experience */
 
   /* work */
   .work-container {
@@ -617,6 +641,12 @@ footer {
         }
 
         .work-section-left-buttons {
+          button {
+            a {
+              font-size: $fs-r;
+            }
+          }
+
           button:last-child {
             margin: $p-r 0 0 0;
           }
@@ -640,11 +670,13 @@ footer {
     h1,
     p {
       padding: 0 $p-m;
-      font-size: $fs-m;
+      font-size: $fs-r;
     }
 
-    p {
-      font-size: $fs-r;
+    p,
+    a,
+    span {
+      font-size: $fs-s;
     }
 
     .footer-right {

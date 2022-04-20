@@ -1,11 +1,14 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <div id="contact" className="contact-container">
       <div className="contact-content">
-        <h1>Contact:</h1>
+        <h1>{t("contact")}:</h1>
         <p>
           <Icon icon="akar-icons:envelope" width="32" />
           gawrysiak.maciej@pm.com

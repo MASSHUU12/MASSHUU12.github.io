@@ -1,7 +1,10 @@
 import React from "react";
 import ExperienceSection from "../components/ExperienceSection";
+import { useTranslation } from "react-i18next";
 
 const Experience = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div id="experience" className="experience-container">
@@ -24,7 +27,7 @@ const Experience = () => {
         />
         <ExperienceSection
           icon={"bi:code-slash"}
-          title={"Other"}
+          title={t("other")}
           items={{
             Python: [],
             "C++": [],
@@ -32,7 +35,7 @@ const Experience = () => {
         />
         <ExperienceSection
           icon={"bi:code-slash"}
-          title={"Tools"}
+          title={t("tools")}
           items={{
             GitHub: [],
             "GitHub Desktop": [],
@@ -44,7 +47,7 @@ const Experience = () => {
         />
       </div>
       <div className="experience-disclaimer">
-        <span>*I don't have much experience with such labeled items</span>
+        <span>*{t("iDontHave")}</span>
       </div>
     </>
   );

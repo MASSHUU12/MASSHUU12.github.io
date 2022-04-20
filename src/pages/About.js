@@ -1,16 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <div id="about" className="about-container">
       <div className="about-content">
-        <h1>More about me:</h1>
-        <p>I am a junior full-stack web developer.</p>
-        <p>
-          With the help of Figma, VS Code, documentation and tea I'm able to do
-          most of the assigned tasks.
-        </p>
-        <span>*I don't have much experience with such labeled items</span>
+        <h1>{t("more")}:</h1>
+        <p>{t("iAmA")}.</p>
+        <p>{t("withTheHelp")}.</p>
       </div>
     </div>
   );

@@ -1,12 +1,19 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { Icon } from "@iconify/react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { i18n, t } = useTranslation();
+
+  const changeLocale = (locale) => {
+    i18n.changeLanguage(locale);
+  };
+
   return (
     <footer id="footer">
       <div className="footer-left">
-        <h1>Useful links</h1>
+        <h1>{t("usefulLinks")}</h1>
         <p>
           <Link to="header" spy={true} smooth={true}>
             <span>Home</span>
@@ -14,30 +21,38 @@ const Footer = () => {
         </p>
         <p>
           <Link to="about" spy={true} smooth={true}>
-            <span>About</span>
+            <span>{t("about")}</span>
           </Link>
         </p>
         <p>
           <Link to="work" spy={true} smooth={true}>
-            <span>Work</span>
+            <span>{t("work")}</span>
           </Link>
         </p>
         <p>
           <Link to="contact" spy={true} smooth={true}>
-            <span>Contact me</span>
+            <span>{t("contactMe")}</span>
           </Link>
         </p>
         <div className="footer-lang">
-          <a href="#">
+          <span
+            onClick={() => {
+              changeLocale("pl");
+            }}
+          >
             <Icon icon={"twemoji:flag-for-flag-poland"} width="38" />
-          </a>
-          <a href="#">
+          </span>
+          <span
+            onClick={() => {
+              changeLocale("en");
+            }}
+          >
             <Icon icon={"twemoji:flag-for-flag-united-states"} width="38" />
-          </a>
+          </span>
         </div>
       </div>
       <div className="footer-right">
-        <h1>Contact</h1>
+        <h1>{t("contact")}</h1>
         <a href="mailto:gawrysiak.maciej@pm.me" className="footer-link">
           <Icon icon={"akar-icons:envelope"} width="32" />
           gawrysiak.maciej@pm.me
