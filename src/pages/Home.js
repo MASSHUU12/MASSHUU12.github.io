@@ -7,22 +7,24 @@ import { useTranslation } from "react-i18next";
 const Home = () => {
   const { t } = useTranslation();
   const [message, setMessage] = useState(t("hello"));
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const date = new Date();
-      const hours = date.getHours();
-      const words = [
-        t("goodMorning"),
-        t("hello"),
-        t("goodEvening"),
-        t("goodNight"),
-      ];
 
-      if (hours < 11) setMessage(words[0]);
-      else if (hours >= 11 && hours < 17) setMessage(words[1]);
-      else if (hours >= 17 && hours < 21) setMessage(words[2]);
-      else setMessage(words[3]);
-    }, 60000);
+  const changeGreeting = () => {
+    const hours = new Date().getHours();
+    const words = [
+      t("goodMorning"),
+      t("hello"),
+      t("goodEvening"),
+      t("goodNight"),
+    ];
+
+    if (hours < 11) setMessage(words[0]);
+    else if (hours >= 11 && hours < 17) setMessage(words[1]);
+    else if (hours >= 17 && hours < 21) setMessage(words[2]);
+    else setMessage(words[3]);
+  };
+  useEffect(() => {
+    changeGreeting();
+    const interval = setInterval(changeGreeting, 60000);
 
     return () => clearInterval(interval); // This represents the unmount to clear interval to prevent memory leaks.
   });
