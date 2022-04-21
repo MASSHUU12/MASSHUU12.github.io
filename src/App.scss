@@ -19,6 +19,34 @@ a:hover {
   cursor: pointer;
 }
 
+/* animations */
+@keyframes homeArrow {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  15% {
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  35% {
+    transform: rotate(0);
+    top: 0;
+  }
+  55% {
+    top: -20px;
+  }
+  65% {
+    top: 5px;
+  }
+  70% {
+    top: 0;
+  }
+}
+/* end animations */
+
 /* custom elements */
 // scrollbar
 ::-webkit-scrollbar {
@@ -128,14 +156,20 @@ header {
 
 .home-container-arrow {
   height: fit-content;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 0 $p-b;
+
+  a {
+    position: relative;
+    animation-name: homeArrow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
 
   svg {
     color: $color-white;
-    margin: 0 0 $p-b;
     cursor: pointer;
   }
 }
@@ -273,6 +307,7 @@ header {
         background-color: $color-transparent;
         border-radius: $p-s;
         margin: $p-m 0;
+        padding: $p-xs 0;
 
         .experience-item-title {
           display: flex;
@@ -289,7 +324,6 @@ header {
       }
 
       .experience-description {
-        padding: 5px;
         filter: brightness(75%);
       }
 
@@ -297,8 +331,10 @@ header {
         color: $color-white;
         background-color: $color-fourth;
         cursor: pointer;
-        padding: $p-s;
+        padding: 0 $p-s;
         border-radius: 0 $p-s $p-s 0;
+        position: absolute;
+        padding: $p-s;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -316,7 +352,7 @@ header {
 }
 
 .experience-disclaimer {
-  color: $color-white;
+  color: $color-second;
   font-size: $fs-s;
   margin: 0 $p-m;
 }
@@ -563,6 +599,10 @@ footer {
         font-size: $fs-m;
       }
     }
+
+    .home-container-right {
+      margin: $p-m 0 0 0;
+    }
   }
   /* end home */
 
@@ -611,6 +651,8 @@ footer {
 
       .experience-body {
         .experience-item {
+          padding: $p-s 0;
+
           span {
             font-size: $fs-r;
           }
@@ -676,6 +718,7 @@ footer {
     p,
     a,
     span {
+      margin: $p-xs 0 0;
       font-size: $fs-s;
     }
 
@@ -684,6 +727,7 @@ footer {
 
       h1 {
         padding: 0;
+        margin: 0 0 $p-s;
       }
     }
 
