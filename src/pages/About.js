@@ -8,8 +8,10 @@ const About = () => {
     <div id="about" className="about-container">
       <div className="about-content">
         <h1>{t("more")}:</h1>
-        <p>{t("iAmA")}.</p>
-        <p>{t("withTheHelp")}.</p>
+        <p>{t("description")}.</p>
+        <p>{t("description2")}.</p>
+        <p>{t("description3")}.</p>
+        <p>{t("description4")}.</p>
       </div>
     </div>
   );
