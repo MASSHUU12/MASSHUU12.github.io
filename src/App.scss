@@ -10,6 +10,8 @@
 body {
   display: flex;
   justify-content: center;
+  margin: 0 4%;
+  font-size: 1em;
 
   background-color: $color-main;
 }
@@ -91,7 +93,6 @@ a:hover {
 
 /* header */
 header {
-  max-width: 1920px;
   margin: $p-r 0 0 0;
 
   display: flex;
@@ -102,7 +103,6 @@ header {
     font-size: $fs-r;
     color: $color-white;
     font-weight: $fw-b;
-    padding: 0 0 0 $p-b;
   }
 }
 /* end header */
@@ -110,7 +110,6 @@ header {
 /* home */
 .home-container {
   height: 85vh;
-  max-width: 1920px;
 
   display: flex;
   flex-direction: row;
@@ -121,7 +120,6 @@ header {
     font-size: $fs-xxb;
     font-weight: $fw-b;
     color: $color-white;
-    padding: 0 $p-xb 0 0;
   }
 
   h3 {
@@ -132,7 +130,6 @@ header {
   p {
     font-size: $fs-b;
     color: $color-second;
-    padding: 0 $p-xb 0 0;
   }
 
   .home-container-left,
@@ -144,7 +141,6 @@ header {
 
   .home-container-left {
     flex-direction: column;
-    padding: 0 0 0 $p-b;
   }
 
   .home-container-right {
@@ -178,13 +174,12 @@ header {
 
 /* about */
 .about-container {
-  max-width: 1920px;
+  margin: 0 0 $p-m;
 
   .about-content {
     background-color: $color-transparent;
     border-radius: $p-m;
     padding: $p-b;
-    margin: 0 $p-m $p-b;
 
     h1 {
       font-size: $fs-b;
@@ -272,9 +267,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  max-width: 1920px;
 
-  margin: 0 $p-m $p-b;
   user-select: none;
 
   .experience-section {
@@ -312,7 +305,7 @@ header {
         background-color: $color-transparent;
         border-radius: $p-s;
         margin: $p-m 0;
-        padding: $p-xs 0;
+        height: 3.5rem;
 
         .experience-item-title {
           display: flex;
@@ -336,13 +329,13 @@ header {
         color: $color-white;
         background-color: $color-fourth;
         cursor: pointer;
-        padding: 0 $p-s;
         border-radius: 0 $p-s $p-s 0;
         position: absolute;
-        padding: $p-s;
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 3.5rem;
+        width: 3rem;
 
         svg {
           transition: transform 0.3s;
@@ -359,24 +352,22 @@ header {
 .experience-disclaimer {
   color: $color-second;
   font-size: $fs-s;
-  margin: 0 $p-m;
 }
 /* end experience */
 
 /* work */
 .work-container {
   margin: $p-xb 0 0 0;
-  max-width: 1920px;
 
   .work-section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 0 0 $p-m;
 
     background-color: $color-transparent;
     border-radius: $p-m;
     padding: $p-b;
-    margin: 0 $p-m $p-b;
 
     .work-section-left {
       width: 50%;
@@ -473,13 +464,10 @@ header {
 
 /* contact */
 .contact-container {
-  max-width: 1920px;
-
   .contact-content {
     background-color: $color-transparent;
     border-radius: $p-m;
     padding: $p-b;
-    margin: 0 $p-m $p-b;
     // inline-size: 95%;
     // inline-size: auto;
     // overflow-wrap: anywhere;
@@ -532,7 +520,7 @@ footer {
   padding: $p-b 0 $p-m;
 
   h1 {
-    font-size: $fs-b;
+    font-size: $fs-m;
     font-weight: $fw-b;
   }
 
@@ -567,6 +555,14 @@ footer {
 }
 /* end footer */
 
+/* ultrawide screen */
+@media (min-width: 2560px) {
+  body {
+    margin: 0 25%;
+    font-size: 1.2em;
+  }
+}
+
 /* mobile view */
 @media (max-width: 1279px) {
   .work-section-left-buttons {
@@ -577,6 +573,7 @@ footer {
 @media (max-width: 768px) {
   body {
     display: block;
+    font-size: 0.8em;
   }
 
   .sidebar-container {
@@ -597,14 +594,12 @@ footer {
 
     .home-container-left {
       margin: $p-m 0;
-      padding: 0 0 0 $p-m;
 
       h1,
       h3,
       p {
         color: $color-white;
         font-size: $fs-xb;
-        padding: 0;
       }
 
       h3 {
@@ -625,15 +620,8 @@ footer {
   /* about */
   .about-container {
     .about-content {
-      padding: $p-m;
-
-      h1 {
-        font-size: $fs-r;
-      }
-
       p {
         font-size: $fs-s;
-        margin: 0 0 $p-s;
       }
     }
   }
@@ -642,47 +630,17 @@ footer {
   /* contact */
   .contact-container {
     .contact-content {
-      padding: $p-m;
-
-      h1 {
-        font-size: $fs-r;
-      }
-
       p {
         font-size: $fs-s;
-        margin: 0 0 $p-s;
       }
     }
   }
   /* end contact */
 
-  /* experience */
-  .experience-container {
-    .experience-section {
-      .experience-head {
-        span {
-          font-size: $fs-r;
-        }
-      }
-
-      .experience-body {
-        .experience-item {
-          padding: $p-s 0;
-
-          span {
-            font-size: $fs-r;
-          }
-        }
-      }
-    }
-  }
-  /* end experience */
-
   /* work */
   .work-container {
     .work-section {
       flex-direction: column-reverse;
-      padding: $p-m;
 
       .work-section-left,
       .work-section-right {
@@ -723,7 +681,6 @@ footer {
   /* footer */
   footer {
     flex-direction: column-reverse;
-    padding: $p-m 0;
     gap: 0;
 
     h1,

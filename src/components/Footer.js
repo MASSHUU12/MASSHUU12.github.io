@@ -16,22 +16,22 @@ const Footer = () => {
         <h1>{t("usefulLinks")}</h1>
         <p>
           <Link to="header" spy={true} smooth={true}>
-            <span>Home</span>
+            Home
           </Link>
         </p>
         <p>
           <Link to="about" spy={true} smooth={true}>
-            <span>{t("about")}</span>
+            {t("about")}
           </Link>
         </p>
         <p>
           <Link to="work" spy={true} smooth={true}>
-            <span>{t("work")}</span>
+            {t("work")}
           </Link>
         </p>
         <p>
           <Link to="contact" spy={true} smooth={true}>
-            <span>{t("contactMe")}</span>
+            {t("contactMe")}
           </Link>
         </p>
         <div className="footer-lang">
