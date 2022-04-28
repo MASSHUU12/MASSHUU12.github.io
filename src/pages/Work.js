@@ -1,4 +1,3 @@
-import React from "react";
 import CutIt from "../img/cutit-mockup.webp";
 import Pralka from "../img/pralka-mockup.webp";
 import WorkItem from "../components/WorkItem";

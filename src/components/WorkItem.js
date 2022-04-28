@@ -1,5 +1,3 @@
-import React from "react";
-
 const WorkItem = ({
   labels,
   title,
@@ -13,10 +11,16 @@ const WorkItem = ({
     <div className="work-section">
       <div className="work-section-left">
         <div className="work-section-left-text">
+          {/** If the page was created in a group, the following information is displayed */}
           {teamwork === false ? null : <span>Teamwork</span>}
           <div className="work-section-left-labels">
+            {/* Maps passed labels */}
             {labels.map((item, index) => {
-              return <span className="work-section-left-label">{item}</span>;
+              return (
+                <span key={index} className="work-section-left-label">
+                  {item}
+                </span>
+              );
             })}
           </div>
           <h1>{title}</h1>
@@ -28,6 +32,7 @@ const WorkItem = ({
               GitHub
             </a>
           </button>
+          {/* If the website is hosted, its link is shown */}
           {site === false ? null : (
             <button className="work-btn">
               <a href={site} target="_blank" rel="noreferrer">

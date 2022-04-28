@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "../img/portfolio-home-sitting.webp";
 import { Icon } from "@iconify/react";
 import { Link } from "react-scroll";
@@ -8,6 +8,10 @@ const Home = () => {
   const { t } = useTranslation();
   const [message, setMessage] = useState(t("hello"));
 
+  /**
+   * This function is responsible for displaying
+   * an appropriate greeting depending on the current time
+   */
   const changeGreeting = () => {
     const hours = new Date().getHours();
     const words = [
@@ -24,9 +28,15 @@ const Home = () => {
   };
   useEffect(() => {
     changeGreeting();
+
+    /**
+     * A function is called every minute
+     * to check whether a new greeting should be displayed
+     */
     const interval = setInterval(changeGreeting, 60000);
 
-    return () => clearInterval(interval); // This represents the unmount to clear interval to prevent memory leaks.
+    // This represents the unmount to clear interval to prevent memory leaks.
+    return () => clearInterval(interval);
   });
 
   return (

@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-scroll";
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
@@ -6,6 +5,10 @@ import { useTranslation } from "react-i18next";
 const Footer = () => {
   const { i18n, t } = useTranslation();
 
+  /**
+   * Responsible for changing the language
+   * when the corresponding flag is pressed
+   */
   const changeLocale = (locale) => {
     i18n.changeLanguage(locale);
   };

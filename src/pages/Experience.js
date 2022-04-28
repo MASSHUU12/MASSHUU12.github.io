@@ -1,4 +1,3 @@
-import React from "react";
 import ExperienceSection from "../components/ExperienceSection";
 import { useTranslation } from "react-i18next";
 

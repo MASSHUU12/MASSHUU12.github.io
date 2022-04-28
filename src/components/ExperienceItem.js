@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Icon } from "@iconify/react";
 import ExperienceDescription from "./ExperienceDescription";
 
@@ -6,6 +6,7 @@ const ExperienceItem = ({ name, description }) => {
   const [arrowStyle, setArrowStyle] = useState("");
   const [isNotOn, setIsNotOn] = useState(true);
 
+  // Responsible for appearing or hiding experience descriptions
   const toggleDescription = () => {
     setIsNotOn(!isNotOn);
 
@@ -20,6 +21,7 @@ const ExperienceItem = ({ name, description }) => {
             <div className="experience-item-title">
               <span>{name}</span>
             </div>
+            {/* Calls the toggleDescription function */}
             <div className="experience-btn" onClick={toggleDescription}>
               <Icon
                 className={arrowStyle}
@@ -28,11 +30,12 @@ const ExperienceItem = ({ name, description }) => {
               />
             </div>
           </div>
+          {/* Returns the status set by toggleDescription */}
           <ExperienceDescription name={description} isNotOn={isNotOn} />
         </>
       ) : (
         <div className="experience-item">
-          <div className="experience-item-title" style={{ padding: "5px" }}>
+          <div className="experience-item-title">
             <span>{name}</span>
           </div>
         </div>
