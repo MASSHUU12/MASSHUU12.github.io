@@ -21,7 +21,7 @@ const Experience = () => {
           icon={"bi:code-slash"}
           title={"Back End"}
           items={{
-            PHP: ["Laravel", "Composer"],
+            "PHP 8": ["Laravel", "Composer"],
             "Node.js*": ["NPM", "React Native*"],
           }}
         />
@@ -30,7 +30,7 @@ const Experience = () => {
           title={t("other")}
           items={{
             Python: [],
-            "C++": [],
+            "C++*": [],
           }}
         />
         <ExperienceSection

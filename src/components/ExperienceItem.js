@@ -28,7 +28,7 @@ const ExperienceItem = ({ name, description }) => {
               />
             </div>
           </div>
-          {!isNotOn && <ExperienceDescription name={description} />}
+          <ExperienceDescription name={description} isNotOn={isNotOn} />
         </>
       ) : (
         <div className="experience-item">

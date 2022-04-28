@@ -322,7 +322,17 @@ header {
       }
 
       .experience-description {
+        position: absolute;
+        visibility: hidden;
         filter: brightness(75%);
+        opacity: 0;
+        transition: opacity 0.5s linear;
+      }
+
+      .experience-description-active {
+        position: static;
+        visibility: visible;
+        opacity: 1;
       }
 
       .experience-btn {
@@ -388,13 +398,14 @@ header {
 
       h1 {
         font-weight: $fw-b;
-        font-size: $fs-xb;
+        font-size: $fs-b;
         padding: $p-r 0 0 0;
       }
 
       p {
         color: $color-second;
-        font-size: $fs-m;
+        font-size: $fs-r;
+        margin: 0 0 $p-m;
       }
 
       .work-section-left-text {
