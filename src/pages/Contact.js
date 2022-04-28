@@ -1,6 +1,9 @@
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 
+const email = "gawrysiak.maciej@pm.com";
+const telegram = "t.me/MASSHUU";
+
 const Contact = () => {
   const { t } = useTranslation();
 
@@ -10,12 +13,14 @@ const Contact = () => {
         <h1>{t("contact")}:</h1>
         <p>
           <Icon icon="akar-icons:envelope" width="32" />
-          gawrysiak.maciej@pm.com
+          <a href={`mailto:${email}`} rel="noreferrer">
+            {email}
+          </a>
         </p>
         <p>
           <Icon icon="bx:bxl-telegram" width="32" />
-          <a href="https://t.me/MASSHUU" target="_blank" rel="noreferrer">
-            t.me/MASSHUU
+          <a href={`https:${telegram}`} target="_blank" rel="noreferrer">
+            {telegram}
           </a>
         </p>
         <p>

@@ -27,18 +27,19 @@ const WorkItem = ({
           <p>{description}</p>
         </div>
         <div className="work-section-left-buttons">
-          <button className="work-btn">
-            <a href={repo} target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          </button>
+          <a className="work-btn" href={repo} target="_blank" rel="noreferrer">
+            GitHub
+          </a>
           {/* If the website is hosted, its link is shown */}
           {site === false ? null : (
-            <button className="work-btn">
-              <a href={site} target="_blank" rel="noreferrer">
-                Visit site
-              </a>
-            </button>
+            <a
+              className="work-btn"
+              href={site}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit site
+            </a>
           )}
         </div>
       </div>

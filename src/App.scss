@@ -352,6 +352,10 @@ header {
         }
       }
 
+      .experience-btn:hover {
+        filter: brightness(75%);
+      }
+
       .experience-btn-flip {
         transform: rotate(-180deg);
       }
@@ -426,26 +430,20 @@ header {
       }
 
       .work-section-left-buttons {
-        button {
-          margin: 0;
-          border: none;
+        a {
           border-radius: $p-r;
           padding: $p-s $p-m;
           background-color: $color-transparent;
-
-          a {
-            text-decoration: none;
-            font-size: $fs-m;
-            color: $color-white;
-          }
+          text-decoration: none;
+          font-size: $fs-s;
+          color: $color-white;
         }
 
-        button:hover {
-          cursor: pointer;
+        a:hover {
           filter: brightness(75%);
         }
 
-        button:first-child {
+        a:first-child {
           margin: 0 $p-m 0 0;
         }
       }
