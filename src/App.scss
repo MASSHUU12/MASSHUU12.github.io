@@ -566,6 +566,11 @@ footer {
 
 /* ultrawide screen */
 @media (min-width: 2560px) {
+  .sidebar-container {
+    right: 5%;
+    font-size: $fs-r;
+  }
+
   body {
     margin: 0 25%;
     font-size: 1.2em;
