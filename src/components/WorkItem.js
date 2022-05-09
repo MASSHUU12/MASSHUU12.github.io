@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 const WorkItem = ({
   labels,
   title,
@@ -7,12 +9,14 @@ const WorkItem = ({
   site = false,
   teamwork = false,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="work-section">
       <div className="work-section-left">
         <div className="work-section-left-text">
           {/** If the page was created in a group, the following information is displayed */}
-          {teamwork === false ? null : <span>Teamwork</span>}
+          {teamwork === false ? null : <span>{t("teamwork")}</span>}
           <div className="work-section-left-labels">
             {/* Maps passed labels */}
             {labels.map((item, index) => {
@@ -38,7 +42,7 @@ const WorkItem = ({
               target="_blank"
               rel="noreferrer"
             >
-              Visit site
+              {t("visitSite")}
             </a>
           )}
         </div>

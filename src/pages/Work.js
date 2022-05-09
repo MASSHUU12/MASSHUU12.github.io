@@ -42,7 +42,7 @@ const Work = () => {
         teamwork={true}
       />
       <WorkItem
-        labels={["Pure PHP", "PayPal Integration", "SCSS"]}
+        labels={[t("purePhp"), t("integrationPaypal"), "SCSS"]}
         title={"Pralka"}
         description={t("pralkaDesc")}
         repo={"https://github.com/MASSHUU12/praktyka-pralka"}

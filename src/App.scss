@@ -80,7 +80,7 @@ a:hover {
 .sidebar-container {
   position: fixed;
   top: 50%;
-  right: -260px;
+  right: -17rem;
   transform: rotate(90deg) translateY(-50%);
   display: flex;
 
@@ -574,6 +574,10 @@ footer {
 
     svg {
       padding: 0 $p-r 0 0;
+    }
+
+    span:hover {
+      filter: brightness(75%);
     }
   }
 }
