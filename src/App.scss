@@ -593,6 +593,12 @@ footer {
     margin: 0 25%;
     font-size: 1.2em;
   }
+
+  footer {
+    .footer-container {
+      padding: 0 0 0 25%;
+    }
+  }
 }
 
 /* mobile view */
