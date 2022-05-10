@@ -15,7 +15,7 @@ const Footer = () => {
 
   return (
     <footer id="footer">
-      <div className="footer-left">
+      <div className="footer-container">
         <h1>{t("usefulLinks")}</h1>
         <p>
           <Link to="header" spy={true} smooth={true}>
@@ -53,43 +53,6 @@ const Footer = () => {
             <Icon icon={"twemoji:flag-for-flag-united-states"} width="38" />
           </span>
         </div>
-      </div>
-      <div className="footer-right">
-        <h1>{t("contact")}</h1>
-        <a href="mailto:gawrysiak.maciej@pm.me" className="footer-link">
-          <Icon icon={"akar-icons:envelope"} width="32" />
-          gawrysiak.maciej@pm.me
-        </a>
-
-        <a
-          href="https://t.me/MASSHUU"
-          target="_blank"
-          rel="noreferrer"
-          className="footer-link"
-        >
-          <Icon icon={"bx:bxl-telegram"} width="32" />
-          MASSHUU
-        </a>
-
-        <a
-          href="https://github.com/MASSHUU12"
-          target="_blank"
-          className="footer-link"
-          rel="noreferrer"
-        >
-          <Icon icon={"akar-icons:github-fill"} width="32" />
-          MASSHUU12
-        </a>
-
-        <a
-          href="https://linkedin.com/in/maciej-gawrysiak"
-          target="_blank"
-          className="footer-link"
-          rel="noreferrer"
-        >
-          <Icon icon={"brandico:linkedin-rect"} width="32" />
-          LinkedIn
-        </a>
       </div>
     </footer>
   );

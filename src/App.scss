@@ -534,50 +534,48 @@ footer {
   width: 100%;
   height: fit-content;
   background-color: $color-transparent;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 15rem;
   color: $color-white;
   padding: $p-b 0 $p-m;
 
-  h1 {
-    font-size: $fs-m;
-    font-weight: $fw-b;
-  }
+  .footer-container {
+    padding: 0 0 0 4%;
 
-  a,
-  span {
-    font-size: $fs-r;
-    text-decoration: none;
-    color: $color-white;
-    padding: 0 0 $p-xs;
-
-    display: flex;
-    align-items: center;
-
-    svg {
-      padding: 0 $p-s 0 0;
+    h1 {
+      font-size: $fs-m;
+      font-weight: $fw-b;
     }
-  }
 
-  .footer-lang {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-
+    a,
     span {
-      cursor: pointer;
+      font-size: $fs-r;
+      text-decoration: none;
+      color: $color-white;
+      padding: 0 0 $p-xs;
+
+      display: flex;
+      align-items: center;
+
+      svg {
+        padding: 0 $p-s 0 0;
+      }
     }
 
-    svg {
-      padding: 0 $p-r 0 0;
-    }
+    .footer-lang {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
 
-    span:hover {
-      filter: brightness(75%);
+      span {
+        cursor: pointer;
+      }
+
+      svg {
+        padding: 0 $p-r 0 0;
+      }
+
+      span:hover {
+        filter: brightness(75%);
+      }
     }
   }
 }
@@ -718,12 +716,13 @@ footer {
 
   /* footer */
   footer {
-    flex-direction: column-reverse;
-    gap: 0;
+    h1 {
+      padding: 0;
+      margin: 0 0 $p-s;
+    }
 
     h1,
     p {
-      padding: 0 $p-m;
       font-size: $fs-r;
     }
 
@@ -732,19 +731,6 @@ footer {
     span {
       margin: $p-xs 0 0;
       font-size: $fs-s;
-    }
-
-    .footer-right {
-      margin: 0 $p-m $p-r;
-
-      h1 {
-        padding: 0;
-        margin: 0 0 $p-s;
-      }
-    }
-
-    .footer-lang {
-      padding: 0 0 0 $p-m;
     }
   }
 

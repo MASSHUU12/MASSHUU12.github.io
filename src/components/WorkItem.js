@@ -34,7 +34,7 @@ const WorkItem = ({
           <a className="work-btn" href={repo} target="_blank" rel="noreferrer">
             GitHub
           </a>
-          {/* If the website is hosted, its link is shown */}
+          {/* If the project is hosted, its link is shown */}
           {site === false ? null : (
             <a
               className="work-btn"
