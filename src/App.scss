@@ -538,6 +538,7 @@ footer {
   padding: $p-b 0 $p-m;
 
   .footer-container {
+    width: fit-content;
     padding: 0 0 0 4%;
 
     h1 {
