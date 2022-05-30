@@ -17,7 +17,7 @@
   "cutItMobileDesc": "Aplikacja mobilna skracająca linki, korzysta z Cut.It API.",
   "cutItDesc": "Prosty skracacz linków dostępny w języku polskim i angielskim.",
   "sendNoteDesc": "SendNote jest usługą pozwalająca na udostępnianie poufnych informacji szybko i bezpiecznie.",
-  "kolobrzegHoteleDesc": "Wyszukiwarka noclegów w Kołobrzegu na podstawie preferencji użytkownika (w związku z wyłączeniem przez miasto API główna funkcja strony nie działa).",
+  "kolobrzegHoteleDesc": "Wyszukiwarka noclegów w Kołobrzegu na podstawie preferencji użytkownika (miasto wyłączyło API na którym bazowała główna funkcjonalność strony).",
   "pralkaDesc": "W pełni funkcjonalny sklep internetowy stworzony podczas praktyk w technikum.",
   "usefulLinks": "Przydatne linki",
   "about": "O mnie",

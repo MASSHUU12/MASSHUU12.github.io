@@ -17,7 +17,7 @@
   "cutItMobileDesc": "A mobile application that shortens links, using the Cut.It API.",
   "cutItDesc": "A simple link shortener available in English and Polish.",
   "sendNoteDesc": "SendNote is a service that allows you to share confidential information quickly and securely.",
-  "kolobrzegHoteleDesc": "Accommodation search engine in Kolobrzeg based on user preferences (due to the API turned off by the city, the main function of the website does not work).",
+  "kolobrzegHoteleDesc": "Accommodation search engine in Kolobrzeg based on user preferences (the city has disabled the API on which the site's core functionality was based).",
   "pralkaDesc": "A fully functional online store created during an internship at technical college.",
   "usefulLinks": "Useful links",
   "about": "About",
