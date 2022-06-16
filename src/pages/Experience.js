@@ -11,17 +11,17 @@ const Experience = () => {
           icon={"bi:code-slash"}
           title={"Front End"}
           items={{
-            "HTML 5": [],
+            HTML: [],
             CSS: ["SCSS"],
-            JavaScript: ["React*", "jQuery", "Vue.js*"],
+            JavaScript: ["React", "React Native", "TypeScript", "jQuery"],
           }}
         />
         <ExperienceSection
           icon={"bi:file-earmark-code"}
           title={"Back End"}
           items={{
-            "PHP 8": ["Laravel", "Composer"],
-            "Node.js*": ["NPM", "React Native*"],
+            PHP: ["Laravel", "Composer"],
+            "Node.js*": ["NPM"],
           }}
         />
         <ExperienceSection
