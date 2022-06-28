@@ -2,7 +2,9 @@ import { Icon } from "@iconify/react";
 import ExperienceItem from "./ExperienceItem";
 import { animated, useSpring } from "@react-spring/web";
 import { useRef } from "react";
-import { useIsVisible } from "react-is-visible";
+
+// Bypasses bug with missing types
+const reactIsVisible = require("react-is-visible");
 
 interface Props {
   icon: string;
@@ -12,7 +14,7 @@ interface Props {
 
 const ExperienceSection = ({ icon, title, items }: Props): JSX.Element => {
   const nodeRef = useRef(null);
-  const isVisible = useIsVisible(nodeRef);
+  const isVisible = reactIsVisible.useIsVisible(nodeRef);
 
   const styles = useSpring({
     to: {

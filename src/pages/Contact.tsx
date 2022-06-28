@@ -2,7 +2,9 @@ import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { animated, useSpring } from "@react-spring/web";
 import { useRef } from "react";
-import { useIsVisible } from "react-is-visible";
+
+// Bypasses bug with missing types
+const reactIsVisible = require("react-is-visible");
 
 const email = "gawrysiak.maciej@pm.com";
 const telegram = "t.me/MASSHUU";
@@ -11,7 +13,7 @@ const Contact = () => {
   const { t } = useTranslation();
 
   const nodeRef = useRef(null);
-  const isVisible = useIsVisible(nodeRef);
+  const isVisible = reactIsVisible.useIsVisible(nodeRef);
 
   const styles = useSpring({
     to: {

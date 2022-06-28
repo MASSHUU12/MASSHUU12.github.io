@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { animated, useSpring } from "@react-spring/web";
 import { Key, useRef } from "react";
-import { useIsVisible } from "react-is-visible";
+
+// Bypasses bug with missing types
+const reactIsVisible = require("react-is-visible");
 
 interface Props {
   labels: Array<string>;
@@ -25,7 +27,7 @@ const WorkItem = ({
   const { t } = useTranslation();
 
   const nodeRef = useRef(null);
-  const isVisible = useIsVisible(nodeRef);
+  const isVisible = reactIsVisible.useIsVisible(nodeRef);
 
   const styles = useSpring({
     to: {
