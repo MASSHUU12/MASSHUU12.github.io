@@ -13,7 +13,13 @@ const Experience = () => {
           items={{
             HTML: [],
             CSS: ["SCSS"],
-            JavaScript: ["React", "React Native", "TypeScript", "jQuery"],
+            JavaScript: [
+              "React",
+              "React Native",
+              "Redux",
+              "TypeScript",
+              "jQuery",
+            ],
           }}
         />
         <ExperienceSection
@@ -30,6 +36,7 @@ const Experience = () => {
           items={{
             Python: [],
             "C++*": [],
+            "Docker*": [],
           }}
         />
         <ExperienceSection
