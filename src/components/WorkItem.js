@@ -1,4 +1,7 @@
 import { useTranslation } from "react-i18next";
+import { animated, useSpring } from "@react-spring/web";
+import { useRef } from "react";
+import { useIsVisible } from "react-is-visible";
 
 const WorkItem = ({
   labels,
@@ -11,8 +14,19 @@ const WorkItem = ({
 }) => {
   const { t } = useTranslation();
 
+  const nodeRef = useRef();
+  const isVisible = useIsVisible(nodeRef);
+
+  const styles = useSpring({
+    to: {
+      opacity: isVisible ? 1 : 0,
+      y: isVisible ? 0 : 24,
+    },
+    delay: 75,
+  });
+
   return (
-    <div className="work-section">
+    <animated.div style={styles} ref={nodeRef} className="work-section">
       <div className="work-section-left">
         <div className="work-section-left-text">
           {/** If the page was created in a group, the following information is displayed */}
@@ -50,7 +64,7 @@ const WorkItem = ({
       <div className="work-section-right">
         <img src={mockup} alt={title} />
       </div>
-    </div>
+    </animated.div>
   );
 };
 

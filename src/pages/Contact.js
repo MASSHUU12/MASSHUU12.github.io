@@ -1,5 +1,8 @@
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
+import { animated, useSpring } from "@react-spring/web";
+import { useRef } from "react";
+import { useIsVisible } from "react-is-visible";
 
 const email = "gawrysiak.maciej@pm.com";
 const telegram = "t.me/MASSHUU";
@@ -7,8 +10,24 @@ const telegram = "t.me/MASSHUU";
 const Contact = () => {
   const { t } = useTranslation();
 
+  const nodeRef = useRef();
+  const isVisible = useIsVisible(nodeRef);
+
+  const styles = useSpring({
+    to: {
+      opacity: isVisible ? 1 : 0,
+      y: isVisible ? 0 : 24,
+    },
+    delay: 75,
+  });
+
   return (
-    <div id="contact" className="contact-container">
+    <animated.div
+      style={styles}
+      ref={nodeRef}
+      id="contact"
+      className="contact-container"
+    >
       <div className="contact-content">
         <h1>{t("contact")}:</h1>
         <p>
@@ -44,7 +63,7 @@ const Contact = () => {
           </a>
         </p>
       </div>
-    </div>
+    </animated.div>
   );
 };
 
