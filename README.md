@@ -1,23 +1,41 @@
 # Portfolio
 
-## Table of contents
+> Portfolio in the form of a website containing all relevant information about me.
+>
+> This site is available in Polish and English.
+
+## Table of Contents
 
 - [Portfolio](#portfolio)
-  - [Table of contents](#table-of-contents)
-  - [General Information](#general-information)
-  - [Technologies](#technologies)
+  - [Table of Contents](#table-of-contents)
+  - [Development setup](#development-setup)
+    - [First setup](#first-setup)
+  - [Dependencies documentation](#dependencies-documentation)
+    - [React Native Docs](#react-native-docs)
+    - [React Native Vector Icons](#react-native-vector-icons)
+    - [Iconify](#iconify)
   - [License](#license)
 
-## General Information
+## Development setup
 
-Portfolio in the form of a website containing all relevant information about me.
+> Note: To run the app on a physical device, you must download the `Expo Go` app
 
-This site is available in Polish and English.
+To start the application use `npm start` or `expo start`.
 
-## Technologies
+### First setup
 
-- React: ^18.0.0
-- SCSS
+```sh
+> npm i
+> npm run start
+```
+
+## Dependencies documentation
+
+### [React Native Docs](https://reactjs.org/docs/getting-started.html)
+
+### [React Native Vector Icons](https://oblador.github.io/react-native-vector-icons/)
+
+### [Iconify](https://iconify.design/)
 
 ## License
 
