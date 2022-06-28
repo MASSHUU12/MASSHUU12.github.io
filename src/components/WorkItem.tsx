@@ -1,7 +1,17 @@
 import { useTranslation } from "react-i18next";
 import { animated, useSpring } from "@react-spring/web";
-import { useRef } from "react";
+import { Key, useRef } from "react";
 import { useIsVisible } from "react-is-visible";
+
+interface Props {
+  labels: Array<string>;
+  title: string;
+  description: string;
+  repo: string;
+  mockup: string;
+  site?: string;
+  teamwork?: boolean;
+}
 
 const WorkItem = ({
   labels,
@@ -9,12 +19,12 @@ const WorkItem = ({
   description,
   repo,
   mockup,
-  site = false,
+  site = "false",
   teamwork = false,
-}) => {
+}: Props): JSX.Element => {
   const { t } = useTranslation();
 
-  const nodeRef = useRef();
+  const nodeRef = useRef(null);
   const isVisible = useIsVisible(nodeRef);
 
   const styles = useSpring({
@@ -33,13 +43,18 @@ const WorkItem = ({
           {teamwork === false ? null : <span>{t("teamwork")}</span>}
           <div className="work-section-left-labels">
             {/* Maps passed labels */}
-            {labels.map((item, index) => {
-              return (
-                <span key={index} className="work-section-left-label">
-                  {item}
-                </span>
-              );
-            })}
+            {labels.map(
+              (
+                item: string | null | undefined,
+                index: Key | null | undefined
+              ) => {
+                return (
+                  <span key={index} className="work-section-left-label">
+                    {item}
+                  </span>
+                );
+              }
+            )}
           </div>
           <h1>{title}</h1>
           <p>{description}</p>
@@ -49,7 +64,7 @@ const WorkItem = ({
             GitHub
           </a>
           {/* If the project is hosted, its link is shown */}
-          {site === false ? null : (
+          {site === "false" ? null : (
             <a
               className="work-btn"
               href={site}

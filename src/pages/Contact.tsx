@@ -10,7 +10,7 @@ const telegram = "t.me/MASSHUU";
 const Contact = () => {
   const { t } = useTranslation();
 
-  const nodeRef = useRef();
+  const nodeRef = useRef(null);
   const isVisible = useIsVisible(nodeRef);
 
   const styles = useSpring({

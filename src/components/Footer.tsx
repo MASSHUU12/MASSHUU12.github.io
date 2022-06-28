@@ -9,7 +9,7 @@ const Footer = () => {
    * Responsible for changing the language
    * when the corresponding flag is pressed
    */
-  const changeLocale = (locale) => {
+  const changeLocale = (locale: string) => {
     i18n.changeLanguage(locale);
   };
 

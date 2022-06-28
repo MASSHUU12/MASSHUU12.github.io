@@ -6,7 +6,7 @@ import { useIsVisible } from "react-is-visible";
 const About = () => {
   const { t } = useTranslation();
 
-  const nodeRef = useRef();
+  const nodeRef = useRef(null);
   const isVisible = useIsVisible(nodeRef);
 
   const styles = useSpring({

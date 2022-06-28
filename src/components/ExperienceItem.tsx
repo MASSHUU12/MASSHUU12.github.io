@@ -2,7 +2,12 @@ import { useState } from "react";
 import { Icon } from "@iconify/react";
 import ExperienceDescription from "./ExperienceDescription";
 
-const ExperienceItem = ({ name, description }) => {
+interface Props {
+  name: string;
+  description: Array<string>;
+}
+
+const ExperienceItem = ({ name, description }: Props): JSX.Element => {
   const [arrowStyle, setArrowStyle] = useState("");
   const [isNotOn, setIsNotOn] = useState(true);
 

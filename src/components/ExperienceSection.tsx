@@ -4,8 +4,14 @@ import { animated, useSpring } from "@react-spring/web";
 import { useRef } from "react";
 import { useIsVisible } from "react-is-visible";
 
-const ExperienceSection = ({ icon, title, items }) => {
-  const nodeRef = useRef();
+interface Props {
+  icon: string;
+  title: string;
+  items: Record<string, Array<string | never>>;
+}
+
+const ExperienceSection = ({ icon, title, items }: Props): JSX.Element => {
+  const nodeRef = useRef(null);
   const isVisible = useIsVisible(nodeRef);
 
   const styles = useSpring({
