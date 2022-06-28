@@ -36,7 +36,6 @@ const Experience = () => {
           items={{
             Python: [],
             "C++*": [],
-            "Docker*": [],
           }}
         />
         <ExperienceSection
@@ -47,6 +46,7 @@ const Experience = () => {
             "GitHub Desktop": [],
             Photoshop: [],
             Figma: [],
+            "Docker*": [],
             Blender: [],
             "DaVinci Resolve": [],
           }}
