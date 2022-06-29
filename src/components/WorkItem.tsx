@@ -42,21 +42,16 @@ const WorkItem = ({
       <div className="work-section-left">
         <div className="work-section-left-text">
           {/** If the page was created in a group, the following information is displayed */}
-          {teamwork === false ? null : <span>{t("teamwork")}</span>}
+          {teamwork && <span>{t("teamwork")}</span>}
           <div className="work-section-left-labels">
             {/* Maps passed labels */}
-            {labels.map(
-              (
-                item: string | null | undefined,
-                index: Key | null | undefined
-              ) => {
-                return (
-                  <span key={index} className="work-section-left-label">
-                    {item}
-                  </span>
-                );
-              }
-            )}
+            {labels.map((item: string, index: Key) => {
+              return (
+                <span key={index} className="work-section-left-label">
+                  {item}
+                </span>
+              );
+            })}
           </div>
           <h1>{title}</h1>
           <p>{description}</p>
@@ -66,7 +61,7 @@ const WorkItem = ({
             GitHub
           </a>
           {/* If the project is hosted, its link is shown */}
-          {site === "false" ? null : (
+          {site != "" && (
             <a
               className="work-btn"
               href={site}
