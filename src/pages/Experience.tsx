@@ -1,55 +1,34 @@
 import ExperienceSection from "../components/ExperienceSection";
 import { useTranslation } from "react-i18next";
+import { useAppSelector } from "../hooks";
 
 const Experience = () => {
   const { t } = useTranslation();
+
+  const exp = useAppSelector((state) => state.experience.value);
 
   return (
     <>
       <div id="experience" className="experience-container">
         <ExperienceSection
-          icon={"bi:code-slash"}
-          title={"Front End"}
-          items={{
-            HTML: [],
-            CSS: ["SCSS"],
-            JavaScript: [
-              "React",
-              "React Native",
-              "Redux",
-              "TypeScript",
-              "jQuery",
-            ],
-          }}
+          icon={exp.frontend.icon}
+          title={exp.frontend.title}
+          items={exp.frontend.items}
         />
         <ExperienceSection
-          icon={"bi:file-earmark-code"}
-          title={"Back End"}
-          items={{
-            PHP: ["Laravel", "Composer"],
-            "Node.js*": ["NPM"],
-          }}
+          icon={exp.backend.icon}
+          title={exp.backend.title}
+          items={exp.backend.items}
         />
         <ExperienceSection
-          icon={"carbon:screen"}
-          title={t("other")}
-          items={{
-            Python: [],
-            "C++*": [],
-          }}
+          icon={exp.other.icon}
+          title={t(exp.other.title)}
+          items={exp.other.items}
         />
         <ExperienceSection
-          icon={"fluent:window-dev-tools-24-regular"}
-          title={t("tools")}
-          items={{
-            GitHub: [],
-            "GitHub Desktop": [],
-            Photoshop: [],
-            Figma: [],
-            "Docker*": [],
-            Blender: [],
-            "DaVinci Resolve": [],
-          }}
+          icon={exp.tools.icon}
+          title={t(exp.tools.title)}
+          items={exp.tools.items}
         />
       </div>
       <div className="experience-disclaimer">
