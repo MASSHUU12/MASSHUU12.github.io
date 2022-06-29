@@ -1,10 +1,4 @@
-import {
-  ReactElement,
-  JSXElementConstructor,
-  ReactFragment,
-  ReactPortal,
-  Key,
-} from "react";
+import { Key } from "react";
 
 interface Props {
   name: Array<string>;
@@ -19,33 +13,20 @@ const ExperienceDescription = ({ name, isNotOn }: Props): JSX.Element => {
        * depending on the passed state,
        * gives it a class that displays or hides it
        */}
-      {name?.map(
-        (
-          item:
-            | string
-            | number
-            | boolean
-            | ReactElement<any, string | JSXElementConstructor<any>>
-            | ReactFragment
-            | ReactPortal
-            | null
-            | undefined,
-          index: Key | null | undefined
-        ) => {
-          return (
-            <div
-              className={`experience-item experience-description ${
-                !isNotOn && "experience-description-active"
-              }`}
-              key={index}
-            >
-              <div className="experience-item-title">
-                <span>{item}</span>
-              </div>
+      {name?.map((item: string, index: Key) => {
+        return (
+          <div
+            className={`experience-item experience-description ${
+              !isNotOn && "experience-description-active"
+            }`}
+            key={index}
+          >
+            <div className="experience-item-title">
+              <span>{item}</span>
             </div>
-          );
-        }
-      )}
+          </div>
+        );
+      })}
     </>
   );
 };

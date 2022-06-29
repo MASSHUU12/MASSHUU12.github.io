@@ -1,6 +1,7 @@
 import { Link } from "react-scroll";
 import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
+import { useAppSelector } from "../hooks";
 
 const Footer = () => {
   const { i18n, t } = useTranslation();
@@ -13,30 +14,21 @@ const Footer = () => {
     i18n.changeLanguage(locale);
   };
 
+  const links = useAppSelector((state) => state.sidebar.value);
+
   return (
     <footer id="footer">
       <div className="footer-container">
         <h1>{t("usefulLinks")}</h1>
-        <p>
-          <Link to="header" spy={true} smooth={true}>
-            Home
-          </Link>
-        </p>
-        <p>
-          <Link to="about" spy={true} smooth={true}>
-            {t("about")}
-          </Link>
-        </p>
-        <p>
-          <Link to="work" spy={true} smooth={true}>
-            {t("work")}
-          </Link>
-        </p>
-        <p>
-          <Link to="contact" spy={true} smooth={true}>
-            {t("contactMe")}
-          </Link>
-        </p>
+        {links.map((item) => {
+          return (
+            <p>
+              <Link to={item.to} spy={true} smooth={true}>
+                {t(item.name)}
+              </Link>
+            </p>
+          );
+        })}
         <div className="footer-lang">
           <span
             onClick={() => {
