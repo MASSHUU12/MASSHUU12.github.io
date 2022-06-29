@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     // Detect browser language on load and set it to website
-    const lang = navigator.language || navigator.userLanguage;
+    const lang = navigator.language;
     i18n.changeLanguage(lang.split("-")[0]);
   }, [i18n]);
 

@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const { t } = useTranslation();
-  const [message, setMessage] = useState(t("hello"));
+  const [message, setMessage] = useState<string>(t("hello"));
 
   /**
    * This function is responsible for displaying
@@ -43,9 +43,7 @@ const Home = () => {
     <>
       <div id="home" className="home-container">
         <div className="home-container-left">
-          <h3>
-            {message}, {t("iAm")}
-          </h3>
+          <h3>{message + " " + t("iAm")}</h3>
           <h1>Maciej</h1>
           <h1>Gawrysiak</h1>
           <p>Junior full-stack {t("developer")}</p>
