@@ -5,8 +5,10 @@ import { loadFull } from "tsparticles";
 import "./App.scss";
 import particlesOptions from "./particles.json";
 import { ISourceOptions } from "tsparticles-engine";
-import Header from "./components/sections/Header";
-import Main from "./components/sections/Main";
+import Header from "./components/sections/header/Header";
+import Main from "./components/sections/main/Main";
+import Footer from "./components/sections/footer/Footer";
+import Works from "./components/sections/work/Works";
 
 function App(): JSX.Element {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -21,6 +23,8 @@ function App(): JSX.Element {
       />
       <Header />
       <Main />
+      <Works />
+      <Footer />
     </div>
   );
 }

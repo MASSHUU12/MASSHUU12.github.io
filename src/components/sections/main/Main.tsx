@@ -1,9 +1,9 @@
-import Button from "../common/Button";
+import Button from "../../common/Button";
 
 const Main = (): JSX.Element => {
   return (
     <section className="main-container">
-      <p>Maciej Gawrysiak</p>
+      <h1>Maciej Gawrysiak</h1>
       <span>Junior Developer</span>
       <Button text="About Me" />
     </section>
