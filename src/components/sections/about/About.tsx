@@ -28,7 +28,7 @@ const About = ({ setToggle }: Props): JSX.Element => {
   });
 
   return (
-    <section className="about-container">
+    <section className="about-container" onClick={() => setReverse(!reverse)}>
       <animated.div className="about-left" style={left}>
         <h1>About Me.</h1>
         <span>Junior Developer</span>
