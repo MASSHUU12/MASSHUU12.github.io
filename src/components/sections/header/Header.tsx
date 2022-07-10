@@ -1,9 +1,15 @@
+import { Link } from "react-scroll";
+
 const Header = (): JSX.Element => {
   return (
-    <header>
+    <header id="header">
       <div>
-        <span>Works</span>
-        <span>Contact</span>
+        <Link to="works" spy smooth>
+          Works
+        </Link>
+        <Link to="contact" spy smooth>
+          Contact
+        </Link>
       </div>
     </header>
   );

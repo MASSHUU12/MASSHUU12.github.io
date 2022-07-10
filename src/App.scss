@@ -32,6 +32,7 @@
 
     a:hover {
         filter: brightness(75%);
+        cursor: pointer;
     }
 }
 
@@ -48,12 +49,12 @@ header {
     font-weight: 600;
     padding: 1em 0;
 
-    span {
+    a {
         color: #b0b2c3;
     }
 
     div {
-        span:first-child {
+        a:first-child {
             margin: 0 1.5em 0 0;
         }
     }
