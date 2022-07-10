@@ -1,13 +1,35 @@
 import { Icon } from "@iconify/react";
+import { useSpring, animated } from "@react-spring/web";
+import { useState } from "react";
 
 interface Props {
   setToggle: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const About = ({ setToggle }: Props): JSX.Element => {
+  const [reverse, setReverse] = useState(false);
+
+  const closeAnim = () => {
+    reverse && setToggle(false);
+  };
+
+  const left = useSpring({
+    to: { y: 0 },
+    from: { y: -window.innerHeight * 0.75 },
+    reset: true,
+    reverse: reverse,
+  });
+  const right = useSpring({
+    to: { y: 0 },
+    from: { y: window.innerHeight * 0.75 },
+    reset: true,
+    reverse: reverse,
+    onRest: closeAnim,
+  });
+
   return (
     <section className="about-container">
-      <div className="about-left">
+      <animated.div className="about-left" style={left}>
         <h1>About Me.</h1>
         <span>Junior Developer</span>
         <p>
@@ -17,12 +39,12 @@ const About = ({ setToggle }: Props): JSX.Element => {
           <strong>finding</strong> the best solutions. When I'm not playing with{" "}
           <strong>code</strong>, I'm playing with my <strong>cat</strong>.
         </p>
-      </div>
-      <div className="about-right">
+      </animated.div>
+      <animated.div className="about-right" style={right}>
         <div className="about-right-header">
           <h1>Contact.</h1>
           <Icon
-            onClick={() => setToggle(false)}
+            onClick={() => setReverse(!reverse)}
             icon="carbon:close"
             color="white"
             width="48"
@@ -68,7 +90,7 @@ const About = ({ setToggle }: Props): JSX.Element => {
           />
           <span>Linkedin</span>
         </a>
-      </div>
+      </animated.div>
     </section>
   );
 };
