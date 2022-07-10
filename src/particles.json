@@ -1,5 +1,5 @@
 {
-  "fpsLimit": 120,
+  "fpsLimit": 60,
   "detectRetina": true,
   "autoPlay": true,
   "duration": 0,
