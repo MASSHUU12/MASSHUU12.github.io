@@ -1,12 +1,13 @@
 interface Props {
   text: string;
+  action: () => void;
 }
 
-const Button = ({ text }: Props): JSX.Element => {
+const Button = ({ text, action }: Props): JSX.Element => {
   return (
-    <a href="#" className="common-button">
+    <div className="common-button" onClick={action}>
       {text}
-    </a>
+    </div>
   );
 };
 

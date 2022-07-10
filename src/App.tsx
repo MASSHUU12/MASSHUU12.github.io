@@ -16,7 +16,7 @@ function App(): JSX.Element {
   }, []);
 
   return (
-    <div className="App">
+    <>
       <Particles
         options={particlesOptions as ISourceOptions}
         init={particlesInit}
@@ -25,7 +25,7 @@ function App(): JSX.Element {
       <Main />
       <Works />
       <Footer />
-    </div>
+    </>
   );
 }
 

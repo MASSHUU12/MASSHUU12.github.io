@@ -20,7 +20,7 @@ const Work = ({ item }: Props): JSX.Element => {
       <div className="works-section-content">
         <h2>{item.title}</h2>
         <p>{item.short_description}</p>
-        <Button text="More info" />
+        <Button text="More info" action={() => console.log(item.title)} />
       </div>
     </div>
   );

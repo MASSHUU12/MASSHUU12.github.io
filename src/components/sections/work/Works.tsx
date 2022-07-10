@@ -5,7 +5,7 @@ import { info } from "./info";
 const Works = () => {
   return (
     <section className="works-container">
-      <Link to="works" spy smooth href="#">
+      <Link to="works" spy smooth href="works">
         Works
       </Link>
       <section id="works">
