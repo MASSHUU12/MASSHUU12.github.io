@@ -26,7 +26,7 @@ const Footer = () => {
           Telegram
         </a>
       </div>
-      <div className="footer-bottom">
+      <div className="footer-middle">
         <p>Maciej Gawrysiak</p>
         <span>•</span>
         <a href="mailto:gawrysiak.maciej@pm.me">Email</a>
@@ -34,7 +34,8 @@ const Footer = () => {
         <Link to="header" spy smooth>
           {t("top")}
         </Link>
-        <span>•</span>
+      </div>
+      <div className="footer-bottom">
         <Flag flag="twemoji:flag-for-flag-poland" locale="pl" />
         <span>•</span>
         <Flag flag="twemoji:flag-for-flag-united-states" locale="en" />
