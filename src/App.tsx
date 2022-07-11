@@ -1,34 +1,36 @@
-import "./style/App.scss";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import SideBar from "./components/SideBar";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Experience from "./pages/Experience";
-import Home from "./pages/Home";
-import Work from "./pages/Work";
-import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
+import Particles from "react-tsparticles";
+import type { Engine } from "tsparticles-engine";
+import { loadFull } from "tsparticles";
+import "./App.scss";
+import particlesOptions from "./particles.json";
+import { ISourceOptions } from "tsparticles-engine";
+import Header from "./components/sections/header/Header";
+import Main from "./components/sections/main/Main";
+import Footer from "./components/sections/footer/Footer";
+import Works from "./components/sections/work/Works";
+import i18n from "./i18n";
 
-function App() {
-  const { i18n } = useTranslation();
+function App(): JSX.Element {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadFull(engine);
+  }, []);
 
   useEffect(() => {
-    // Detect browser language on load and set it to website
-    const lang = navigator.language;
-    i18n.changeLanguage(lang.split("-")[0]);
-  }, [i18n]);
+    // Detect locale on site load
+    i18n.changeLanguage(navigator.language.split("-")[0]);
+  }, []);
 
   return (
     <>
+      <Particles
+        options={particlesOptions as ISourceOptions}
+        init={particlesInit}
+      />
       <Header />
-      <Home />
-      <About />
-      <Contact />
-      <Experience />
-      <Work />
+      <Main />
+      <Works />
       <Footer />
-      <SideBar />
     </>
   );
 }
