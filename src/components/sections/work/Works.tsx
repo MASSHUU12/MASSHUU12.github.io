@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import Work from "../../common/Work";
+import WorkSingle from "./WorkSingle";
 import { info } from "./info";
 
 const Works = () => {
@@ -11,7 +11,7 @@ const Works = () => {
       <section id="works">
         <h1>Works</h1>
         {info.map((item, index) => (
-          <Work key={index} item={item} />
+          <WorkSingle key={index} item={item} />
         ))}
       </section>
     </section>
