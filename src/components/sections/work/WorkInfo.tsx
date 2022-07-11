@@ -10,6 +10,7 @@ interface Props {
     description: string;
     labels: Array<string>;
     teamwork: boolean;
+    wip: boolean;
     github: string;
     website: string;
     image: string;
@@ -53,7 +54,10 @@ const WorkInfo = ({ item, setToggle }: Props): JSX.Element => {
     >
       <animated.div className="common-left" style={left}>
         <h1>{item.title}.</h1>
-        {item.teamwork && <span>{t("teamwork")}</span>}
+        <div className="common-left-labels">
+          {item.teamwork && <span>{t("teamwork")}</span>}
+          {item.wip && <span>{t("wip")}</span>}
+        </div>
         <p>{t(item.description)}</p>
       </animated.div>
       <animated.div className="common-right" style={right}>

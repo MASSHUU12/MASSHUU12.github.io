@@ -96,8 +96,12 @@
             }
         }
 
-        span {
+        .common-left-labels {
             margin: 0 0 1.1rem;
+
+            span:nth-child(even) {
+                margin: 0 0 0 1rem;
+            }
         }
     }
 
@@ -137,6 +141,7 @@
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
+            flex-wrap: wrap;
 
             .common-right-label {
                 color: #fff;
@@ -221,10 +226,10 @@ header {
         margin: 5rem 0 0 0;
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 600;
             color: #4a4a4a;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
         }
 
         .works-section {
@@ -240,7 +245,7 @@ header {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-                filter: brightness(50%);
+                filter: brightness(45%);
             }
 
             .works-section-content {
@@ -367,13 +372,22 @@ footer {
 
         .common-left {
             min-height: 50%;
+            padding: 1.3rem 0 3rem;
+
+            .common-left-labels {
+                span:nth-child(even) {
+                    margin: 0;
+                }
+            }
         }
 
         .common-right {
             height: 100%;
 
             .common-right-labels {
-                flex-wrap: wrap;
+                .common-right-label {
+                    margin: 0;
+                }
             }
         }
     }

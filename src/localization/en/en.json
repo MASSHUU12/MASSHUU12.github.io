@@ -29,5 +29,8 @@
   "code": "code",
   "playingWith": "I'm playing with my",
   "cat": "cat",
-  "top": "Top"
+  "top": "Top",
+  "newLife": "A service designed to facilitate the adoption of animals.",
+  "newLifeDesc": "New Life is an application that works closely with the server to facilitate animal adoptions. The app will support two modes of operation. The first is to show the user animals that match him and he can swipe them left, or right (a way known from, for example, Tinder). The shelter then gets the information and can immediately accept the user to the next stage, or reject. The second mode is a general display of all the animals the server will be able to collect from the pages of various shelters.",
+  "wip": "Work in Progress"
 }

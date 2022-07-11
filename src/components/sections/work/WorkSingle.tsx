@@ -10,6 +10,7 @@ interface Props {
     description: string;
     labels: Array<string>;
     teamwork: boolean;
+    wip: boolean;
     github: string;
     website: string;
     image: string;
