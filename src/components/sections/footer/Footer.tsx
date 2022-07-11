@@ -1,9 +1,13 @@
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
+import Flag from "../../common/Flag";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer>
-      <div>
+      <div className="footer-top">
         <a
           href="https://www.linkedin.com/in/maciej-gawrysiak/"
           target="_blank"
@@ -22,12 +26,19 @@ const Footer = () => {
           Telegram
         </a>
       </div>
-      <p>
-        Maciej Gawrysiak • <a href="mailto:gawrysiak.maciej@pm.me">Email</a> •{" "}
+      <div className="footer-bottom">
+        <p>Maciej Gawrysiak</p>
+        <span>•</span>
+        <a href="mailto:gawrysiak.maciej@pm.me">Email</a>
+        <span>•</span>
         <Link to="header" spy smooth>
-          Top
+          {t("top")}
         </Link>
-      </p>
+        <span>•</span>
+        <Flag flag="twemoji:flag-for-flag-poland" locale="pl" />
+        <span>•</span>
+        <Flag flag="twemoji:flag-for-flag-united-states" locale="en" />
+      </div>
     </footer>
   );
 };

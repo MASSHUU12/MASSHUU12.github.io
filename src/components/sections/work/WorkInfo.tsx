@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useSpring, animated } from "@react-spring/web";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   item: {
@@ -18,6 +19,7 @@ interface Props {
 
 const WorkInfo = ({ item, setToggle }: Props): JSX.Element => {
   const [reverse, setReverse] = useState(false);
+  const { t } = useTranslation();
 
   const closeAnim = () => {
     reverse && setToggle(false);
@@ -51,12 +53,12 @@ const WorkInfo = ({ item, setToggle }: Props): JSX.Element => {
     >
       <animated.div className="common-left" style={left}>
         <h1>{item.title}.</h1>
-        {item.teamwork && <span>Teamwork</span>}
-        <p>{item.description}</p>
+        {item.teamwork && <span>{t("teamwork")}</span>}
+        <p>{t(item.description)}</p>
       </animated.div>
       <animated.div className="common-right" style={right}>
         <div className="common-right-header">
-          <h1>Details.</h1>
+          <h1>{t("details")}.</h1>
           <Icon
             onClick={() => setReverse(!reverse)}
             icon="carbon:close"
@@ -78,13 +80,13 @@ const WorkInfo = ({ item, setToggle }: Props): JSX.Element => {
           {item.github && (
             <a href={item.github} target="_blank" rel="noreferrer">
               <Icon icon="mdi:web" color="white" width="32" />
-              <span>Source code</span>
+              <span>{t("sourceCode")}</span>
             </a>
           )}
           {item.website && (
             <a href={item.website} target="_blank" rel="noreferrer">
               <Icon icon="mdi:web" color="white" width="32" />
-              <span>Website</span>
+              <span>{t("website")}</span>
             </a>
           )}
         </div>

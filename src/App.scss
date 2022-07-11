@@ -276,7 +276,7 @@ footer {
     width: 100%;
     padding: 0 0 2rem;
 
-    div {
+    .footer-top {
         display: flex;
         justify-content: center;
         width: 100%;
@@ -294,10 +294,22 @@ footer {
         }
     }
 
-    p {
-        font-size: 1rem;
-        font-weight: 300;
-        color: #fff;
+    .footer-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        span,
+        p {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #fff;
+        }
+
+        span {
+            margin: 0 0.5rem;
+        }
 
         a {
             text-decoration: none;

@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useSpring, animated } from "@react-spring/web";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   setToggle: React.Dispatch<React.SetStateAction<boolean>>;
@@ -8,6 +9,7 @@ interface Props {
 
 const About = ({ setToggle }: Props): JSX.Element => {
   const [reverse, setReverse] = useState(false);
+  const { t } = useTranslation();
 
   const closeAnim = () => {
     reverse && setToggle(false);
@@ -40,19 +42,19 @@ const About = ({ setToggle }: Props): JSX.Element => {
       onClick={() => setReverse(!reverse)}
     >
       <animated.div className="common-left" style={left}>
-        <h1>About Me.</h1>
-        <span>Junior Developer</span>
+        <h1>{t("aboutMe")}.</h1>
+        <span>{t("title")}</span>
         <p>
-          I'm Maciej, a 20-year-old Polish <strong>junior developer</strong>.
-          I'm a weird guy who likes to create weird things and bring them to
-          life. Not only that, but I like <strong>solving</strong> problems and{" "}
-          <strong>finding</strong> the best solutions. When I'm not playing with{" "}
-          <strong>code</strong>, I'm playing with my <strong>cat</strong>.
+          {t("iAm")} <strong>{t("title")}</strong>. {t("weird")} {t("notOnly")}{" "}
+          <strong>{t("solving")}</strong> {t("problems")}
+          <strong>{t("finding")}</strong> {t("solutions")} {t("whenImNot")}{" "}
+          <strong>{t("code")}</strong>, {t("playingWith")}{" "}
+          <strong>{t("cat")}</strong>.
         </p>
       </animated.div>
       <animated.div className="common-right" style={right}>
         <div className="common-right-header">
-          <h1>Contact.</h1>
+          <h1>{t("contact")}.</h1>
           <Icon
             onClick={() => setReverse(!reverse)}
             icon="carbon:close"
