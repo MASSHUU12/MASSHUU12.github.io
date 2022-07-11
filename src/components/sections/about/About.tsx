@@ -39,7 +39,7 @@ const About = ({ setToggle }: Props): JSX.Element => {
     <animated.section
       style={background}
       className="common-container"
-      onClick={() => setReverse(!reverse)}
+      onClick={() => setReverse(true)}
     >
       <animated.div className="common-left" style={left}>
         <h1>{t("aboutMe")}.</h1>
@@ -56,7 +56,7 @@ const About = ({ setToggle }: Props): JSX.Element => {
         <div className="common-right-header">
           <h1>{t("contact")}.</h1>
           <Icon
-            onClick={() => setReverse(!reverse)}
+            onClick={() => setReverse(true)}
             icon="carbon:close"
             color="white"
             width="48"
