@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.05fc02f2.css",
+    "main.js": "/static/js/main.6d50c9ec.js",
+    "static/media/newLife.webp": "/static/media/newLife.96ceb327be3c6109de52.webp",
+    "static/media/kolobrzegHotele.webp": "/static/media/kolobrzegHotele.6b3fb50fee723fd818e7.webp",
+    "static/media/pralka.webp": "/static/media/pralka.a75531e328b204458b79.webp",
+    "static/media/sendNote.webp": "/static/media/sendNote.e7af9530b17009333d84.webp",
+    "static/media/cutItMobile.webp": "/static/media/cutItMobile.67b410cc06a424391658.webp",
+    "static/media/cutIt.webp": "/static/media/cutIt.101e4cf98a173612853e.webp",
+    "index.html": "/index.html",
+    "main.05fc02f2.css.map": "/static/css/main.05fc02f2.css.map",
+    "main.6d50c9ec.js.map": "/static/js/main.6d50c9ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05fc02f2.css",
+    "static/js/main.6d50c9ec.js"
+  ]
+}
