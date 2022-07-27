@@ -2,23 +2,9 @@ import { Icon } from "@iconify/react";
 import { useSpring, animated } from "@react-spring/web";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { InfoToggleProps } from "../../../interfaces/interfaces";
 
-interface Props {
-  item: {
-    title: string;
-    short_description: string;
-    description: string;
-    labels: Array<string>;
-    teamwork: boolean;
-    wip: boolean;
-    github: string;
-    website: string;
-    image: string;
-  };
-  setToggle: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const WorkInfo = ({ item, setToggle }: Props): JSX.Element => {
+const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
   const [reverse, setReverse] = useState(false);
   const { t } = useTranslation();
 
@@ -55,8 +41,7 @@ const WorkInfo = ({ item, setToggle }: Props): JSX.Element => {
       <animated.div className="common-left" style={left}>
         <h1>{item.title}.</h1>
         <div className="common-left-labels">
-          {item.teamwork && <span>{t("teamwork")}</span>}
-          {item.wip && <span>{t("wip")}</span>}
+          {item.leftLabel && <span>{t(item.leftLabel)}</span>}
         </div>
         <p>{t(item.description)}</p>
       </animated.div>

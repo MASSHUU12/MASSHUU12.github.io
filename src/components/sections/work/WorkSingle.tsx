@@ -2,22 +2,9 @@ import { useState } from "react";
 import Button from "../../common/Button";
 import WorkInfo from "./WorkInfo";
 import { useTranslation } from "react-i18next";
+import { InfoProps } from "../../../interfaces/interfaces";
 
-interface Props {
-  item: {
-    title: string;
-    short_description: string;
-    description: string;
-    labels: Array<string>;
-    teamwork: boolean;
-    wip: boolean;
-    github: string;
-    website: string;
-    image: string;
-  };
-}
-
-const Work = ({ item }: Props): JSX.Element => {
+const Work = ({ item }: InfoProps): JSX.Element => {
   const [toggle, setToggle] = useState(false);
   const { t } = useTranslation();
 

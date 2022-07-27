@@ -31,6 +31,7 @@
   "cat": "kotem",
   "top": "Do góry",
   "newLife": "Serwis, którego zadaniem jest ułatwienie adopcji zwierząt.",
-  "newLifeDesc": "New Life to aplikacja ściśle współpracująca z serwerem, której zadaniem jest ułatwianie adopcji zwierząt. Aplikacja będzie obsługiwać dwa tryby pracy. Pierwszy to pokazywanie użytkownikowi zwierzęta pasujące do niego i może przesunąć je w lewo, lub prawo (sposób znany z np. Tindera). Schronisko dostaje wtedy informację i może od razu zaakceptować użytkownika do następnego etapu, lub odrzucić. Drugi tryb to ogólne wyświetlanie wszystkich zwierząt, jakie serwer będzie w stanie zebrać ze stron różnych schronisk.",
-  "wip": "Praca w Toku"
+  "newLifeDesc": "New Life to aplikacja, której zadaniem jest ułatwienie adopcji zwierząt. Aplikacja będzie obsługiwać dwa tryby pracy. Pierwszym trybem jest pokazywanie użytkownikowi zwierząt pasujących do niego w sposób znany z np. Tindera. Schronisko dostaje wtedy informację i może od razu zaakceptować użytkownika do następnego etapu, lub go odrzucić. Drugi tryb to ogólne wyświetlanie wszystkich zwierząt, jakie serwer będzie w stanie zebrać ze stron różnych schronisk.",
+  "wip": "Praca w Toku",
+  "suspended": "Zawieszone — projekt zbyt duży dla jednej osoby"
 }
