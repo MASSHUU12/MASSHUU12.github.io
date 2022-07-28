@@ -5,9 +5,13 @@ export interface InfoProps {
     description: string;
     labels: Array<string>;
     leftLabel: string;
-    github: string;
-    website: string;
     image: string;
+    links:
+      | {
+          name: string;
+          link: string;
+        }[]
+      | never[];
   };
 }
 
@@ -18,9 +22,13 @@ export interface InfoToggleProps {
     description: string;
     labels: Array<string>;
     leftLabel: string;
-    github: string;
-    website: string;
     image: string;
+    links:
+      | {
+          name: string;
+          link: string;
+        }[]
+      | never[];
   };
   setToggle: React.Dispatch<React.SetStateAction<boolean>>;
 }

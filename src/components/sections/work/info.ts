@@ -20,10 +20,8 @@ export const info = [
       "Redux",
     ],
     leftLabel: "suspended",
-    wip: true,
-    github: "",
-    website: "",
     image: NewLife,
+    links: [],
   },
   {
     title: "Cut.It",
@@ -31,9 +29,13 @@ export const info = [
     description: "cutItDesc",
     labels: ["Laravel", "MariaDB", "jQuery", "SCSS"],
     leftLabel: "",
-    github: "https://github.com/MASSHUU12/Cut.It",
-    website: "",
     image: CutIt,
+    links: [
+      {
+        name: "sourceCode",
+        link: "https://github.com/MASSHUU12/Cut.It",
+      },
+    ],
   },
   {
     title: "Cut.It Mobile",
@@ -41,9 +43,13 @@ export const info = [
     description: "cutItMobileDesc",
     labels: ["React Native", "Laravel API"],
     leftLabel: "",
-    github: "https://github.com/MASSHUU12/Cut.It-mobile",
-    website: "",
     image: CutItMobile,
+    links: [
+      {
+        name: "sourceCode",
+        link: "https://github.com/MASSHUU12/Cut.It-mobile",
+      },
+    ],
   },
   {
     title: "KolobrzegHotele",
@@ -51,9 +57,17 @@ export const info = [
     description: "kolobrzegHoteleDesc",
     labels: ["Laravel", "Bing Maps", "Kołobrzeg OpenData", "SCSS"],
     leftLabel: "teamwork",
-    github: "https://github.com/MASSHUU12/project-k",
-    website: "http://jakubdev.vxm.pl/",
     image: KolobrzegHotele,
+    links: [
+      {
+        name: "sourceCode",
+        link: "https://github.com/MASSHUU12/project-k",
+      },
+      {
+        name: "website",
+        link: "http://jakubdev.vxm.pl/",
+      },
+    ],
   },
   {
     title: "SendNote",
@@ -61,9 +75,13 @@ export const info = [
     description: "sendNoteDesc",
     labels: ["Laravel", "jQuery", "MariaDB", "SCSS"],
     leftLabel: "",
-    github: "https://github.com/MASSHUU12/SendNote",
-    website: "",
     image: sendNote,
+    links: [
+      {
+        name: "sourceCode",
+        link: "https://github.com/MASSHUU12/SendNote",
+      },
+    ],
   },
   {
     title: "Pralka",
@@ -71,8 +89,12 @@ export const info = [
     description: "pralkaDesc",
     labels: ["PHP", "PayPal", "SCSS"],
     leftLabel: "teamwork",
-    github: "https://github.com/MASSHUU12/praktyka-pralka",
-    website: "",
     image: Pralka,
+    links: [
+      {
+        name: "sourceCode",
+        link: "https://github.com/MASSHUU12/praktyka-pralka",
+      },
+    ],
   },
 ];

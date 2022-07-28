@@ -12,6 +12,7 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
     reverse && setToggle(false);
   };
 
+  // Animation of the appearance of sections with details.
   const left = useSpring({
     to: { x: 0 },
     from: { x: -window.innerWidth * 0.5 },
@@ -57,6 +58,7 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
           />
         </div>
         <div className="common-right-labels">
+          {/* Label display. */}
           {item.labels.map((label, index) => {
             return (
               <span key={index} className="common-right-label">
@@ -66,18 +68,28 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
           })}
         </div>
         <div className="common-right-links">
-          {item.github && (
-            <a href={item.github} target="_blank" rel="noreferrer">
-              <Icon icon="mdi:web" color="white" width="32" />
-              <span>{t("sourceCode")}</span>
-            </a>
-          )}
-          {item.website && (
-            <a href={item.website} target="_blank" rel="noreferrer">
-              <Icon icon="mdi:web" color="white" width="32" />
-              <span>{t("website")}</span>
-            </a>
-          )}
+          {/* Link display. */}
+          {item.links.map((object, index) => {
+            return (
+              <a
+                href={object.link}
+                key={index}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icon
+                  icon={
+                    object.name === "sourceCode"
+                      ? "akar-icons:github-fill"
+                      : "mdi:web"
+                  }
+                  color="white"
+                  width="32"
+                />
+                <span>{t(object.name)}</span>
+              </a>
+            );
+          })}
         </div>
       </animated.div>
     </animated.section>
