@@ -11,7 +11,7 @@ const Work = ({ item }: InfoProps): JSX.Element => {
   return (
     <>
       <div className="works-section">
-        <img src={item.image} alt={t(item.title)} />
+        <img loading="lazy" src={item.image} alt={t(item.title)} />
         <div className="works-section-content">
           <h2>{t(item.title)}</h2>
           <p>{t(item.short_description)}</p>
