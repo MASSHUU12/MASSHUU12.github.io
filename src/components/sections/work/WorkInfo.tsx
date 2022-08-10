@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { useSpring, animated } from "@react-spring/web";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { isEmpty } from "underscore";
 import { InfoToggleProps } from "../../../interfaces/interfaces";
 
 const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
@@ -42,7 +43,9 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
       <animated.div className="common-left" style={left}>
         <h1>{item.title}.</h1>
         <div className="common-left-labels">
-          {item.leftLabel && <span>{t(item.leftLabel)}</span>}
+          {item.leftLabel.map((label, index) => {
+            return <span key={index}>{t(label)}</span>;
+          })}
         </div>
         <p>{t(item.description)}</p>
       </animated.div>

@@ -97,6 +97,8 @@
         }
 
         .common-left-labels {
+            display: flex;
+            flex-wrap: wrap;
             margin: 0 0 1.1rem;
 
             span:nth-child(even) {
@@ -341,13 +343,14 @@ footer {
         .common-left,
         .common-right {
             width: 100%;
-            padding: 1.3rem 0;
+            padding: 0;
 
             h1,
             span,
             p,
             a {
                 padding: 0 1rem;
+                margin: 0;
             }
 
             a {
@@ -374,6 +377,7 @@ footer {
 
         .common-right {
             height: 100%;
+            padding: 1rem 0 0 0;
 
             .common-right-labels {
                 .common-right-label {

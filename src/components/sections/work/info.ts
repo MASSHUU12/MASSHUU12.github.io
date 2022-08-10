@@ -19,7 +19,7 @@ export const info = [
       "React Native",
       "Redux",
     ],
-    leftLabel: "suspended",
+    leftLabel: ["suspended", "shareSourceCode"],
     image: NewLife,
     links: [],
   },
@@ -28,7 +28,7 @@ export const info = [
     short_description: "linkShortener",
     description: "cutItDesc",
     labels: ["Laravel", "MariaDB", "jQuery", "SCSS"],
-    leftLabel: "",
+    leftLabel: [],
     image: CutIt,
     links: [
       {
@@ -42,7 +42,7 @@ export const info = [
     short_description: "mobileLinkShortener",
     description: "cutItMobileDesc",
     labels: ["React Native", "Laravel API"],
-    leftLabel: "",
+    leftLabel: [],
     image: CutItMobile,
     links: [
       {
@@ -56,7 +56,7 @@ export const info = [
     short_description: "searchEngine",
     description: "kolobrzegHoteleDesc",
     labels: ["Laravel", "Bing Maps", "Kołobrzeg OpenData", "SCSS"],
-    leftLabel: "teamwork",
+    leftLabel: ["teamwork"],
     image: KolobrzegHotele,
     links: [
       {
@@ -74,7 +74,7 @@ export const info = [
     short_description: "secureSharing",
     description: "sendNoteDesc",
     labels: ["Laravel", "jQuery", "MariaDB", "SCSS"],
-    leftLabel: "",
+    leftLabel: [],
     image: sendNote,
     links: [
       {
@@ -88,7 +88,7 @@ export const info = [
     short_description: "secondHandStore",
     description: "pralkaDesc",
     labels: ["PHP", "PayPal", "SCSS"],
-    leftLabel: "teamwork",
+    leftLabel: ["teamwork"],
     image: Pralka,
     links: [
       {
