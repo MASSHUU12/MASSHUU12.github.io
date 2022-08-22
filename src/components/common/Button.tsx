@@ -1,11 +1,15 @@
 interface Props {
   text: string;
+  white?: boolean;
   action: () => void;
 }
 
-const Button = ({ text, action }: Props): JSX.Element => {
+const Button = ({ text, white = false, action }: Props): JSX.Element => {
   return (
-    <div className="common-button" onClick={action}>
+    <div
+      className={`common-button${white ? " common-button-white" : ""}`}
+      onClick={action}
+    >
       {text}
     </div>
   );

@@ -1,11 +1,12 @@
-import { useState } from "react";
 import { Link } from "react-scroll";
-import About from "../about/About";
 import { useTranslation } from "react-i18next";
+import { useAppDispatch } from "../../app/hooks";
+import { toggleAbout } from "../../features/aboutSlice";
+import { toggleCV } from "../../features/cvSlice";
 
 const Header = (): JSX.Element => {
-  const [toggle, setToggle] = useState(false);
   const { t } = useTranslation();
+  const dispatch = useAppDispatch();
 
   return (
     <>
@@ -14,12 +15,17 @@ const Header = (): JSX.Element => {
           <Link to="works" spy smooth>
             {t("works")}
           </Link>
-          <Link to="contact" spy smooth onClick={() => setToggle(!toggle)}>
+          <Link
+            to="contact"
+            spy
+            smooth
+            onClick={() => dispatch(toggleAbout(true))}
+          >
             {t("contact")}
           </Link>
+          <button onClick={() => dispatch(toggleCV(true))}>CV</button>
         </div>
       </header>
-      {toggle && <About setToggle={setToggle} />}
     </>
   );
 };

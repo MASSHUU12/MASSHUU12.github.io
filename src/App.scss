@@ -14,6 +14,20 @@
     border-radius: 100vh;
 }
 
+
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+    a:hover,
+    .common-button:hover,
+    svg:hover,
+    button:hover {
+        filter: brightness(75%);
+        cursor: pointer;
+    }
+}
+
 /* Common */
 .common-button {
     background-color: #ec302e;
@@ -23,18 +37,13 @@
     border-radius: 0.2rem;
     font-size: 1.5rem;
     font-weight: 500;
+    min-width: 3.5rem;
+    text-align: center;
 }
 
-* {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-
-    a:hover,
-    .common-button:hover,
-    svg:hover {
-        filter: brightness(75%);
-        cursor: pointer;
-    }
+.common-button-white {
+    background-color: #fff;
+    color: #1a1920;
 }
 
 .common-container {
@@ -52,7 +61,8 @@
     margin: 0 !important;
 
     .common-left,
-    .common-right {
+    .common-right,
+    .common-center {
         width: 30%;
         padding: 5rem;
         display: flex;
@@ -156,6 +166,28 @@
             margin: 1rem 0 0 0;
         }
     }
+
+    .common-center {
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        background-color: #1a1920;
+        color: #fff;
+        padding: 1rem 2rem 3rem;
+        min-height: fit-content;
+
+        section {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        a {
+            color: #fff;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+    }
 }
 
 /* End common */
@@ -169,16 +201,24 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    font-size: 1.3rem;
-    font-weight: 600;
     padding: 1em 0;
 
-    a {
+    a,
+    button {
+        font-size: 1.3rem;
+        font-weight: 600;
         color: #b0b2c3;
     }
 
+    button {
+        background-color: transparent;
+        border: none;
+    }
+
     div {
-        a:first-child {
+
+        a,
+        button {
             margin: 0 1.5em 0 0;
         }
     }
@@ -204,6 +244,15 @@ header {
         font-style: italic;
         font-weight: 300;
         margin: 0 0 1rem;
+    }
+
+    .main-container-btns {
+        display: flex;
+        flex-direction: row;
+
+        div:first-child {
+            margin: 0 1.3rem 0 0;
+        }
     }
 }
 
@@ -384,6 +433,10 @@ footer {
                     margin: 0;
                 }
             }
+        }
+
+        .common-center {
+            width: 75%;
         }
     }
 

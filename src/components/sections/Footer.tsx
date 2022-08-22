@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
-import Flag from "../../common/Flag";
+import Flag from "../common/Flag";
 
 const Footer = () => {
   const { t } = useTranslation();

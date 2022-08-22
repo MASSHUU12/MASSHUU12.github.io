@@ -2,7 +2,6 @@ import { Icon } from "@iconify/react";
 import { useSpring, animated } from "@react-spring/web";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { isEmpty } from "underscore";
 import { InfoToggleProps } from "../../../interfaces/interfaces";
 
 const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {

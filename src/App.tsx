@@ -5,9 +5,9 @@ import { loadFull } from "tsparticles";
 import "./App.scss";
 import particlesOptions from "./particles.json";
 import { ISourceOptions } from "tsparticles-engine";
-import Header from "./components/sections/header/Header";
-import Main from "./components/sections/main/Main";
-import Footer from "./components/sections/footer/Footer";
+import Header from "./components/sections/Header";
+import Main from "./components/sections/Main";
+import Footer from "./components/sections/Footer";
 import Works from "./components/sections/work/Works";
 import i18n from "./i18n";
 
