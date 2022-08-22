@@ -12,13 +12,14 @@ const Header = (): JSX.Element => {
     <>
       <header id="header">
         <div>
-          <Link to="works" spy smooth>
+          <Link to="works" spy smooth rel="noreferrer">
             {t("works")}
           </Link>
           <Link
             to="contact"
             spy
             smooth
+            rel="noreferrer"
             onClick={() => dispatch(toggleAbout(true))}
           >
             {t("contact")}
