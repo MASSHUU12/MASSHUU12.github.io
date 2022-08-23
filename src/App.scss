@@ -14,7 +14,6 @@
     border-radius: 100vh;
 }
 
-
 * {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -74,12 +73,6 @@
             font-size: 2.5rem;
         }
 
-        span {
-            font-size: .75rem;
-            font-weight: 300;
-            font-style: italic;
-        }
-
         p {
             font-size: .9rem;
             font-weight: 500;
@@ -97,6 +90,12 @@
         span,
         p {
             color: #1c1d25;
+        }
+
+        span {
+            font-size: .75rem;
+            font-weight: 300;
+            font-style: italic;
         }
 
         p {
@@ -120,22 +119,6 @@
     .common-right {
         background-color: #1a1920;
 
-        a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #fff;
-            margin: 0 0 0.8rem;
-            width: fit-content;
-
-            span {
-                font-style: normal;
-                font-size: 1.2rem;
-                font-weight: 500;
-                margin: 0 0 0 1rem;
-            }
-        }
-
         .common-right-header {
             display: flex;
             flex-direction: row;
@@ -158,12 +141,14 @@
             .common-right-label {
                 color: #fff;
                 font-size: 1rem;
-                margin: 0 1rem 0 0;
+                margin: 0 1rem 1rem 0;
             }
         }
 
         .common-right-links {
-            margin: 1rem 0 0 0;
+            a:nth-child(even) {
+                margin: 0.5rem 0;
+            }
         }
     }
 
@@ -190,6 +175,24 @@
     }
 }
 
+.common-custom-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    width: fit-content;
+
+    span {
+        margin: 0 0 0 1rem;
+    }
+}
+
+.common-custom-link-wo-icon {
+    span {
+        margin: 0;
+    }
+}
+
 /* End common */
 
 body {
@@ -199,7 +202,6 @@ body {
 
 header {
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
     padding: 1em 0;
 
@@ -208,19 +210,13 @@ header {
         font-size: 1.3rem;
         font-weight: 600;
         color: #b0b2c3;
+        margin: 0 1.5em 0 0;
     }
 
     button {
         background-color: transparent;
         border: none;
-    }
-
-    div {
-
-        a,
-        button {
-            margin: 0 1.5em 0 0;
-        }
+        margin: 0;
     }
 }
 
@@ -325,28 +321,16 @@ header {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0 0 2rem;
-
     .footer-top {
         display: flex;
         justify-content: center;
-        width: 100%;
-        margin: 0 0 1rem;
+        font-weight: 600;
+    }
 
-        a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-
+    .footer-top,
+    .footer-middle {
         a:nth-child(2) {
-            margin: 0 2rem;
+            margin: 0 1rem;
         }
     }
 
@@ -356,18 +340,19 @@ footer {
         justify-content: center;
         align-items: center;
         margin: 0 0 1rem;
+    }
+
+    .footer-middle {
 
         span,
-        p,
         a {
-            font-size: 1rem;
-            font-weight: 300;
             color: #fff;
-            text-decoration: none;
         }
+    }
 
-        span {
-            margin: 0 0.5rem;
+    .footer-bottom {
+        svg:nth-child(2) {
+            margin: 0 0 0 1rem;
         }
     }
 }
@@ -395,17 +380,14 @@ footer {
             padding: 0;
 
             h1,
-            span,
             p,
             a {
                 padding: 0 1rem;
                 margin: 0;
             }
 
-            a {
-                span {
-                    padding: 0;
-                }
+            span {
+                padding: 0 1rem;
             }
 
             h1 {
@@ -429,8 +411,10 @@ footer {
             padding: 1rem 0 0 0;
 
             .common-right-labels {
+                margin: 0 0 1rem;
+
                 .common-right-label {
-                    margin: 0;
+                    margin: 0 0;
                 }
             }
         }

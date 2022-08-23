@@ -3,6 +3,7 @@ import { useSpring, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { toggleAbout, toggleReverse } from "../../features/aboutSlice";
+import Social from "../common/Social";
 
 const About = (): JSX.Element => {
   const toggle = useAppSelector((state) => state.about);
@@ -65,54 +66,26 @@ const About = (): JSX.Element => {
               />
             </div>
             <div className="common-right-links">
-              <a
+              <Social
                 href="mailto:gawrysiak.maciej@pm.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Icon
-                  icon="ic:outline-alternate-email"
-                  color="white"
-                  width="32"
-                  height="32"
-                />
-                <span>gawrysiak.maciej@pm.me</span>
-              </a>
-              <a
+                text="gawrysiak.maciej@pm.me"
+                icon="ic:outline-alternate-email"
+              />
+              <Social
                 href="https://github.com/MASSHUU12"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Icon
-                  icon="brandico:github"
-                  color="white"
-                  width="32"
-                  height="32"
-                />
-                <span>MASSHUU12</span>
-              </a>
-              <a href="https://t.me/MASSHUU" target="_blank" rel="noreferrer">
-                <Icon
-                  icon="akar-icons:telegram-fill"
-                  color="white"
-                  width="32"
-                  height="32"
-                />
-                <span>MASSHUU</span>
-              </a>
-              <a
+                text="MASSHUU12"
+                icon="brandico:github"
+              />
+              <Social
+                href="https://t.me/MASSHUU"
+                text="MASSHUU"
+                icon="akar-icons:telegram-fill"
+              />
+              <Social
                 href="https://linkedin.com/in/maciej-gawrysiak"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Icon
-                  icon="brandico:linkedin-rect"
-                  color="white"
-                  width="32"
-                  height="32"
-                />
-                <span>Linkedin</span>
-              </a>
+                text="Linkedin"
+                icon="brandico:linkedin-rect"
+              />
             </div>
           </animated.div>
         </animated.section>

@@ -9,25 +9,21 @@ const Header = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   return (
-    <>
-      <header id="header">
-        <div>
-          <Link to="works" spy smooth rel="noreferrer">
-            {t("works")}
-          </Link>
-          <Link
-            to="contact"
-            spy
-            smooth
-            rel="noreferrer"
-            onClick={() => dispatch(toggleAbout(true))}
-          >
-            {t("contact")}
-          </Link>
-          <button onClick={() => dispatch(toggleCV(true))}>CV</button>
-        </div>
-      </header>
-    </>
+    <header id="header">
+      <Link to="works" spy smooth rel="noreferrer">
+        {t("works")}
+      </Link>
+      <Link
+        to="contact"
+        spy
+        smooth
+        rel="noreferrer"
+        onClick={() => dispatch(toggleAbout(true))}
+      >
+        {t("contact")}
+      </Link>
+      <button onClick={() => dispatch(toggleCV(true))}>CV</button>
+    </header>
   );
 };
 

@@ -3,6 +3,7 @@ import { useSpring, animated } from "@react-spring/web";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { InfoToggleProps } from "../../../interfaces/interfaces";
+import Social from "../../common/Social";
 
 const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
   const [reverse, setReverse] = useState(false);
@@ -73,23 +74,16 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
           {/* Link display. */}
           {item.links.map((object, index) => {
             return (
-              <a
+              <Social
                 href={object.link}
+                text={t(object.name)}
+                icon={
+                  object.name === "sourceCode"
+                    ? "akar-icons:github-fill"
+                    : "mdi:web"
+                }
                 key={index}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Icon
-                  icon={
-                    object.name === "sourceCode"
-                      ? "akar-icons:github-fill"
-                      : "mdi:web"
-                  }
-                  color="white"
-                  width="32"
-                />
-                <span>{t(object.name)}</span>
-              </a>
+              />
             );
           })}
         </div>
