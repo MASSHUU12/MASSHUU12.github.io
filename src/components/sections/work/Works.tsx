@@ -15,7 +15,7 @@ const Works = () => {
         <h1>{t("works")}</h1>
         {/* Map through items and displays them. */}
         {info.map((item, index) => (
-          <WorkSingle key={index} item={item} />
+          <WorkSingle key={index} item={item} keyID={index} />
         ))}
       </section>
     </section>

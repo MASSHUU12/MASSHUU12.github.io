@@ -13,6 +13,7 @@ export interface InfoProps {
         }[]
       | never[];
   };
+  keyID: number;
 }
 
 export interface InfoToggleProps {
