@@ -291,15 +291,14 @@ header {
 
         .works-section-labels {
             margin: 1rem 0 0 0;
-
-            span:nth-child(even) {
-                margin: 0 0.5rem;
-            }
+            display: flex;
+            flex-wrap: wrap;
 
             span {
                 background-color: #4a4a4a;
                 color: #fff;
                 padding: 0.5rem;
+                margin: 0.2rem 0.5rem 0.2rem 0;
                 border-radius: 0.3rem;
             }
         }
@@ -324,12 +323,6 @@ header {
         justify-content: center;
         align-items: center;
 
-        .work-info-container-back {
-            position: absolute;
-            left: 2rem;
-            top: 2rem;
-        }
-
         .work-info-element {
             height: 100%;
             background-color: #fff;
@@ -352,8 +345,8 @@ header {
                         font-weight: 600;
                     }
 
-                    span:nth-child(even) {
-                        margin: 0 0.3rem;
+                    span {
+                        margin: 0.2rem 0.3rem 0.2rem 0;
                     }
 
                     div {
@@ -366,6 +359,8 @@ header {
 
                     .work-info-labels {
                         margin: 0 0 1rem;
+                        display: flex;
+                        flex-wrap: wrap;
 
                         span {
                             color: #fff;
@@ -529,22 +524,29 @@ footer {
 
     .works-container {
         width: 100%;
+        align-items: center;
 
         .works-section {
-            width: 90%;
-            margin: 0 0 2rem;
+            margin: 0 0 1rem;
+        }
+    }
 
-            .works-section-content {
-                text-align: left;
-                padding: 0 0 1.5rem 1.5rem;
-                max-width: 75%;
+    .work-info {
+        .work-info-container {
 
-                h2 {
-                    font-size: 1.8rem;
-                }
+            .work-info-container-back {
+                left: 0.3rem;
+                top: 0.3rem;
+            }
 
-                p {
-                    font-size: 1rem;
+            .work-info-element {
+                width: 90%;
+                border-width: 1rem 1.5rem;
+
+                section {
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    margin: 0 0 1rem;
                 }
             }
         }

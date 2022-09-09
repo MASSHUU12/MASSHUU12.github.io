@@ -86,17 +86,17 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
     // Its presence nullifies errors with the animation and display of the element.
     <div className="work-info">
       <animated.section className="work-info-container" style={background}>
-        {/* Back button */}
-        <animated.div style={backButton}>
-          <Icon
-            className="work-info-container-back"
-            icon="ic:round-arrow-back-ios-new"
-            color="white"
-            width="64"
-            onClick={() => setReverse(true)}
-          />
-        </animated.div>
         <animated.div className="work-info-element" style={element}>
+          {/* Back button */}
+          <animated.div style={backButton}>
+            <Icon
+              className="work-info-container-back"
+              icon="ic:round-arrow-back-ios-new"
+              color="#4a4a4a"
+              width="48"
+              onClick={() => setReverse(true)}
+            />
+          </animated.div>
           {/* Basic info section */}
           <section>
             <div className="work-info-details">
