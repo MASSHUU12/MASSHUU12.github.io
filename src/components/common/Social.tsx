@@ -4,6 +4,7 @@ interface Props {
   href: string;
   text: string;
   icon?: string;
+  color?: string;
 }
 
 /**
@@ -15,7 +16,12 @@ interface Props {
  *
  * @returns JSX.Element
  */
-const Social = ({ href, text, icon = "" }: Props): JSX.Element => {
+const Social = ({
+  href,
+  text,
+  icon = "",
+  color = "white",
+}: Props): JSX.Element => {
   return (
     <a
       href={href}
@@ -26,7 +32,7 @@ const Social = ({ href, text, icon = "" }: Props): JSX.Element => {
       }`}
     >
       {icon !== "" ? (
-        <Icon icon={icon} color="white" width="32" height="32" />
+        <Icon icon={icon} color={color} width="32" height="32" />
       ) : (
         ""
       )}

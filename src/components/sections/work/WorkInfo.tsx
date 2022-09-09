@@ -25,70 +25,81 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
     from: { x: window.innerWidth * 0.5 },
     reset: true,
     reverse: reverse,
-    onRest: closeAnim,
   });
   const background = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
+    to: { y: 0 },
+    from: { y: window.innerHeight },
     reset: true,
     reverse: reverse,
+    onRest: closeAnim,
   });
 
   return (
-    <animated.section
-      style={background}
-      className="common-container"
-      onClick={() => setReverse(true)}
-    >
-      <animated.div className="common-left" style={left}>
-        <h1>{item.title}.</h1>
-        <div className="common-left-labels">
-          {item.leftLabel.map((label, index) => {
-            return <span key={index}>{t(label)}</span>;
-          })}
+    // Although it seems that this div is unnecessary,
+    // it is unfortunately required.
+    // Its presence nullifies errors with the animation and display of the element.
+    <div className="work-info">
+      <animated.section className="work-info-container" style={background}>
+        {/* Back button */}
+        <Icon
+          className="work-info-container-back"
+          icon="ic:round-arrow-back-ios-new"
+          color="white"
+          width="64"
+          onClick={() => setReverse(true)}
+        />
+        <div className="work-info-element">
+          {/* Basic info section */}
+          <section>
+            <div className="work-info-details">
+              <h1>{item.title}</h1>
+              {item.leftLabel ? (
+                <div>
+                  {item.leftLabel.map((label, index) => {
+                    return <span key={index}>{t(label)}</span>;
+                  })}
+                </div>
+              ) : (
+                ""
+              )}
+              {/* Labels */}
+              {item.labels ? (
+                <div className="work-info-labels">
+                  {item.labels.map((label, index) => {
+                    return <span key={index}>{t(label)}</span>;
+                  })}
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
+            {/* Links */}
+            <div className="work-info-details-links">
+              {item.links.map((object, index) => {
+                return (
+                  <Social
+                    href={object.link}
+                    text={t(object.name)}
+                    icon={
+                      object.name === "sourceCode"
+                        ? "akar-icons:github-fill"
+                        : "mdi:web"
+                    }
+                    color="#1a1920"
+                    key={index}
+                  />
+                );
+              })}
+            </div>
+          </section>
+          {/* Description section */}
+          <div className="work-info-desc">
+            <h3>Description</h3>
+            <p>{t(item.description)}</p>
+          </div>
         </div>
-        <p>{t(item.description)}</p>
-      </animated.div>
-      <animated.div className="common-right" style={right}>
-        <div className="common-right-header">
-          <h1>{t("details")}.</h1>
-          <Icon
-            onClick={() => setReverse(true)}
-            icon="carbon:close"
-            color="white"
-            width="48"
-            height="48"
-          />
-        </div>
-        <div className="common-right-labels">
-          {/* Label display. */}
-          {item.labels.map((label, index) => {
-            return (
-              <span key={index} className="common-right-label">
-                {label}
-              </span>
-            );
-          })}
-        </div>
-        <div className="common-right-links">
-          {/* Link display. */}
-          {item.links.map((object, index) => {
-            return (
-              <Social
-                href={object.link}
-                text={t(object.name)}
-                icon={
-                  object.name === "sourceCode"
-                    ? "akar-icons:github-fill"
-                    : "mdi:web"
-                }
-                key={index}
-              />
-            );
-          })}
-        </div>
-      </animated.div>
-    </animated.section>
+      </animated.section>
+    </div>
   );
 };
 

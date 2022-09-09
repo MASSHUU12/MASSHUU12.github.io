@@ -33,6 +33,6 @@
   "newLife": "Serwis, którego zadaniem jest ułatwienie adopcji zwierząt.",
   "newLifeDesc": "New Life to aplikacja, której zadaniem jest ułatwienie adopcji zwierząt. Aplikacja będzie obsługiwać dwa tryby pracy. Pierwszym trybem jest pokazywanie użytkownikowi zwierząt pasujących do niego w sposób znany z np. Tindera. Schronisko dostaje wtedy informację i może od razu zaakceptować użytkownika do następnego etapu, lub go odrzucić. Drugi tryb to ogólne wyświetlanie wszystkich zwierząt, jakie serwer będzie w stanie zebrać ze stron różnych schronisk.",
   "wip": "Praca w Toku",
-  "suspended": "Zawieszone — projekt zbyt duży dla jednej osoby",
-  "shareSourceCode": "Mogę udostępnić kod źródłowy"
+  "suspended": "Zawieszone — projekt zbyt duży dla jednej osoby.",
+  "shareSourceCode": "Mogę udostępnić kod źródłowy."
 }

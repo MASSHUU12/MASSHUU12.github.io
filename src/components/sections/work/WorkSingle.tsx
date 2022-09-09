@@ -16,6 +16,7 @@ const Work = ({ item, keyID }: InfoProps): JSX.Element => {
     y: animPlayed ? 0 : 100,
     scale: mouseOver ? 1.1 : 1,
     reset: true,
+    cancel: toggle,
   });
 
   // Checks whether the observed changes require running an animation.

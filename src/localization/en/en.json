@@ -33,6 +33,6 @@
   "newLife": "A service designed to facilitate the adoption of animals.",
   "newLifeDesc": "New Life is an application designed to facilitate animal adoption. The app will support two modes of operation. The first mode is to show the user matching animals in a way known from, for example, Tinder. The shelter then gets the information and can immediately accept the user to the next stage, or reject him. The second mode is a general display of all the animals the server will be able to collect from the pages of various shelters.",
   "wip": "Work in Progress",
-  "suspended": "Suspended - project too large for one person",
-  "shareSourceCode": "I can share the source code"
+  "suspended": "Suspended - project too large for one person.",
+  "shareSourceCode": "I can share the source code."
 }
