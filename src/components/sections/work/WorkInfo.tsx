@@ -13,25 +13,71 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
     reverse && setToggle(false);
   };
 
-  // Animation of the appearance of sections with details.
-  const left = useSpring({
-    to: { x: 0 },
-    from: { x: -window.innerWidth * 0.5 },
+  // Common animation config
+  const slideInConfig = {
+    to: {
+      y: 0,
+      opacity: 1,
+    },
+    from: {
+      y: 100,
+      opacity: 0,
+    },
     reset: true,
     reverse: reverse,
-  });
-  const right = useSpring({
-    to: { x: 0 },
-    from: { x: window.innerWidth * 0.5 },
-    reset: true,
-    reverse: reverse,
-  });
+  };
+
+  // Animations of the appearance of sections.
   const background = useSpring({
     to: { y: 0 },
     from: { y: window.innerHeight },
     reset: true,
     reverse: reverse,
     onRest: closeAnim,
+  });
+
+  const element = useSpring({
+    to: {
+      scaleX: 1,
+      opacity: 1,
+    },
+    from: {
+      scaleX: 0,
+      opacity: 0,
+    },
+    reset: true,
+    reverse: reverse,
+    delay: 250,
+  });
+
+  const backButton = useSpring({
+    to: {
+      opacity: 1,
+    },
+    from: {
+      opacity: 0,
+    },
+    reset: true,
+    reverse: reverse,
+    delay: 500,
+  });
+
+  // Delay 500
+  const delay500 = useSpring({
+    ...slideInConfig,
+    delay: 500,
+  });
+
+  // Delay 600
+  const delay600 = useSpring({
+    ...slideInConfig,
+    delay: 600,
+  });
+
+  // Delay 700
+  const labels = useSpring({
+    ...slideInConfig,
+    delay: 700,
   });
 
   return (
@@ -41,40 +87,42 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
     <div className="work-info">
       <animated.section className="work-info-container" style={background}>
         {/* Back button */}
-        <Icon
-          className="work-info-container-back"
-          icon="ic:round-arrow-back-ios-new"
-          color="white"
-          width="64"
-          onClick={() => setReverse(true)}
-        />
-        <div className="work-info-element">
+        <animated.div style={backButton}>
+          <Icon
+            className="work-info-container-back"
+            icon="ic:round-arrow-back-ios-new"
+            color="white"
+            width="64"
+            onClick={() => setReverse(true)}
+          />
+        </animated.div>
+        <animated.div className="work-info-element" style={element}>
           {/* Basic info section */}
           <section>
             <div className="work-info-details">
-              <h1>{item.title}</h1>
+              <animated.h1 style={delay500}>{item.title}</animated.h1>
               {item.leftLabel ? (
-                <div>
+                <animated.div style={delay600}>
                   {item.leftLabel.map((label, index) => {
                     return <span key={index}>{t(label)}</span>;
                   })}
-                </div>
+                </animated.div>
               ) : (
                 ""
               )}
               {/* Labels */}
               {item.labels ? (
-                <div className="work-info-labels">
+                <animated.div style={labels} className="work-info-labels">
                   {item.labels.map((label, index) => {
                     return <span key={index}>{t(label)}</span>;
                   })}
-                </div>
+                </animated.div>
               ) : (
                 ""
               )}
             </div>
             {/* Links */}
-            <div className="work-info-details-links">
+            <animated.div style={delay500} className="work-info-details-links">
               {item.links.map((object, index) => {
                 return (
                   <Social
@@ -90,14 +138,14 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
                   />
                 );
               })}
-            </div>
+            </animated.div>
           </section>
           {/* Description section */}
           <div className="work-info-desc">
-            <h3>Description</h3>
-            <p>{t(item.description)}</p>
+            <animated.h3 style={delay500}>Description</animated.h3>
+            <animated.p style={delay600}>{t(item.description)}</animated.p>
           </div>
-        </div>
+        </animated.div>
       </animated.section>
     </div>
   );
