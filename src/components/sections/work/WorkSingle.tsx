@@ -7,8 +7,9 @@ import { useSpring, animated } from "@react-spring/web";
 const Work = ({ item, keyID }: InfoProps): JSX.Element => {
   const [toggle, setToggle] = useState(false);
   const [mouseOver, setMouseOver] = useState(false);
-  const { t } = useTranslation();
   const [animPlayed, setAnimPlayed] = useState(false);
+
+  const { t } = useTranslation();
 
   // Item animation.
   const styles = useSpring({
@@ -47,7 +48,13 @@ const Work = ({ item, keyID }: InfoProps): JSX.Element => {
         style={styles}
         className="works-section"
         id={`w${keyID}`}
-        onClick={() => setToggle(!toggle)}
+        onClick={() => {
+          // Open window.
+          setToggle(!toggle);
+
+          // Give class to body to prevent from scrolling page.
+          document.querySelector("body")!.className = "disable-scroll";
+        }}
         onMouseEnter={() => setMouseOver(true)}
         onMouseLeave={() => setMouseOver(false)}
       >

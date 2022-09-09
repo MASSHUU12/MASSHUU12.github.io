@@ -94,7 +94,13 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
               icon="ic:round-arrow-back-ios-new"
               color="#4a4a4a"
               width="48"
-              onClick={() => setReverse(true)}
+              onClick={() => {
+                // Close window.
+                setReverse(true);
+
+                // Remove class from body to prevent from scrolling page.
+                document.querySelector("body")!.className = "";
+              }}
             />
           </animated.div>
           {/* Basic info section */}
