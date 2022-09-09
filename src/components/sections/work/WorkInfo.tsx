@@ -29,8 +29,14 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
 
   // Animations of the appearance of sections.
   const background = useSpring({
-    to: { y: 0 },
-    from: { y: window.innerHeight },
+    to: {
+      scaleX: 1,
+      opacity: reverse ? 0.3 : 1,
+    },
+    from: {
+      scaleX: 0,
+      opacity: reverse ? 0 : 1,
+    },
     reset: true,
     reverse: reverse,
     onRest: closeAnim,
