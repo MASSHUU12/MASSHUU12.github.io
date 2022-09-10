@@ -1,21 +1,12 @@
-import { useCallback, useEffect } from "react";
-import Particles from "react-tsparticles";
-import type { Engine } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
-import "./App.scss";
-import particlesOptions from "./particles.json";
-import { ISourceOptions } from "tsparticles-engine";
+import { useEffect } from "react";
 import Header from "./components/sections/Header";
 import Main from "./components/sections/Main";
 import Footer from "./components/sections/Footer";
 import Works from "./components/sections/work/Works";
 import i18n from "./i18n";
+import "./App.scss";
 
 function App(): JSX.Element {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine);
-  }, []);
-
   useEffect(() => {
     // Detect locale on site load
     i18n.changeLanguage(navigator.language.split("-")[0]);
@@ -23,10 +14,6 @@ function App(): JSX.Element {
 
   return (
     <>
-      <Particles
-        options={particlesOptions as ISourceOptions}
-        init={particlesInit}
-      />
       <Header />
       <Main />
       <Works />
