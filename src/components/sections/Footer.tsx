@@ -1,7 +1,7 @@
-import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import Flag from "../common/Flag";
 import Social from "../common/Social";
+import Scroll from "../common/Scroll";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -19,9 +19,7 @@ const Footer = () => {
       <div className="footer-middle">
         <span>Maciej Gawrysiak</span>
         <Social href="mailto:gawrysiak.maciej@pm.me" text="Email" />
-        <Link to="header" spy smooth>
-          {t("top")}
-        </Link>
+        <Scroll text={t("top")} to="header" />
       </div>
       <div className="footer-bottom">
         <Flag flag="twemoji:flag-for-flag-poland" locale="pl" />

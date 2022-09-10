@@ -3,7 +3,7 @@ import { toggleAbout } from "../../features/aboutSlice";
 import { toggleCV } from "../../features/cvSlice";
 import { useAppDispatch } from "../../app/hooks";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-scroll";
+import Scroll from "../common/Scroll";
 
 const Header = (): JSX.Element => {
   const { t } = useTranslation();
@@ -38,21 +38,14 @@ const Header = (): JSX.Element => {
 
   return (
     <header id="header">
+      <animated.button
+        style={contact}
+        onClick={() => dispatch(toggleAbout(true))}
+      >
+        {t("aboutMe")}
+      </animated.button>
       <animated.div style={works}>
-        <Link to="works" spy smooth rel="noreferrer">
-          {t("works")}
-        </Link>
-      </animated.div>
-      <animated.div style={contact}>
-        <Link
-          to="contact"
-          spy
-          smooth
-          rel="noreferrer"
-          onClick={() => dispatch(toggleAbout(true))}
-        >
-          {t("contact")}
-        </Link>
+        <Scroll text={t("works")} to="works" />
       </animated.div>
       <animated.button style={cv} onClick={() => dispatch(toggleCV(true))}>
         CV

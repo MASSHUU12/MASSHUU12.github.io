@@ -25,6 +25,10 @@
         filter: brightness(75%);
         cursor: pointer;
     }
+
+    a {
+        text-decoration: none;
+    }
 }
 
 /* Common */
@@ -212,20 +216,19 @@ body {
 header {
     display: flex;
     justify-content: flex-end;
-    padding: 1em 0;
+    padding: 1rem 0;
 
     a,
     button {
         font-size: 1.3rem;
         font-weight: 600;
         color: #fff;
-        margin: 0 1.5em 0 0;
+        margin: 0 1em 0 0;
     }
 
     button {
         background-color: transparent;
         border: none;
-        margin: 0;
     }
 }
 
@@ -254,6 +257,7 @@ header {
     .main-container-btns {
         display: flex;
         flex-direction: row;
+        visibility: hidden;
 
         div:first-child {
             margin: 0 1.3rem 0 0;
