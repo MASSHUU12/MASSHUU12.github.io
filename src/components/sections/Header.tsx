@@ -21,12 +21,12 @@ const Header = (): JSX.Element => {
     config: config.slow,
   };
 
-  const works = useSpring({
+  const about = useSpring({
     ...animConfig,
     delay: 300,
   });
 
-  const contact = useSpring({
+  const works = useSpring({
     ...animConfig,
     delay: 450,
   });
@@ -39,7 +39,7 @@ const Header = (): JSX.Element => {
   return (
     <header id="header">
       <animated.button
-        style={contact}
+        style={about}
         onClick={() => dispatch(toggleAbout(true))}
       >
         {t("aboutMe")}
