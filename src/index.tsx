@@ -6,6 +6,7 @@ import "./i18n";
 import store from "./app/store";
 import About from "./components/sections/About";
 import CV from "./components/sections/CV";
+import MobileMenu from "./components/sections/MobileMenu";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
@@ -16,6 +17,7 @@ root.render(
       <App />
       <About />
       <CV />
+      <MobileMenu />
     </Provider>
   </React.StrictMode>
 );

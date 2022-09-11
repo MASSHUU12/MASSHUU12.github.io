@@ -4,6 +4,8 @@ import { toggleCV } from "../../features/cvSlice";
 import { useAppDispatch } from "../../app/hooks";
 import { useTranslation } from "react-i18next";
 import Scroll from "../common/Scroll";
+import { Icon } from "@iconify/react";
+import { toggleMobileMenu } from "../../features/mobileMenuSlice";
 
 const Header = (): JSX.Element => {
   const { t } = useTranslation();
@@ -50,6 +52,18 @@ const Header = (): JSX.Element => {
       <animated.button style={cv} onClick={() => dispatch(toggleCV(true))}>
         CV
       </animated.button>
+      <Icon
+        icon="charm:menu-hamburger"
+        color="white"
+        width="48"
+        onClick={() => {
+          // Open menu.
+          dispatch(toggleMobileMenu(true));
+
+          // Give class to body to prevent from scrolling page.
+          document.querySelector("body")!.className = "disable-scroll";
+        }}
+      />
     </header>
   );
 };
