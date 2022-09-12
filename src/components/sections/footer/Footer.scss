@@ -1,0 +1,34 @@
+.footer-top {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.footer-top,
+.footer-middle {
+    a:nth-child(2) {
+        margin: 0 1rem;
+    }
+}
+
+.footer-middle,
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1rem;
+}
+
+.footer-middle {
+
+    span,
+    a {
+        color: #fff;
+    }
+}
+
+.footer-bottom {
+    svg:nth-child(2) {
+        margin: 0 0 0 1rem;
+    }
+}

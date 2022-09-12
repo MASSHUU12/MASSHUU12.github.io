@@ -4,9 +4,9 @@ import { Provider } from "react-redux";
 import App from "./App";
 import "./i18n";
 import store from "./app/store";
-import About from "./components/sections/About";
-import CV from "./components/sections/CV";
-import MobileMenu from "./components/sections/MobileMenu";
+import About from "./components/sections/about/About";
+import CV from "./components/sections/cv/CV";
+import MobileMenu from "./components/sections/mobileMenu/MobileMenu";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);

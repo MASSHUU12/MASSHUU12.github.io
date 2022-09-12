@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useSpring, animated } from "@react-spring/web";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { toggleCV, toggleCVReverse } from "../../features/cvSlice";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import { toggleCV, toggleCVReverse } from "../../../features/cvSlice";
 
 const CV = (): JSX.Element => {
   const toggle = useAppSelector((state) => state.cv);

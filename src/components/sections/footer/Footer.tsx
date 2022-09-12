@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import Flag from "../common/Flag";
-import Social from "../common/Social";
-import Scroll from "../common/Scroll";
+import Flag from "../../common/Flag";
+import Social from "../../common/Social";
+import Scroll from "../../common/Scroll";
 
 const Footer = () => {
   const { t } = useTranslation();
