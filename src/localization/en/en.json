@@ -1,38 +1,35 @@
 {
-  "works": "Works",
-  "contact": "Contact",
-  "title": "Junior Developer",
-  "aboutMe": "About Me",
-  "more": "More",
-  "teamwork": "Teamwork",
-  "details": "Details",
-  "sourceCode": "Source code",
-  "website": "Website",
-  "linkShortener": "Link shortener.",
-  "cutItDesc": "A simple link shortener without any weird features, ads, etc. Allows you to generate a QR code for your site. Unused links are removed from the database after a certain period of time.",
-  "mobileLinkShortener": "Mobile link shortener.",
-  "cutItMobileDesc": "Like the web version, it allows for link shortening, and QR code generation. The application requires the web version to function, as it uses its API.",
-  "searchEngine": "Kolobrzeg accommodation search engine.",
-  "kolobrzegHoteleDesc": "KolobrzegHotele is a search engine for accommodation. The site was created for a competition, but unfortunately the city turned off the API that the site used, so most of the features no longer work. Accommodations were searched based on several categories and how important they were to the user. E.g., if proximity to the beach was most important to someone, and the rest was irrelevant, the proposed accommodations were as close to the beach as possible.",
-  "secureSharing": "Secure note sharing.",
-  "sendNoteDesc": "SendNote is a service that allows you to share confidential information quickly and securely. Allows you to protect a note with a password, set the rules under which it is to be deleted, such as after the maximum number of views, or the date (rules can be combined).",
-  "secondHandStore": "Second-hand appliance store.",
-  "pralkaDesc": "This website was created for a vocational training at a technical school and shows a store with used household appliances. Users can add listings, and buy items thanks to PayPal integration.",
-  "iAm": "I'm Maciej Gawrysiak, a 20-year-old Polish",
-  "weird": "I'm a weird guy who likes to create weird things and bring them to life.",
-  "notOnly": "Not only that, but I like",
-  "solving": "solving",
-  "problems": "problems and ",
-  "finding": "finding",
-  "solutions": "the best solutions.",
-  "whenImNot": "When I'm not playing with",
-  "code": "code",
-  "playingWith": "I'm playing with my",
-  "cat": "cat",
-  "top": "Top",
-  "newLife": "A service designed to facilitate the adoption of animals.",
-  "newLifeDesc": "New Life is an application designed to facilitate animal adoption. The app will support two modes of operation. The first mode is to show the user matching animals in a way known from, for example, Tinder. The shelter then gets the information and can immediately accept the user to the next stage, or reject him. The second mode is a general display of all the animals the server will be able to collect from the pages of various shelters.",
-  "wip": "Work in Progress",
-  "suspended": "Suspended - project too large for one person.",
-  "shareSourceCode": "I can share the source code."
+  "meTitle": "Junior Developer",
+  "meDescription": "I'm Maciej, a 20-year-old Polish programmer. I'm a strange guy who likes to create strange things and bring them to life. I like solving problems and finding the best solutions. When I'm not playing with code, I'm playing with my cat.",
+
+  "hAbout": "About Me",
+  "hWorks": "Works",
+
+  "aContact": "Contact",
+
+  "fTop": "Top",
+
+  "wSus": "Suspended.",
+  "wShare": "I can share the source code.",
+  "wSource": "Source code",
+  "wSite": "Website",
+  "wTeam": "Teamwork",
+
+  "w1Short": "A service designed to facilitate the adoption of animals.",
+  "w1Long": "New Life is an application designed to facilitate animal adoption. The app will support two modes of operation. The first mode is to show the user matching animals in a way known from, for example, Tinder. The shelter then gets the information and can immediately accept the user to the next stage, or reject him. The second mode is a general display of all the animals the server will be able to collect from the pages of various shelters.",
+
+  "w2Short": "Link shortener.",
+  "w2Long": "A simple link shortener without any weird features, ads, etc. Allows you to generate a QR code for your site. Unused links are removed from the database after a certain period of time.",
+
+  "w3Short": "Mobile link shortener.",
+  "w3Long": "Like the web version, it allows for link shortening, and QR code generation. The application requires the web version to function, as it uses its API.",
+
+  "w4Short": "Kolobrzeg accommodation search engine.",
+  "w4Long": "KolobrzegHotele is a search engine for accommodation. The site was created for a competition, but unfortunately the city turned off the API that the site used, so most of the features no longer work. Accommodations were searched based on several categories and how important they were to the user. E.g., if proximity to the beach was most important to someone, and the rest was irrelevant, the proposed accommodations were as close to the beach as possible.",
+
+  "w5Short": "Secure note sharing.",
+  "w5Long": "SendNote is a service that allows you to share confidential information quickly and securely. Allows you to protect a note with a password, set the rules under which it is to be deleted, such as after the maximum number of views, or the date.",
+
+  "w6Short": "Second-hand appliance store.",
+  "w6Long": "This website was created for a vocational training at a technical school and shows a store with used household appliances. Users can add listings, and buy items thanks to PayPal integration."
 }

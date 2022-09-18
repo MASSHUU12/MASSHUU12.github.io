@@ -1,0 +1,20 @@
+.cv-item {
+  width: 30%;
+  height: fit-content;
+  background-color: #1a1920;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-item {
+    width: 75%;
+  }
+}

@@ -1,9 +1,10 @@
 import { Icon } from "@iconify/react";
 import { useSpring, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { toggleAbout, toggleReverse } from "../../features/aboutSlice";
-import Social from "../common/Social";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import { toggleAbout, toggleReverse } from "../../../features/aboutSlice";
+import { scroll } from "../../../utils/preventScroll";
+import Social from "../../common/Social";
 
 const About = (): JSX.Element => {
   const toggle = useAppSelector((state) => state.about);
@@ -13,6 +14,14 @@ const About = (): JSX.Element => {
 
   const closeAnim = () => {
     toggle.reverse && dispatch(toggleAbout(false));
+  };
+
+  const closeMenu = (): void => {
+    // Close menu.
+    dispatch(toggleReverse(true));
+
+    // Enable page scrolling.
+    scroll.enable();
   };
 
   const left = useSpring({
@@ -40,32 +49,26 @@ const About = (): JSX.Element => {
       {toggle.value && (
         <animated.section
           style={background}
-          className="common-container"
-          onClick={() => dispatch(toggleReverse(true))}
+          className="popup-bg"
+          onClick={() => closeMenu()}
         >
-          <animated.div className="common-left" style={left}>
-            <h1>{t("aboutMe")}.</h1>
-            <span>{t("title")}</span>
-            <p>
-              {t("iAm")} <strong>{t("title")}</strong>. {t("weird")}{" "}
-              {t("notOnly")} <strong>{t("solving")}</strong> {t("problems")}
-              <strong>{t("finding")}</strong> {t("solutions")} {t("whenImNot")}{" "}
-              <strong>{t("code")}</strong>, {t("playingWith")}{" "}
-              <strong>{t("cat")}</strong>.
-            </p>
+          <animated.div className="about-left" style={left}>
+            <h1>{t("hAbout")}.</h1>
+            <span>{t("meTitle")}</span>
+            <p>{t("meDescription")}</p>
           </animated.div>
-          <animated.div className="common-right" style={right}>
-            <div className="common-right-header">
-              <h1>{t("contact")}.</h1>
+          <animated.div className="about-right" style={right}>
+            <div className="about-right-header">
+              <h1>{t("aContact")}.</h1>
               <Icon
-                onClick={() => dispatch(toggleReverse(true))}
+                onClick={() => closeMenu()}
                 icon="carbon:close"
                 color="white"
                 width="48"
                 height="48"
               />
             </div>
-            <div className="common-right-links">
+            <div className="about-right-links">
               <Social
                 href="mailto:gawrysiak.maciej@pm.com"
                 text="gawrysiak.maciej@pm.me"

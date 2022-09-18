@@ -1,14 +1,15 @@
 import { Icon } from "@iconify/react";
 import { useSpring, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { toggleAbout } from "../../features/aboutSlice";
-import { toggleCV } from "../../features/cvSlice";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import { toggleAbout } from "../../../features/aboutSlice";
+import { toggleCV } from "../../../features/cvSlice";
 import {
   toggleMobileMenu,
   toggleMobileMenuReverse,
-} from "../../features/mobileMenuSlice";
-import Scroll from "../common/Scroll";
+} from "../../../features/mobileMenuSlice";
+import { scroll } from "../../../utils/preventScroll";
+import Scroll from "../../common/Scroll";
 
 const MobileMenu = (): JSX.Element => {
   const toggle = useAppSelector((state) => state.mobileMenu);
@@ -24,8 +25,8 @@ const MobileMenu = (): JSX.Element => {
     // Close menu.
     dispatch(toggleMobileMenuReverse(true));
 
-    // Remove class from body to prevent from scrolling page.
-    document.querySelector("body")!.className = "";
+    // Enable page scrolling.
+    scroll.enable();
   };
 
   const animConfig = {
@@ -79,7 +80,6 @@ const MobileMenu = (): JSX.Element => {
 
   return (
     <>
-      {/* TODO: On click close and move to/ open section */}
       {toggle.value && (
         <animated.section style={bg} className="mobile-menu-bg">
           <animated.div style={bg2} className="mobile-menu-content">
@@ -99,10 +99,10 @@ const MobileMenu = (): JSX.Element => {
                 dispatch(toggleAbout(true));
               }}
             >
-              {t("aboutMe")}
+              {t("hAbout")}
             </animated.button>
             <animated.div style={works} onClick={() => closeMenu()}>
-              <Scroll text={t("works")} to="works" />
+              <Scroll text={t("hWorks")} to="works" />
             </animated.div>
             <animated.button
               style={cv}
