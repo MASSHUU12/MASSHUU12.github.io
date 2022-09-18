@@ -7,21 +7,8 @@
 @import url("./components/sections/work/WorkInfo.scss");
 @import url("./components/sections/mobileMenu/MobileMenu.scss");
 @import url("./components/sections/about/About.scss");
+@import url("./components/sections/cv/CV.scss");
 @import url("./components/sections/footer/Footer.scss");
-
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 0.6rem;
-}
-
-::-webkit-scrollbar-track {
-  background: #1a1920;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #fff;
-  border-radius: 100vh;
-}
 
 * {
   margin: 0;
@@ -38,6 +25,30 @@
   a {
     text-decoration: none;
   }
+}
+
+body {
+  margin: 0 15%;
+  font-size: 1em;
+  background-color: #1c1d25;
+  background-image: url("../public/assets/background.svg");
+  background-attachment: fixed;
+  background-size: cover;
+  /* background by SVGBackgrounds.com */
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1920;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 100vh;
 }
 
 /* Common */
@@ -81,17 +92,21 @@
   padding-right: 15px;
 }
 
-/* End common */
-
-body {
-  margin: 0 15%;
-  font-size: 1em;
-  background-color: #1c1d25;
-  background-image: url("../public/assets/background.svg");
-  background-attachment: fixed;
-  background-size: cover;
-  /* background by SVGBackgrounds.com */
+.popup-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 25, 32, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
 }
+
+/* End common */
 
 /* Ultrawide */
 @media (min-width: 2560px) {
@@ -104,6 +119,11 @@ body {
 @media (max-width: 768px) {
   .common-button {
     font-size: 1rem;
+  }
+
+  .popup-bg {
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
   body {

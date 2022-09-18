@@ -31,19 +31,17 @@ const CV = (): JSX.Element => {
       {toggle.value && (
         <animated.section
           style={background}
-          className="common-container"
+          className="popup-bg"
           onClick={() => dispatch(toggleCVReverse(true))}
         >
-          <animated.div style={bottom} className="common-center">
-            <section>
-              <Icon
-                onClick={() => dispatch(toggleCVReverse(true))}
-                icon="carbon:close"
-                color="white"
-                width="48"
-                height="48"
-              />
-            </section>
+          <animated.div style={bottom} className="cv-item">
+            <Icon
+              onClick={() => dispatch(toggleCVReverse(true))}
+              icon="carbon:close"
+              color="white"
+              width="48"
+              height="48"
+            />
             <a href="/assets/gawrysiak_cv.pdf" target="_blank">
               gawrysiak_pl.pdf
             </a>

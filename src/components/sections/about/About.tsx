@@ -49,7 +49,7 @@ const About = (): JSX.Element => {
       {toggle.value && (
         <animated.section
           style={background}
-          className="about-container"
+          className="popup-bg"
           onClick={() => closeMenu()}
         >
           <animated.div className="about-left" style={left}>
