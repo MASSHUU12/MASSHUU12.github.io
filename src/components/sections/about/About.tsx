@@ -53,19 +53,13 @@ const About = (): JSX.Element => {
           onClick={() => closeMenu()}
         >
           <animated.div className="about-left" style={left}>
-            <h1>{t("aboutMe")}.</h1>
-            <span>{t("title")}</span>
-            <p>
-              {t("iAm")} <strong>{t("title")}</strong>. {t("weird")}{" "}
-              {t("notOnly")} <strong>{t("solving")}</strong> {t("problems")}
-              <strong>{t("finding")}</strong> {t("solutions")} {t("whenImNot")}{" "}
-              <strong>{t("code")}</strong>, {t("playingWith")}{" "}
-              <strong>{t("cat")}</strong>.
-            </p>
+            <h1>{t("hAbout")}.</h1>
+            <span>{t("meTitle")}</span>
+            <p>{t("meDescription")}</p>
           </animated.div>
           <animated.div className="about-right" style={right}>
             <div className="about-right-header">
-              <h1>{t("contact")}.</h1>
+              <h1>{t("aContact")}.</h1>
               <Icon
                 onClick={() => closeMenu()}
                 icon="carbon:close"

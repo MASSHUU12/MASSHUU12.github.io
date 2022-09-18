@@ -36,13 +36,6 @@
     font-style: italic;
   }
 
-  p {
-    strong {
-      color: #f06449;
-      font-weight: 700;
-    }
-  }
-
   .about-left-labels {
     display: flex;
     flex-wrap: wrap;
@@ -91,6 +84,7 @@
 }
 
 @media (max-width: 768px) {
+
   .about-left,
   .about-right {
     width: 100%;

@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="footer-middle">
         <span>Maciej Gawrysiak</span>
         <Social href="mailto:gawrysiak.maciej@pm.me" text="Email" />
-        <Scroll text={t("top")} to="header" />
+        <Scroll text={t("fTop")} to="header" />
       </div>
       <div className="footer-bottom">
         <Flag flag="twemoji:flag-for-flag-poland" locale="pl" />

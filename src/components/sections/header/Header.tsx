@@ -51,10 +51,10 @@ const Header = (): JSX.Element => {
           scroll.disable();
         }}
       >
-        {t("aboutMe")}
+        {t("hAbout")}
       </animated.button>
       <animated.div style={works}>
-        <Scroll text={t("works")} to="works" />
+        <Scroll text={t("hWorks")} to="works" />
       </animated.div>
       <animated.button style={cv} onClick={() => dispatch(toggleCV(true))}>
         CV

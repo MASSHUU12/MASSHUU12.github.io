@@ -29,7 +29,7 @@ const Main = (): JSX.Element => {
   return (
     <section className="main-container">
       <animated.h1 style={name}>Maciej Gawrysiak</animated.h1>
-      <animated.span style={title}>{t("title")}</animated.span>
+      <animated.span style={title}>{t("meTitle")}</animated.span>
     </section>
   );
 };
