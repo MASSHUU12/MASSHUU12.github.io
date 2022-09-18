@@ -1,16 +1,16 @@
 .works-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
-    .works-container {
-        width: 100%;
-        align-items: center;
+  .works-container {
+    width: 100%;
+    align-items: center;
 
-        .works-section {
-            margin: 0 0 1rem;
-        }
+    .works-section {
+      margin: 0 0 1rem;
     }
+  }
 }

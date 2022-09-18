@@ -1,4 +1,4 @@
-@import url('https://api.fonts.coollabs.io/css2?family=Poppins:wght@300;500;600;700&display=swap');
+@import url("https://api.fonts.coollabs.io/css2?family=Poppins:wght@300;500;600;700&display=swap");
 
 @import url("./components/sections/header/Header.scss");
 @import url("./components/sections/main/Main.scss");
@@ -11,102 +11,102 @@
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 0.6rem;
+  width: 0.6rem;
 }
 
 ::-webkit-scrollbar-track {
-    background: #1a1920;
+  background: #1a1920;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #fff;
-    border-radius: 100vh;
+  background: #fff;
+  border-radius: 100vh;
 }
 
 * {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 
-    a:hover,
-    .common-button:hover,
-    svg:hover,
-    button:hover {
-        filter: brightness(75%);
-        cursor: pointer;
-    }
+  a:hover,
+  .common-button:hover,
+  svg:hover,
+  button:hover {
+    filter: brightness(75%);
+    cursor: pointer;
+  }
 
-    a {
-        text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 }
 
 /* Common */
 .common-button {
-    background-color: #ec302e;
-    text-decoration: none;
-    color: #fff;
-    padding: 0.3rem 1rem;
-    border-radius: 0.2rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    min-width: 3.5rem;
-    text-align: center;
+  background-color: #ec302e;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-radius: 0.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  min-width: 3.5rem;
+  text-align: center;
 }
 
 .common-button-white {
-    background-color: #fff;
-    color: #1a1920;
+  background-color: #fff;
+  color: #1a1920;
 }
 
 .common-custom-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-    width: fit-content;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  width: fit-content;
 
-    span {
-        margin: 0 0 0 1rem;
-    }
+  span {
+    margin: 0 0 0 1rem;
+  }
 }
 
 .common-custom-link-wo-icon {
-    span {
-        margin: 0;
-    }
+  span {
+    margin: 0;
+  }
 }
 
 .disable-scroll {
-    overflow: hidden;
-    padding-right: 15px;
+  overflow: hidden;
+  padding-right: 15px;
 }
 
 /* End common */
 
 body {
-    margin: 0 15%;
-    font-size: 1em;
-    background-color: #1C1D25;
-    background-image: url("../public/assets/background.svg");
-    background-attachment: fixed;
-    background-size: cover;
-    /* background by SVGBackgrounds.com */
+  margin: 0 15%;
+  font-size: 1em;
+  background-color: #1c1d25;
+  background-image: url("../public/assets/background.svg");
+  background-attachment: fixed;
+  background-size: cover;
+  /* background by SVGBackgrounds.com */
 }
 
 /* Ultrawide */
 @media (min-width: 2560px) {
-    body {
-        margin: 0 25%;
-    }
+  body {
+    margin: 0 25%;
+  }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    .common-button {
-        font-size: 1rem;
-    }
+  .common-button {
+    font-size: 1rem;
+  }
 
-    body {
-        margin: 0;
-    }
+  body {
+    margin: 0;
+  }
 }
