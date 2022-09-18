@@ -99,10 +99,10 @@ const MobileMenu = (): JSX.Element => {
                 dispatch(toggleAbout(true));
               }}
             >
-              {t("aboutMe")}
+              {t("hAbout")}
             </animated.button>
             <animated.div style={works} onClick={() => closeMenu()}>
-              <Scroll text={t("works")} to="works" />
+              <Scroll text={t("hWorks")} to="works" />
             </animated.div>
             <animated.button
               style={cv}
