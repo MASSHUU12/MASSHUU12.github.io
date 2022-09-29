@@ -53,7 +53,13 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
     },
     reset: true,
     reverse: reverse,
-    delay: 500,
+    delay: 400,
+  });
+
+  // Delay 400
+  const delay400 = useSpring({
+    ...slideInConfig,
+    delay: 400,
   });
 
   // Delay 500
@@ -63,13 +69,13 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
   });
 
   // Delay 600
-  const delay600 = useSpring({
+  const labels = useSpring({
     ...slideInConfig,
     delay: 600,
   });
 
   // Delay 700
-  const labels = useSpring({
+  const delay700 = useSpring({
     ...slideInConfig,
     delay: 700,
   });
@@ -97,9 +103,9 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
         </animated.div>
         <section className="work-info-details-container">
           <div className="work-info-details">
-            <animated.h1 style={delay500}>{item.title}</animated.h1>
+            <animated.h1 style={delay400}>{item.title}</animated.h1>
             {item.leftLabel ? (
-              <animated.div style={delay600}>
+              <animated.div style={delay500}>
                 {item.leftLabel.map((label, index) => {
                   return <span key={index}>{t(label)}</span>;
                 })}
@@ -119,7 +125,7 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
             )}
           </div>
           {/* Links */}
-          <animated.div style={delay500} className="work-info-links">
+          <animated.div style={delay400} className="work-info-links">
             {item.links.map((object, index) => {
               return (
                 <Social
@@ -139,11 +145,11 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
         </section>
         {/* Description section */}
         <div className="work-info-desc">
-          <animated.h3 style={delay500}>Description</animated.h3>
-          <animated.p style={delay600}>{t(item.description)}</animated.p>
+          <animated.h3 style={delay400}>Description</animated.h3>
+          <animated.p style={delay500}>{t(item.description)}</animated.p>
         </div>
         {/* Images */}
-        <animated.div className="work-info-images">
+        <animated.div style={delay700} className="work-info-images">
           {item.images.map((image, index) => (
             <WorkImage key={index} image={image} title={item.title} />
           ))}
