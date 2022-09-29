@@ -5,7 +5,7 @@ export interface InfoProps {
     description: string;
     labels: Array<string>;
     leftLabel: Array<string>;
-    image: Array<string>;
+    images: Array<string>;
     links:
       | {
           name: string;
@@ -23,7 +23,7 @@ export interface InfoToggleProps {
     description: string;
     labels: Array<string>;
     leftLabel: Array<string>;
-    image: Array<string>;
+    images: Array<string>;
     links:
       | {
           name: string;

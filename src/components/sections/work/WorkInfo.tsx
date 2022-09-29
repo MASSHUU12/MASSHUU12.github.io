@@ -3,7 +3,9 @@ import { useSpring, animated } from "@react-spring/web";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { InfoToggleProps } from "../../../interfaces/interfaces";
+import { scroll } from "../../../utils/preventScroll";
 import Social from "../../common/Social";
+import WorkImage from "./WorkImage";
 
 const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
   const [reverse, setReverse] = useState(false);
@@ -42,20 +44,6 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
     onRest: closeAnim,
   });
 
-  const element = useSpring({
-    to: {
-      scaleX: 1,
-      opacity: 1,
-    },
-    from: {
-      scaleX: 0,
-      opacity: 0,
-    },
-    reset: true,
-    reverse: reverse,
-    delay: 250,
-  });
-
   const backButton = useSpring({
     to: {
       opacity: 1,
@@ -92,71 +80,73 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
     // Its presence nullifies errors with the animation and display of the element.
     <div className="work-info">
       <animated.section className="work-info-container" style={background}>
-        <animated.div className="work-info-element" style={element}>
-          {/* Back button */}
-          <animated.div style={backButton}>
-            <Icon
-              className="work-info-container-back"
-              icon="ic:round-arrow-back-ios-new"
-              color="#4a4a4a"
-              width="48"
-              onClick={() => {
-                // Close window.
-                setReverse(true);
+        {/* Back button */}
+        <animated.div style={backButton}>
+          <Icon
+            className="work-info-container-back"
+            icon="ic:round-arrow-back-ios-new"
+            color="#4a4a4a"
+            width="48"
+            onClick={() => {
+              // Close window.
+              setReverse(true);
 
-                // Remove class from body to prevent from scrolling page.
-                document.querySelector("body")!.className = "";
-              }}
-            />
-          </animated.div>
-          {/* Basic info section */}
-          <section>
-            <div className="work-info-details">
-              <animated.h1 style={delay500}>{item.title}</animated.h1>
-              {item.leftLabel ? (
-                <animated.div style={delay600}>
-                  {item.leftLabel.map((label, index) => {
-                    return <span key={index}>{t(label)}</span>;
-                  })}
-                </animated.div>
-              ) : (
-                ""
-              )}
-              {/* Labels */}
-              {item.labels ? (
-                <animated.div style={labels} className="work-info-labels">
-                  {item.labels.map((label, index) => {
-                    return <span key={index}>{t(label)}</span>;
-                  })}
-                </animated.div>
-              ) : (
-                ""
-              )}
-            </div>
-            {/* Links */}
-            <animated.div style={delay500} className="work-info-details-links">
-              {item.links.map((object, index) => {
-                return (
-                  <Social
-                    href={object.link}
-                    text={t(object.name)}
-                    icon={
-                      object.name === "sourceCode"
-                        ? "akar-icons:github-fill"
-                        : "mdi:web"
-                    }
-                    color="#1a1920"
-                    key={index}
-                  />
-                );
-              })}
-            </animated.div>
-          </section>
-          {/* Description section */}
-          <div className="work-info-desc">
-            <animated.h3 style={delay500}>Description</animated.h3>
-            <animated.p style={delay600}>{t(item.description)}</animated.p>
+              scroll.enable();
+            }}
+          />
+        </animated.div>
+        <section className="work-info-details-container">
+          <div className="work-info-details">
+            <animated.h1 style={delay500}>{item.title}</animated.h1>
+            {item.leftLabel ? (
+              <animated.div style={delay600}>
+                {item.leftLabel.map((label, index) => {
+                  return <span key={index}>{t(label)}</span>;
+                })}
+              </animated.div>
+            ) : (
+              ""
+            )}
+            {/* Labels */}
+            {item.labels ? (
+              <animated.div style={labels} className="work-info-labels">
+                {item.labels.map((label, index) => {
+                  return <span key={index}>{t(label)}</span>;
+                })}
+              </animated.div>
+            ) : (
+              ""
+            )}
           </div>
+          {/* Links */}
+          <animated.div style={delay500} className="work-info-links">
+            {item.links.map((object, index) => {
+              return (
+                <Social
+                  href={object.link}
+                  text={t(object.name)}
+                  icon={
+                    object.name === "sourceCode"
+                      ? "akar-icons:github-fill"
+                      : "mdi:web"
+                  }
+                  color="#1a1920"
+                  key={index}
+                />
+              );
+            })}
+          </animated.div>
+        </section>
+        {/* Description section */}
+        <div className="work-info-desc">
+          <animated.h3 style={delay500}>Description</animated.h3>
+          <animated.p style={delay600}>{t(item.description)}</animated.p>
+        </div>
+        {/* Images */}
+        <animated.div className="work-info-images">
+          {item.images.map((image, index) => (
+            <WorkImage key={index} image={image} title={item.title} />
+          ))}
         </animated.div>
       </animated.section>
     </div>

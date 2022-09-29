@@ -14,7 +14,7 @@ export const info = [
     description: "w5Long",
     labels: ["React Native", "TypeScript", "SQLite", "Redux"],
     leftLabel: ["wTeam"],
-    image: [BookAppMain, BookAppSearch],
+    images: [BookAppMain, BookAppSearch],
     links: [
       {
         name: "wSource",
@@ -36,7 +36,7 @@ export const info = [
       "Redux",
     ],
     leftLabel: ["wSus", "wShare"],
-    image: [NewLife],
+    images: [NewLife],
     links: [],
   },
   {
@@ -45,7 +45,7 @@ export const info = [
     description: "w2Long",
     labels: ["Laravel", "MariaDB", "jQuery", "SCSS"],
     leftLabel: [],
-    image: [CutIt],
+    images: [CutIt],
     links: [
       {
         name: "wSource",
@@ -59,7 +59,7 @@ export const info = [
     description: "w3Long",
     labels: ["React Native", "Laravel API"],
     leftLabel: [],
-    image: [CutItMobile],
+    images: [CutItMobile],
     links: [
       {
         name: "wSource",
@@ -73,7 +73,7 @@ export const info = [
     description: "w4Long",
     labels: ["Laravel", "Bing Maps", "Kołobrzeg OpenData", "SCSS"],
     leftLabel: ["wTeam"],
-    image: [KolobrzegHotele],
+    images: [KolobrzegHotele],
     links: [
       {
         name: "wSource",
@@ -91,7 +91,7 @@ export const info = [
     description: "w6Long",
     labels: ["PHP", "PayPal", "SCSS"],
     leftLabel: ["wTeam"],
-    image: [Pralka],
+    images: [Pralka],
     links: [
       {
         name: "wSource",
