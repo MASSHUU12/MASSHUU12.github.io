@@ -1,11 +1,27 @@
 import CutItMobile from "./images/cutItMobile.webp";
 import CutIt from "./images/cutIt.webp";
-import sendNote from "./images/sendNote.webp";
 import KolobrzegHotele from "./images/kolobrzegHotele.webp";
 import Pralka from "./images/pralka.webp";
 import NewLife from "./images/newLife.webp";
 
+import BookAppMain from "./images/bookapp_main.webp";
+import BookAppSearch from "./images/bookapp_search.webp";
+
 export const info = [
+  {
+    title: "Bookapp (WIP)",
+    short_description: "w5Short",
+    description: "w5Long",
+    labels: ["React Native", "TypeScript", "SQLite", "Redux"],
+    leftLabel: ["wTeam"],
+    image: [BookAppMain, BookAppSearch],
+    links: [
+      {
+        name: "wSource",
+        link: "https://github.com/MASSHUU12/bookapp",
+      },
+    ],
+  },
   {
     title: "New Life",
     short_description: "w1Short",
@@ -20,7 +36,7 @@ export const info = [
       "Redux",
     ],
     leftLabel: ["wSus", "wShare"],
-    image: NewLife,
+    image: [NewLife],
     links: [],
   },
   {
@@ -29,7 +45,7 @@ export const info = [
     description: "w2Long",
     labels: ["Laravel", "MariaDB", "jQuery", "SCSS"],
     leftLabel: [],
-    image: CutIt,
+    image: [CutIt],
     links: [
       {
         name: "wSource",
@@ -43,7 +59,7 @@ export const info = [
     description: "w3Long",
     labels: ["React Native", "Laravel API"],
     leftLabel: [],
-    image: CutItMobile,
+    image: [CutItMobile],
     links: [
       {
         name: "wSource",
@@ -57,7 +73,7 @@ export const info = [
     description: "w4Long",
     labels: ["Laravel", "Bing Maps", "Kołobrzeg OpenData", "SCSS"],
     leftLabel: ["wTeam"],
-    image: KolobrzegHotele,
+    image: [KolobrzegHotele],
     links: [
       {
         name: "wSource",
@@ -70,26 +86,12 @@ export const info = [
     ],
   },
   {
-    title: "SendNote",
-    short_description: "w5Short",
-    description: "w5Long",
-    labels: ["Laravel", "jQuery", "MariaDB", "SCSS"],
-    leftLabel: [],
-    image: sendNote,
-    links: [
-      {
-        name: "wSource",
-        link: "https://github.com/MASSHUU12/SendNote",
-      },
-    ],
-  },
-  {
     title: "Pralka",
     short_description: "w6Short",
     description: "w6Long",
     labels: ["PHP", "PayPal", "SCSS"],
     leftLabel: ["wTeam"],
-    image: Pralka,
+    image: [Pralka],
     links: [
       {
         name: "wSource",

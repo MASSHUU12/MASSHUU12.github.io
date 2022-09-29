@@ -27,8 +27,8 @@
   "w4Short": "Kolobrzeg accommodation search engine.",
   "w4Long": "KolobrzegHotele is a search engine for accommodation. The site was created for a competition, but unfortunately the city turned off the API that the site used, so most of the features no longer work. Accommodations were searched based on several categories and how important they were to the user. E.g., if proximity to the beach was most important to someone, and the rest was irrelevant, the proposed accommodations were as close to the beach as possible.",
 
-  "w5Short": "Secure note sharing.",
-  "w5Long": "SendNote is a service that allows you to share confidential information quickly and securely. Allows you to protect a note with a password, set the rules under which it is to be deleted, such as after the maximum number of views, or the date.",
+  "w5Short": "Bookapp (working name) is a mobile application for tracking reading.",
+  "w5Long": "The application easily allows you to mark books you have read and books \"to read\". Thanks to its integration with the openlibrary.org API, it also allows you to search for books and check details about them.",
 
   "w6Short": "Second-hand appliance store.",
   "w6Long": "This website was created for a vocational training at a technical school and shows a store with used household appliances. Users can add listings, and buy items thanks to PayPal integration."

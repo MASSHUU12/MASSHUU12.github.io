@@ -26,8 +26,8 @@
   "w4Short": "Wyszukiwarka noclegów w Kołobrzegu.",
   "w4Long": "KołobrzegHotele to wyszukiwarka miejsc noclegowych. Strona została stworzona na konkurs, ale niestety miasto wyłączyło API, z którego strona korzystała, więc większość funkcji już nie działa. Noclegi były wyszukiwane na podstawie kilku kategorii i tego jak ważne były dla użytkownika. Np. jeśli dla kogoś najważniejsza była bliskość plaży, a reszta była nieistotna, to proponowane noclegi były jak najbliżej plaży.",
 
-  "w5Short": "Bezpieczne udostępnianie notatek.",
-  "w5Long": "SendNote to usługa pozwalająca na szybkie i bezpieczne udostępnianie poufnych informacji. Umożliwia zabezpieczenie notatki hasłem, ustalenie zasad, według których ma być ona usuwana, np. po maksymalnej liczbie wyświetleń, lub daty.",
+  "w5Short": "Bookapp (nazwa robocza) to aplikacja mobilna do śledzenia czytania.",
+  "w5Long": "Aplikacja w prosty sposób pozwala na oznaczanie przeczytanych książek oraz książek \"do przeczytania\". Dzięki integracji z API openlibrary.org pozwala również na wyszukiwanie książek i sprawdzanie szczegółów na ich temat.",
 
   "w6Short": "Sklep z używanym sprzętem AGD.",
   "w6Long": "Strona powstała na potrzeby praktyki zawodowej w technikum i przedstawia sklep z używanym sprzętem AGD. Użytkownicy mogą dodawać oferty, a także kupować przedmioty dzięki integracji z systemem PayPal."
