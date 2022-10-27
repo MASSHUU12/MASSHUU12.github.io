@@ -6,6 +6,8 @@ import NewLife from "./images/newLife.webp";
 
 import BookAppMain from "./images/bookapp_main.webp";
 import BookAppSearch from "./images/bookapp_search.webp";
+import BookAppSingle from "./images/bookapp_single.webp";
+import BookAppList from "./images/bookapp_list.webp";
 
 export const info = [
   {
@@ -14,7 +16,7 @@ export const info = [
     description: "w5Long",
     labels: ["React Native", "TypeScript", "SQLite", "Redux"],
     leftLabel: ["wTeam"],
-    images: [BookAppMain, BookAppSearch],
+    images: [BookAppMain, BookAppSingle, BookAppSearch, BookAppList],
     links: [
       {
         name: "wSource",
