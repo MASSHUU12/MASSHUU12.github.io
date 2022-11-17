@@ -1,9 +1,10 @@
 {
-  "meTitle": "Junior Deweloper",
+  "meHello": "Hej, jestem",
+  "meTitle": "Jestem fullstack junior web deweloperem.",
   "meDescription": "Jestem Maciej, 20-letni polski programista. Jestem dziwnym facetem, który lubi tworzyć dziwne rzeczy i wprowadzać je do życia. Lubię rozwiązywać problemy i znajdować najlepsze rozwiązania. Kiedy nie bawię się kodem, bawię się z moim kotem.",
 
   "hAbout": "O Mnie",
-  "hWorks": "Prace",
+  "hWorks": "Sprawdź moje prace",
 
   "aContact": "Kontakt",
   "fTop": "Do góry",
