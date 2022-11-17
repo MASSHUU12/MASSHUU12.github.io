@@ -8,6 +8,12 @@ const Footer = () => {
 
   return (
     <footer>
+      <div className="bgjar-attribution">
+        Free SVG Background by{" "}
+        <a target="_blank" rel="noreferrer" href="https://bgjar.com">
+          BGJar
+        </a>
+      </div>
       <div className="footer-top">
         <Social
           href="https://www.linkedin.com/in/maciej-gawrysiak"

@@ -3,19 +3,6 @@ header {
   justify-content: flex-end;
   padding: 1rem 0;
 
-  a,
-  button {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #fff;
-    margin: 0 1em 0 0;
-  }
-
-  button {
-    background-color: transparent;
-    border: none;
-  }
-
   svg {
     display: none;
   }
@@ -23,11 +10,6 @@ header {
 
 @media (max-width: 768px) {
   header {
-    a,
-    button {
-      visibility: hidden;
-    }
-
     svg {
       display: block;
       margin: 0 1rem 0 0;

@@ -20,6 +20,7 @@
 }
 
 .footer-middle {
+
   span,
   a {
     color: #fff;
@@ -30,4 +31,12 @@
   svg:nth-child(2) {
     margin: 0 0 0 1rem;
   }
+}
+
+.bgjar-attribution {
+  position: relative;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  color: whitesmoke;
+  font-size: 0.75rem;
 }
