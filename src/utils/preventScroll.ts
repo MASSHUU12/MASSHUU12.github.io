@@ -1,7 +1,7 @@
 export const scroll = {
   /** Remove class from body to enable page scrolling. */
   enable: (): void => {
-    document.querySelector("body")!.className = "";
+    document.querySelector("body")?.removeAttribute("class");
   },
   /** Set class to body to prevent from page scrolling. */
   disable: (): void => {
