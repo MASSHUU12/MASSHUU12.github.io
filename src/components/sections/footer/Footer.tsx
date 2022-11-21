@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import Flag from "../../common/Flag";
 import Social from "../../common/Social";
-import Scroll from "../../common/Scroll";
 
 /**
  * Footer component
@@ -13,28 +12,30 @@ const Footer = (): JSX.Element => {
 
   return (
     <footer>
-      <div className="bgjar-attribution">
-        SVG Background by{" "}
-        <a target="_blank" rel="noreferrer" href="https://bgjar.com">
-          BGJar
-        </a>
+      <div className="foot-grid">
+        <div className="foot-links">
+          <Social
+            href="https://www.linkedin.com/in/maciej-gawrysiak"
+            text="Linkedin"
+          />
+          <Social href="https://github.com/MASSHUU12" text="GitHub" />
+          <Social href="https://t.me/MASSHUU" text="Telegram" />
+          <Social href="mailto:gawrysiak.maciej@pm.me" text="Email" />
+        </div>
+        <div className="foot-flags">
+          <Flag flag="twemoji:flag-for-flag-poland" locale="pl" />
+          <Flag flag="twemoji:flag-for-flag-united-states" locale="en" />
+        </div>
       </div>
-      <div className="footer-top">
-        <Social
-          href="https://www.linkedin.com/in/maciej-gawrysiak"
-          text="Linkedin"
-        />
-        <Social href="https://github.com/MASSHUU12" text="GitHub" />
-        <Social href="https://t.me/MASSHUU" text="Telegram" />
-      </div>
-      <div className="footer-middle">
+      <hr />
+      <div className="foot-btm">
         <span>Maciej Gawrysiak</span>
-        <Social href="mailto:gawrysiak.maciej@pm.me" text="Email" />
-        <Scroll text={t("fTop")} to="header" />
-      </div>
-      <div className="footer-bottom">
-        <Flag flag="twemoji:flag-for-flag-poland" locale="pl" />
-        <Flag flag="twemoji:flag-for-flag-united-states" locale="en" />
+        <span>
+          {t("fAtt")}
+          <a target="_blank" rel="noreferrer" href="https://bgjar.com">
+            BGJar
+          </a>
+        </span>
       </div>
     </footer>
   );
