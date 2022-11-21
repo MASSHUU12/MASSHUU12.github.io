@@ -1,10 +1,17 @@
 import { Icon } from "@iconify/react";
 import { useSpring, animated } from "@react-spring/web";
+import { backgroundAnim } from "../../../animations/commonAnims";
+import { cvBottomAnimation } from "../../../animations/cvAnims";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { toggleCV, toggleCVReverse } from "../../../features/cvSlice";
 
+/**
+ * Component for accessing CV
+ *
+ * @return {*}  {JSX.Element}
+ */
 const CV = (): JSX.Element => {
-  const toggle = useAppSelector((state) => state.cv);
+  const toggle = useAppSelector(state => state.cv);
   const dispatch = useAppDispatch();
 
   const closeAnim = () => {
@@ -12,17 +19,13 @@ const CV = (): JSX.Element => {
   };
 
   const bottom = useSpring({
-    to: { y: -window.innerHeight * 0.3 },
-    from: { y: window.innerHeight * 0.5 },
-    reset: true,
+    ...cvBottomAnimation,
     reverse: toggle.reverse,
     onRest: closeAnim,
   });
 
   const background = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-    reset: true,
+    ...backgroundAnim,
     reverse: toggle.reverse,
   });
 
@@ -32,8 +35,7 @@ const CV = (): JSX.Element => {
         <animated.section
           style={background}
           className="popup-bg"
-          onClick={() => dispatch(toggleCVReverse(true))}
-        >
+          onClick={() => dispatch(toggleCVReverse(true))}>
           <animated.div style={bottom} className="cv-item">
             <Icon
               onClick={() => dispatch(toggleCVReverse(true))}

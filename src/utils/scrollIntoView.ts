@@ -1,5 +1,5 @@
 interface Props {
-  e: React.MouseEvent<HTMLAnchorElement, MouseEvent>;
+  e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement, MouseEvent>;
   to: string;
   behavior?: "smooth" | "auto";
 }

@@ -1,4 +1,4 @@
-import { useSpring, animated, config } from "@react-spring/web";
+import { useSpring, animated } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 import { useAppDispatch } from "../../../app/hooks";
 import { toggleAbout } from "../../../features/aboutSlice";
@@ -6,6 +6,7 @@ import Btn from "../../common/Btn";
 import { scroll } from "../../../utils/preventScroll";
 import { scrollIntoView } from "../../../utils/scrollIntoView";
 import { toggleCV } from "../../../features/cvSlice";
+import { slideToLeftAnim } from "../../../animations/slideToLeftAnim";
 
 /**
  * Main section
@@ -16,25 +17,15 @@ const Main = (): JSX.Element => {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
 
-  const animConfig = {
-    to: {
-      opacity: 1,
-      x: 0,
-    },
-    from: {
-      opacity: 0,
-      x: 100,
-    },
-    config: config.slow,
-  };
-
+  // Name animation
   const name = useSpring({
-    ...animConfig,
+    ...slideToLeftAnim,
     delay: 300,
   });
 
+  // Title animation
   const title = useSpring({
-    ...animConfig,
+    ...slideToLeftAnim,
     delay: 450,
   });
 
@@ -59,7 +50,7 @@ const Main = (): JSX.Element => {
         />
         <Btn
           text={t("hWorks")}
-          action={(e) => scrollIntoView({ e: e, to: "works" })}
+          action={e => scrollIntoView({ e: e, to: "works" })}
           delay={250}
         />
         <Btn text="CV" action={() => dispatch(toggleCV(true))} delay={400} />

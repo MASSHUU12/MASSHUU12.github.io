@@ -3,13 +3,18 @@ import Flag from "../../common/Flag";
 import Social from "../../common/Social";
 import Scroll from "../../common/Scroll";
 
-const Footer = () => {
+/**
+ * Footer component
+ *
+ * @return {*}  {JSX.Element}
+ */
+const Footer = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
     <footer>
       <div className="bgjar-attribution">
-        Free SVG Background by{" "}
+        SVG Background by{" "}
         <a target="_blank" rel="noreferrer" href="https://bgjar.com">
           BGJar
         </a>

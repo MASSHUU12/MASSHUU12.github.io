@@ -1,3 +1,5 @@
+import { scrollIntoView } from "../../utils/scrollIntoView";
+
 interface Props {
   text: string;
   to: string;
@@ -5,17 +7,11 @@ interface Props {
 }
 
 const Scroll = ({ text, to, behavior = "smooth" }: Props) => {
-  const scroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void => {
-    e.preventDefault();
-
-    document.getElementById(to)?.scrollIntoView({
-      behavior: behavior,
-      block: "start",
-    });
-  };
-
   return (
-    <a href="/" rel="noreferrer" onClick={(e) => scroll(e)}>
+    <a
+      href="/"
+      rel="noreferrer"
+      onClick={e => scrollIntoView({ e: e, to: to, behavior: behavior })}>
       {text}
     </a>
   );

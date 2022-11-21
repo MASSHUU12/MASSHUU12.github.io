@@ -2,11 +2,22 @@ import { Icon } from "@iconify/react";
 import { useSpring, animated } from "@react-spring/web";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { backgroundAnim } from "../../../animations/commonAnims";
+import {
+  workBackgroundAnimation,
+  workSlideInAnimation,
+} from "../../../animations/workAnims";
 import { InfoToggleProps } from "../../../interfaces/interfaces";
 import { scroll } from "../../../utils/preventScroll";
 import Social from "../../common/Social";
 import WorkImage from "./WorkImage";
 
+/**
+ * Main component displaying detailed information about the project
+ *
+ * @param {InfoToggleProps} { item, setToggle }
+ * @return {*}  {JSX.Element}
+ */
 const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
   const [reverse, setReverse] = useState(false);
   const { t } = useTranslation();
@@ -17,41 +28,17 @@ const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
 
   // Common animation config
   const slideInConfig = {
-    to: {
-      y: 0,
-      opacity: 1,
-    },
-    from: {
-      y: 100,
-      opacity: 0,
-    },
-    reset: true,
+    ...workSlideInAnimation,
     reverse: reverse,
   };
 
   // Animations of the appearance of sections.
   const background = useSpring({
-    to: {
-      scaleX: 1,
-      opacity: reverse ? 0.3 : 1,
-    },
-    from: {
-      scaleX: 0,
-      opacity: reverse ? 0 : 1,
-    },
-    reset: true,
-    reverse: reverse,
-    onRest: closeAnim,
+    ...workBackgroundAnimation(reverse, closeAnim),
   });
 
   const backButton = useSpring({
-    to: {
-      opacity: 1,
-    },
-    from: {
-      opacity: 0,
-    },
-    reset: true,
+    ...backgroundAnim,
     reverse: reverse,
     delay: 400,
   });

@@ -6,7 +6,13 @@ interface Props {
   title: string;
 }
 
-const WorkImage = ({ image, title }: Props) => {
+/**
+ * Component used to display project images
+ *
+ * @param {Props} { image, title }
+ * @return {*}  {JSX.Element}
+ */
+const WorkImage = ({ image, title }: Props): JSX.Element => {
   const [mouseOver, setMouseOver] = useState(false);
 
   const styles = useSpring({

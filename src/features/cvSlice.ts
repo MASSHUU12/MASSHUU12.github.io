@@ -12,7 +12,7 @@ export const cvSlice = createSlice({
       action: {
         payload: boolean;
         type: string;
-      }
+      },
     ): void => {
       state.value = action.payload;
       state.reverse = action.payload ? false : true;

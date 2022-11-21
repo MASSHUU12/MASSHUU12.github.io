@@ -3,7 +3,14 @@ import WorkInfo from "./WorkInfo";
 import { useTranslation } from "react-i18next";
 import { InfoProps } from "../../../interfaces/interfaces";
 import { useSpring, animated } from "@react-spring/web";
+import { workItemAnimation } from "../../../animations/workAnims";
 
+/**
+ * Work item
+ *
+ * @param {InfoProps} { item, keyID }
+ * @return {*}  {JSX.Element}
+ */
 const Work = ({ item, keyID }: InfoProps): JSX.Element => {
   const [toggle, setToggle] = useState(false);
   const [mouseOver, setMouseOver] = useState(false);
@@ -12,17 +19,11 @@ const Work = ({ item, keyID }: InfoProps): JSX.Element => {
   const { t } = useTranslation();
 
   // Item animation.
-  const styles = useSpring({
-    opacity: animPlayed ? 1 : 0,
-    y: animPlayed ? 0 : 100,
-    scale: mouseOver ? 1.1 : 1,
-    reset: true,
-    cancel: toggle,
-  });
+  const styles = useSpring(workItemAnimation(animPlayed, mouseOver, toggle));
 
   // Checks whether the observed changes require running an animation.
   const observerCallback = (entries: IntersectionObserverEntry[]): void => {
-    entries.forEach((entry) => {
+    entries.forEach(entry => {
       // If item is visible play animation.
       if (entry.isIntersecting) {
         setAnimPlayed(true);
@@ -56,8 +57,7 @@ const Work = ({ item, keyID }: InfoProps): JSX.Element => {
           document.querySelector("body")!.className = "disable-scroll";
         }}
         onMouseEnter={() => setMouseOver(true)}
-        onMouseLeave={() => setMouseOver(false)}
-      >
+        onMouseLeave={() => setMouseOver(false)}>
         <h2>{t(item.title)}</h2>
         <p>{t(item.short_description)}</p>
         <div className="works-section-labels">
