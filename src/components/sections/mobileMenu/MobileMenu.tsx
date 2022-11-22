@@ -1,7 +1,7 @@
-import { useSpring, animated } from "@react-spring/web";
-import { mobileMenuSlideAnimation } from "../../../animations/mobileMenuAnims";
-import { useAppDispatch, useAppSelector } from "../../../app/hooks";
-import { toggleMobileMenu } from "../../../features/mobileMenuSlice";
+import { animated, useSpring } from "@react-spring/web";
+import { mobileMenuSlideAnimation } from "animations/mobileMenuAnims";
+import { useAppDispatch, useAppSelector } from "app/hooks";
+import { toggleMobileMenu } from "features/mobileMenuSlice";
 import MobileMenuLinks from "./MobileMenuLinks";
 
 /**

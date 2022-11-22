@@ -1,15 +1,15 @@
 import { Icon } from "@iconify/react";
-import { useSpring, animated } from "@react-spring/web";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { backgroundAnim } from "../../../animations/commonAnims";
+import { animated, useSpring } from "@react-spring/web";
+import { backgroundAnim } from "animations/commonAnims";
 import {
   workBackgroundAnimation,
   workSlideInAnimation,
-} from "../../../animations/workAnims";
-import { InfoToggleProps } from "../../../interfaces/interfaces";
-import { scroll } from "../../../utils/preventScroll";
-import Social from "../../common/Social";
+} from "animations/workAnims";
+import Social from "components/common/Social";
+import { InfoToggleProps } from "interfaces/interfaces";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { scroll } from "utils/preventScroll";
 import WorkImage from "./WorkImage";
 
 /**

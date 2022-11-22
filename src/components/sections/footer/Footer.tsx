@@ -1,6 +1,6 @@
+import Flag from "components/common/Flag";
+import Social from "components/common/Social";
 import { useTranslation } from "react-i18next";
-import Flag from "../../common/Flag";
-import Social from "../../common/Social";
 
 /**
  * Footer component

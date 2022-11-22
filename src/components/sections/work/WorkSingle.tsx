@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import WorkInfo from "./WorkInfo";
+import { animated, useSpring } from "@react-spring/web";
+import { workItemAnimation } from "animations/workAnims";
+import { InfoProps } from "interfaces/interfaces";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { InfoProps } from "../../../interfaces/interfaces";
-import { useSpring, animated } from "@react-spring/web";
-import { workItemAnimation } from "../../../animations/workAnims";
+import WorkInfo from "./WorkInfo";
 
 /**
  * Work item

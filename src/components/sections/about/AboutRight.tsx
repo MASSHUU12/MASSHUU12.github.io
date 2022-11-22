@@ -1,10 +1,10 @@
 import { Icon } from "@iconify/react";
 import { animated, useSpring } from "@react-spring/web";
+import { aboutRightAnim } from "animations/aboutAnims";
+import { useAppDispatch, useAppSelector } from "app/hooks";
+import Social from "components/common/Social";
+import { toggleAbout } from "features/aboutSlice";
 import { useTranslation } from "react-i18next";
-import { aboutRightAnim } from "../../../animations/aboutAnims";
-import { useAppDispatch, useAppSelector } from "../../../app/hooks";
-import { toggleAbout } from "../../../features/aboutSlice";
-import Social from "../../common/Social";
 
 interface Props {
   closeMenu: (arg: void) => any;

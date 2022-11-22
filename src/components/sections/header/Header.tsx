@@ -1,7 +1,7 @@
-import { useAppDispatch } from "../../../app/hooks";
 import { Icon } from "@iconify/react";
-import { toggleMobileMenu } from "../../../features/mobileMenuSlice";
-import { scroll } from "../../../utils/preventScroll";
+import { useAppDispatch } from "app/hooks";
+import { toggleMobileMenu } from "features/mobileMenuSlice";
+import { scroll } from "utils/preventScroll";
 
 /**
  * Header component, displays content only on mobile

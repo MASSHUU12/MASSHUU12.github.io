@@ -1,4 +1,4 @@
-import { scrollIntoView } from "../../utils/scrollIntoView";
+import { scrollIntoView } from "utils/scrollIntoView";
 
 interface Props {
   text: string;

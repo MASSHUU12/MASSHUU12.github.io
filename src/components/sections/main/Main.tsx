@@ -1,12 +1,12 @@
-import { useSpring, animated } from "@react-spring/web";
+import { animated, useSpring } from "@react-spring/web";
+import { slideToLeftAnim } from "animations/slideToLeftAnim";
+import { useAppDispatch } from "app/hooks";
+import Btn from "components/common/Btn";
+import { toggleAbout } from "features/aboutSlice";
+import { toggleCV } from "features/cvSlice";
 import { useTranslation } from "react-i18next";
-import { useAppDispatch } from "../../../app/hooks";
-import { toggleAbout } from "../../../features/aboutSlice";
-import Btn from "../../common/Btn";
-import { scroll } from "../../../utils/preventScroll";
-import { scrollIntoView } from "../../../utils/scrollIntoView";
-import { toggleCV } from "../../../features/cvSlice";
-import { slideToLeftAnim } from "../../../animations/slideToLeftAnim";
+import { scroll } from "utils/preventScroll";
+import { scrollIntoView } from "utils/scrollIntoView";
 
 /**
  * Main section

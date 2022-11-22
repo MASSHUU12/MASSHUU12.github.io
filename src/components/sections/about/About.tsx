@@ -1,8 +1,8 @@
-import { useSpring, animated } from "@react-spring/web";
-import { backgroundAnim } from "../../../animations/commonAnims";
-import { useAppDispatch, useAppSelector } from "../../../app/hooks";
-import { toggleReverse } from "../../../features/aboutSlice";
-import { scroll } from "../../../utils/preventScroll";
+import { animated, useSpring } from "@react-spring/web";
+import { backgroundAnim } from "animations/commonAnims";
+import { useAppDispatch, useAppSelector } from "app/hooks";
+import { toggleReverse } from "features/aboutSlice";
+import { scroll } from "utils/preventScroll";
 import AboutLeft from "./AboutLeft";
 import AboutRight from "./AboutRight";
 

@@ -1,7 +1,7 @@
 import { animated, useSpring } from "@react-spring/web";
+import { aboutLeftAnim } from "animations/aboutAnims";
+import { useAppSelector } from "app/hooks";
 import { useTranslation } from "react-i18next";
-import { aboutLeftAnim } from "../../../animations/aboutAnims";
-import { useAppSelector } from "../../../app/hooks";
 
 /**
  * Left part of about component
