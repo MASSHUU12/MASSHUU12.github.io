@@ -1,4 +1,5 @@
 import { useSpring, animated, config } from "@react-spring/web";
+import { useState } from "react";
 
 interface Props {
   text: string;
@@ -11,10 +12,13 @@ const Btn: React.FunctionComponent<Props> = ({
   action,
   delay = 0,
 }): JSX.Element => {
+  const [hover, setHover] = useState<boolean>(false);
+
   const animConfig = useSpring({
     to: {
       opacity: 1,
       y: 0,
+      scale: hover ? 1.15 : 1,
     },
     from: {
       opacity: 0,
@@ -29,7 +33,9 @@ const Btn: React.FunctionComponent<Props> = ({
       type="button"
       style={animConfig}
       className="common-btn"
-      onClick={action}>
+      onClick={action}
+      onMouseOver={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}>
       {text}
     </animated.button>
   );
