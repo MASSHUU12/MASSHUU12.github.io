@@ -6,7 +6,11 @@ interface Props {
   delay?: number;
 }
 
-const Btn = ({ text, action, delay = 0 }: Props): JSX.Element => {
+const Btn: React.FunctionComponent<Props> = ({
+  text,
+  action,
+  delay = 0,
+}): JSX.Element => {
   const animConfig = useSpring({
     to: {
       opacity: 1,
@@ -25,8 +29,7 @@ const Btn = ({ text, action, delay = 0 }: Props): JSX.Element => {
       type="button"
       style={animConfig}
       className="common-btn"
-      onClick={action}
-    >
+      onClick={action}>
       {text}
     </animated.button>
   );

@@ -1,7 +1,7 @@
 import WorkSingle from "./WorkSingle";
 import { info } from "./info";
 
-const Works = () => {
+const Works: React.FunctionComponent<any> = () => {
   return (
     <section className="works-container" id="works">
       {/* Map through items and displays them. */}

@@ -4,12 +4,15 @@ interface Props {
   action: () => void;
 }
 
-const Button = ({ text, white = false, action }: Props): JSX.Element => {
+const Button: React.FunctionComponent<Props> = ({
+  text,
+  white = false,
+  action,
+}): JSX.Element => {
   return (
     <div
       className={`common-button${white ? " common-button-white" : ""}`}
-      onClick={action}
-    >
+      onClick={action}>
       {text}
     </div>
   );

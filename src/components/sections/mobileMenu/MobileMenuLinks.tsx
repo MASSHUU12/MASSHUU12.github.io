@@ -14,7 +14,7 @@ import { scrollIntoView } from "utils/scrollIntoView";
  *
  * @return {*}  {JSX.Element}
  */
-const MobileMenuLinks = (): JSX.Element => {
+const MobileMenuLinks: React.FunctionComponent<any> = (): JSX.Element => {
   const toggle = useAppSelector(state => state.mobileMenu);
   const dispatch = useAppDispatch();
 

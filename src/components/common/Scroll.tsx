@@ -6,7 +6,11 @@ interface Props {
   behavior?: "smooth" | "auto";
 }
 
-const Scroll = ({ text, to, behavior = "smooth" }: Props) => {
+const Scroll: React.FunctionComponent<Props> = ({
+  text,
+  to,
+  behavior = "smooth",
+}) => {
   return (
     <a
       href="/"

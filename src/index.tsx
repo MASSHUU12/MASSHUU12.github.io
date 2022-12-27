@@ -19,5 +19,5 @@ root.render(
       <CV />
       <MobileMenu />
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

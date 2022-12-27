@@ -16,12 +16,12 @@ interface Props {
  *
  * @returns JSX.Element
  */
-const Social = ({
+const Social: React.FunctionComponent<Props> = ({
   href,
   text,
   icon = "",
   color = "white",
-}: Props): JSX.Element => {
+}): JSX.Element => {
   return (
     <a
       href={href}
@@ -29,8 +29,7 @@ const Social = ({
       rel="noreferrer"
       className={`common-custom-link${
         icon === "" ? " common-custom-link-wo-icon" : ""
-      }`}
-    >
+      }`}>
       {icon !== "" ? (
         <Icon icon={icon} color={color} width="32" height="32" />
       ) : (

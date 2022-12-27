@@ -9,7 +9,7 @@ import MobileMenuLinks from "./MobileMenuLinks";
  *
  * @return {*}  {JSX.Element}
  */
-const MobileMenu = (): JSX.Element => {
+const MobileMenu: React.FunctionComponent<any> = (): JSX.Element => {
   const toggle = useAppSelector(state => state.mobileMenu);
   const dispatch = useAppDispatch();
 

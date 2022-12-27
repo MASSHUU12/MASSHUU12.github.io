@@ -11,7 +11,10 @@ import WorkInfo from "./WorkInfo";
  * @param {InfoProps} { item, keyID }
  * @return {*}  {JSX.Element}
  */
-const Work = ({ item, keyID }: InfoProps): JSX.Element => {
+const Work: React.FunctionComponent<InfoProps> = ({
+  item,
+  keyID,
+}: InfoProps): JSX.Element => {
   const [toggle, setToggle] = useState(false);
   const [mouseOver, setMouseOver] = useState(false);
   const [animPlayed, setAnimPlayed] = useState(false);

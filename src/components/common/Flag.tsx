@@ -6,7 +6,10 @@ interface Props {
   locale: string;
 }
 
-const Flag = ({ flag, locale }: Props): JSX.Element => {
+const Flag: React.FunctionComponent<Props> = ({
+  flag,
+  locale,
+}): JSX.Element => {
   const { i18n } = useTranslation();
 
   const changeLocale = (locale: string): void => {

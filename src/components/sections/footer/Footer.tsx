@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
  *
  * @return {*}  {JSX.Element}
  */
-const Footer = (): JSX.Element => {
+const Footer: React.FunctionComponent<any> = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (

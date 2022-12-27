@@ -8,7 +8,7 @@ import { scroll } from "utils/preventScroll";
  *
  * @return {*}  {JSX.Element}
  */
-const Header = (): JSX.Element => {
+const Header: React.FunctionComponent<any> = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   return (

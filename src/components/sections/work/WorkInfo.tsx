@@ -18,7 +18,10 @@ import WorkImage from "./WorkImage";
  * @param {InfoToggleProps} { item, setToggle }
  * @return {*}  {JSX.Element}
  */
-const WorkInfo = ({ item, setToggle }: InfoToggleProps): JSX.Element => {
+const WorkInfo: React.FunctionComponent<InfoToggleProps> = ({
+  item,
+  setToggle,
+}: InfoToggleProps): JSX.Element => {
   const [reverse, setReverse] = useState(false);
   const { t } = useTranslation();
 

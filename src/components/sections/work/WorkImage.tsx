@@ -12,7 +12,10 @@ interface Props {
  * @param {Props} { image, title }
  * @return {*}  {JSX.Element}
  */
-const WorkImage = ({ image, title }: Props): JSX.Element => {
+const WorkImage: React.FunctionComponent<Props> = ({
+  image,
+  title,
+}: Props): JSX.Element => {
   const [mouseOver, setMouseOver] = useState(false);
 
   const styles = useSpring({

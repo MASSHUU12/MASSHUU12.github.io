@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
  *
  * @return {*}  {JSX.Element}
  */
-const AboutLeft = (): JSX.Element => {
+const AboutLeft: React.FunctionComponent<any> = (): JSX.Element => {
   const toggle = useAppSelector(state => state.about);
   const { t } = useTranslation();
 

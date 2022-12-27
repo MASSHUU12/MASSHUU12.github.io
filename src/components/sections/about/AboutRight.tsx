@@ -16,7 +16,9 @@ interface Props {
  * @param {Props} { closeMenu }
  * @return {*}  {JSX.Element}
  */
-const AboutRight = ({ closeMenu }: Props): JSX.Element => {
+const AboutRight: React.FunctionComponent<Props> = ({
+  closeMenu,
+}: Props): JSX.Element => {
   const toggle = useAppSelector(state => state.about);
   const dispatch = useAppDispatch();
   const { t } = useTranslation();

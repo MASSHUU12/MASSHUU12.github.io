@@ -6,7 +6,7 @@ import Works from "components/sections/work/Works";
 import i18n from "i18n";
 import { useEffect } from "react";
 
-function App(): JSX.Element {
+const App: React.FunctionComponent<any> = (): JSX.Element => {
   useEffect(() => {
     // Detect locale on site load
     i18n.changeLanguage(navigator.language.split("-")[0]);
@@ -20,6 +20,6 @@ function App(): JSX.Element {
       <Footer />
     </>
   );
-}
+};
 
 export default App;

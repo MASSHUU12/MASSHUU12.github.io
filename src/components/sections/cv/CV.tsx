@@ -10,7 +10,7 @@ import { toggleCV, toggleCVReverse } from "features/cvSlice";
  *
  * @return {*}  {JSX.Element}
  */
-const CV = (): JSX.Element => {
+const CV: React.FunctionComponent<any> = (): JSX.Element => {
   const toggle = useAppSelector(state => state.cv);
   const dispatch = useAppDispatch();
 

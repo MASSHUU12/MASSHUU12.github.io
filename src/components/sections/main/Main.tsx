@@ -13,7 +13,7 @@ import { scrollIntoView } from "utils/scrollIntoView";
  *
  * @return {*}  {JSX.Element}
  */
-const Main = (): JSX.Element => {
+const Main: React.FunctionComponent<any> = (): JSX.Element => {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
 
