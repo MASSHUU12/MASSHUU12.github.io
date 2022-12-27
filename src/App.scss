@@ -15,7 +15,6 @@
   font-family: "Poppins", sans-serif;
 
   a:hover,
-  .common-button:hover,
   svg:hover,
   button:hover {
     filter: brightness(85%);
@@ -99,7 +98,7 @@ body {
 
 /* End common */
 
-/* Ultrawide */
+/* Ultra-wide */
 @media (min-width: 2560px) {
   body {
     margin: 0 25%;
