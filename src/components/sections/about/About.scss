@@ -50,11 +50,15 @@
 .about-right {
   background-color: #252934;
 
-  .about-right-header {
+  .about-right-header,
+  .about-left-labels {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+  }
+
+  .about-right-header {
+    justify-content: space-between;
     user-select: none;
 
     h1 {
@@ -63,10 +67,7 @@
   }
 
   .about-right-labels {
-    display: flex;
-    flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
     flex-wrap: wrap;
 
     .about-right-label {
@@ -125,7 +126,7 @@
       margin: 0 0 1rem;
 
       .about-right-label {
-        margin: 0 0;
+        margin: 0;
       }
     }
   }

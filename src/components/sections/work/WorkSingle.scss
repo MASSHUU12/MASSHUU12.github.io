@@ -10,19 +10,18 @@
   padding: 2rem;
   border-radius: 0.3rem;
 
-  span {
+  span,
+  h2,
+  p {
     font-weight: 600;
     color: #1c1d25;
   }
 
   h2 {
-    color: #1a1920;
     font-size: 2rem;
-    font-weight: 600;
   }
 
   p {
-    color: #1c1d25;
     font-size: 1.2rem;
     font-weight: 500;
   }

@@ -29,10 +29,7 @@
 body {
   margin: 0 15%;
   font-size: 1em;
-  background-color: #1c1d25;
-  background-image: url("../public/assets/background.svg");
-  background-attachment: fixed;
-  background-size: cover;
+  background: fixed url("../public/assets/background.svg") 0%/cover #1c1d25;
 }
 
 /* Scrollbar */

@@ -5,10 +5,14 @@
   justify-content: center;
   align-items: center;
 
-  h1 {
+  h1,
+  span {
     font-size: 3rem;
-    color: #fff;
     font-weight: 300;
+  }
+
+  h1 {
+    color: #fff;
 
     span {
       color: #c97eda;
@@ -17,9 +21,7 @@
   }
 
   span {
-    font-size: 3rem;
     color: #fff;
-    font-weight: 300;
     margin: 0 0 1rem 0;
   }
 
