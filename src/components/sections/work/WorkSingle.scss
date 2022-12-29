@@ -1,3 +1,5 @@
+@use "../../../colors" as c;
+
 .works-section {
   width: 75%;
   height: fit-content;
@@ -5,7 +7,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #fff;
+  background-color: c.$white;
   cursor: pointer;
   padding: 2rem;
   border-radius: 0.3rem;
@@ -14,7 +16,7 @@
   h2,
   p {
     font-weight: 600;
-    color: #1c1d25;
+    color: c.$primary;
   }
 
   h2 {
@@ -32,8 +34,8 @@
     flex-wrap: wrap;
 
     span {
-      background-color: #252934;
-      color: #fff;
+      background-color: c.$third;
+      color: c.$white;
       padding: 0.5rem;
       margin: 0.2rem 0.5rem 0.2rem 0;
       border-radius: 0.3rem;

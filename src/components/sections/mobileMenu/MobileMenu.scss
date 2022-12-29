@@ -1,15 +1,17 @@
+@use "../../../colors" as c;
+
 .mobile-menu-bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #4a4a4a;
+  background-color: c.$fifth;
 
   .mobile-menu-content {
     width: 100%;
     height: 100%;
-    background-color: #1a1920;
+    background-color: c.$secondary;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,7 +27,7 @@
     button {
       font-size: 2rem;
       font-weight: 600;
-      color: #fff;
+      color: c.$white;
       margin: 0 1em 0 0;
     }
 

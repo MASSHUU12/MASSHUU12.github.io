@@ -1,3 +1,5 @@
+@use "../../../colors" as c;
+
 .main-container {
   height: 100vh;
   display: flex;
@@ -12,16 +14,16 @@
   }
 
   h1 {
-    color: #fff;
+    color: c.$white;
 
     span {
-      color: #c97eda;
+      color: c.$fourth;
       font-weight: 400;
     }
   }
 
   span {
-    color: #fff;
+    color: c.$white;
     margin: 0 0 1rem 0;
   }
 

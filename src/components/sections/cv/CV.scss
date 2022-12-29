@@ -1,13 +1,15 @@
+@use "../../../colors" as c;
+
 .cv-item {
   width: 30%;
   height: fit-content;
-  background-color: #1a1920;
+  background-color: c.$secondary;
   display: flex;
   flex-direction: column;
   padding: 2rem;
 
   a {
-    color: #fff;
+    color: c.$white;
     text-decoration: none;
     width: fit-content;
   }

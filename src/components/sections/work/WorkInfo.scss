@@ -1,3 +1,5 @@
+@use "../../../colors" as c;
+
 .work-info {
   position: fixed;
   top: 0;
@@ -11,7 +13,7 @@
   .work-info-container {
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    background-color: c.$white;
     overflow: scroll;
     padding: 0 15%;
 
@@ -27,7 +29,7 @@
 
       .work-info-details {
         h1 {
-          color: #1a1920;
+          color: c.$secondary;
           font-size: 2rem;
           font-weight: 600;
         }
@@ -41,7 +43,7 @@
           margin: 0 0 1rem;
 
           span {
-            color: #1c1d25;
+            color: c.$primary;
           }
         }
 
@@ -51,8 +53,8 @@
           flex-wrap: wrap;
 
           span {
-            color: #fff;
-            background-color: #252934;
+            color: c.$white;
+            background-color: c.$third;
             padding: 0.5rem;
             border-radius: 0.3rem;
           }
@@ -61,7 +63,7 @@
 
       .work-info-links {
         span {
-          color: #1a1920;
+          color: c.$secondary;
         }
       }
     }

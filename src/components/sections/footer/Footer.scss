@@ -1,9 +1,11 @@
+@use "../../../colors" as c;
+
 footer {
   margin: 0 0 1rem;
 
   hr {
     margin: 1rem 0;
-    color: white;
+    color: c.$white;
   }
 
   .foot-grid {
@@ -27,10 +29,10 @@ footer {
   .foot-btm {
     display: flex;
     justify-content: space-between;
-    color: white;
+    color: c.$white;
 
     a {
-      color: white;
+      color: c.$white;
       margin: 0 0 0 0.3rem;
       text-decoration: underline;
     }

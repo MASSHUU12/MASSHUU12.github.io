@@ -1,3 +1,5 @@
+@use "../../../colors" as c;
+
 .about-left,
 .about-right {
   width: 30%;
@@ -19,15 +21,15 @@
 }
 
 .about-left {
-  background-color: #fff;
+  background-color: c.$white;
 
   h1 {
-    color: #252934;
+    color: c.$third;
   }
 
   span,
   p {
-    color: #1c1d25;
+    color: c.$primary;
   }
 
   span {
@@ -48,7 +50,7 @@
 }
 
 .about-right {
-  background-color: #252934;
+  background-color: c.$third;
 
   .about-right-header,
   .about-left-labels {
@@ -62,7 +64,7 @@
     user-select: none;
 
     h1 {
-      color: #fff;
+      color: c.$white;
     }
   }
 
@@ -71,7 +73,7 @@
     flex-wrap: wrap;
 
     .about-right-label {
-      color: #fff;
+      color: c.$white;
       font-size: 1rem;
       margin: 0 1rem 1rem 0;
     }
