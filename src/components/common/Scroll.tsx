@@ -1,12 +1,13 @@
 import { scrollIntoView } from "utils/scrollIntoView";
+import { FunctionComponent } from "preact";
 
-interface Props {
+type Props = {
   text: string;
   to: string;
   behavior?: "smooth" | "auto";
-}
+};
 
-const Scroll: React.FunctionComponent<Props> = ({
+const Scroll: FunctionComponent<Props> = ({
   text,
   to,
   behavior = "smooth",
@@ -15,7 +16,7 @@ const Scroll: React.FunctionComponent<Props> = ({
     <a
       href="/"
       rel="noreferrer"
-      onClick={e => scrollIntoView({ e: e, to: to, behavior: behavior })}>
+      onClick={e => scrollIntoView({ e, to, behavior })}>
       {text}
     </a>
   );

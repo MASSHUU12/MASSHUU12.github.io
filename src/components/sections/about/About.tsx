@@ -3,6 +3,8 @@ import { backgroundAnim } from "animations/commonAnims";
 import { useAppDispatch, useAppSelector } from "app/hooks";
 import { toggleReverse } from "features/aboutSlice";
 import { scroll } from "utils/preventScroll";
+import { FunctionComponent } from "preact";
+
 import AboutLeft from "./AboutLeft";
 import AboutRight from "./AboutRight";
 
@@ -11,7 +13,7 @@ import AboutRight from "./AboutRight";
  *
  * @return {*}  {JSX.Element}
  */
-const About: React.FunctionComponent<any> = (): JSX.Element => {
+const About: FunctionComponent<any> = (): JSX.Element => {
   const toggle = useAppSelector(state => state.about);
   const dispatch = useAppDispatch();
 

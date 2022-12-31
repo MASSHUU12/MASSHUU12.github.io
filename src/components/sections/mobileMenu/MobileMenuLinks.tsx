@@ -1,11 +1,15 @@
 import { Icon } from "@iconify/react";
 import { animated, useSpring } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
+import { FunctionComponent } from "preact";
+
 import { mobileMenuAnimation } from "animations/mobileMenuAnims";
 import { useAppDispatch, useAppSelector } from "app/hooks";
+
 import { toggleAbout } from "features/aboutSlice";
 import { toggleCV } from "features/cvSlice";
 import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
-import { useTranslation } from "react-i18next";
+
 import { scroll } from "utils/preventScroll";
 import { scrollIntoView } from "utils/scrollIntoView";
 
@@ -14,7 +18,7 @@ import { scrollIntoView } from "utils/scrollIntoView";
  *
  * @return {*}  {JSX.Element}
  */
-const MobileMenuLinks: React.FunctionComponent<any> = (): JSX.Element => {
+const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
   const toggle = useAppSelector(state => state.mobileMenu);
   const dispatch = useAppDispatch();
 

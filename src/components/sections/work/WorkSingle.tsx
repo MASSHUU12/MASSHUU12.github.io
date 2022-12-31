@@ -1,8 +1,10 @@
 import { animated, useSpring } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "preact/hooks";
+import { FunctionComponent } from "preact";
+
 import { workItemAnimation } from "animations/workAnims";
 import { InfoProps } from "interfaces/interfaces";
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 import WorkInfo from "./WorkInfo";
 
 /**
@@ -11,10 +13,7 @@ import WorkInfo from "./WorkInfo";
  * @param {InfoProps} { item, keyID }
  * @return {*}  {JSX.Element}
  */
-const Work: React.FunctionComponent<InfoProps> = ({
-  item,
-  keyID,
-}: InfoProps): JSX.Element => {
+const Work: FunctionComponent<InfoProps> = ({ item, keyID }): JSX.Element => {
   const [toggle, setToggle] = useState(false);
   const [mouseOver, setMouseOver] = useState(false);
   const [animPlayed, setAnimPlayed] = useState(false);
@@ -63,7 +62,7 @@ const Work: React.FunctionComponent<InfoProps> = ({
         onMouseLeave={() => setMouseOver(false)}>
         <h2>{t(item.title)}</h2>
         <p>{t(item.short_description)}</p>
-        <div className="works-section-labels">
+        <div class="works-section-labels">
           {item.labels.map((label, index) => {
             return <span key={index}>{t(label)}</span>;
           })}

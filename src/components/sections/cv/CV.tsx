@@ -4,13 +4,14 @@ import { backgroundAnim } from "animations/commonAnims";
 import { cvBottomAnimation } from "animations/cvAnims";
 import { useAppDispatch, useAppSelector } from "app/hooks";
 import { toggleCV, toggleCVReverse } from "features/cvSlice";
+import { FunctionComponent } from "preact";
 
 /**
  * Component for accessing CV
  *
  * @return {*}  {JSX.Element}
  */
-const CV: React.FunctionComponent<any> = (): JSX.Element => {
+const CV: FunctionComponent<any> = (): JSX.Element => {
   const toggle = useAppSelector(state => state.cv);
   const dispatch = useAppDispatch();
 

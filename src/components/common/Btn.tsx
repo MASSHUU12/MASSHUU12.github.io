@@ -1,13 +1,15 @@
 import { useSpring, animated, config } from "@react-spring/web";
-import { useState } from "react";
 
-interface Props {
+import { useState } from "preact/hooks";
+import { FunctionComponent } from "preact";
+
+type Props = {
   text: string;
   action: (args: any) => any;
   delay?: number;
-}
+};
 
-const Btn: React.FunctionComponent<Props> = ({
+const Btn: FunctionComponent<Props> = ({
   text,
   action,
   delay = 0,

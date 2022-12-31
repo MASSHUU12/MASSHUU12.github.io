@@ -2,13 +2,14 @@ import { Icon } from "@iconify/react";
 import { useAppDispatch } from "app/hooks";
 import { toggleMobileMenu } from "features/mobileMenuSlice";
 import { scroll } from "utils/preventScroll";
+import { FunctionComponent } from "preact";
 
 /**
  * Header component, displays content only on mobile
  *
  * @return {*}  {JSX.Element}
  */
-const Header: React.FunctionComponent<any> = (): JSX.Element => {
+const Header: FunctionComponent<any> = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   return (

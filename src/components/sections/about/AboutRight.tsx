@@ -5,10 +5,11 @@ import { useAppDispatch, useAppSelector } from "app/hooks";
 import Social from "components/common/Social";
 import { toggleAbout } from "features/aboutSlice";
 import { useTranslation } from "react-i18next";
+import { FunctionComponent } from "preact";
 
-interface Props {
+type Props = {
   closeMenu: (arg: void) => any;
-}
+};
 
 /**
  * Right part of about component
@@ -16,9 +17,7 @@ interface Props {
  * @param {Props} { closeMenu }
  * @return {*}  {JSX.Element}
  */
-const AboutRight: React.FunctionComponent<Props> = ({
-  closeMenu,
-}: Props): JSX.Element => {
+const AboutRight: FunctionComponent<Props> = ({ closeMenu }): JSX.Element => {
   const toggle = useAppSelector(state => state.about);
   const dispatch = useAppDispatch();
   const { t } = useTranslation();
@@ -36,7 +35,7 @@ const AboutRight: React.FunctionComponent<Props> = ({
 
   return (
     <animated.div className="about-right" style={anim}>
-      <div className="about-right-header">
+      <div class="about-right-header">
         <h1>{t("aContact")}.</h1>
         <Icon
           onClick={() => closeMenu()}
@@ -46,7 +45,7 @@ const AboutRight: React.FunctionComponent<Props> = ({
           height="48"
         />
       </div>
-      <div className="about-right-links">
+      <div class="about-right-links">
         <Social
           href="mailto:gawrysiak.maciej@pm.com"
           text="gawrysiak.maciej@pm.me"

@@ -1,3 +1,5 @@
+import { StateUpdater } from "preact/hooks";
+
 export interface InfoProps {
   item: {
     title: string;
@@ -31,5 +33,5 @@ export interface InfoToggleProps {
         }[]
       | never[];
   };
-  setToggle: React.Dispatch<React.SetStateAction<boolean>>;
+  setToggle: StateUpdater<boolean>;
 }

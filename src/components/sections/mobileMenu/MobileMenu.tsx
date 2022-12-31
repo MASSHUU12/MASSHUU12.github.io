@@ -3,13 +3,14 @@ import { mobileMenuSlideAnimation } from "animations/mobileMenuAnims";
 import { useAppDispatch, useAppSelector } from "app/hooks";
 import { toggleMobileMenu } from "features/mobileMenuSlice";
 import MobileMenuLinks from "./MobileMenuLinks";
+import { FunctionComponent } from "preact";
 
 /**
  * Menu available only on mobile
  *
  * @return {*}  {JSX.Element}
  */
-const MobileMenu: React.FunctionComponent<any> = (): JSX.Element => {
+const MobileMenu: FunctionComponent<any> = (): JSX.Element => {
   const toggle = useAppSelector(state => state.mobileMenu);
   const dispatch = useAppDispatch();
 

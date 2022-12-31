@@ -1,19 +1,21 @@
+import { useTranslation } from "react-i18next";
+import { FunctionComponent } from "preact";
+
 import Flag from "components/common/Flag";
 import Social from "components/common/Social";
-import { useTranslation } from "react-i18next";
 
 /**
  * Footer component
  *
  * @return {*}  {JSX.Element}
  */
-const Footer: React.FunctionComponent<any> = (): JSX.Element => {
+const Footer: FunctionComponent<any> = (): JSX.Element => {
   const { t } = useTranslation();
 
   return (
     <footer>
-      <div className="foot-grid">
-        <div className="foot-links">
+      <div class="foot-grid">
+        <div class="foot-links">
           <Social
             href="https://www.linkedin.com/in/maciej-gawrysiak"
             text="Linkedin"
@@ -22,13 +24,13 @@ const Footer: React.FunctionComponent<any> = (): JSX.Element => {
           <Social href="https://t.me/MASSHUU" text="Telegram" />
           <Social href="mailto:gawrysiak.maciej@pm.me" text="Email" />
         </div>
-        <div className="foot-flags">
+        <div class="foot-flags">
           <Flag flag="twemoji:flag-for-flag-poland" locale="pl" />
           <Flag flag="twemoji:flag-for-flag-united-states" locale="en" />
         </div>
       </div>
       <hr />
-      <div className="foot-btm">
+      <div class="foot-btm">
         <span>Maciej Gawrysiak</span>
         <span>
           {t("fAtt")}

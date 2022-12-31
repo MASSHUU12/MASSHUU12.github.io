@@ -1,11 +1,12 @@
 import { Icon } from "@iconify/react";
+import { FunctionComponent } from "preact";
 
-interface Props {
+type Props = {
   href: string;
   text: string;
   icon?: string;
   color?: string;
-}
+};
 
 /**
  * Custom link with chosen icon.
@@ -16,7 +17,7 @@ interface Props {
  *
  * @returns JSX.Element
  */
-const Social: React.FunctionComponent<Props> = ({
+const Social: FunctionComponent<Props> = ({
   href,
   text,
   icon = "",
@@ -27,7 +28,7 @@ const Social: React.FunctionComponent<Props> = ({
       href={href}
       target="_blank"
       rel="noreferrer"
-      className={`common-custom-link${
+      class={`common-custom-link${
         icon === "" ? " common-custom-link-wo-icon" : ""
       }`}>
       {icon !== "" ? (

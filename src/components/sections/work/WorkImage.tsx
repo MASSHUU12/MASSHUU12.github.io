@@ -1,10 +1,11 @@
 import { animated, useSpring } from "@react-spring/web";
-import { useState } from "react";
+import { useState } from "preact/hooks";
+import { FunctionComponent } from "preact";
 
-interface Props {
+type Props = {
   image: any;
   title: string;
-}
+};
 
 /**
  * Component used to display project images
@@ -12,10 +13,7 @@ interface Props {
  * @param {Props} { image, title }
  * @return {*}  {JSX.Element}
  */
-const WorkImage: React.FunctionComponent<Props> = ({
-  image,
-  title,
-}: Props): JSX.Element => {
+const WorkImage: FunctionComponent<Props> = ({ image, title }): JSX.Element => {
   const [mouseOver, setMouseOver] = useState(false);
 
   const styles = useSpring({

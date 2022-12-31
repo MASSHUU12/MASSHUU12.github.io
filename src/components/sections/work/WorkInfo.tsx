@@ -1,14 +1,17 @@
 import { Icon } from "@iconify/react";
 import { animated, useSpring } from "@react-spring/web";
+import { useTranslation } from "react-i18next";
+import { useState } from "preact/hooks";
+import { FunctionComponent } from "preact";
+
 import { backgroundAnim } from "animations/commonAnims";
 import {
   workBackgroundAnimation,
   workSlideInAnimation,
 } from "animations/workAnims";
+
 import Social from "components/common/Social";
 import { InfoToggleProps } from "interfaces/interfaces";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { scroll } from "utils/preventScroll";
 import WorkImage from "./WorkImage";
 
@@ -18,10 +21,10 @@ import WorkImage from "./WorkImage";
  * @param {InfoToggleProps} { item, setToggle }
  * @return {*}  {JSX.Element}
  */
-const WorkInfo: React.FunctionComponent<InfoToggleProps> = ({
+const WorkInfo: FunctionComponent<InfoToggleProps> = ({
   item,
   setToggle,
-}: InfoToggleProps): JSX.Element => {
+}): JSX.Element => {
   const [reverse, setReverse] = useState(false);
   const { t } = useTranslation();
 
@@ -74,7 +77,7 @@ const WorkInfo: React.FunctionComponent<InfoToggleProps> = ({
     // Although it seems that this div is unnecessary,
     // it is unfortunately required.
     // Its presence nullifies errors with the animation and display of the element.
-    <div className="work-info">
+    <div class="work-info">
       <animated.section className="work-info-container" style={background}>
         {/* Back button */}
         <animated.div style={backButton}>
@@ -91,8 +94,8 @@ const WorkInfo: React.FunctionComponent<InfoToggleProps> = ({
             }}
           />
         </animated.div>
-        <section className="work-info-details-container">
-          <div className="work-info-details">
+        <section class="work-info-details-container">
+          <div class="work-info-details">
             <animated.h1 style={delay400}>{item.title}</animated.h1>
             {item.leftLabel ? (
               <animated.div style={delay500}>
@@ -134,7 +137,7 @@ const WorkInfo: React.FunctionComponent<InfoToggleProps> = ({
           </animated.div>
         </section>
         {/* Description section */}
-        <div className="work-info-desc">
+        <div class="work-info-desc">
           <animated.h3 style={delay400}>Description</animated.h3>
           <animated.p style={delay500}>{t(item.description)}</animated.p>
         </div>
