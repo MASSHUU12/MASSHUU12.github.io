@@ -17,8 +17,8 @@
   "wSite": "Strona",
   "wTeam": "Praca zespołowa",
 
-  "w1Short": "Serwis, ułatwiający adopcję zwierząt.",
-  "w1Long": "New Life to aplikacja, której zadaniem jest ułatwienie adopcji zwierząt. Aplikacja będzie obsługiwać dwa tryby pracy. Pierwszym trybem jest pokazywanie użytkownikowi zwierząt pasujących do niego w sposób znany z np. Tindera. Schronisko dostaje wtedy informację i może od razu zaakceptować użytkownika do następnego etapu, lub go odrzucić. Drugi tryb to ogólne wyświetlanie wszystkich zwierząt, jakie serwer będzie w stanie zebrać ze stron różnych schronisk.",
+  "w1Short": "Twórz czysty i czytelny kod w Visual Studio Code.",
+  "w1Long": "To rozszerzenie zachęca do pisania krótkich linii kodu, powiadamiając Cię, gdy przekroczysz limit.",
 
   "w2Short": "Skracacz linków.",
   "w2Long": "Prosty skracacz linków bez żadnych dziwnych funkcji, reklam itp. Umożliwia wygenerowanie kodu QR dla swojej strony. Nieużywane linki są usuwane z bazy danych po określonym czasie.",

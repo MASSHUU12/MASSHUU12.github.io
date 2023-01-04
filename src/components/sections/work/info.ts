@@ -2,7 +2,7 @@ import CutItMobile from "./images/cutItMobile.webp";
 import CutIt from "./images/cutIt.webp";
 import KolobrzegHotele from "./images/kolobrzegHotele.webp";
 import Pralka from "./images/pralka.webp";
-import NewLife from "./images/newLife.webp";
+import TooLong from "./images/tooLong.webp";
 
 import BookAppMain from "./images/bookapp_main.webp";
 import BookAppSearch from "./images/bookapp_search.webp";
@@ -25,21 +25,40 @@ export const info = [
     ],
   },
   {
-    title: "New Life",
+    title: "Too Long - line limit",
     short_description: "w1Short",
     description: "w1Long",
-    labels: [
-      "Laravel",
-      "Express.js",
-      "MariaDB",
-      "Docker",
-      "TypeScript",
-      "React Native",
-      "Redux",
+    labels: ["TypeScript"],
+    leftLabel: [],
+    images: [TooLong],
+    links: [
+      {
+        name: "wSource",
+        link: "https://github.com/MASSHUU12/too-long-line-limit",
+      },
+      {
+        name: "wSite",
+        link: "https://marketplace.visualstudio.com/items?itemName=MASSHUU12.too-long-line-limit",
+      },
     ],
-    leftLabel: ["wSus", "wShare"],
-    images: [NewLife],
-    links: [],
+  },
+  {
+    title: "KolobrzegHotele",
+    short_description: "w4Short",
+    description: "w4Long",
+    labels: ["Laravel", "Bing Maps", "Kołobrzeg OpenData", "SCSS"],
+    leftLabel: ["wTeam"],
+    images: [KolobrzegHotele],
+    links: [
+      {
+        name: "wSource",
+        link: "https://github.com/MASSHUU12/project-k",
+      },
+      {
+        name: "wSite",
+        link: "http://jakubdev.vxm.pl/",
+      },
+    ],
   },
   {
     title: "Cut.It",
@@ -66,24 +85,6 @@ export const info = [
       {
         name: "wSource",
         link: "https://github.com/MASSHUU12/Cut.It-mobile",
-      },
-    ],
-  },
-  {
-    title: "KolobrzegHotele",
-    short_description: "w4Short",
-    description: "w4Long",
-    labels: ["Laravel", "Bing Maps", "Kołobrzeg OpenData", "SCSS"],
-    leftLabel: ["wTeam"],
-    images: [KolobrzegHotele],
-    links: [
-      {
-        name: "wSource",
-        link: "https://github.com/MASSHUU12/project-k",
-      },
-      {
-        name: "wSite",
-        link: "http://jakubdev.vxm.pl/",
       },
     ],
   },
