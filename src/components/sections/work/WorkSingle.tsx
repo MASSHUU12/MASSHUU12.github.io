@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "preact/hooks";
 import { FunctionComponent } from "preact";
 
-import { workItemAnimation } from "animations/workAnims";
-import { InfoProps } from "interfaces/interfaces";
+import { workItemAnimation } from "src/animations/workAnims";
+import { InfoProps } from "src/interfaces/interfaces";
 import WorkInfo from "./WorkInfo";
 
 /**

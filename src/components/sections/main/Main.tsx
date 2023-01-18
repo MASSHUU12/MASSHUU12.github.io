@@ -2,15 +2,17 @@ import { animated, useSpring } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 import { FunctionComponent } from "preact";
 
-import { slideToLeftAnim } from "animations/slideToLeftAnim";
-import { useAppDispatch } from "app/hooks";
-import Btn from "components/common/Btn";
+import { slideToLeftAnim } from "src/animations/slideToLeftAnim";
+import { useAppDispatch } from "src/app/hooks";
+import Btn from "src/components/common/Btn";
 
-import { toggleAbout } from "features/aboutSlice";
-import { toggleCV } from "features/cvSlice";
+import { toggleAbout } from "src/features/aboutSlice";
+import { toggleCV } from "src/features/cvSlice";
 
-import { scroll } from "utils/preventScroll";
-import { scrollIntoView } from "utils/scrollIntoView";
+import { scroll } from "src/utils/preventScroll";
+import { scrollIntoView } from "src/utils/scrollIntoView";
+
+import "./Style.scss";
 
 /**
  * Main section

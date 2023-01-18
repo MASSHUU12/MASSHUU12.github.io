@@ -2,16 +2,6 @@
 
 @import url("https://api.fonts.coollabs.io/css2?family=Poppins:wght@300;500;600;700&display=swap");
 
-@import url("./components/sections/header/Header.scss");
-@import url("./components/sections/main/Main.scss");
-@import url("./components/sections/work/Works.scss");
-@import url("./components/sections/work/WorkSingle.scss");
-@import url("./components/sections/work/WorkInfo.scss");
-@import url("./components/sections/mobileMenu/MobileMenu.scss");
-@import url("./components/sections/about/About.scss");
-@import url("./components/sections/cv/CV.scss");
-@import url("./components/sections/footer/Footer.scss");
-
 * {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -31,7 +21,7 @@
 body {
   margin: 0 15%;
   font-size: 1em;
-  background: fixed url("../public/assets/background.svg") 0%/cover c.$primary;
+  background: fixed url("/assets/background.svg") 0%/cover c.$primary;
 }
 
 /* Scrollbar */

@@ -1,9 +1,9 @@
 import { Icon } from "@iconify/react";
 import { animated, useSpring } from "@react-spring/web";
-import { aboutRightAnim } from "animations/aboutAnims";
-import { useAppDispatch, useAppSelector } from "app/hooks";
-import Social from "components/common/Social";
-import { toggleAbout } from "features/aboutSlice";
+import { aboutRightAnim } from "src/animations/aboutAnims";
+import { useAppDispatch, useAppSelector } from "src/app/hooks";
+import Social from "src/components/common/Social";
+import { toggleAbout } from "src/features/aboutSlice";
 import { useTranslation } from "react-i18next";
 import { FunctionComponent } from "preact";
 

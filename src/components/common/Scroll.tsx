@@ -1,4 +1,4 @@
-import { scrollIntoView } from "utils/scrollIntoView";
+import { scrollIntoView } from "src/utils/scrollIntoView";
 import { FunctionComponent } from "preact";
 
 type Props = {
@@ -16,7 +16,7 @@ const Scroll: FunctionComponent<Props> = ({
     <a
       href="/"
       rel="noreferrer"
-      onClick={e => scrollIntoView({ e, to, behavior })}>
+      onClick={(e: MouseEvent) => scrollIntoView({ e, to, behavior })}>
       {text}
     </a>
   );

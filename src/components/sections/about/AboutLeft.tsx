@@ -1,6 +1,6 @@
 import { animated, useSpring } from "@react-spring/web";
-import { aboutLeftAnim } from "animations/aboutAnims";
-import { useAppSelector } from "app/hooks";
+import { aboutLeftAnim } from "src/animations/aboutAnims";
+import { useAppSelector } from "src/app/hooks";
 import { useTranslation } from "react-i18next";
 import { FunctionComponent } from "preact";
 

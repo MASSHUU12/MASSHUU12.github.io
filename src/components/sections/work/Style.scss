@@ -1,5 +1,12 @@
 @use "../../../colors" as c;
 
+.works-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .work-info {
   position: fixed;
   top: 0;
@@ -83,9 +90,60 @@
   }
 }
 
-@media (max-width: 768px) {
-  // ? Why I need !important
+.works-section {
+  width: 75%;
+  height: fit-content;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: c.$white;
+  cursor: pointer;
+  padding: 2rem;
+  border-radius: 0.3rem;
 
+  span,
+  h2,
+  p {
+    font-weight: 600;
+    color: c.$primary;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .works-section-labels {
+    margin: 1rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    span {
+      background-color: c.$third;
+      color: c.$white;
+      padding: 0.5rem;
+      margin: 0.2rem 0.5rem 0.2rem 0;
+      border-radius: 0.3rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .works-container {
+    width: 100%;
+    align-items: center;
+
+    .works-section {
+      margin: 0 0 1rem;
+    }
+  }
+
+  // ? Why I need !important
   .work-info-container {
     padding: 0 5% !important;
   }
@@ -102,5 +160,9 @@
       width: 90vw !important;
       margin: 0 0 2rem !important;
     }
+  }
+
+  .works-section {
+    margin: 0 0 1rem;
   }
 }

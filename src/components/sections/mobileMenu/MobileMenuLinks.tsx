@@ -3,15 +3,15 @@ import { animated, useSpring } from "@react-spring/web";
 import { useTranslation } from "react-i18next";
 import { FunctionComponent } from "preact";
 
-import { mobileMenuAnimation } from "animations/mobileMenuAnims";
-import { useAppDispatch, useAppSelector } from "app/hooks";
+import { mobileMenuAnimation } from "src/animations/mobileMenuAnims";
+import { useAppDispatch, useAppSelector } from "src/app/hooks";
 
-import { toggleAbout } from "features/aboutSlice";
-import { toggleCV } from "features/cvSlice";
-import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
+import { toggleAbout } from "src/features/aboutSlice";
+import { toggleCV } from "src/features/cvSlice";
+import { toggleMobileMenuReverse } from "src/features/mobileMenuSlice";
 
-import { scroll } from "utils/preventScroll";
-import { scrollIntoView } from "utils/scrollIntoView";
+import { scroll } from "src/utils/preventScroll";
+import { scrollIntoView } from "src/utils/scrollIntoView";
 
 /**
  * Component with link for MobileMenu component
@@ -76,7 +76,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
       {/* Works link */}
       <animated.button
         style={works}
-        onClick={e => scrollIntoView({ e: e, to: "works" })}>
+        onClick={(e: MouseEvent) => scrollIntoView({ e: e, to: "works" })}>
         {t("hWorks")}
       </animated.button>
       {/* CV link */}

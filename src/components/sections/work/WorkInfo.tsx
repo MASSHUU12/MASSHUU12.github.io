@@ -4,15 +4,15 @@ import { useTranslation } from "react-i18next";
 import { useState } from "preact/hooks";
 import { FunctionComponent } from "preact";
 
-import { backgroundAnim } from "animations/commonAnims";
+import { backgroundAnim } from "src/animations/commonAnims";
 import {
   workBackgroundAnimation,
   workSlideInAnimation,
-} from "animations/workAnims";
+} from "src/animations/workAnims";
 
-import Social from "components/common/Social";
-import { InfoToggleProps } from "interfaces/interfaces";
-import { scroll } from "utils/preventScroll";
+import Social from "src/components/common/Social";
+import { InfoToggleProps } from "src/interfaces/interfaces";
+import { scroll } from "src/utils/preventScroll";
 import WorkImage from "./WorkImage";
 
 /**

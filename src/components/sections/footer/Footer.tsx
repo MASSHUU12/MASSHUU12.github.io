@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { FunctionComponent } from "preact";
 
-import Flag from "components/common/Flag";
-import Social from "components/common/Social";
+import Flag from "src/components/common/Flag";
+import Social from "src/components/common/Social";
+
+import "./Style.scss";
 
 /**
  * Footer component

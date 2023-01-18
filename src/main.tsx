@@ -1,5 +1,6 @@
 import { render } from "preact";
 import { Provider } from "react-redux";
+
 import App from "./App";
 import "./i18n";
 import store from "./app/store";

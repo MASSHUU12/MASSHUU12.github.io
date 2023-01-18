@@ -3,6 +3,8 @@ import { FunctionComponent } from "preact";
 import WorkSingle from "./WorkSingle";
 import { info } from "./info";
 
+import "./Style.scss";
+
 const Works: FunctionComponent<any> = () => {
   return (
     <section class="works-container" id="works">

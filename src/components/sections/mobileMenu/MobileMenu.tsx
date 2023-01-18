@@ -1,9 +1,11 @@
 import { animated, useSpring } from "@react-spring/web";
-import { mobileMenuSlideAnimation } from "animations/mobileMenuAnims";
-import { useAppDispatch, useAppSelector } from "app/hooks";
-import { toggleMobileMenu } from "features/mobileMenuSlice";
+import { mobileMenuSlideAnimation } from "src/animations/mobileMenuAnims";
+import { useAppDispatch, useAppSelector } from "src/app/hooks";
+import { toggleMobileMenu } from "src/features/mobileMenuSlice";
 import MobileMenuLinks from "./MobileMenuLinks";
 import { FunctionComponent } from "preact";
+
+import "./Style.scss";
 
 /**
  * Menu available only on mobile
