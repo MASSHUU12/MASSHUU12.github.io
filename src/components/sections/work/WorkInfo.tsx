@@ -10,9 +10,9 @@ import {
   workSlideInAnimation,
 } from "src/animations/workAnims";
 
-import Social from "src/components/common/Social";
+import Social from "common/Social";
 import { InfoToggleProps } from "src/interfaces/interfaces";
-import { scroll } from "src/utils/preventScroll";
+import { scroll } from "utils/preventScroll";
 import WorkImage from "./WorkImage";
 
 /**

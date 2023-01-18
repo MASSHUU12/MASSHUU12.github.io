@@ -6,12 +6,12 @@ import { FunctionComponent } from "preact";
 import { mobileMenuAnimation } from "src/animations/mobileMenuAnims";
 import { useAppDispatch, useAppSelector } from "src/app/hooks";
 
-import { toggleAbout } from "src/features/aboutSlice";
-import { toggleCV } from "src/features/cvSlice";
-import { toggleMobileMenuReverse } from "src/features/mobileMenuSlice";
+import { toggleAbout } from "features/aboutSlice";
+import { toggleCV } from "features/cvSlice";
+import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
 
-import { scroll } from "src/utils/preventScroll";
-import { scrollIntoView } from "src/utils/scrollIntoView";
+import { scroll } from "utils/preventScroll";
+import { scrollIntoView } from "utils/scrollIntoView";
 
 /**
  * Component with link for MobileMenu component

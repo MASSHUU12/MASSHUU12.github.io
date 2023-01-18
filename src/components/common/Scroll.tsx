@@ -1,5 +1,5 @@
-import { scrollIntoView } from "src/utils/scrollIntoView";
 import { FunctionComponent } from "preact";
+import { scrollIntoView } from "utils/scrollIntoView";
 
 type Props = {
   text: string;

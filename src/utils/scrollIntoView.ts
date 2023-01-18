@@ -3,7 +3,6 @@ import { JSXInternal } from "preact/src/jsx";
 type Props = {
   e:
     | JSXInternal.TargetedMouseEvent<HTMLAnchorElement>
-    | MouseEvent
     | MouseEvent;
   to: string;
   behavior?: "smooth" | "auto";

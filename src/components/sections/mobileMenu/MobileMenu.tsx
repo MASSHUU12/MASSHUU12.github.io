@@ -1,9 +1,10 @@
+import { FunctionComponent } from "preact";
 import { animated, useSpring } from "@react-spring/web";
+
 import { mobileMenuSlideAnimation } from "src/animations/mobileMenuAnims";
 import { useAppDispatch, useAppSelector } from "src/app/hooks";
-import { toggleMobileMenu } from "src/features/mobileMenuSlice";
+import { toggleMobileMenu } from "features/mobileMenuSlice";
 import MobileMenuLinks from "./MobileMenuLinks";
-import { FunctionComponent } from "preact";
 
 import "./Style.scss";
 

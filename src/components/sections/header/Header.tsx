@@ -1,8 +1,9 @@
-import { Icon } from "@iconify/react";
-import { useAppDispatch } from "src/app/hooks";
-import { toggleMobileMenu } from "src/features/mobileMenuSlice";
-import { scroll } from "src/utils/preventScroll";
 import { FunctionComponent } from "preact";
+import { Icon } from "@iconify/react";
+
+import { scroll } from "utils/preventScroll";
+import { useAppDispatch } from "src/app/hooks";
+import { toggleMobileMenu } from "features/mobileMenuSlice";
 
 import "./Style.scss";
 

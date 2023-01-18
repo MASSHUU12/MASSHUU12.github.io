@@ -1,10 +1,12 @@
+import { FunctionComponent } from "preact";
 import { Icon } from "@iconify/react";
 import { animated, useSpring } from "@react-spring/web";
+
 import { backgroundAnim } from "src/animations/commonAnims";
 import { cvBottomAnimation } from "src/animations/cvAnims";
+
 import { useAppDispatch, useAppSelector } from "src/app/hooks";
-import { toggleCV, toggleCVReverse } from "src/features/cvSlice";
-import { FunctionComponent } from "preact";
+import { toggleCV, toggleCVReverse } from "features/cvSlice";
 
 import "./Style.scss";
 

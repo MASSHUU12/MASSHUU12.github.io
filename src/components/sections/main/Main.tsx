@@ -4,13 +4,13 @@ import { FunctionComponent } from "preact";
 
 import { slideToLeftAnim } from "src/animations/slideToLeftAnim";
 import { useAppDispatch } from "src/app/hooks";
-import Btn from "src/components/common/Btn";
+import Btn from "common/Btn";
 
-import { toggleAbout } from "src/features/aboutSlice";
-import { toggleCV } from "src/features/cvSlice";
+import { toggleAbout } from "features/aboutSlice";
+import { toggleCV } from "features/cvSlice";
 
-import { scroll } from "src/utils/preventScroll";
-import { scrollIntoView } from "src/utils/scrollIntoView";
+import { scroll } from "utils/preventScroll";
+import { scrollIntoView } from "utils/scrollIntoView";
 
 import "./Style.scss";
 

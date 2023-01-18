@@ -19,7 +19,12 @@
     "baseUrl": "./",
     "paths": {
       "react": ["./node_modules/preact/compat/"],
-      "react-dom": ["./node_modules/preact/compat/"]
+      "react-dom": ["./node_modules/preact/compat/"],
+      "cmp/*": ["./src/components/*"],
+      "common/*": ["./src/components/common/*"],
+      "sections/*": ["./src/components/sections/*"],
+      "utils/*": ["./src/utils/*"],
+      "features/*": ["./src/features/*"]
     }
   },
   "include": ["src"],

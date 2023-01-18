@@ -5,10 +5,10 @@ import { toggleReverse } from "src/features/aboutSlice";
 import { scroll } from "src/utils/preventScroll";
 import { FunctionComponent } from "preact";
 
+import "./Style.scss";
+
 import AboutLeft from "./AboutLeft";
 import AboutRight from "./AboutRight";
-
-import "./Style.scss";
 
 /**
  * Main about component
