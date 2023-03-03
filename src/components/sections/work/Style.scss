@@ -175,6 +175,28 @@
 
     .project-section {
       margin: 0 0 1rem;
+      width: 85vw;
+      height: 45vh;
+      max-height: unset;
+      margin: 0 0 1.5rem;
+      padding: 0;
+
+      .project-content {
+        width: 100%;
+        background-color: c.$third;
+        box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+        padding: 0 0 0 1.5rem;
+
+        p {
+          background-color: unset;
+          box-shadow: unset;
+          padding: 0;
+        }
+      }
+
+      .project-image {
+        display: none;
+      }
     }
   }
 
