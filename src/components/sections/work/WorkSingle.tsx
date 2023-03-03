@@ -49,7 +49,7 @@ const Work: FunctionComponent<InfoProps> = ({ item, keyID }): JSX.Element => {
     <>
       <animated.div
         style={styles}
-        className="works-section"
+        className="project-section"
         id={`w${keyID}`}
         onClick={() => {
           // Open window.
@@ -60,12 +60,18 @@ const Work: FunctionComponent<InfoProps> = ({ item, keyID }): JSX.Element => {
         }}
         onMouseEnter={() => setMouseOver(true)}
         onMouseLeave={() => setMouseOver(false)}>
-        <h2>{t(item.title)}</h2>
-        <p>{t(item.short_description)}</p>
-        <div class="works-section-labels">
-          {item.labels.map((label, index) => {
-            return <span key={index}>{t(label)}</span>;
-          })}
+        <div className="project-content">
+          <h3>Featured Project</h3>
+          <h2>{t(item.title)}</h2>
+          <p>{t(item.short_description)}</p>
+          <div class="project-labels">
+            {item.labels.map((label, index) => {
+              return <span key={index}>{t(label)}</span>;
+            })}
+          </div>
+        </div>
+        <div className="project-image">
+          <img src="/assets/projects/tooLong.webp" alt="" />
         </div>
       </animated.div>
       {toggle && <WorkInfo item={item} setToggle={setToggle} />}

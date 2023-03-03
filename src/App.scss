@@ -19,9 +19,12 @@
 }
 
 body {
-  margin: 0 15%;
   font-size: 1em;
-  background: fixed url("/assets/background.svg") 0%/cover c.$primary;
+  background-color: c.$primary;
+
+  #root {
+    margin: 0 15%;
+  }
 }
 
 /* Scrollbar */

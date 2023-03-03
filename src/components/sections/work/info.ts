@@ -1,14 +1,3 @@
-import CutItMobile from "./images/cutItMobile.webp";
-import CutIt from "./images/cutIt.webp";
-import KolobrzegHotele from "./images/kolobrzegHotele.webp";
-import Pralka from "./images/pralka.webp";
-import TooLong from "./images/tooLong.webp";
-
-import BookAppMain from "./images/bookapp_main.webp";
-import BookAppSearch from "./images/bookapp_search.webp";
-import BookAppSingle from "./images/bookapp_single.webp";
-import BookAppList from "./images/bookapp_list.webp";
-
 export const info = [
   {
     title: "Bookapp (WIP)",
@@ -16,7 +5,12 @@ export const info = [
     description: "w5Long",
     labels: ["React Native", "TypeScript", "SQLite", "Redux"],
     leftLabel: ["wTeam"],
-    images: [BookAppMain, BookAppSingle, BookAppSearch, BookAppList],
+    images: [
+      "bookapp_main.webp",
+      "bookapp_search.webp",
+      "bookapp_search.webp",
+      "bookapp_list.webp",
+    ],
     links: [
       {
         name: "wSource",
@@ -30,7 +24,7 @@ export const info = [
     description: "w1Long",
     labels: ["TypeScript"],
     leftLabel: [],
-    images: [TooLong],
+    images: ["tooLong.webp"],
     links: [
       {
         name: "wSource",
@@ -48,7 +42,7 @@ export const info = [
     description: "w4Long",
     labels: ["Laravel", "Bing Maps", "Kołobrzeg OpenData", "SCSS"],
     leftLabel: ["wTeam"],
-    images: [KolobrzegHotele],
+    images: ["kolobrzegHotele.webp"],
     links: [
       {
         name: "wSource",
@@ -66,7 +60,7 @@ export const info = [
     description: "w2Long",
     labels: ["Laravel", "MariaDB", "jQuery", "SCSS"],
     leftLabel: [],
-    images: [CutIt],
+    images: ["cutIt.webp"],
     links: [
       {
         name: "wSource",
@@ -80,7 +74,7 @@ export const info = [
     description: "w3Long",
     labels: ["React Native", "Laravel API"],
     leftLabel: [],
-    images: [CutItMobile],
+    images: ["cutItMobile.webp"],
     links: [
       {
         name: "wSource",
@@ -94,7 +88,7 @@ export const info = [
     description: "w6Long",
     labels: ["PHP", "PayPal", "SCSS"],
     leftLabel: ["wTeam"],
-    images: [Pralka],
+    images: ["pralka.webp"],
     links: [
       {
         name: "wSource",
