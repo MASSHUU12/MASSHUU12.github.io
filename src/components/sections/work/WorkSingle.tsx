@@ -64,7 +64,7 @@ const Work: FunctionComponent<InfoProps> = ({
         onMouseEnter={() => setMouseOver(true)}
         onMouseLeave={() => setMouseOver(false)}>
         <div className="project-content">
-          <h3>Featured Project</h3>
+          {item.teamwork && <h3>{t("wTeam")}</h3>}
           <h2>{t(item.title)}</h2>
           <p>{t(item.short_desc)}</p>
           <div class="project-labels">

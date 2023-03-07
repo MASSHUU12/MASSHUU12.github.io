@@ -7,6 +7,7 @@ export interface InfoProps {
     description: string;
     labels: Array<string>;
     labels_left: Array<string>;
+    teamwork: boolean;
     images: Array<string>;
     links:
       | {
@@ -25,6 +26,7 @@ export interface InfoToggleProps {
     description: string;
     labels: Array<string>;
     labels_left: Array<string>;
+    teamwork: boolean;
     images: Array<string>;
     links:
       | {

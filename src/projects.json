@@ -5,7 +5,9 @@
     "description": "w5Long",
     "labels": ["React Native", "TypeScript", "SQLite", "Redux"],
     "labels_left": ["wTeam"],
+    "teamwork": true,
     "images": [
+      "bookapp_mockup.webp",
       "bookapp_main.webp",
       "bookapp_search.webp",
       "bookapp_search.webp",
@@ -14,7 +16,29 @@
     "links": [
       {
         "name": "wSource",
+        "type": "github",
         "link": "https://github.com/MASSHUU12/bookapp"
+      }
+    ]
+  },
+  {
+    "title": "System Info",
+    "short_desc": "w3Short",
+    "description": "w3Long",
+    "labels": ["TypeScript", "Visual Studio Code API", "VS Code Extension"],
+    "labels_left": [],
+    "teamwork": false,
+    "images": ["systemInfo.webp"],
+    "links": [
+      {
+        "name": "wSource",
+        "type": "github",
+        "link": "https://github.com/MASSHUU12/system-info"
+      },
+      {
+        "name": "wSite",
+        "type": "website",
+        "link": "https://marketplace.visualstudio.com/items?itemName=MASSHUU12.system-info"
       }
     ]
   },
@@ -22,35 +46,40 @@
     "title": "Too Long - line limit",
     "short_desc": "w1Short",
     "description": "w1Long",
-    "labels": ["TypeScript"],
+    "labels": ["TypeScript", "Visual Studio Code API", "VS Code Extension"],
     "labels_left": [],
+    "teamwork": false,
     "images": ["tooLong.webp"],
     "links": [
       {
         "name": "wSource",
+        "type": "github",
         "link": "https://github.com/MASSHUU12/too-long-line-limit"
       },
       {
         "name": "wSite",
+        "type": "website",
         "link": "https://marketplace.visualstudio.com/items?itemName=MASSHUU12.too-long-line-limit"
       }
     ]
   },
   {
     "title": "KolobrzegHotele",
-    "short_description": "w4Short",
-    "short_desc": "w4Long",
-    "description": "",
+    "short_desc": "w4Short",
+    "description": "w4Long",
     "labels": ["Laravel", "Bing Maps", "Kołobrzeg OpenData", "SCSS"],
     "labels_left": ["wTeam"],
+    "teamwork": true,
     "images": ["kolobrzegHotele.webp"],
     "links": [
       {
         "name": "wSource",
+        "type": "github",
         "link": "https://github.com/MASSHUU12/project-k"
       },
       {
         "name": "wSite",
+        "type": "website",
         "link": "http://jakubdev.vxm.pl/"
       }
     ]
@@ -61,25 +90,13 @@
     "description": "w2Long",
     "labels": ["Laravel", "MariaDB", "jQuery", "SCSS"],
     "labels_left": [],
+    "teamwork": false,
     "images": ["cutIt.webp"],
     "links": [
       {
         "name": "wSource",
+        "type": "github",
         "link": "https://github.com/MASSHUU12/Cut.It"
-      }
-    ]
-  },
-  {
-    "title": "Cut.It Mobile",
-    "short_desc": "w3Short",
-    "description": "w3Long",
-    "labels": ["React Native", "Laravel API"],
-    "labels_left": [],
-    "images": ["cutItMobile.webp"],
-    "links": [
-      {
-        "name": "wSource",
-        "link": "https://github.com/MASSHUU12/Cut.It-mobile"
       }
     ]
   }
