@@ -5,7 +5,7 @@ import { FunctionComponent } from "preact";
 
 import { workItemAnimation } from "src/animations/workAnims";
 import { InfoProps } from "src/interfaces/interfaces";
-import WorkInfo from "./WorkInfo";
+import ProjectInfo from "./ProjectInfo";
 
 /**
  * Work item
@@ -13,7 +13,7 @@ import WorkInfo from "./WorkInfo";
  * @param {InfoProps} { item, keyID }
  * @return {*}  {JSX.Element}
  */
-const Work: FunctionComponent<InfoProps> = ({
+const Project: FunctionComponent<InfoProps> = ({
   item,
   keyID,
 }: InfoProps): JSX.Element => {
@@ -77,9 +77,9 @@ const Work: FunctionComponent<InfoProps> = ({
           <img src={`/assets/projects/${item.images[0]}`} alt="" />
         </div>
       </animated.div>
-      {toggle && <WorkInfo item={item} setToggle={setToggle} />}
+      {toggle && <ProjectInfo item={item} setToggle={setToggle} />}
     </>
   );
 };
 
-export default Work;
+export default Project;

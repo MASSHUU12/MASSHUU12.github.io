@@ -13,7 +13,10 @@ type Props = {
  * @param {Props} { image, title }
  * @return {*}  {JSX.Element}
  */
-const WorkImage: FunctionComponent<Props> = ({ image, title }): JSX.Element => {
+const ProjectImage: FunctionComponent<Props> = ({
+  image,
+  title,
+}): JSX.Element => {
   const [mouseOver, setMouseOver] = useState(false);
 
   const styles = useSpring({
@@ -24,7 +27,7 @@ const WorkImage: FunctionComponent<Props> = ({ image, title }): JSX.Element => {
     <animated.img
       style={styles}
       loading="lazy"
-      src={image}
+      src={`/assets/projects/${image}`}
       alt={title + " image"}
       onMouseEnter={() => setMouseOver(true)}
       onMouseLeave={() => setMouseOver(false)}
@@ -32,4 +35,4 @@ const WorkImage: FunctionComponent<Props> = ({ image, title }): JSX.Element => {
   );
 };
 
-export default WorkImage;
+export default ProjectImage;
