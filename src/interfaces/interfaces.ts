@@ -3,10 +3,10 @@ import { StateUpdater } from "preact/hooks";
 export interface InfoProps {
   item: {
     title: string;
-    short_description: string;
+    short_desc: string;
     description: string;
     labels: Array<string>;
-    leftLabel: Array<string>;
+    labels_left: Array<string>;
     images: Array<string>;
     links:
       | {
@@ -21,10 +21,10 @@ export interface InfoProps {
 export interface InfoToggleProps {
   item: {
     title: string;
-    short_description: string;
+    short_desc: string;
     description: string;
     labels: Array<string>;
-    leftLabel: Array<string>;
+    labels_left: Array<string>;
     images: Array<string>;
     links:
       | {

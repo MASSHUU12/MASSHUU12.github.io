@@ -24,7 +24,7 @@ import WorkImage from "./WorkImage";
 const WorkInfo: FunctionComponent<InfoToggleProps> = ({
   item,
   setToggle,
-}): JSX.Element => {
+}: InfoToggleProps): JSX.Element => {
   const [reverse, setReverse] = useState(false);
   const { t } = useTranslation();
 
@@ -97,9 +97,9 @@ const WorkInfo: FunctionComponent<InfoToggleProps> = ({
         <section class="work-info-details-container">
           <div class="work-info-details">
             <animated.h1 style={delay400}>{item.title}</animated.h1>
-            {item.leftLabel ? (
+            {item.labels_left ? (
               <animated.div style={delay500}>
-                {item.leftLabel.map((label, index) => {
+                {item.labels_left.map((label, index) => {
                   return <span key={index}>{t(label)}</span>;
                 })}
               </animated.div>

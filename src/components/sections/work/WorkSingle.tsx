@@ -13,7 +13,10 @@ import WorkInfo from "./WorkInfo";
  * @param {InfoProps} { item, keyID }
  * @return {*}  {JSX.Element}
  */
-const Work: FunctionComponent<InfoProps> = ({ item, keyID }): JSX.Element => {
+const Work: FunctionComponent<InfoProps> = ({
+  item,
+  keyID,
+}: InfoProps): JSX.Element => {
   const [toggle, setToggle] = useState(false);
   const [mouseOver, setMouseOver] = useState(false);
   const [animPlayed, setAnimPlayed] = useState(false);
@@ -63,7 +66,7 @@ const Work: FunctionComponent<InfoProps> = ({ item, keyID }): JSX.Element => {
         <div className="project-content">
           <h3>Featured Project</h3>
           <h2>{t(item.title)}</h2>
-          <p>{t(item.short_description)}</p>
+          <p>{t(item.short_desc)}</p>
           <div class="project-labels">
             {item.labels.map((label, index) => {
               return <span key={index}>{t(label)}</span>;
@@ -71,7 +74,7 @@ const Work: FunctionComponent<InfoProps> = ({ item, keyID }): JSX.Element => {
           </div>
         </div>
         <div className="project-image">
-          <img src="/assets/projects/tooLong.webp" alt="" />
+          <img src={`/assets/projects/${item.images[0]}`} alt="" />
         </div>
       </animated.div>
       {toggle && <WorkInfo item={item} setToggle={setToggle} />}

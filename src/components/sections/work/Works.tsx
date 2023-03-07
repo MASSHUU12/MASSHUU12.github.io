@@ -1,15 +1,15 @@
 import { FunctionComponent } from "preact";
 
 import WorkSingle from "./WorkSingle";
-import { info } from "./info";
+import * as json from "../../../projects.json";
 
 import "./Style.scss";
 
 const Works: FunctionComponent<any> = () => {
   return (
-    <section class="works-container" id="works">
+    <section class="project-container" id="works">
       {/* Map through items and displays them. */}
-      {info.map((item, index) => (
+      {json["default"].map((item: any, index: any) => (
         <WorkSingle key={index} item={item} keyID={index} />
       ))}
     </section>
