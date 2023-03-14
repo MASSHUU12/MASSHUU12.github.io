@@ -74,7 +74,10 @@ const Project: FunctionComponent<InfoProps> = ({
           </div>
         </div>
         <div className="project-image">
-          <img src={`/assets/projects/${item.images[0]}`} alt="" />
+          <img
+            src={`/assets/projects/${item.images[0]}`}
+            alt={`${item.title}'s project image`}
+          />
         </div>
       </animated.div>
       {toggle && <ProjectInfo item={item} setToggle={setToggle} />}
