@@ -13,7 +13,7 @@ import {
 import Social from "common/Social";
 import { InfoToggleProps } from "src/interfaces/interfaces";
 import { scroll } from "utils/preventScroll";
-import WorkImage from "./WorkImage";
+import ProjectImage from "./ProjectImage";
 
 /**
  * Main component displaying detailed information about the project
@@ -21,10 +21,10 @@ import WorkImage from "./WorkImage";
  * @param {InfoToggleProps} { item, setToggle }
  * @return {*}  {JSX.Element}
  */
-const WorkInfo: FunctionComponent<InfoToggleProps> = ({
+const ProjectInfo: FunctionComponent<InfoToggleProps> = ({
   item,
   setToggle,
-}): JSX.Element => {
+}: InfoToggleProps): JSX.Element => {
   const [reverse, setReverse] = useState(false);
   const { t } = useTranslation();
 
@@ -77,12 +77,12 @@ const WorkInfo: FunctionComponent<InfoToggleProps> = ({
     // Although it seems that this div is unnecessary,
     // it is unfortunately required.
     // Its presence nullifies errors with the animation and display of the element.
-    <div class="work-info">
-      <animated.section className="work-info-container" style={background}>
+    <div class="project-info">
+      <animated.section className="project-info-container" style={background}>
         {/* Back button */}
         <animated.div style={backButton}>
           <Icon
-            className="work-info-container-back"
+            className="project-info-container-back"
             icon="ic:round-arrow-back-ios-new"
             color="#4a4a4a"
             width="48"
@@ -94,12 +94,12 @@ const WorkInfo: FunctionComponent<InfoToggleProps> = ({
             }}
           />
         </animated.div>
-        <section class="work-info-details-container">
-          <div class="work-info-details">
+        <section class="project-info-details-container">
+          <div class="project-info-details">
             <animated.h1 style={delay400}>{item.title}</animated.h1>
-            {item.leftLabel ? (
+            {item.labels_left ? (
               <animated.div style={delay500}>
-                {item.leftLabel.map((label, index) => {
+                {item.labels_left.map((label, index) => {
                   return <span key={index}>{t(label)}</span>;
                 })}
               </animated.div>
@@ -108,7 +108,7 @@ const WorkInfo: FunctionComponent<InfoToggleProps> = ({
             )}
             {/* Labels */}
             {item.labels ? (
-              <animated.div style={labels} className="work-info-labels">
+              <animated.div style={labels} className="project-info-labels">
                 {item.labels.map((label, index) => {
                   return <span key={index}>{t(label)}</span>;
                 })}
@@ -118,7 +118,7 @@ const WorkInfo: FunctionComponent<InfoToggleProps> = ({
             )}
           </div>
           {/* Links */}
-          <animated.div style={delay400} className="work-info-links">
+          <animated.div style={delay400} className="project-info-links">
             {item.links.map((object, index) => {
               return (
                 <Social
@@ -137,14 +137,14 @@ const WorkInfo: FunctionComponent<InfoToggleProps> = ({
           </animated.div>
         </section>
         {/* Description section */}
-        <div class="work-info-desc">
+        <div class="project-info-desc">
           <animated.h3 style={delay400}>Description</animated.h3>
           <animated.p style={delay500}>{t(item.description)}</animated.p>
         </div>
         {/* Images */}
-        <animated.div style={delay700} className="work-info-images">
+        <animated.div style={delay700} className="project-info-images">
           {item.images.map((image, index) => (
-            <WorkImage key={index} image={image} title={item.title} />
+            <ProjectImage key={index} image={image} title={item.title} />
           ))}
         </animated.div>
       </animated.section>
@@ -152,4 +152,4 @@ const WorkInfo: FunctionComponent<InfoToggleProps> = ({
   );
 };
 
-export default WorkInfo;
+export default ProjectInfo;

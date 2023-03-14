@@ -23,15 +23,12 @@
   "w2Short": "Link shortener.",
   "w2Long": "A simple link shortener without any weird features, ads, etc. Allows you to generate a QR code for your site. Unused links are removed from the database after a certain period of time.",
 
-  "w3Short": "Mobile link shortener.",
-  "w3Long": "Like the web version, it allows for link shortening, and QR code generation. The application requires the web version to function, as it uses its API.",
+  "w3Short": "Get up-to-date information about your computer resource usage in Visual Studio Code.",
+  "w3Long": "Get up-to-date information about your computer resource usage in Visual Studio Code.",
 
   "w4Short": "Kolobrzeg accommodation search engine.",
-  "w4Long": "KolobrzegHotele is a search engine for accommodation. The site was created for a competition, but unfortunately the city turned off the API that the site used, so most of the features no longer work. Accommodations were searched based on several categories and how important they were to the user. E.g., if proximity to the beach was most important to someone, and the rest was irrelevant, the proposed accommodations were as close to the beach as possible.",
+  "w4Long": "KolobrzegHotels is a search engine for places to stay. The site was created for a competition. The city disabled some of the API the site uses, so some of the features may not work. Accommodations are searched based on several categories and how important they are to the user, e.g. if proximity to the beach is most important to someone and the rest is unimportant, accommodations as close to the beach as possible will be suggested.",
 
-  "w5Short": "Bookapp (working name) is a mobile application for tracking reading.",
-  "w5Long": "The application easily allows you to mark books you have read and books \"to read\". Thanks to its integration with the openlibrary.org API, it also allows you to search for books and check details about them.",
-
-  "w6Short": "Second-hand appliance store.",
-  "w6Long": "This website was created for a vocational training at a technical school and shows a store with used household appliances. Users can add listings, and buy items thanks to PayPal integration."
+  "w5Short": "Bookapp is a mobile application to track books read.",
+  "w5Long": "The application easily allows you to mark books you have read and books \"to read\". Thanks to its integration with the openlibrary.org API, it also allows you to search for books and check details about them."
 }

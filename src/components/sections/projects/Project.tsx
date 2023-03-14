@@ -5,15 +5,18 @@ import { FunctionComponent } from "preact";
 
 import { workItemAnimation } from "src/animations/workAnims";
 import { InfoProps } from "src/interfaces/interfaces";
-import WorkInfo from "./WorkInfo";
+import ProjectInfo from "./ProjectInfo";
 
 /**
- * Work item
+ * Project
  *
  * @param {InfoProps} { item, keyID }
  * @return {*}  {JSX.Element}
  */
-const Work: FunctionComponent<InfoProps> = ({ item, keyID }): JSX.Element => {
+const Project: FunctionComponent<InfoProps> = ({
+  item,
+  keyID,
+}: InfoProps): JSX.Element => {
   const [toggle, setToggle] = useState(false);
   const [mouseOver, setMouseOver] = useState(false);
   const [animPlayed, setAnimPlayed] = useState(false);
@@ -49,7 +52,7 @@ const Work: FunctionComponent<InfoProps> = ({ item, keyID }): JSX.Element => {
     <>
       <animated.div
         style={styles}
-        className="works-section"
+        className="project-section"
         id={`w${keyID}`}
         onClick={() => {
           // Open window.
@@ -60,17 +63,23 @@ const Work: FunctionComponent<InfoProps> = ({ item, keyID }): JSX.Element => {
         }}
         onMouseEnter={() => setMouseOver(true)}
         onMouseLeave={() => setMouseOver(false)}>
-        <h2>{t(item.title)}</h2>
-        <p>{t(item.short_description)}</p>
-        <div class="works-section-labels">
-          {item.labels.map((label, index) => {
-            return <span key={index}>{t(label)}</span>;
-          })}
+        <div className="project-content">
+          {item.teamwork && <h3>{t("wTeam")}</h3>}
+          <h2>{t(item.title)}</h2>
+          <p>{t(item.short_desc)}</p>
+          <div class="project-labels">
+            {item.labels.map((label, index) => {
+              return <span key={index}>{t(label)}</span>;
+            })}
+          </div>
+        </div>
+        <div className="project-image">
+          <img src={`/assets/projects/${item.images[0]}`} alt="" />
         </div>
       </animated.div>
-      {toggle && <WorkInfo item={item} setToggle={setToggle} />}
+      {toggle && <ProjectInfo item={item} setToggle={setToggle} />}
     </>
   );
 };
 
-export default Work;
+export default Project;

@@ -19,9 +19,12 @@
 }
 
 body {
-  margin: 0 15%;
   font-size: 1em;
-  background: fixed url("/assets/background.svg") 0%/cover c.$primary;
+  background-color: c.$blue_gray;
+
+  #root {
+    margin: 0 15%;
+  }
 }
 
 /* Scrollbar */
@@ -30,7 +33,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: c.$secondary;
+  background: c.$plum;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -90,7 +93,9 @@ body {
 /* Ultra-wide */
 @media (min-width: 2560px) {
   body {
-    margin: 0 25%;
+    #root {
+      margin: 0 25%;
+    }
   }
 }
 
@@ -102,6 +107,8 @@ body {
   }
 
   body {
-    margin: 0;
+    #root {
+      margin: 0 8%;
+    }
   }
 }

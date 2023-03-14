@@ -7,7 +7,7 @@ import i18n from "./i18n";
 import Footer from "sections/footer/Footer";
 import Header from "sections/header/Header";
 import Main from "sections/main/Main";
-import Works from "sections/work/Works";
+import Projects from "cmp/sections/projects/Projects";
 
 const App: FunctionComponent<any> = (): JSX.Element => {
   useEffect(() => {
@@ -19,7 +19,7 @@ const App: FunctionComponent<any> = (): JSX.Element => {
     <>
       <Header />
       <Main />
-      <Works />
+      <Projects />
       <Footer />
     </>
   );
