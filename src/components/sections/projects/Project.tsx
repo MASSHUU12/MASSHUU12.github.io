@@ -8,7 +8,7 @@ import { InfoProps } from "src/interfaces/interfaces";
 import ProjectInfo from "./ProjectInfo";
 
 /**
- * Work item
+ * Project
  *
  * @param {InfoProps} { item, keyID }
  * @return {*}  {JSX.Element}
