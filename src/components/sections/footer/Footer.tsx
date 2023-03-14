@@ -34,12 +34,6 @@ const Footer: FunctionComponent<any> = (): JSX.Element => {
       <hr />
       <div class="foot-btm">
         <span>Maciej Gawrysiak</span>
-        <span>
-          {t("fAtt")}
-          <a target="_blank" rel="noreferrer" href="https://bgjar.com">
-            BGJar
-          </a>
-        </span>
       </div>
     </footer>
   );
