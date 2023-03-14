@@ -20,7 +20,7 @@
 
 body {
   font-size: 1em;
-  background-color: c.$primary;
+  background-color: c.$blue_gray;
 
   #root {
     margin: 0 15%;
@@ -33,7 +33,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: c.$secondary;
+  background: c.$plum;
 }
 
 ::-webkit-scrollbar-thumb {
