@@ -12,39 +12,21 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     font-weight: 200;
-  }
 
-  .foot-flags {
-    display: flex;
-    align-items: flex-end;
+    .foot-flags {
+      display: flex;
+      align-items: flex-end;
+      margin: 0.5rem 0 0 0;
 
-    svg:nth-child(even) {
-      margin: 0 0 0 1rem;
+      svg:nth-child(even) {
+        margin: 0 0 0 1rem;
+      }
     }
   }
 
   .foot-btm {
-    display: flex;
-    justify-content: space-between;
     color: c.$white;
-
-    a {
-      color: c.$white;
-      margin: 0 0 0 0.3rem;
-      text-decoration: underline;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  footer {
-
-    .foot-grid,
-    .foot-btm {
-      flex-direction: column;
-    }
   }
 }
