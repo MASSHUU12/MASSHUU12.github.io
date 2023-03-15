@@ -1,7 +1,7 @@
 @use "../../../colors" as c;
 
 .cv-item {
-  width: 30%;
+  width: 75%;
   height: fit-content;
   background-color: c.$blue_gray;
   display: flex;
@@ -13,10 +13,8 @@
     text-decoration: none;
     width: fit-content;
   }
-}
 
-@media (max-width: 768px) {
-  .cv-item {
-    width: 75%;
+  @media (min-width: 768px) {
+    width: 30%;
   }
 }

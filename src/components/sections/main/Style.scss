@@ -1,54 +1,46 @@
 @use "../../../colors" as c;
 
 .main-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  height: 100vh;
 
   h1,
   span {
-    font-size: 3rem;
-    font-weight: 300;
-  }
-
-  h1 {
+    font-size: 2rem;
+    font-weight: 400;
     color: c.$white;
 
     span {
-      color: c.$light_yellow;
       font-weight: 400;
+      color: c.$light_yellow;
     }
-  }
-
-  span {
-    color: c.$white;
-    margin: 0 0 1rem 0;
   }
 
   div {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
 
     button {
-      margin: 0 1rem 0 0;
+      margin: 1rem;
     }
   }
-}
 
-@media (max-width: 768px) {
-  .main-container {
+  .main-container-menu {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
 
     h1,
     span {
-      font-size: 2rem;
+      font-size: 3rem;
     }
 
     .main-container-menu {
-      display: none;
+      display: block;
     }
   }
 }

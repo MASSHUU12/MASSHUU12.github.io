@@ -2,40 +2,25 @@
 
 .about-left,
 .about-right {
-  width: 30%;
-  padding: 5rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 30%;
   text-align: left;
 
+  h1,
+  span,
+  p,
+  svg {
+    padding: 0 1rem;
+  }
+
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   p {
     font-size: 0.9rem;
-    font-weight: 500;
     text-align: justify;
-  }
-}
-
-.about-left {
-  background-color: c.$white;
-
-  h1 {
-    color: c.$plum;
-  }
-
-  span,
-  p {
-    color: c.$blue_gray;
-  }
-
-  span {
-    font-size: 0.75rem;
-    font-weight: 300;
-    font-style: italic;
   }
 
   .about-left-labels {
@@ -49,8 +34,49 @@
   }
 }
 
+.about-left {
+  padding: 1.3rem 0 3rem;
+  min-height: 50%;
+  background-color: c.$white;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  span,
+  p {
+    color: c.$blue_gray;
+  }
+
+  span {
+    font-size: 0.75rem;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  h1 {
+    color: c.$plum;
+  }
+
+  span,
+  p {
+    color: c.$blue_gray;
+  }
+
+  .about-left-labels {
+    span:nth-child(even) {
+      margin: 0;
+    }
+  }
+}
+
 .about-right {
+  padding: 5rem;
   background-color: c.$blue_gray;
+
+  span {
+    padding: unset;
+  }
 
   .about-right-header,
   .about-left-labels {
@@ -86,43 +112,30 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 
   .about-left,
   .about-right {
-    width: 100%;
-    padding: 0;
-
-    h1,
-    p,
-    a {
-      padding: 0 1rem;
-      margin: 0;
-    }
-
-    span {
-      padding: 0 1rem;
-    }
+    width: 30%;
+    min-height: 30%;
+    padding: 5rem;
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
   }
 
   .about-left {
-    min-height: 50%;
-    padding: 1.3rem 0 3rem;
+    min-height: 30%;
 
     .about-left-labels {
       span:nth-child(even) {
-        margin: 0;
+        margin: 0 0 0 1rem;
       }
     }
   }
 
   .about-right {
-    height: 100%;
-    padding: 1rem 0 0 0;
 
     .about-right-labels {
       margin: 0 0 1rem;
