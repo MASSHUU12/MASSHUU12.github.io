@@ -5,17 +5,17 @@
 * {
   margin: 0;
   font-family: 'JetBrains Mono', monospace;
+}
 
-  a:hover,
-  svg:hover,
-  button:hover {
-    filter: brightness(85%);
-    cursor: pointer;
-  }
+a:hover,
+svg:hover,
+button:hover {
+  filter: brightness(85%);
+  cursor: pointer;
+}
 
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
 }
 
 body {
@@ -23,22 +23,8 @@ body {
   background-color: c.$blue_gray;
 
   #root {
-    margin: 0 15%;
+    margin: 0 8%;
   }
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 0.6rem;
-}
-
-::-webkit-scrollbar-track {
-  background: c.$plum;
-}
-
-::-webkit-scrollbar-thumb {
-  background: c.$white;
-  border-radius: 100vh;
 }
 
 /* Common */
@@ -82,13 +68,11 @@ body {
   height: 100%;
   background-color: c.$dim;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: flex-end;
   margin: 0;
 }
-
-/* End common */
 
 /* Ultra-wide */
 @media (min-width: 2560px) {
@@ -99,16 +83,16 @@ body {
   }
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+/* PC */
+@media (min-width: 768px) {
   .popup-bg {
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: center;
   }
 
   body {
     #root {
-      margin: 0 8%;
+      margin: 0 15%;
     }
   }
 }
