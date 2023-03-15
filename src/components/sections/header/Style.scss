@@ -4,14 +4,12 @@ header {
   padding: 1rem 0;
 
   svg {
-    display: none;
+    display: block;
   }
-}
 
-@media (max-width: 768px) {
-  header {
+  @media (min-width: 768px) {
     svg {
-      display: block;
+      display: none;
     }
   }
 }
