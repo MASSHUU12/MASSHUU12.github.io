@@ -46,10 +46,7 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
         <Btn
           text={t("hAbout")}
           action={() => {
-            // Open menu
             dispatch(toggleAbout(true));
-
-            // Prevent page from scrolling
             scroll.disable();
           }}
           delay={100}
@@ -59,7 +56,14 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
           action={e => scrollIntoView({ e: e, to: "works" })}
           delay={250}
         />
-        <Btn text="CV" action={() => dispatch(toggleCV(true))} delay={400} />
+        <Btn
+          text="CV"
+          action={() => {
+            dispatch(toggleCV(true));
+            scroll.disable();
+          }}
+          delay={400}
+        />
       </div>
     </section>
   );

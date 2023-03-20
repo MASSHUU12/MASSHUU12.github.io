@@ -25,10 +25,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
   const { t } = useTranslation();
 
   const closeMenu = (): void => {
-    // Close menu.
     dispatch(toggleMobileMenuReverse(true));
-
-    // Enable page scrolling.
     scroll.enable();
   };
 
@@ -66,10 +63,9 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
       <animated.button
         style={about}
         onClick={() => {
-          // Close menu.
           closeMenu();
-
           dispatch(toggleAbout(true));
+          scroll.disable();
         }}>
         {t("hAbout")}
       </animated.button>
@@ -83,10 +79,9 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
       <animated.button
         style={cv}
         onClick={() => {
-          // Close menu.
           closeMenu();
-
           dispatch(toggleCV(true));
+          scroll.disable();
         }}>
         CV
       </animated.button>
