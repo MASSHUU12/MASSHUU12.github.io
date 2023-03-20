@@ -9,9 +9,7 @@ import { useAppDispatch, useAppSelector } from "src/app/hooks";
 import { toggleAbout } from "features/aboutSlice";
 import { toggleCV } from "features/cvSlice";
 import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
-
-import { scroll } from "utils/preventScroll";
-import { scrollIntoView } from "utils/scrollIntoView";
+import Scroll from "@masshuu/scroll-utilities";
 
 /**
  * Component with link for MobileMenu component
@@ -26,7 +24,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
 
   const closeMenu = (): void => {
     dispatch(toggleMobileMenuReverse(true));
-    scroll.enable();
+    Scroll.enable();
   };
 
   const animConfig = {
@@ -65,14 +63,14 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
         onClick={() => {
           closeMenu();
           dispatch(toggleAbout(true));
-          scroll.disable();
+          Scroll.disable();
         }}>
         {t("hAbout")}
       </animated.button>
       {/* Works link */}
       <animated.button
         style={works}
-        onClick={(e: MouseEvent) => scrollIntoView({ e: e, to: "works" })}>
+        onClick={(e: MouseEvent) => Scroll.intoView({ target: "#works" })}>
         {t("hWorks")}
       </animated.button>
       {/* CV link */}
@@ -81,7 +79,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
         onClick={() => {
           closeMenu();
           dispatch(toggleCV(true));
-          scroll.disable();
+          Scroll.disable();
         }}>
         CV
       </animated.button>

@@ -9,8 +9,7 @@ import Btn from "common/Btn";
 import { toggleAbout } from "features/aboutSlice";
 import { toggleCV } from "features/cvSlice";
 
-import { scroll } from "utils/preventScroll";
-import { scrollIntoView } from "utils/scrollIntoView";
+import Scroll from "@masshuu/scroll-utilities";
 
 import "./Style.scss";
 
@@ -47,20 +46,24 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
           text={t("hAbout")}
           action={() => {
             dispatch(toggleAbout(true));
-            scroll.disable();
+            // scroll.disable();
+            Scroll.disable();
           }}
           delay={100}
         />
         <Btn
           text={t("hWorks")}
-          action={e => scrollIntoView({ e: e, to: "works" })}
+          action={e => {
+            // scrollIntoView({ e: e, to: "works" })
+            Scroll.intoView({ target: "#works" });
+          }}
           delay={250}
         />
         <Btn
           text="CV"
           action={() => {
             dispatch(toggleCV(true));
-            scroll.disable();
+            Scroll.disable();
           }}
           delay={400}
         />

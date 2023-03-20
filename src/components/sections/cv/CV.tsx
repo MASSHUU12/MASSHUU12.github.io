@@ -7,7 +7,7 @@ import { cvBottomAnimation } from "src/animations/cvAnims";
 
 import { useAppDispatch, useAppSelector } from "src/app/hooks";
 import { toggleCV, toggleCVReverse } from "features/cvSlice";
-import { scroll } from "utils/preventScroll";
+import Scroll from "@masshuu/scroll-utilities";
 
 import "./Style.scss";
 
@@ -23,7 +23,7 @@ const CV: FunctionComponent<any> = (): JSX.Element => {
   const closeAnim = () => {
     if (toggle.reverse) {
       dispatch(toggleCV(false));
-      scroll.enable();
+      Scroll.enable();
     }
   };
 

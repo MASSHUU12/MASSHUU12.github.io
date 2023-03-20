@@ -1,9 +1,9 @@
 import { FunctionComponent } from "preact";
 import { Icon } from "@iconify/react";
 
-import { scroll } from "utils/preventScroll";
 import { useAppDispatch } from "src/app/hooks";
 import { toggleMobileMenu } from "features/mobileMenuSlice";
+import Scroll from "@masshuu/scroll-utilities";
 
 import "./Style.scss";
 
@@ -22,11 +22,8 @@ const Header: FunctionComponent<any> = (): JSX.Element => {
         color="white"
         width="48"
         onClick={() => {
-          // Open menu.
           dispatch(toggleMobileMenu(true));
-
-          // Prevent page from scrolling.
-          scroll.disable();
+          Scroll.disable();
         }}
       />
     </header>

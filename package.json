@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@masshuu/scroll-utilities": "^1.1.0",
     "@react-spring/web": "^9.6.1",
     "@redux-devtools/core": "^3.13.1",
     "@reduxjs/toolkit": "^1.9.1",
