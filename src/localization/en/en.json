@@ -20,8 +20,8 @@
   "w1Short": "Create clean and readable code in Visual Studio Code.",
   "w1Long": "This extension encourages you to write short lines of code, notifying you when you exceed the limit.",
 
-  "w2Short": "Link shortener.",
-  "w2Long": "A simple link shortener without any weird features, ads, etc. Allows you to generate a QR code for your site. Unused links are removed from the database after a certain period of time.",
+  "w2Short": "CLI tool that allows users to run multiple programs or commands at once. ",
+  "w2Long": "Program Runner is a CLI tool written in C# that allows users to run multiple programs or commands at once. The tool reads a list of programs/commands from a JSON file and executes them in parallel.",
 
   "w3Short": "Get up-to-date information about your computer resource usage in Visual Studio Code.",
   "w3Long": "Get up-to-date information about your computer resource usage in Visual Studio Code.",

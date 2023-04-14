@@ -85,18 +85,18 @@
     ]
   },
   {
-    "title": "Cut.It",
+    "title": "Program Runner",
     "short_desc": "w2Short",
     "description": "w2Long",
-    "labels": ["Laravel", "MariaDB", "jQuery", "SCSS"],
+    "labels": ["C#", ".NET 7"],
     "labels_left": [],
     "teamwork": false,
-    "images": ["cutIt.webp"],
+    "images": ["program-runner.webp"],
     "links": [
       {
         "name": "wSource",
         "type": "github",
-        "link": "https://github.com/MASSHUU12/Cut.It"
+        "link": "https://github.com/MASSHUU12/program-runner"
       }
     ]
   }
