@@ -34,7 +34,7 @@ const Btn: FunctionComponent<Props> = ({
     <animated.button
       type="button"
       style={animConfig}
-      className="common-btn"
+      className="font-light py-1 px-3 bg-transparent text-white text-2xl border-white"
       onClick={action}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}>
