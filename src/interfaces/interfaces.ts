@@ -12,6 +12,7 @@ export interface InfoProps {
     links:
       | {
           name: string;
+          type: string;
           link: string;
         }[]
       | never[];

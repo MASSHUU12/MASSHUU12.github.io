@@ -1,12 +1,5 @@
 @use "../../../colors" as c;
 
-.project-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .project-info {
   position: fixed;
   top: 0;
@@ -130,18 +123,6 @@
       background-color: c.$light_yellow;
       color: c.$blue_gray;
     }
-
-    .project-labels {
-      margin: 1rem 0 0 0;
-      display: flex;
-      flex-wrap: wrap;
-
-      span {
-        color: c.$gray;
-        margin: 0.2rem 0.5rem 0.2rem 0;
-        font-weight: 300;
-      }
-    }
   }
 
   .project-image {
@@ -170,83 +151,64 @@
 }
 
 @media (max-width: 768px) {
-  .project-container {
-    width: 100%;
-    align-items: center;
+  .project-section {
+    position: relative;
+    margin: 0 0 1rem;
+    width: 85vw;
+    height: 45vh;
+    max-height: unset;
+    margin: 0 0 1.5rem;
+    padding: 0;
+    overflow: hidden;
 
-    .project-section {
-      position: relative;
-      margin: 0 0 1rem;
-      width: 85vw;
-      height: 45vh;
-      max-height: unset;
-      margin: 0 0 1.5rem;
-      padding: 0;
-      overflow: hidden;
+    .project-content {
+      width: 100%;
+      background-color: transparent;
+      box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+      padding: 0 0 0 1.5rem;
 
-      .project-content {
-        width: 100%;
-        background-color: transparent;
-        box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-        padding: 0 0 0 1.5rem;
-
-        h3 {
-          color: c.$white;
-        }
-
-        h2 {
-          color: c.$light_yellow;
-        }
-
-        p {
-          background-color: unset;
-          box-shadow: unset;
-          padding: 0;
-          margin: 0 1rem 0 0;
-          color: c.$white;
-          font-weight: 600;
-        }
-
-        .project-labels {
-          span {
-            font-size: 0.8rem;
-            margin: 0 0.5rem 0 0;
-            color: c.$gray;
-            font-weight: 600;
-            // mix-blend-mode: difference;
-          }
-
-          span:last-child {
-            margin: unset;
-          }
-        }
+      h3 {
+        color: c.$white;
       }
 
-      .project-image {
-        position: absolute;
+      h2 {
+        color: c.$light_yellow;
+      }
+
+      p {
+        background-color: unset;
+        box-shadow: unset;
+        padding: 0;
+        margin: 0 1rem 0 0;
+        color: c.$white;
+        font-weight: 600;
+      }
+    }
+
+    .project-image {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+
+      img {
         height: 100%;
-        width: 100%;
-        z-index: -1;
-
-        img {
-          height: 100%;
-          width: fit-content;
-          filter: unset;
-        }
+        width: fit-content;
+        filter: unset;
       }
+    }
 
-      .project-image::after {
-        content: "";
-        position: absolute;
-        inset: 0 0;
-        left: 2rem;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(180deg,
-            rgba(255, 255, 255, 0) 15%,
-            rgba(0, 0, 0, 0.5) 50%,
-            rgba(0, 0, 0, 0.70) 100%);
-      }
+    .project-image::after {
+      content: "";
+      position: absolute;
+      inset: 0 0;
+      left: 2rem;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg,
+          rgba(255, 255, 255, 0) 15%,
+          rgba(0, 0, 0, 0.5) 50%,
+          rgba(0, 0, 0, 0.70) 100%);
     }
   }
 
