@@ -4,8 +4,6 @@ import { useAppDispatch, useAppSelector } from "src/app/hooks";
 import { toggleReverse } from "src/features/aboutSlice";
 import { FunctionComponent } from "preact";
 
-import "./Style.scss";
-
 import AboutLeft from "./AboutLeft";
 import AboutRight from "./AboutRight";
 import Scroll from "@masshuu/scroll-utilities";
@@ -39,7 +37,7 @@ const About: FunctionComponent<any> = (): JSX.Element => {
       {toggle.value && (
         <animated.section
           style={background}
-          className="popup-bg"
+          className="fixed top-0 left-0 w-full h-full bg-dim flex flex-col items-center justify-end m-0 md:flex-row md:justify-center"
           onClick={() => closeMenu()}>
           <AboutLeft />
           <AboutRight closeMenu={closeMenu} />

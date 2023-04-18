@@ -1,7 +1,6 @@
 import { FunctionComponent } from "preact";
 import { useEffect } from "preact/hooks";
 
-import "./App.scss";
 import i18n from "./i18n";
 
 import Footer from "sections/footer/Footer";
