@@ -49,24 +49,18 @@ const AboutRight: FunctionComponent<Props> = ({ closeMenu }): JSX.Element => {
       <div class="about-right-links">
         <Social
           href="mailto:gawrysiak.maciej@pm.com"
-          text="gawrysiak.maciej@pm.me"
-          icon="ic:outline-alternate-email"
-        />
-        <Social
-          href="https://github.com/MASSHUU12"
-          text="MASSHUU12"
-          icon="brandico:github"
-        />
-        <Social
-          href="https://t.me/MASSHUU"
-          text="MASSHUU"
-          icon="akar-icons:telegram-fill"
-        />
-        <Social
-          href="https://linkedin.com/in/maciej-gawrysiak"
-          text="Linkedin"
-          icon="brandico:linkedin-rect"
-        />
+          text="gawrysiak.maciej@pm.me">
+          <Icon icon="ic:outline-alternate-email" width="48" />
+        </Social>
+        <Social href="https://github.com/MASSHUU12" text="MASSHUU12">
+          <Icon icon="brandico:github" width="48" />
+        </Social>
+        <Social href="https://t.me/MASSHUU" text="MASSHUU">
+          <Icon icon="akar-icons:telegram-fill" width="48" />
+        </Social>
+        <Social href="https://linkedin.com/in/maciej-gawrysiak" text="Linkedin">
+          <Icon icon="brandico:linkedin-rect" width="48" />
+        </Social>
       </div>
     </animated.div>
   );

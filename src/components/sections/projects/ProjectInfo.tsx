@@ -121,17 +121,17 @@ const ProjectInfo: FunctionComponent<InfoToggleProps> = ({
           <animated.div style={delay400} className="project-info-links">
             {item.links.map((object, index) => {
               return (
-                <Social
-                  href={object.link}
-                  text={t(object.name)}
-                  icon={
-                    object.name === "sourceCode"
-                      ? "akar-icons:github-fill"
-                      : "mdi:web"
-                  }
-                  color="#1a1920"
-                  key={index}
-                />
+                <Social href={object.link} text={t(object.name)} key={index}>
+                  <Icon
+                    icon={
+                      object.type === "github"
+                        ? "akar-icons:github-fill"
+                        : "mdi:web"
+                    }
+                    width="32"
+                    color="#1a1920"
+                  />
+                </Social>
               );
             })}
           </animated.div>

@@ -1,19 +1,5 @@
 @use "./colors" as c;
 
-@import url('https://api.fonts.coollabs.io/css2?family=JetBrains+Mono:wght@300;500;600;700&display=swap');
-
-* {
-  margin: 0;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-a:hover,
-svg:hover,
-button:hover {
-  filter: brightness(85%);
-  cursor: pointer;
-}
-
 a {
   text-decoration: none;
 }
@@ -28,25 +14,6 @@ body {
 }
 
 /* Common */
-
-.common-custom-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: c.$white;
-  width: fit-content;
-
-  span {
-    margin: 0 0 0 1rem;
-  }
-}
-
-.common-custom-link-wo-icon {
-  span {
-    margin: 0;
-  }
-}
-
 .popup-bg {
   position: fixed;
   top: 0;
