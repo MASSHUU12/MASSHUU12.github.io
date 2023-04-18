@@ -11,8 +11,6 @@ import { toggleCV } from "features/cvSlice";
 
 import Scroll from "@masshuu/scroll-utilities";
 
-import "./Style.scss";
-
 /**
  * Main section
  *
@@ -35,13 +33,15 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
   });
 
   return (
-    <section class="main-container">
-      <animated.h1 style={name}>
+    <section class="flex flex-col gap-3 justify-center items-center h-screen">
+      <animated.h1 style={name} class="text-4xl md:text-5xl text-white_custom">
         {t("meHello")}
-        <span>Maciej Gawrysiak</span>.
+        <span class="text-light_yellow">Maciej Gawrysiak</span>.
       </animated.h1>
-      <animated.span style={title}>{t("meTitle")}</animated.span>
-      <div class="main-container-menu">
+      <animated.span style={title} class="text-2xl text-white_custom">
+        {t("meTitle")}
+      </animated.span>
+      <div class="hidden md:flex md:flex-wrap">
         <Btn
           text={t("hAbout")}
           action={() => {

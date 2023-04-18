@@ -5,8 +5,6 @@ import { useAppDispatch } from "src/app/hooks";
 import { toggleMobileMenu } from "features/mobileMenuSlice";
 import Scroll from "@masshuu/scroll-utilities";
 
-import "./Style.scss";
-
 /**
  * Header component, displays content only on mobile
  *
@@ -16,7 +14,7 @@ const Header: FunctionComponent<any> = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   return (
-    <header id="header">
+    <header id="header" class="flex justify-end py-4 md:invisible">
       <Icon
         icon="charm:menu-hamburger"
         color="white"
