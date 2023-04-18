@@ -24,7 +24,7 @@ const Social: FunctionComponent<Props> = ({
       href={href}
       target="_blank"
       rel="noreferrer"
-      class="flex items-center no-underline text-white_custom w-fit">
+      class="flex items-center no-underline text-white_custom w-fit gap-3">
       {children}
       <span>{text}</span>
     </a>
