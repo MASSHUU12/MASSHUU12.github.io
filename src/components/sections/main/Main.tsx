@@ -9,7 +9,7 @@ import Btn from "common/Btn";
 import { toggleAbout } from "features/aboutSlice";
 import { toggleCV } from "features/cvSlice";
 
-import Scroll from "@masshuu/scroll-utilities";
+import Scroll from "helpers/Scroll";
 
 /**
  * Main section
@@ -54,7 +54,6 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
         <Btn
           text={t("hWorks")}
           action={e => {
-            // scrollIntoView({ e: e, to: "works" })
             Scroll.intoView({ target: "#works" });
           }}
           delay={250}

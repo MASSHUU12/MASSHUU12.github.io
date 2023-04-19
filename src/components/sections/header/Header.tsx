@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 
 import { useAppDispatch } from "src/app/hooks";
 import { toggleMobileMenu } from "features/mobileMenuSlice";
-import Scroll from "@masshuu/scroll-utilities";
+import Scroll from "helpers/Scroll";
 
 /**
  * Header component, displays content only on mobile

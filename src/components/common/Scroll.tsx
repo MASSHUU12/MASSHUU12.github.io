@@ -1,5 +1,5 @@
 import { FunctionComponent } from "preact";
-import * as Sc from "@masshuu/scroll-utilities";
+import * as Sc from "helpers/Scroll";
 
 type Props = {
   text: string;

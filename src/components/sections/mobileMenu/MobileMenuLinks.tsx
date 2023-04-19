@@ -1,15 +1,15 @@
 import { Icon } from "@iconify/react";
-import { animated, useSpring } from "@react-spring/web";
-import { useTranslation } from "react-i18next";
 import { FunctionComponent } from "preact";
+import { useTranslation } from "react-i18next";
+import { animated, useSpring } from "@react-spring/web";
 
-import { mobileMenuAnimation } from "src/animations/mobileMenuAnims";
+import Scroll from "helpers/Scroll";
 import { useAppDispatch, useAppSelector } from "src/app/hooks";
+import { mobileMenuAnimation } from "src/animations/mobileMenuAnims";
 
-import { toggleAbout } from "features/aboutSlice";
 import { toggleCV } from "features/cvSlice";
+import { toggleAbout } from "features/aboutSlice";
 import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
-import Scroll from "@masshuu/scroll-utilities";
 
 /**
  * Component with link for MobileMenu component

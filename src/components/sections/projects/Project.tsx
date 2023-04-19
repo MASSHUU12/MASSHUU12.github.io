@@ -57,9 +57,6 @@ const Project: FunctionComponent<InfoProps> = ({
         onClick={() => {
           // Open window.
           setToggle(!toggle);
-
-          // Give class to body to prevent from scrolling page.
-          document.querySelector("body")!.className = "disable-scroll";
         }}
         onMouseEnter={() => setMouseOver(true)}
         onMouseLeave={() => setMouseOver(false)}>

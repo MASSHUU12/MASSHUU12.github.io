@@ -18,6 +18,7 @@ export default defineConfig({
       sections: path.resolve("./src/components/sections"),
       utils: path.resolve("./src/utils"),
       features: path.resolve("./src/features"),
+      helpers: path.resolve("./src/helpers"),
     },
   },
 });

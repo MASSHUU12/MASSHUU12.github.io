@@ -3,10 +3,10 @@ import { backgroundAnim } from "src/animations/commonAnims";
 import { useAppDispatch, useAppSelector } from "src/app/hooks";
 import { toggleReverse } from "src/features/aboutSlice";
 import { FunctionComponent } from "preact";
+import Scroll from "helpers/Scroll";
 
 import AboutLeft from "./AboutLeft";
 import AboutRight from "./AboutRight";
-import Scroll from "@masshuu/scroll-utilities";
 
 /**
  * Main about component

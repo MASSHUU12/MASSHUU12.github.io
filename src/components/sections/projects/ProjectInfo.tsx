@@ -13,7 +13,7 @@ import {
 import Social from "common/Social";
 import { InfoToggleProps } from "src/interfaces/interfaces";
 import ProjectImage from "./ProjectImage";
-import Scroll from "@masshuu/scroll-utilities";
+import Scroll from "helpers/Scroll";
 
 /**
  * Main component displaying detailed information about the project

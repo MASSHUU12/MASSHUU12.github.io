@@ -7,7 +7,7 @@ import { cvBottomAnimation } from "src/animations/cvAnims";
 
 import { useAppDispatch, useAppSelector } from "src/app/hooks";
 import { toggleCV, toggleCVReverse } from "features/cvSlice";
-import Scroll from "@masshuu/scroll-utilities";
+import Scroll from "helpers/Scroll";
 
 /**
  * Component for accessing CV
