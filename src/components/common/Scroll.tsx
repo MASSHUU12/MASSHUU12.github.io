@@ -1,5 +1,6 @@
 import { FunctionComponent } from "preact";
-import * as Sc from "@masshuu/scroll-utilities";
+
+import * as Sc from "helpers/Scroll";
 
 type Props = {
   text: string;
@@ -7,11 +8,21 @@ type Props = {
   behavior?: "smooth" | "auto";
 };
 
+/**
+ *
+ *
+ * @param {Props} {
+ *   text,
+ *   to,
+ *   behavior = "smooth",
+ * }
+ * @return {*}  {JSX.Element}
+ */
 const Scroll: FunctionComponent<Props> = ({
   text,
   to,
   behavior = "smooth",
-}) => {
+}: Props): JSX.Element => {
   return (
     <a
       href="/"

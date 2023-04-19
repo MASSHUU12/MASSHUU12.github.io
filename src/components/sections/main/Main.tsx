@@ -1,17 +1,14 @@
-import { animated, useSpring } from "@react-spring/web";
-import { useTranslation } from "react-i18next";
 import { FunctionComponent } from "preact";
+import { useTranslation } from "react-i18next";
+import { animated, useSpring } from "@react-spring/web";
 
-import { slideToLeftAnim } from "src/animations/slideToLeftAnim";
-import { useAppDispatch } from "src/app/hooks";
 import Btn from "common/Btn";
+import Scroll from "helpers/Scroll";
+import { useAppDispatch } from "src/app/hooks";
+import { slideToLeftAnim } from "src/animations/slideToLeftAnim";
 
-import { toggleAbout } from "features/aboutSlice";
 import { toggleCV } from "features/cvSlice";
-
-import Scroll from "@masshuu/scroll-utilities";
-
-import "./Style.scss";
+import { toggleAbout } from "features/aboutSlice";
 
 /**
  * Main section
@@ -35,13 +32,17 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
   });
 
   return (
-    <section class="main-container">
-      <animated.h1 style={name}>
+    <section class="flex flex-col gap-3 justify-center items-center h-screen">
+      <animated.h1
+        style={name}
+        class="text-4xl md:text-5xl text-white_custom md:text-center">
         {t("meHello")}
-        <span>Maciej Gawrysiak</span>.
+        <span class="text-light_yellow"> Maciej Gawrysiak</span>.
       </animated.h1>
-      <animated.span style={title}>{t("meTitle")}</animated.span>
-      <div class="main-container-menu">
+      <animated.span style={title} class="text-2xl text-white_custom">
+        {t("meTitle")}
+      </animated.span>
+      <div class="hidden md:flex md:flex-wrap">
         <Btn
           text={t("hAbout")}
           action={() => {
@@ -54,7 +55,6 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
         <Btn
           text={t("hWorks")}
           action={e => {
-            // scrollIntoView({ e: e, to: "works" })
             Scroll.intoView({ target: "#works" });
           }}
           delay={250}

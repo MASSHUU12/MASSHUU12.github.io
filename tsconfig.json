@@ -24,7 +24,8 @@
       "common/*": ["./src/components/common/*"],
       "sections/*": ["./src/components/sections/*"],
       "utils/*": ["./src/utils/*"],
-      "features/*": ["./src/features/*"]
+      "features/*": ["./src/features/*"],
+      "helpers/*": ["./src/helpers/*"]
     }
   },
   "include": ["src"],

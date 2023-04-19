@@ -1,11 +1,11 @@
-import { animated, useSpring } from "@react-spring/web";
+import { FunctionComponent } from "preact";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "preact/hooks";
-import { FunctionComponent } from "preact";
+import { animated, useSpring } from "@react-spring/web";
 
-import { workItemAnimation } from "src/animations/workAnims";
-import { InfoProps } from "src/interfaces/interfaces";
 import ProjectInfo from "./ProjectInfo";
+import { InfoProps } from "src/interfaces/interfaces";
+import { workItemAnimation } from "src/animations/workAnims";
 
 /**
  * Project
@@ -52,29 +52,39 @@ const Project: FunctionComponent<InfoProps> = ({
     <>
       <animated.div
         style={styles}
-        className="project-section"
+        className="w-[55vw] max-h-[20vw] mb-8 flex flex-row justify-center cursor-pointer p-8 rounded-md max-md:relative max-md:w-[85vw] max-md:h-[45vh] max-md:max-h-[unset] max-md:mb-6 max-md:p-0 max-md:overflow-hidden"
         id={`w${keyID}`}
         onClick={() => {
           // Open window.
           setToggle(!toggle);
-
-          // Give class to body to prevent from scrolling page.
-          document.querySelector("body")!.className = "disable-scroll";
         }}
         onMouseEnter={() => setMouseOver(true)}
         onMouseLeave={() => setMouseOver(false)}>
-        <div className="project-content">
-          {item.teamwork && <h3>{t("wTeam")}</h3>}
-          <h2>{t(item.title)}</h2>
-          <p>{t(item.short_desc)}</p>
-          <div class="project-labels">
+        <div className="w-[60%] flex flex-col justify-center max-md:w-full max-md:bg-[unset] max-md:shadow-lg max-md:pl-6 max-md:relative -bottom-12">
+          {item.teamwork && (
+            <h3 class="text-xs mb-3 text-light_yellow max-md:text-white_custom">
+              {t("wTeam")}
+            </h3>
+          )}
+          <h2 class="text-xl mb-4 text-aqua max-md:text-light_yellow">
+            {t(item.title)}
+          </h2>
+          <p class="text-sm p-5 shadow-lg bg-light_yellow text-blue_gray max-md:text-white_custom max-md:bg-[unset] max-md:shadow-none max-md:p-0 max-md:mr-4 font-semibold">
+            {t(item.short_desc)}
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
             {item.labels.map((label, index) => {
-              return <span key={index}>{t(label)}</span>;
+              return (
+                <span class="text-gray" key={index}>
+                  {t(label)}
+                </span>
+              );
             })}
           </div>
         </div>
-        <div className="project-image">
+        <div class="w-[75%] relative -left-8 -z-10 flex justify-center items-center max-md:absolute max-md:h-full max-md:w-full max-md:left-0 max-md:after:absolute max-md:after:w-full max-md:after:h-full max-md:after:bg-gradient-to-b max-md:after:from-transparent max-md:after:via-black/50 max-md:after:to-zinc-900">
           <img
+            class="w-full grayscale shadow-lg duration-300 transition-[filter] hover:grayscale-0 active:grayscale-0 max-md:h-full max-md:w-fit max-md:filter-none"
             src={`/assets/projects/${item.images[0]}`}
             alt={`${item.title}'s project image`}
           />

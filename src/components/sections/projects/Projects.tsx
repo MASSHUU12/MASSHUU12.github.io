@@ -1,13 +1,16 @@
 import { FunctionComponent } from "preact";
 
 import Project from "./Project";
-import projects from "../../../projects.json";
+import projects from "src/projects.json";
 
-import "./Style.scss";
-
-const Projects: FunctionComponent<any> = () => {
+/**
+ *
+ *
+ * @return {*}
+ */
+const Projects: FunctionComponent<any> = (): JSX.Element => {
   return (
-    <section class="project-container" id="works">
+    <section id="works">
       {/* Map through items and displays them. */}
       {projects.map((item: any, index: any) => (
         <Project key={index} item={item} keyID={index} />

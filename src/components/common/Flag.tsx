@@ -1,13 +1,22 @@
 import { Icon } from "@iconify/react";
-import { useTranslation } from "react-i18next";
 import { FunctionComponent } from "preact";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   flag: string;
   locale: string;
 };
 
-const Flag: FunctionComponent<Props> = ({ flag, locale }): JSX.Element => {
+/**
+ *
+ *
+ * @param {Props} { flag, locale }
+ * @return {*}  {JSX.Element}
+ */
+const Flag: FunctionComponent<Props> = ({
+  flag,
+  locale,
+}: Props): JSX.Element => {
   const { i18n } = useTranslation();
 
   const changeLocale = (locale: string): void => {

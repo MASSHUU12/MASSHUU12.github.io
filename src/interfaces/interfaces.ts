@@ -12,6 +12,7 @@ export interface InfoProps {
     links:
       | {
           name: string;
+          type: string;
           link: string;
         }[]
       | never[];
@@ -31,6 +32,7 @@ export interface InfoToggleProps {
     links:
       | {
           name: string;
+          type: string;
           link: string;
         }[]
       | never[];

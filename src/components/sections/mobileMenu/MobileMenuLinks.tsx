@@ -1,15 +1,15 @@
 import { Icon } from "@iconify/react";
-import { animated, useSpring } from "@react-spring/web";
-import { useTranslation } from "react-i18next";
 import { FunctionComponent } from "preact";
+import { useTranslation } from "react-i18next";
+import { animated, useSpring } from "@react-spring/web";
 
-import { mobileMenuAnimation } from "src/animations/mobileMenuAnims";
+import Scroll from "helpers/Scroll";
 import { useAppDispatch, useAppSelector } from "src/app/hooks";
+import { mobileMenuAnimation } from "src/animations/mobileMenuAnims";
 
-import { toggleAbout } from "features/aboutSlice";
 import { toggleCV } from "features/cvSlice";
+import { toggleAbout } from "features/aboutSlice";
 import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
-import Scroll from "@masshuu/scroll-utilities";
 
 /**
  * Component with link for MobileMenu component
@@ -50,16 +50,18 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
   return (
     <>
       {/* Close button */}
-      <Icon
-        onClick={() => closeMenu()}
-        icon="carbon:close"
-        color="white"
-        width="48"
-        height="48"
-      />
+      <div class="absolute top-4 right-4">
+        <Icon
+          onClick={() => closeMenu()}
+          icon="carbon:close"
+          color="white"
+          width="64"
+        />
+      </div>
       {/* About link */}
       <animated.button
         style={about}
+        class="text-3xl text-white_custom"
         onClick={() => {
           closeMenu();
           dispatch(toggleAbout(true));
@@ -70,12 +72,14 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
       {/* Works link */}
       <animated.button
         style={works}
+        class="text-3xl text-white_custom"
         onClick={(e: MouseEvent) => Scroll.intoView({ target: "#works" })}>
         {t("hWorks")}
       </animated.button>
       {/* CV link */}
       <animated.button
         style={cv}
+        class="text-3xl text-white_custom"
         onClick={() => {
           closeMenu();
           dispatch(toggleCV(true));

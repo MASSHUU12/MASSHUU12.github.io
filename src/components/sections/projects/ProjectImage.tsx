@@ -1,10 +1,11 @@
-import { animated, useSpring } from "@react-spring/web";
 import { useState } from "preact/hooks";
 import { FunctionComponent } from "preact";
+import { animated, useSpring } from "@react-spring/web";
 
 type Props = {
   image: any;
   title: string;
+  classes?: string;
 };
 
 /**
@@ -16,6 +17,7 @@ type Props = {
 const ProjectImage: FunctionComponent<Props> = ({
   image,
   title,
+  classes,
 }): JSX.Element => {
   const [mouseOver, setMouseOver] = useState(false);
 
@@ -26,6 +28,7 @@ const ProjectImage: FunctionComponent<Props> = ({
   return (
     <animated.img
       style={styles}
+      class={classes}
       loading="lazy"
       src={`/assets/projects/${image}`}
       alt={title + " image"}

@@ -1,15 +1,13 @@
-import { FunctionComponent } from "preact";
 import { Icon } from "@iconify/react";
+import { FunctionComponent } from "preact";
 import { animated, useSpring } from "@react-spring/web";
 
-import { backgroundAnim } from "src/animations/commonAnims";
 import { cvBottomAnimation } from "src/animations/cvAnims";
+import { backgroundAnim } from "src/animations/commonAnims";
 
-import { useAppDispatch, useAppSelector } from "src/app/hooks";
+import Scroll from "helpers/Scroll";
 import { toggleCV, toggleCVReverse } from "features/cvSlice";
-import Scroll from "@masshuu/scroll-utilities";
-
-import "./Style.scss";
+import { useAppDispatch, useAppSelector } from "src/app/hooks";
 
 /**
  * Component for accessing CV
@@ -43,15 +41,16 @@ const CV: FunctionComponent<any> = (): JSX.Element => {
       {toggle.value && (
         <animated.section
           style={background}
-          className="popup-bg"
+          class="fixed top-0 left-0 w-full h-full bg-dim flex flex-col items-center justify-end m-0 md:flex-row md:justify-center"
           onClick={() => dispatch(toggleCVReverse(true))}>
-          <animated.div style={bottom} className="cv-item">
+          <animated.div
+            style={bottom}
+            className="bg-blue_gray p-4 rounded-md flex flex-col text-white_custom gap-2">
             <Icon
               onClick={() => dispatch(toggleCVReverse(true))}
               icon="carbon:close"
               color="white"
-              width="48"
-              height="48"
+              width="32"
             />
             <a href="/assets/gawrysiak_cv.pdf" target="_blank">
               gawrysiak_pl.pdf

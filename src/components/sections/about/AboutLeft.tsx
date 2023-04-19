@@ -1,9 +1,9 @@
-import { animated, useSpring } from "@react-spring/web";
-import { useTranslation } from "react-i18next";
 import { FunctionComponent } from "preact";
+import { useTranslation } from "react-i18next";
+import { animated, useSpring } from "@react-spring/web";
 
-import { aboutLeftAnim } from "src/animations/aboutAnims";
 import { useAppSelector } from "src/app/hooks";
+import { aboutLeftAnim } from "src/animations/aboutAnims";
 
 /**
  * Left part of about component
@@ -21,9 +21,11 @@ const AboutLeft: FunctionComponent<any> = (): JSX.Element => {
   });
 
   return (
-    <animated.div className="about-left" style={anim}>
-      <h1>{t("hAbout")}.</h1>
-      <span>{t("meTitle")}</span>
+    <animated.div
+      class="bg-white_custom p-3 flex-1 md:min-h-[30%] md:max-w-[30%] md:p-12"
+      style={anim}>
+      <h1 class="text-3xl text-plum">{t("hAbout")}.</h1>
+      <span class="text-sm text-blue_gray italic">{t("meTitle")}</span>
       <p>{t("meDescription")}</p>
     </animated.div>
   );
