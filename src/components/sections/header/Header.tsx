@@ -1,9 +1,9 @@
-import { FunctionComponent } from "preact";
 import { Icon } from "@iconify/react";
+import { FunctionComponent } from "preact";
 
+import Scroll from "helpers/Scroll";
 import { useAppDispatch } from "src/app/hooks";
 import { toggleMobileMenu } from "features/mobileMenuSlice";
-import Scroll from "helpers/Scroll";
 
 /**
  * Header component, displays content only on mobile

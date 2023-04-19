@@ -9,11 +9,21 @@ type Props = {
   delay?: number;
 };
 
+/**
+ *
+ *
+ * @param {Props} {
+ *   text,
+ *   action,
+ *   delay = 0,
+ * }
+ * @return {*}  {JSX.Element}
+ */
 const Btn: FunctionComponent<Props> = ({
   text,
   action,
   delay = 0,
-}): JSX.Element => {
+}: Props): JSX.Element => {
   const [hover, setHover] = useState<boolean>(false);
 
   const animConfig = useSpring({
@@ -34,7 +44,7 @@ const Btn: FunctionComponent<Props> = ({
     <animated.button
       type="button"
       style={animConfig}
-      className="font-light py-1 px-3 bg-transparent text-white_custom text-2xl border-white_custom"
+      className="font-light py-1 px-3 bg-transparent text-white_custom text-2xl border-white_custom underline decoration-gray"
       onClick={action}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}>

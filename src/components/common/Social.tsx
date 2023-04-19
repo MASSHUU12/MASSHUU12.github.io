@@ -10,17 +10,20 @@ type Props = {
 /**
  * Custom link with chosen icon.
  *
- * @param href - Link address.
- * @param text - Link text.
- *
- * @returns JSX.Element
+ * @param {*} {
+ *   href,
+ *   text,
+ *   children,
+ *   classes,
+ * }
+ * @return {*}  {JSX.Element}
  */
 const Social: FunctionComponent<Props> = ({
   href,
   text,
   children,
   classes,
-}): JSX.Element => {
+}: Props): JSX.Element => {
   return (
     <a
       href={href}

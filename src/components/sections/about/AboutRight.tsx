@@ -1,7 +1,7 @@
+import { Icon } from "@iconify/react";
 import { FunctionComponent } from "preact";
 import { useTranslation } from "react-i18next";
 import { animated, useSpring } from "@react-spring/web";
-import { Icon } from "@iconify/react";
 
 import Social from "common/Social";
 import { toggleAbout } from "features/aboutSlice";

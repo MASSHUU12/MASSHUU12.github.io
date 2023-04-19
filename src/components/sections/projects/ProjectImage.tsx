@@ -1,6 +1,6 @@
-import { animated, useSpring } from "@react-spring/web";
 import { useState } from "preact/hooks";
 import { FunctionComponent } from "preact";
+import { animated, useSpring } from "@react-spring/web";
 
 type Props = {
   image: any;

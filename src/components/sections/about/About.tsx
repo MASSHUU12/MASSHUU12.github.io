@@ -1,9 +1,10 @@
+import { FunctionComponent } from "preact";
 import { animated, useSpring } from "@react-spring/web";
+
+import Scroll from "helpers/Scroll";
+import { toggleReverse } from "src/features/aboutSlice";
 import { backgroundAnim } from "src/animations/commonAnims";
 import { useAppDispatch, useAppSelector } from "src/app/hooks";
-import { toggleReverse } from "src/features/aboutSlice";
-import { FunctionComponent } from "preact";
-import Scroll from "helpers/Scroll";
 
 import AboutLeft from "./AboutLeft";
 import AboutRight from "./AboutRight";

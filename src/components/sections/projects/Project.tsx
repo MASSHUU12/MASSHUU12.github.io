@@ -1,11 +1,11 @@
-import { animated, useSpring } from "@react-spring/web";
+import { FunctionComponent } from "preact";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "preact/hooks";
-import { FunctionComponent } from "preact";
+import { animated, useSpring } from "@react-spring/web";
 
-import { workItemAnimation } from "src/animations/workAnims";
-import { InfoProps } from "src/interfaces/interfaces";
 import ProjectInfo from "./ProjectInfo";
+import { InfoProps } from "src/interfaces/interfaces";
+import { workItemAnimation } from "src/animations/workAnims";
 
 /**
  * Project
@@ -60,7 +60,7 @@ const Project: FunctionComponent<InfoProps> = ({
         }}
         onMouseEnter={() => setMouseOver(true)}
         onMouseLeave={() => setMouseOver(false)}>
-        <div className="w-[60%] flex flex-col justify-center max-md:w-full max-md:bg-[unset] max-md:shadow-lg max-md:pl-6">
+        <div className="w-[60%] flex flex-col justify-center max-md:w-full max-md:bg-[unset] max-md:shadow-lg max-md:pl-6 max-md:relative -bottom-12">
           {item.teamwork && (
             <h3 class="text-xs mb-3 text-light_yellow max-md:text-white_custom">
               {t("wTeam")}

@@ -1,19 +1,19 @@
 import { Icon } from "@iconify/react";
-import { animated, useSpring } from "@react-spring/web";
-import { useTranslation } from "react-i18next";
 import { useState } from "preact/hooks";
 import { FunctionComponent } from "preact";
+import { useTranslation } from "react-i18next";
+import { animated, useSpring } from "@react-spring/web";
 
-import { backgroundAnim } from "src/animations/commonAnims";
 import {
   workBackgroundAnimation,
   workSlideInAnimation,
 } from "src/animations/workAnims";
+import { backgroundAnim } from "src/animations/commonAnims";
 
 import Social from "common/Social";
-import { InfoToggleProps } from "src/interfaces/interfaces";
-import ProjectImage from "./ProjectImage";
 import Scroll from "helpers/Scroll";
+import ProjectImage from "./ProjectImage";
+import { InfoToggleProps } from "src/interfaces/interfaces";
 
 /**
  * Main component displaying detailed information about the project
@@ -101,7 +101,7 @@ const ProjectInfo: FunctionComponent<InfoToggleProps> = ({
             <animated.h1 style={delay400} class="text-plum text-4xl">
               {item.title}
             </animated.h1>
-            {item.labels_left ? (
+            {item.labels_left && (
               <animated.div style={delay500}>
                 {item.labels_left.map((label, index) => {
                   return (
@@ -111,12 +111,10 @@ const ProjectInfo: FunctionComponent<InfoToggleProps> = ({
                   );
                 })}
               </animated.div>
-            ) : (
-              ""
             )}
             {/* Labels */}
             {item.labels && (
-              <animated.div style={labels} class="mb-4 flex flex-wrap gap-3">
+              <animated.div style={labels} class="my-4 flex flex-wrap gap-3">
                 {item.labels.map((label, index) => {
                   return (
                     <span

@@ -1,15 +1,14 @@
-import { animated, useSpring } from "@react-spring/web";
-import { useTranslation } from "react-i18next";
 import { FunctionComponent } from "preact";
+import { useTranslation } from "react-i18next";
+import { animated, useSpring } from "@react-spring/web";
 
-import { slideToLeftAnim } from "src/animations/slideToLeftAnim";
-import { useAppDispatch } from "src/app/hooks";
 import Btn from "common/Btn";
-
-import { toggleAbout } from "features/aboutSlice";
-import { toggleCV } from "features/cvSlice";
-
 import Scroll from "helpers/Scroll";
+import { useAppDispatch } from "src/app/hooks";
+import { slideToLeftAnim } from "src/animations/slideToLeftAnim";
+
+import { toggleCV } from "features/cvSlice";
+import { toggleAbout } from "features/aboutSlice";
 
 /**
  * Main section
@@ -34,9 +33,11 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
 
   return (
     <section class="flex flex-col gap-3 justify-center items-center h-screen">
-      <animated.h1 style={name} class="text-4xl md:text-5xl text-white_custom">
+      <animated.h1
+        style={name}
+        class="text-4xl md:text-5xl text-white_custom md:text-center">
         {t("meHello")}
-        <span class="text-light_yellow">Maciej Gawrysiak</span>.
+        <span class="text-light_yellow"> Maciej Gawrysiak</span>.
       </animated.h1>
       <animated.span style={title} class="text-2xl text-white_custom">
         {t("meTitle")}
