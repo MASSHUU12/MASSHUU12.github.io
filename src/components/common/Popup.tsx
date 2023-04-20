@@ -9,7 +9,7 @@ import { toggle } from "features/popupsSlice";
 import { useAppDispatch } from "src/app/hooks";
 
 import { backgroundAnim } from "src/animations/commonAnims";
-import { aboutLeftAnim, aboutRightAnim } from "src/animations/aboutAnims";
+import { popupLeftAnim, popupRightAnim } from "src/animations/popupAnims";
 
 interface PopupProps {
   children: ComponentChildren;
@@ -21,7 +21,7 @@ interface PopupProps {
  *
  * @param {*} {
  *   children,
- *   closePopup,
+ *   popup,
  * }
  * @return {*}  {JSX.Element}
  */
@@ -46,13 +46,13 @@ const Popup: FunctionComponent<PopupProps> = ({
 
   // Left component animation
   const leftAnimation = useSpring({
-    ...aboutLeftAnim,
+    ...popupLeftAnim,
     reverse: isClosing,
   });
 
   // Right component animation
   const rightAnimation = useSpring({
-    ...aboutRightAnim,
+    ...popupRightAnim,
     reverse: isClosing,
   });
 
