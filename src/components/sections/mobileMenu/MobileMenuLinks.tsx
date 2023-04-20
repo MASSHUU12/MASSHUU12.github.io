@@ -81,8 +81,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
         class="text-3xl text-white_custom"
         onClick={() => {
           closeMenu();
-          dispatch(toggleCV(true));
-          Scroll.disable();
+          dispatch(toggle("cvOpened"));
         }}>
         CV
       </animated.button>

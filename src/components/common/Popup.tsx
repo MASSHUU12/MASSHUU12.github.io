@@ -79,11 +79,13 @@ const Popup: FunctionComponent<PopupProps> = ({
       onClick={close}>
       <div class="flex flex-col md:flex-row justify-center items-center w-full h-full md:max-h-[50%] md:w-10/12">
         {/* Left section */}
-        <animated.section
-          style={leftAnimation}
-          class="flex-1 p-3 md:p-12 w-full h-full bg-white_custom">
-          {childrenArray[0]}
-        </animated.section>
+        {childrenArray.length >= 2 && (
+          <animated.section
+            style={leftAnimation}
+            class="flex-1 p-3 md:p-12 w-full h-full bg-white_custom">
+            {childrenArray[0]}
+          </animated.section>
+        )}
         {/* Right section */}
         <animated.section
           style={rightAnimation}
@@ -91,7 +93,7 @@ const Popup: FunctionComponent<PopupProps> = ({
           <div class="flex flex-row justify-end items-center">
             <Icon icon="carbon:close" color="white" width="32" />
           </div>
-          <div>{childrenArray[1]}</div>
+          <div>{childrenArray[childrenArray.length <= 1 ? 0 : 1]}</div>
         </animated.section>
       </div>
     </animated.div>

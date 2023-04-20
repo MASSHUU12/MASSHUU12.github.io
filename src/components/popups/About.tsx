@@ -8,12 +8,12 @@ import Popup from "cmp/common/Popup";
 import Social from "cmp/common/Social";
 
 /**
- * Main about component
+ * About popup
  *
  * @return {*}  {JSX.Element}
  */
 const About: FunctionComponent<any> = (): JSX.Element => {
-  const aboutOpened = useAppSelector(state => state.popups.value.aboutOpened);
+  const aboutOpened = useAppSelector(state => state.popups.aboutOpened);
 
   const { t } = useTranslation();
 

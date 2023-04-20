@@ -1,15 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { popups } from "src/types";
 
 export const popupsSlice = createSlice({
   name: "popups",
   initialState: {
-    value: {
-      aboutOpened: false,
-    },
+    aboutOpened: false,
+    cvOpened: false,
   },
   reducers: {
-    toggle: (state, action: { payload: "aboutOpened" }): void => {
-      state.value[action.payload] = !state.value[action.payload];
+    toggle: (state, action: { payload: popups }): void => {
+      state[action.payload] = !state[action.payload];
     },
   },
 });

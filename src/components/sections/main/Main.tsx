@@ -58,10 +58,7 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
           {/* CV */}
           <Btn
             text="CV"
-            action={() => {
-              dispatch(toggleCV(true));
-              Scroll.disable();
-            }}
+            action={() => dispatch(toggle("cvOpened"))}
             delay={400}
           />
         </div>

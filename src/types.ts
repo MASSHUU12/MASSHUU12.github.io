@@ -1,1 +1,1 @@
-export type popups = "aboutOpened";
+export type popups = "aboutOpened" | "cvOpened";
