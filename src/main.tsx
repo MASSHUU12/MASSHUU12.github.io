@@ -5,7 +5,7 @@ import App from "./App";
 import store from "./app/store";
 
 import CV from "sections/cv/CV";
-import About from "sections/about/About";
+import About from "cmp/popups/About";
 import MobileMenu from "sections/mobileMenu/MobileMenu";
 
 import "./i18n";

@@ -5,9 +5,9 @@ import { animated, useSpring } from "@react-spring/web";
 import Btn from "common/Btn";
 import Scroll from "helpers/Scroll";
 import { toggleCV } from "features/cvSlice";
+import { toggle } from "features/popupsSlice";
 import { useAppDispatch } from "src/app/hooks";
 import { slideToLeftAnim } from "src/animations/slideToLeftAnim";
-import { toggle } from "features/popupsSlice";
 
 /**
  * Main section
