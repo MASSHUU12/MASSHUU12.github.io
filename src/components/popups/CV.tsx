@@ -1,5 +1,6 @@
-import Popup from "cmp/common/Popup";
 import { FunctionComponent } from "preact";
+
+import Popup from "cmp/common/Popup";
 import { useAppSelector } from "src/app/hooks";
 
 /**

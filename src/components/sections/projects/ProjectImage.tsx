@@ -18,7 +18,7 @@ const ProjectImage: FunctionComponent<Props> = ({
   image,
   title,
   classes,
-}): JSX.Element => {
+}: Props): JSX.Element => {
   const [mouseOver, setMouseOver] = useState(false);
 
   const styles = useSpring({

@@ -7,9 +7,8 @@ import Scroll from "helpers/Scroll";
 import { useAppDispatch, useAppSelector } from "src/app/hooks";
 import { mobileMenuAnimation } from "src/animations/mobileMenuAnims";
 
-import { toggleCV } from "features/cvSlice";
-import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
 import { toggle } from "features/popupsSlice";
+import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
 
 /**
  * Component with link for MobileMenu component

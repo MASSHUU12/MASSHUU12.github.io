@@ -1,7 +1,6 @@
-import { useSpring, animated, config } from "@react-spring/web";
-
 import { useState } from "preact/hooks";
 import { FunctionComponent } from "preact";
+import { useSpring, animated, config } from "@react-spring/web";
 
 type Props = {
   text: string;
