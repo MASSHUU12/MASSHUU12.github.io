@@ -8,8 +8,8 @@ import { useAppDispatch, useAppSelector } from "src/app/hooks";
 import { mobileMenuAnimation } from "src/animations/mobileMenuAnims";
 
 import { toggleCV } from "features/cvSlice";
-import { toggleAbout } from "features/aboutSlice";
 import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
+import { toggle } from "features/popupsSlice";
 
 /**
  * Component with link for MobileMenu component
@@ -17,7 +17,7 @@ import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
  * @return {*}  {JSX.Element}
  */
 const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
-  const toggle = useAppSelector(state => state.mobileMenu);
+  const toggleMobile = useAppSelector(state => state.mobileMenu);
   const dispatch = useAppDispatch();
 
   const { t } = useTranslation();
@@ -29,7 +29,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
 
   const animConfig = {
     ...mobileMenuAnimation,
-    reverse: toggle.reverse,
+    reverse: toggleMobile.reverse,
   };
 
   const about = useSpring({
@@ -64,8 +64,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
         class="text-3xl text-white_custom"
         onClick={() => {
           closeMenu();
-          dispatch(toggleAbout(true));
-          Scroll.disable();
+          dispatch(toggle("aboutOpened"));
         }}>
         {t("hAbout")}
       </animated.button>
