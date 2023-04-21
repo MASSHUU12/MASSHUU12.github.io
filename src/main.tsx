@@ -4,8 +4,8 @@ import { Provider } from "react-redux";
 import App from "./App";
 import store from "./app/store";
 
-import CV from "sections/cv/CV";
-import About from "sections/about/About";
+import CV from "cmp/popups/CV";
+import About from "cmp/popups/About";
 import MobileMenu from "sections/mobileMenu/MobileMenu";
 
 import "./i18n";

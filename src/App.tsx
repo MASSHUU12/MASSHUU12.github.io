@@ -3,9 +3,9 @@ import { FunctionComponent } from "preact";
 
 import i18n from "./i18n";
 
-import Main from "sections/main/Main";
-import Footer from "sections/footer/Footer";
-import Header from "sections/header/Header";
+import Main from "cmp/sections/Main";
+import Footer from "cmp/sections/Footer";
+import Header from "cmp/sections/Header";
 import Projects from "cmp/sections/projects/Projects";
 
 const App: FunctionComponent<any> = (): JSX.Element => {

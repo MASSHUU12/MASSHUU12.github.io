@@ -4,7 +4,7 @@ import { useEffect, useState } from "preact/hooks";
 import { animated, useSpring } from "@react-spring/web";
 
 import ProjectInfo from "./ProjectInfo";
-import { InfoProps } from "src/interfaces/interfaces";
+import { InfoProps } from "src/interfaces";
 import { workItemAnimation } from "src/animations/workAnims";
 
 /**
