@@ -1,10 +1,9 @@
-import { FunctionComponent } from "preact";
+import { FunctionComponent, JSX } from "preact";
 import { animated, useSpring } from "@react-spring/web";
 
 import MobileMenuLinks from "./MobileMenuLinks";
-import { toggleMobileMenu } from "features/mobileMenuSlice";
-import { useAppDispatch, useAppSelector } from "src/app/hooks";
 import { mobileMenuSlideAnimation } from "src/animations/mobileMenuAnims";
+import { usePopupsStore } from "src/app/store";
 
 /**
  * Menu available only on mobile
@@ -12,11 +11,11 @@ import { mobileMenuSlideAnimation } from "src/animations/mobileMenuAnims";
  * @return {*}  {JSX.Element}
  */
 const MobileMenu: FunctionComponent<any> = (): JSX.Element => {
-  const toggle = useAppSelector(state => state.mobileMenu);
-  const dispatch = useAppDispatch();
+  const toggle = usePopupsStore(state => state.mobileMenu);
+  const toggleMobileMenu = usePopupsStore(state => state.toggleMobileMenu);
 
   const closeAnim = (): void => {
-    toggle.reverse && dispatch(toggleMobileMenu(false));
+    toggle.reverse && toggleMobileMenu(false);
   };
 
   const bgconfig = {

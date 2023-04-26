@@ -1,7 +1,7 @@
-import { FunctionComponent } from "preact";
+import { FunctionComponent, JSX } from "preact";
 
 import Popup from "cmp/common/Popup";
-import { useAppSelector } from "src/app/hooks";
+import { usePopupsStore } from "src/app/store";
 
 /**
  * CV popup
@@ -9,7 +9,7 @@ import { useAppSelector } from "src/app/hooks";
  * @return {*}  {JSX.Element}
  */
 const CV: FunctionComponent<any> = (): JSX.Element => {
-  const cvOpened = useAppSelector(state => state.popups.cvOpened);
+  const cvOpened = usePopupsStore(state => state.cvOpened);
 
   return (
     <>

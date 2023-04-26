@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useState } from "preact/hooks";
-import { FunctionComponent } from "preact";
 import { useTranslation } from "react-i18next";
+import { FunctionComponent, JSX } from "preact";
 import { animated, useSpring } from "@react-spring/web";
 
 import {

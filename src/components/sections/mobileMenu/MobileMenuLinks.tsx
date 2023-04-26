@@ -1,14 +1,11 @@
 import { Icon } from "@iconify/react";
-import { FunctionComponent } from "preact";
 import { useTranslation } from "react-i18next";
+import { FunctionComponent, JSX } from "preact";
 import { animated, useSpring } from "@react-spring/web";
 
 import Scroll from "helpers/Scroll";
-import { useAppDispatch, useAppSelector } from "src/app/hooks";
 import { mobileMenuAnimation } from "src/animations/mobileMenuAnims";
-
-import { toggle } from "features/popupsSlice";
-import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
+import { usePopupsStore } from "src/app/store";
 
 /**
  * Component with link for MobileMenu component
@@ -16,13 +13,16 @@ import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
  * @return {*}  {JSX.Element}
  */
 const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
-  const toggleMobile = useAppSelector(state => state.mobileMenu);
-  const dispatch = useAppDispatch();
+  const toggle = usePopupsStore(state => state.toggle);
+  const toggleMobile = usePopupsStore(state => state.mobileMenu);
+  const toggleMobileMenuReverse = usePopupsStore(
+    state => state.toggleMobileMenuReverse,
+  );
 
   const { t } = useTranslation();
 
   const closeMenu = (): void => {
-    dispatch(toggleMobileMenuReverse(true));
+    toggleMobileMenuReverse(true);
     Scroll.enable();
   };
 
@@ -63,7 +63,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
         class="text-3xl text-white_custom"
         onClick={() => {
           closeMenu();
-          dispatch(toggle("aboutOpened"));
+          toggle("aboutOpened");
         }}>
         {t("hAbout")}
       </animated.button>
@@ -80,7 +80,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
         class="text-3xl text-white_custom"
         onClick={() => {
           closeMenu();
-          dispatch(toggle("cvOpened"));
+          toggle("cvOpened");
         }}>
         CV
       </animated.button>

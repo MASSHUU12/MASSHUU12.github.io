@@ -1,5 +1,5 @@
 import { useEffect } from "preact/hooks";
-import { FunctionComponent } from "preact";
+import { FunctionComponent, JSX } from "preact";
 
 import i18n from "./i18n";
 

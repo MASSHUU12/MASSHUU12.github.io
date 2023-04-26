@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
-import { FunctionComponent } from "preact";
 import { useTranslation } from "react-i18next";
+import { FunctionComponent, JSX } from "preact";
 
 type Props = {
   flag: string;

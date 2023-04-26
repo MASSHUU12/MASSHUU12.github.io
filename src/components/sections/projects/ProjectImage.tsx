@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { FunctionComponent } from "preact";
+import { FunctionComponent, JSX } from "preact";
 import { animated, useSpring } from "@react-spring/web";
 
 type Props = {

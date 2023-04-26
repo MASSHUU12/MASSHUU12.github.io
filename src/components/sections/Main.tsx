@@ -1,11 +1,10 @@
-import { FunctionComponent } from "preact";
+import { FunctionComponent, JSX } from "preact";
 import { useTranslation } from "react-i18next";
 import { animated, useSpring } from "@react-spring/web";
 
 import Btn from "common/Btn";
 import Scroll from "helpers/Scroll";
-import { toggle } from "features/popupsSlice";
-import { useAppDispatch } from "src/app/hooks";
+import { usePopupsStore } from "src/app/store";
 import { slideToLeftAnim } from "src/animations/slideToLeftAnim";
 
 /**
@@ -15,7 +14,7 @@ import { slideToLeftAnim } from "src/animations/slideToLeftAnim";
  */
 const Main: FunctionComponent<any> = (): JSX.Element => {
   const { t } = useTranslation();
-  const dispatch = useAppDispatch();
+  const togglePopups = usePopupsStore(state => state.toggle);
 
   // Name animation
   const name = useSpring({
@@ -45,7 +44,7 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
           {/* About */}
           <Btn
             text={t("hAbout")}
-            action={() => dispatch(toggle("aboutOpened"))}
+            action={() => togglePopups("aboutOpened")}
             delay={100}
           />
           {/* Works */}
@@ -55,11 +54,7 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
             delay={250}
           />
           {/* CV */}
-          <Btn
-            text="CV"
-            action={() => dispatch(toggle("cvOpened"))}
-            delay={400}
-          />
+          <Btn text="CV" action={() => togglePopups("cvOpened")} delay={400} />
         </div>
       </section>
     </>
