@@ -1,5 +1,6 @@
 import path from "path";
 import { defineConfig } from "vite";
+import eslint from "vite-plugin-eslint";
 import preact from "@preact/preset-vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
@@ -9,7 +10,7 @@ export default defineConfig({
   build: {
     manifest: true,
   },
-  plugins: [preact(), tsconfigPaths()],
+  plugins: [preact(), tsconfigPaths(), eslint()],
   resolve: {
     alias: {
       src: path.resolve("src/"),
