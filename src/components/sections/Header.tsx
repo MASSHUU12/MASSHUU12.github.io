@@ -10,7 +10,7 @@ import { usePopupsStore } from "src/app/store";
  * @return {*}  {JSX.Element}
  */
 const Header: FunctionComponent<any> = (): JSX.Element => {
-  const toggleMobileMenu = usePopupsStore(state => state.toggleMobileMenu);
+  const toggle = usePopupsStore(state => state.toggle);
 
   return (
     <header id="header" class="flex justify-end py-4 md:invisible">
@@ -19,7 +19,7 @@ const Header: FunctionComponent<any> = (): JSX.Element => {
         color="white"
         width="48"
         onClick={() => {
-          toggleMobileMenu(true);
+          toggle("mobileMenuOpened");
           Scroll.disable();
         }}
       />

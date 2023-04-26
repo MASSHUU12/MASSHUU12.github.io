@@ -44,11 +44,6 @@ export interface InfoToggleProps {
 export interface Popups {
   aboutOpened: boolean;
   cvOpened: boolean;
-  mobileMenu: {
-    value: boolean;
-    reverse: boolean;
-  };
+  mobileMenuOpened: boolean;
   toggle: (what: popups) => void;
-  toggleMobileMenu: (value: boolean) => void;
-  toggleMobileMenuReverse: (reverse: boolean) => void;
 }

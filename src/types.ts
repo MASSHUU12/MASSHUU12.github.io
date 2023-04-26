@@ -1,1 +1,1 @@
-export type popups = "aboutOpened" | "cvOpened";
+export type popups = "aboutOpened" | "cvOpened" | "mobileMenuOpened";

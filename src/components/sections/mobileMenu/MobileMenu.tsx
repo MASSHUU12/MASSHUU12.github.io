@@ -1,41 +1,43 @@
 import { FunctionComponent, JSX } from "preact";
+import { useEffect, useState } from "preact/hooks";
 import { animated, useSpring } from "@react-spring/web";
 
+import Scroll from "helpers/Scroll";
+import { usePopupsStore } from "src/app/store";
 import MobileMenuLinks from "./MobileMenuLinks";
 import { mobileMenuSlideAnimation } from "src/animations/mobileMenuAnims";
-import { usePopupsStore } from "src/app/store";
 
 /**
- * Menu available only on mobile
+ * Menu available only on mobile.
  *
  * @return {*}  {JSX.Element}
  */
 const MobileMenu: FunctionComponent<any> = (): JSX.Element => {
-  const toggle = usePopupsStore(state => state.mobileMenu);
-  const toggleMobileMenu = usePopupsStore(state => state.toggleMobileMenu);
+  const opened = usePopupsStore(state => state.mobileMenuOpened);
+  const [isClosed, setIsClosed] = useState(true);
 
-  const closeAnim = (): void => {
-    toggle.reverse && toggleMobileMenu(false);
-  };
-
-  const bgconfig = {
-    ...mobileMenuSlideAnimation,
-    reverse: toggle.reverse,
-  };
+  // Disable scroll when popup is opened
+  useEffect(() => {
+    opened && (setIsClosed(false), Scroll.disable());
+  }, [opened, isClosed]);
 
   const bg = useSpring({
-    ...bgconfig,
-    onRest: closeAnim,
+    ...mobileMenuSlideAnimation,
+    reverse: !opened,
+    onRest: (): void => {
+      !opened && (setIsClosed(true), Scroll.enable());
+    },
   });
 
   const bg2 = useSpring({
-    ...bgconfig,
+    ...mobileMenuSlideAnimation,
     delay: 150,
+    reverse: !opened,
   });
 
   return (
     <>
-      {toggle.value && (
+      {!isClosed && (
         // Background 1
         <animated.section
           style={bg}
