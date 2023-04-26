@@ -1,10 +1,10 @@
-import { FunctionComponent } from "preact";
 import { useTranslation } from "react-i18next";
+import { FunctionComponent, JSX } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { animated, useSpring } from "@react-spring/web";
 
 import ProjectInfo from "./ProjectInfo";
-import { InfoProps } from "src/interfaces";
+import { InfoProps } from "src/typing/interfaces";
 import { workItemAnimation } from "src/animations/workAnims";
 
 /**

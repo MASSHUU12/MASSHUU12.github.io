@@ -1,4 +1,4 @@
-import { FunctionComponent } from "preact";
+import { FunctionComponent, JSX } from "preact";
 
 import * as Sc from "helpers/Scroll";
 

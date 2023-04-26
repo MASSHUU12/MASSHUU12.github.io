@@ -1,48 +1,33 @@
 import { Icon } from "@iconify/react";
-import { FunctionComponent } from "preact";
 import { useTranslation } from "react-i18next";
+import { FunctionComponent, JSX } from "preact";
 import { animated, useSpring } from "@react-spring/web";
 
 import Scroll from "helpers/Scroll";
-import { useAppDispatch, useAppSelector } from "src/app/hooks";
+import { usePopupsStore } from "src/app/store";
 import { mobileMenuAnimation } from "src/animations/mobileMenuAnims";
 
-import { toggle } from "features/popupsSlice";
-import { toggleMobileMenuReverse } from "features/mobileMenuSlice";
-
 /**
- * Component with link for MobileMenu component
+ * Component with link for MobileMenu component.
  *
  * @return {*}  {JSX.Element}
  */
 const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
-  const toggleMobile = useAppSelector(state => state.mobileMenu);
-  const dispatch = useAppDispatch();
-
+  const toggle = usePopupsStore(state => state.toggle);
   const { t } = useTranslation();
 
-  const closeMenu = (): void => {
-    dispatch(toggleMobileMenuReverse(true));
-    Scroll.enable();
-  };
-
-  const animConfig = {
-    ...mobileMenuAnimation,
-    reverse: toggleMobile.reverse,
-  };
-
   const about = useSpring({
-    ...animConfig,
+    ...mobileMenuAnimation,
     delay: 200,
   });
 
   const works = useSpring({
-    ...animConfig,
+    ...mobileMenuAnimation,
     delay: 300,
   });
 
   const cv = useSpring({
-    ...animConfig,
+    ...mobileMenuAnimation,
     delay: 400,
   });
 
@@ -51,7 +36,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
       {/* Close button */}
       <div class="absolute top-4 right-4">
         <Icon
-          onClick={() => closeMenu()}
+          onClick={() => toggle("mobileMenu")}
           icon="carbon:close"
           color="white"
           width="64"
@@ -62,8 +47,8 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
         style={about}
         class="text-3xl text-white_custom"
         onClick={() => {
-          closeMenu();
-          dispatch(toggle("aboutOpened"));
+          toggle("mobileMenu");
+          toggle("about");
         }}>
         {t("hAbout")}
       </animated.button>
@@ -71,7 +56,10 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
       <animated.button
         style={works}
         class="text-3xl text-white_custom"
-        onClick={(e: MouseEvent) => Scroll.intoView({ target: "#works" })}>
+        onClick={(e: MouseEvent) => {
+          toggle("mobileMenu");
+          Scroll.intoView({ target: "#works" });
+        }}>
         {t("hWorks")}
       </animated.button>
       {/* CV link */}
@@ -79,8 +67,8 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
         style={cv}
         class="text-3xl text-white_custom"
         onClick={() => {
-          closeMenu();
-          dispatch(toggle("cvOpened"));
+          toggle("mobileMenu");
+          toggle("cv");
         }}>
         CV
       </animated.button>

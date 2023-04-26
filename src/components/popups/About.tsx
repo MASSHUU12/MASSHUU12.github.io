@@ -1,11 +1,10 @@
 import { Icon } from "@iconify/react";
-import { FunctionComponent } from "preact";
 import { useTranslation } from "react-i18next";
-
-import { useAppSelector } from "src/app/hooks";
+import { FunctionComponent, JSX } from "preact";
 
 import Popup from "cmp/common/Popup";
 import Social from "cmp/common/Social";
+import { usePopupsStore } from "src/app/store";
 
 /**
  * About popup
@@ -13,14 +12,14 @@ import Social from "cmp/common/Social";
  * @return {*}  {JSX.Element}
  */
 const About: FunctionComponent<any> = (): JSX.Element => {
-  const aboutOpened = useAppSelector(state => state.popups.aboutOpened);
+  const about = usePopupsStore(state => state.about);
 
   const { t } = useTranslation();
 
   return (
     <>
-      {aboutOpened && (
-        <Popup popup="aboutOpened">
+      {about && (
+        <Popup popup="about">
           <>
             <h1 class="text-3xl text-plum">{t("hAbout")}.</h1>
             <span class="text-sm text-blue_gray italic">{t("meTitle")}</span>

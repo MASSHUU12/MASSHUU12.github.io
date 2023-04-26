@@ -1,15 +1,19 @@
 import { Icon } from "@iconify/react";
 import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useState } from "preact/hooks";
-import { ComponentChildren, FunctionComponent, toChildArray } from "preact";
+import {
+  ComponentChildren,
+  FunctionComponent,
+  JSX,
+  toChildArray,
+} from "preact";
 
-import { popups } from "src/types";
+import { popups } from "src/constants/types";
 import Scroll from "helpers/Scroll";
-import { toggle } from "features/popupsSlice";
-import { useAppDispatch } from "src/app/hooks";
 
 import { backgroundAnim } from "src/animations/commonAnims";
 import { popupLeftAnim, popupRightAnim } from "src/animations/popupAnims";
+import { usePopupsStore } from "src/app/store";
 
 interface PopupProps {
   children: ComponentChildren;
@@ -29,7 +33,7 @@ const Popup: FunctionComponent<PopupProps> = ({
   children,
   popup,
 }: PopupProps): JSX.Element => {
-  const dispatch = useAppDispatch();
+  const toggle = usePopupsStore(state => state.toggle);
   const [isClosing, setIsClosing] = useState(false);
   const childrenArray = toChildArray(children);
 
@@ -65,7 +69,7 @@ const Popup: FunctionComponent<PopupProps> = ({
         setIsClosing(true);
       },
       onRest: () => {
-        dispatch(toggle(popup));
+        toggle(popup);
         Scroll.enable();
       },
     });

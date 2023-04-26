@@ -1,4 +1,5 @@
 import { StateUpdater } from "preact/hooks";
+import { popups } from "./types";
 
 export interface InfoProps {
   item: {
@@ -38,4 +39,14 @@ export interface InfoToggleProps {
       | never[];
   };
   setToggle: StateUpdater<boolean>;
+}
+
+export interface Popups {
+  about: boolean;
+  cv: boolean;
+  mobileMenu: boolean;
+}
+
+export interface PopupsStore extends Popups {
+  toggle: (what: popups) => void;
 }

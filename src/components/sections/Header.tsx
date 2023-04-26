@@ -1,9 +1,8 @@
 import { Icon } from "@iconify/react";
-import { FunctionComponent } from "preact";
+import { FunctionComponent, JSX } from "preact";
 
 import Scroll from "helpers/Scroll";
-import { useAppDispatch } from "src/app/hooks";
-import { toggleMobileMenu } from "features/mobileMenuSlice";
+import { usePopupsStore } from "src/app/store";
 
 /**
  * Header component, displays content only on mobile
@@ -11,7 +10,7 @@ import { toggleMobileMenu } from "features/mobileMenuSlice";
  * @return {*}  {JSX.Element}
  */
 const Header: FunctionComponent<any> = (): JSX.Element => {
-  const dispatch = useAppDispatch();
+  const toggle = usePopupsStore(state => state.toggle);
 
   return (
     <header id="header" class="flex justify-end py-4 md:invisible">
@@ -20,7 +19,7 @@ const Header: FunctionComponent<any> = (): JSX.Element => {
         color="white"
         width="48"
         onClick={() => {
-          dispatch(toggleMobileMenu(true));
+          toggle("mobileMenu");
           Scroll.disable();
         }}
       />

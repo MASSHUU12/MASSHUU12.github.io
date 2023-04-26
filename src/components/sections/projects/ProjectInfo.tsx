@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useState } from "preact/hooks";
-import { FunctionComponent } from "preact";
 import { useTranslation } from "react-i18next";
+import { FunctionComponent, JSX } from "preact";
 import { animated, useSpring } from "@react-spring/web";
 
 import {
@@ -13,7 +13,7 @@ import { backgroundAnim } from "src/animations/commonAnims";
 import Social from "common/Social";
 import Scroll from "helpers/Scroll";
 import ProjectImage from "./ProjectImage";
-import { InfoToggleProps } from "src/interfaces";
+import { InfoToggleProps } from "src/typing/interfaces";
 
 /**
  * Main component displaying detailed information about the project

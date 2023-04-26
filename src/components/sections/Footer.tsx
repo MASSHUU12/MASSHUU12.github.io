@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import { FunctionComponent } from "preact";
+import { FunctionComponent, JSX } from "preact";
 import { useTranslation } from "react-i18next";
 
 import Flag from "common/Flag";

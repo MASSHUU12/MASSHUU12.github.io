@@ -1,14 +1,17 @@
-import { configureStore } from "@reduxjs/toolkit";
-import mobileMenuReducer from "../features/mobileMenuSlice";
-import popupsReducer from "../features/popupsSlice";
+import { create } from "zustand";
 
-const store = configureStore({
-  reducer: {
-    mobileMenu: mobileMenuReducer,
-    popups: popupsReducer,
+import { popups } from "src/typing/types";
+import { PopupsStore } from "src/typing/interfaces";
+
+export const usePopupsStore = create<PopupsStore>()(set => ({
+  about: false,
+  cv: false,
+  mobileMenu: false,
+  toggle: (what: popups): void => {
+    set((state: PopupsStore) => {
+      state[what] = !state[what];
+
+      return { ...state };
+    });
   },
-});
-
-export default store;
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+}));
