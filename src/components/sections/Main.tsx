@@ -44,7 +44,7 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
           {/* About */}
           <Btn
             text={t("hAbout")}
-            action={() => togglePopups("aboutOpened")}
+            action={() => togglePopups("about")}
             delay={100}
           />
           {/* Works */}
@@ -54,7 +54,7 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
             delay={250}
           />
           {/* CV */}
-          <Btn text="CV" action={() => togglePopups("cvOpened")} delay={400} />
+          <Btn text="CV" action={() => togglePopups("cv")} delay={400} />
         </div>
       </section>
     </>

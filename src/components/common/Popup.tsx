@@ -8,7 +8,7 @@ import {
   toChildArray,
 } from "preact";
 
-import { popups } from "src/types";
+import { popups } from "src/constants/types";
 import Scroll from "helpers/Scroll";
 
 import { backgroundAnim } from "src/animations/commonAnims";

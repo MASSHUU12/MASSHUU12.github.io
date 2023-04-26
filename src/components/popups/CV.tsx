@@ -9,12 +9,12 @@ import { usePopupsStore } from "src/app/store";
  * @return {*}  {JSX.Element}
  */
 const CV: FunctionComponent<any> = (): JSX.Element => {
-  const cvOpened = usePopupsStore(state => state.cvOpened);
+  const cv = usePopupsStore(state => state.cv);
 
   return (
     <>
-      {cvOpened && (
-        <Popup popup="cvOpened">
+      {cv && (
+        <Popup popup="cv">
           <div class="flex flex-col items-center text-white_custom gap-2">
             <a class="text-4xl" href="/assets/gawrysiak_cv.pdf" target="_blank">
               gawrysiak_pl.pdf

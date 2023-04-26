@@ -42,8 +42,11 @@ export interface InfoToggleProps {
 }
 
 export interface Popups {
-  aboutOpened: boolean;
-  cvOpened: boolean;
-  mobileMenuOpened: boolean;
+  about: boolean;
+  cv: boolean;
+  mobileMenu: boolean;
+}
+
+export interface PopupsStore extends Popups {
   toggle: (what: popups) => void;
 }

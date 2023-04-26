@@ -1,14 +1,14 @@
 import { create } from "zustand";
 
-import { popups } from "src/types";
-import { Popups } from "src/interfaces";
+import { popups } from "src/typing/types";
+import { PopupsStore } from "src/typing/interfaces";
 
-export const usePopupsStore = create<Popups>()(set => ({
-  aboutOpened: false,
-  cvOpened: false,
-  mobileMenuOpened: false,
+export const usePopupsStore = create<PopupsStore>()(set => ({
+  about: false,
+  cv: false,
+  mobileMenu: false,
   toggle: (what: popups): void => {
-    set((state: Popups) => {
+    set((state: PopupsStore) => {
       state[what] = !state[what];
 
       return { ...state };

@@ -13,7 +13,7 @@ import { mobileMenuSlideAnimation } from "src/animations/mobileMenuAnims";
  * @return {*}  {JSX.Element}
  */
 const MobileMenu: FunctionComponent<any> = (): JSX.Element => {
-  const opened = usePopupsStore(state => state.mobileMenuOpened);
+  const opened = usePopupsStore(state => state.mobileMenu);
   const [isClosed, setIsClosed] = useState(true);
 
   // Disable scroll when popup is opened

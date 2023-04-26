@@ -19,7 +19,7 @@ const Header: FunctionComponent<any> = (): JSX.Element => {
         color="white"
         width="48"
         onClick={() => {
-          toggle("mobileMenuOpened");
+          toggle("mobileMenu");
           Scroll.disable();
         }}
       />

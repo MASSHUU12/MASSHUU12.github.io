@@ -12,14 +12,14 @@ import { usePopupsStore } from "src/app/store";
  * @return {*}  {JSX.Element}
  */
 const About: FunctionComponent<any> = (): JSX.Element => {
-  const aboutOpened = usePopupsStore(state => state.aboutOpened);
+  const about = usePopupsStore(state => state.about);
 
   const { t } = useTranslation();
 
   return (
     <>
-      {aboutOpened && (
-        <Popup popup="aboutOpened">
+      {about && (
+        <Popup popup="about">
           <>
             <h1 class="text-3xl text-plum">{t("hAbout")}.</h1>
             <span class="text-sm text-blue_gray italic">{t("meTitle")}</span>

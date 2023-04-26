@@ -36,7 +36,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
       {/* Close button */}
       <div class="absolute top-4 right-4">
         <Icon
-          onClick={() => toggle("mobileMenuOpened")}
+          onClick={() => toggle("mobileMenu")}
           icon="carbon:close"
           color="white"
           width="64"
@@ -47,8 +47,8 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
         style={about}
         class="text-3xl text-white_custom"
         onClick={() => {
-          toggle("mobileMenuOpened");
-          toggle("aboutOpened");
+          toggle("mobileMenu");
+          toggle("about");
         }}>
         {t("hAbout")}
       </animated.button>
@@ -57,7 +57,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
         style={works}
         class="text-3xl text-white_custom"
         onClick={(e: MouseEvent) => {
-          toggle("mobileMenuOpened");
+          toggle("mobileMenu");
           Scroll.intoView({ target: "#works" });
         }}>
         {t("hWorks")}
@@ -67,8 +67,8 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
         style={cv}
         class="text-3xl text-white_custom"
         onClick={() => {
-          toggle("mobileMenuOpened");
-          toggle("cvOpened");
+          toggle("mobileMenu");
+          toggle("cv");
         }}>
         CV
       </animated.button>

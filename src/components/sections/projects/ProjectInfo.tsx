@@ -13,7 +13,7 @@ import { backgroundAnim } from "src/animations/commonAnims";
 import Social from "common/Social";
 import Scroll from "helpers/Scroll";
 import ProjectImage from "./ProjectImage";
-import { InfoToggleProps } from "src/interfaces";
+import { InfoToggleProps } from "src/typing/interfaces";
 
 /**
  * Main component displaying detailed information about the project
