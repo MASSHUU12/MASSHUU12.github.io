@@ -3,7 +3,7 @@ import { FunctionComponent, JSX } from "preact";
 import { animated, useSpring } from "@react-spring/web";
 
 type Props = {
-  image: any;
+  image: unknown;
   title: string;
   classes?: string;
 };
@@ -31,7 +31,7 @@ const ProjectImage: FunctionComponent<Props> = ({
       class={classes}
       loading="lazy"
       src={`/assets/projects/${image}`}
-      alt={title + " image"}
+      alt={`${title} image`}
       onMouseEnter={() => setMouseOver(true)}
       onMouseLeave={() => setMouseOver(false)}
     />

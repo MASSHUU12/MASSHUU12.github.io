@@ -12,7 +12,7 @@ import { slideToLeftAnim } from "src/animations/slideToLeftAnim";
  *
  * @return {*}  {JSX.Element}
  */
-const Main: FunctionComponent<any> = (): JSX.Element => {
+const Main: FunctionComponent<unknown> = (): JSX.Element => {
   const { t } = useTranslation();
   const togglePopups = usePopupsStore(state => state.toggle);
 
@@ -50,7 +50,7 @@ const Main: FunctionComponent<any> = (): JSX.Element => {
           {/* Works */}
           <Btn
             text={t("hWorks")}
-            action={e => Scroll.intoView({ target: "#works" })}
+            action={() => Scroll.intoView({ target: "#works" })}
             delay={250}
           />
           {/* CV */}

@@ -14,7 +14,7 @@ export default class Scroll {
    * @return {*}  {void}
    * @memberof Scroll
    */
-  public static enable(selector: string = "body"): void {
+  public static enable(selector = "body"): void {
     const element = document.querySelector<HTMLElement>(selector);
 
     if (!element) return;
@@ -30,7 +30,7 @@ export default class Scroll {
    * @return {*}  {void}
    * @memberof Scroll
    */
-  public static disable(selector: string = "body"): void {
+  public static disable(selector = "body"): void {
     const element = document.querySelector<HTMLElement>(selector);
 
     if (!element) return;

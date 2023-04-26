@@ -1,6 +1,5 @@
 import { Icon } from "@iconify/react";
 import { FunctionComponent, JSX } from "preact";
-import { useTranslation } from "react-i18next";
 
 import Flag from "common/Flag";
 import Social from "common/Social";
@@ -10,9 +9,7 @@ import Social from "common/Social";
  *
  * @return {*}  {JSX.Element}
  */
-const Footer: FunctionComponent<any> = (): JSX.Element => {
-  const { t } = useTranslation();
-
+const Footer: FunctionComponent<unknown> = (): JSX.Element => {
   return (
     <footer class="mb-4">
       <div class="w-full flex md:flex-row md:gap-0 gap-2 flex-col justify-between font-extralight">

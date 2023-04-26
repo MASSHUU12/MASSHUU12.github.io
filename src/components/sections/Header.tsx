@@ -9,7 +9,7 @@ import { usePopupsStore } from "src/app/store";
  *
  * @return {*}  {JSX.Element}
  */
-const Header: FunctionComponent<any> = (): JSX.Element => {
+const Header: FunctionComponent<unknown> = (): JSX.Element => {
   const toggle = usePopupsStore(state => state.toggle);
 
   return (

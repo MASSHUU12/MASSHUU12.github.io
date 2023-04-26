@@ -4,7 +4,8 @@ import { useSpring, animated, config } from "@react-spring/web";
 
 type Props = {
   text: string;
-  action: (args: any) => any;
+  // eslint-disable-next-line no-unused-vars
+  action: (args: unknown) => unknown;
   delay?: number;
 };
 
@@ -36,7 +37,7 @@ const Btn: FunctionComponent<Props> = ({
       y: 100,
     },
     config: config.slow,
-    delay: delay,
+    delay,
   });
 
   return (

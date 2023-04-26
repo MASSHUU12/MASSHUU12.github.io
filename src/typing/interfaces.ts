@@ -48,5 +48,6 @@ export interface Popups {
 }
 
 export interface PopupsStore extends Popups {
+  // eslint-disable-next-line no-unused-vars
   toggle: (what: popups) => void;
 }

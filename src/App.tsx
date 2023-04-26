@@ -8,7 +8,7 @@ import Footer from "cmp/sections/Footer";
 import Header from "cmp/sections/Header";
 import Projects from "cmp/sections/projects/Projects";
 
-const App: FunctionComponent<any> = (): JSX.Element => {
+const App: FunctionComponent<unknown> = (): JSX.Element => {
   useEffect(() => {
     // Detect locale on site load
     i18n.changeLanguage(navigator.language.split("-")[0]);

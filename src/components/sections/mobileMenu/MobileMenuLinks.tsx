@@ -12,7 +12,7 @@ import { mobileMenuAnimation } from "src/animations/mobileMenuAnims";
  *
  * @return {*}  {JSX.Element}
  */
-const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
+const MobileMenuLinks: FunctionComponent<unknown> = (): JSX.Element => {
   const toggle = usePopupsStore(state => state.toggle);
   const { t } = useTranslation();
 
@@ -56,7 +56,7 @@ const MobileMenuLinks: FunctionComponent<any> = (): JSX.Element => {
       <animated.button
         style={works}
         class="text-3xl text-white_custom"
-        onClick={(e: MouseEvent) => {
+        onClick={() => {
           toggle("mobileMenu");
           Scroll.intoView({ target: "#works" });
         }}>

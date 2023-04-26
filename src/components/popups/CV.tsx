@@ -8,7 +8,7 @@ import { usePopupsStore } from "src/app/store";
  *
  * @return {*}  {JSX.Element}
  */
-const CV: FunctionComponent<any> = (): JSX.Element => {
+const CV: FunctionComponent<unknown> = (): JSX.Element => {
   const cv = usePopupsStore(state => state.cv);
 
   return (

@@ -35,7 +35,7 @@ const ProjectInfo: FunctionComponent<InfoToggleProps> = ({
   // Common animation config
   const slideInConfig = {
     ...workSlideInAnimation,
-    reverse: reverse,
+    reverse,
   };
 
   // Animations of the appearance of sections.
@@ -45,7 +45,7 @@ const ProjectInfo: FunctionComponent<InfoToggleProps> = ({
 
   const backButton = useSpring({
     ...backgroundAnim,
-    reverse: reverse,
+    reverse,
     delay: 400,
   });
 

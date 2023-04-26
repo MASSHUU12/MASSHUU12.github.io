@@ -24,7 +24,7 @@ export const workBackgroundAnimation = (
       opacity: reverse ? 0 : 1,
     },
     reset: true,
-    reverse: reverse,
+    reverse,
     onRest: closeAnim,
   };
 };

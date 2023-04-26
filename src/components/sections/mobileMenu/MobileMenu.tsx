@@ -12,7 +12,7 @@ import { mobileMenuSlideAnimation } from "src/animations/mobileMenuAnims";
  *
  * @return {*}  {JSX.Element}
  */
-const MobileMenu: FunctionComponent<any> = (): JSX.Element => {
+const MobileMenu: FunctionComponent<unknown> = (): JSX.Element => {
   const opened = usePopupsStore(state => state.mobileMenu);
   const [isClosed, setIsClosed] = useState(true);
 

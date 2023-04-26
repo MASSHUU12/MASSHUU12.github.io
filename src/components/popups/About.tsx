@@ -11,7 +11,7 @@ import { usePopupsStore } from "src/app/store";
  *
  * @return {*}  {JSX.Element}
  */
-const About: FunctionComponent<any> = (): JSX.Element => {
+const About: FunctionComponent<unknown> = (): JSX.Element => {
   const about = usePopupsStore(state => state.about);
 
   const { t } = useTranslation();

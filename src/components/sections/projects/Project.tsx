@@ -44,8 +44,12 @@ const Project: FunctionComponent<InfoProps> = ({
       threshold: 0.15, // Consider item 'visible' if 15% of it is shown.
     });
 
+    const selector = document.querySelector(`#w${keyID}`);
+
+    if (selector === null) return;
+
     // Look for items.
-    observer.observe(document.querySelector(`#w${keyID}`)!);
+    observer.observe(selector);
   }, [keyID, animPlayed]);
 
   return (

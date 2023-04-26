@@ -10,10 +10,10 @@ import {
 
 import Scroll from "helpers/Scroll";
 import { popups } from "src/typing/types";
+import { usePopupsStore } from "src/app/store";
 
 import { backgroundAnim } from "src/animations/commonAnims";
 import { popupLeftAnim, popupRightAnim } from "src/animations/popupAnims";
-import { usePopupsStore } from "src/app/store";
 
 interface PopupProps {
   children: ComponentChildren;
