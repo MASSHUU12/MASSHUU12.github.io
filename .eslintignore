@@ -1,1 +1,4 @@
-vite.config.ts
+vite.config.*
+jest.config.*
+*.test.*
+babel.config.*
