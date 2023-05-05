@@ -79,9 +79,9 @@ const Popup: FunctionComponent<PopupProps> = ({
     // Background
     <animated.div
       style={bgAnimation}
-      class="flex justify-center items-center fixed top-0 left-0 w-full h-full bg-dim"
+      class="flex justify-center items-center fixed top-0 left-0 w-full h-full bg-dim backdrop-blur-sm"
       onClick={close}>
-      <div class="flex flex-col md:flex-row justify-center items-center w-full h-full md:max-h-[70%] md:w-10/12">
+      <div class="flex flex-col md:flex-row justify-center items-center w-full h-full md:max-h-[70%] md:w-10/12 shadow-2xl">
         {/* Left section */}
         {childrenArray.length >= 2 && (
           <animated.section
