@@ -45,6 +45,7 @@ export interface Popups {
   about: boolean;
   cv: boolean;
   mobileMenu: boolean;
+  projectView: boolean;
 }
 
 export interface PopupsStore extends Popups {

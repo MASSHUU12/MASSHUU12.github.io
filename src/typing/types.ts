@@ -1,1 +1,1 @@
-export type popups = "about" | "cv" | "mobileMenu";
+export type popups = "about" | "cv" | "mobileMenu" | "projectView";

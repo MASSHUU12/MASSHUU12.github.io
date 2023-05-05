@@ -7,6 +7,7 @@ export const usePopupsStore = create<PopupsStore>()(set => ({
   about: false,
   cv: false,
   mobileMenu: false,
+  projectView: false,
   toggle: (what: popups): void => {
     set((state: PopupsStore) => {
       state[what] = !state[what];
