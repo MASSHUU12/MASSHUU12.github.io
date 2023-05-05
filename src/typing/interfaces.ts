@@ -21,6 +21,7 @@ export interface InfoProps {
   keyID: number;
 }
 
+// TODO: Delete this interface
 export interface InfoToggleProps {
   item: {
     title: string;
