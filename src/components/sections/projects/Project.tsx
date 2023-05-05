@@ -3,9 +3,9 @@ import { FunctionComponent, JSX } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { animated, useSpring } from "@react-spring/web";
 
-import ProjectInfo from "./ProjectInfo";
 import { InfoProps } from "src/typing/interfaces";
 import { workItemAnimation } from "src/animations/workAnims";
+import { usePopupsStore } from "src/app/store";
 
 /**
  * Project
@@ -17,14 +17,16 @@ const Project: FunctionComponent<InfoProps> = ({
   item,
   keyID,
 }: InfoProps): JSX.Element => {
-  const [toggle, setToggle] = useState(false);
   const [mouseOver, setMouseOver] = useState(false);
   const [animPlayed, setAnimPlayed] = useState(false);
+  const state = usePopupsStore(state => state);
 
   const { t } = useTranslation();
 
   // Item animation.
-  const styles = useSpring(workItemAnimation(animPlayed, mouseOver, toggle));
+  const styles = useSpring(
+    workItemAnimation(animPlayed, mouseOver, state.projectView),
+  );
 
   // Checks whether the observed changes require running an animation.
   const observerCallback = (entries: IntersectionObserverEntry[]): void => {
@@ -59,8 +61,8 @@ const Project: FunctionComponent<InfoProps> = ({
         className="w-[55vw] max-h-[20vw] mb-8 flex flex-row justify-center cursor-pointer p-8 rounded-md max-md:relative max-md:w-[85vw] max-md:h-[45vh] max-md:max-h-[unset] max-md:mb-6 max-md:p-0 max-md:overflow-hidden"
         id={`w${keyID}`}
         onClick={() => {
-          // Open window.
-          setToggle(!toggle);
+          // Open project view.
+          state.toggle("projectView");
         }}
         onMouseEnter={() => setMouseOver(true)}
         onMouseLeave={() => setMouseOver(false)}>
@@ -94,7 +96,6 @@ const Project: FunctionComponent<InfoProps> = ({
           />
         </div>
       </animated.div>
-      {toggle && <ProjectInfo item={item} setToggle={setToggle} />}
     </>
   );
 };
