@@ -3,9 +3,9 @@ import { FunctionComponent, JSX } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { animated, useSpring } from "@react-spring/web";
 
+import { usePopupsStore } from "src/app/store";
 import { InfoProps } from "src/typing/interfaces";
 import { workItemAnimation } from "src/animations/workAnims";
-import { usePopupsStore } from "src/app/store";
 
 /**
  * Project
@@ -24,9 +24,7 @@ const Project: FunctionComponent<InfoProps> = ({
   const { t } = useTranslation();
 
   // Item animation.
-  const styles = useSpring(
-    workItemAnimation(animPlayed, mouseOver, state.projectView),
-  );
+  const styles = useSpring(workItemAnimation(animPlayed, mouseOver));
 
   // Checks whether the observed changes require running an animation.
   const observerCallback = (entries: IntersectionObserverEntry[]): void => {

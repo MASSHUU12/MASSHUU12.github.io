@@ -29,16 +29,11 @@ export const workBackgroundAnimation = (
   };
 };
 
-export const workItemAnimation = (
-  animPlayed: boolean,
-  mouseOver: boolean,
-  toggle: boolean,
-) => {
+export const workItemAnimation = (animPlayed: boolean, mouseOver: boolean) => {
   return {
     opacity: animPlayed ? 1 : 0,
     y: animPlayed ? 0 : 100,
     scale: mouseOver ? 1.1 : 1,
     reset: true,
-    cancel: toggle,
   };
 };
