@@ -16,7 +16,7 @@ const ProjectView: FunctionComponent<unknown> = (): JSX.Element => {
       {enabled && (
         <Popup popup="projectView">
           <div class="h-full overflow-scroll">
-            <section>
+            <section class="flex justify-between max-md:flex-col">
               <div>
                 {/* Title */}
                 <h1 class="text-white_custom text-2xl flex items-center gap-2">
@@ -30,7 +30,7 @@ const ProjectView: FunctionComponent<unknown> = (): JSX.Element => {
                   <div class="flex flex-row flex-wrap gap-2 my-2">
                     {data.labels.map((label, index) => {
                       return (
-                        <span key={index} class="text-gray font-thin">
+                        <span key={index} class="text-light_yellow font-thin">
                           {t(label)}
                         </span>
                       );
@@ -53,7 +53,7 @@ const ProjectView: FunctionComponent<unknown> = (): JSX.Element => {
                             : "mdi:web"
                         }
                         width="24"
-                        color="#fffefa"
+                        color="#348899"
                       />
                     </Social>
                   );
@@ -66,18 +66,20 @@ const ProjectView: FunctionComponent<unknown> = (): JSX.Element => {
               <p class="text-gray">{t(data.description)}</p>
             </section>
             {/* Images */}
-            <section class="flex flex-row flex-wrap mt-4">
+            <section class="flex flex-col mt-4 pb-4">
               <h2 class="text-white_custom text-l">{t("wImgs")}</h2>
-              {data.images.map((image, index) => {
-                return (
-                  <ProjectImage
-                    key={index}
-                    image={image}
-                    title={data.title}
-                    classes="cursor-pointer max-md:mb-4"
-                  />
-                );
-              })}
+              <div class="flex flex-row flex-wrap gap-2">
+                {data.images.map((image, index) => {
+                  return (
+                    <ProjectImage
+                      key={index}
+                      image={image}
+                      title={data.title}
+                      classes="cursor-pointer mb-4 h-[60vh] max-md:h-[100%]"
+                    />
+                  );
+                })}
+              </div>
             </section>
           </div>
         </Popup>
