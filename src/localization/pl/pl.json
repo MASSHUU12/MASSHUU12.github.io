@@ -16,6 +16,8 @@
   "wSource": "Kod źródłowy",
   "wSite": "Strona",
   "wTeam": "Praca zespołowa",
+  "wDesc": "Opis",
+  "wImgs": "Zdjęcia",
 
   "w1Short": "Twórz czysty i czytelny kod w Visual Studio Code.",
   "w1Long": "To rozszerzenie zachęca do pisania krótkich linii kodu, powiadamiając Cię, gdy przekroczysz limit.",

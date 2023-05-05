@@ -3,7 +3,7 @@ import { FunctionComponent, JSX } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { animated, useSpring } from "@react-spring/web";
 
-import { usePopupsStore } from "src/app/store";
+import { usePopupsStore, useProjectInfoStore } from "src/app/store";
 import { InfoProps } from "src/typing/interfaces";
 import { workItemAnimation } from "src/animations/workAnims";
 
@@ -20,6 +20,7 @@ const Project: FunctionComponent<InfoProps> = ({
   const [mouseOver, setMouseOver] = useState(false);
   const [animPlayed, setAnimPlayed] = useState(false);
   const state = usePopupsStore(state => state);
+  const setData = useProjectInfoStore(state => state.setData);
 
   const { t } = useTranslation();
 
@@ -60,6 +61,7 @@ const Project: FunctionComponent<InfoProps> = ({
         id={`w${keyID}`}
         onClick={() => {
           // Open project view.
+          setData({ item, keyID });
           state.toggle("projectView");
         }}
         onMouseEnter={() => setMouseOver(true)}

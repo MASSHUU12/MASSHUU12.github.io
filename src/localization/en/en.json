@@ -16,6 +16,8 @@
   "wSource": "Source code",
   "wSite": "Website",
   "wTeam": "Teamwork",
+  "wDesc": "Description",
+  "wImgs": "Images",
 
   "w1Short": "Create clean and readable code in Visual Studio Code.",
   "w1Long": "This extension encourages you to write short lines of code, notifying you when you exceed the limit.",

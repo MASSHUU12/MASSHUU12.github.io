@@ -17,7 +17,13 @@ export const usePopupsStore = create<PopupsStore>()(set => ({
   },
 }));
 
-export const useProjectInfoStore = create<InfoProps>()(set => ({
+interface ProjectInfoProps extends InfoProps {
+  // eslint-disable-next-line no-unused-vars
+  setData: (data: InfoProps) => void;
+  deleteData: () => void;
+}
+
+export const useProjectInfoStore = create<ProjectInfoProps>()(set => ({
   item: {
     title: "",
     short_desc: "",
