@@ -79,25 +79,27 @@ const Popup: FunctionComponent<PopupProps> = ({
     // Background
     <animated.div
       style={bgAnimation}
-      class="flex justify-center items-center fixed top-0 left-0 w-full h-full bg-dim"
+      class="flex justify-center items-center fixed top-0 left-0 w-full h-full bg-dim backdrop-blur-sm"
       onClick={close}>
-      <div class="flex flex-col md:flex-row justify-center items-center w-full h-full md:max-h-[50%] md:w-10/12">
+      <div class="flex flex-col md:flex-row justify-center items-center w-full h-full md:max-h-[70%] md:w-10/12 shadow-2xl">
         {/* Left section */}
         {childrenArray.length >= 2 && (
           <animated.section
             style={leftAnimation}
-            class="flex-1 p-3 md:p-12 w-full h-full bg-white_custom">
+            class="flex-1 p-3 md:p-8 w-full h-full bg-white_custom">
             {childrenArray[0]}
           </animated.section>
         )}
         {/* Right section */}
         <animated.section
           style={rightAnimation}
-          class="flex-1 p-3 md:p-12 w-full h-full bg-blue_gray">
+          class="flex-1 p-3 md:p-8 w-full h-full bg-blue_gray">
           <div class="flex flex-row justify-end items-center">
             <Icon icon="carbon:close" color="white" width="32" />
           </div>
-          <div>{childrenArray[childrenArray.length <= 1 ? 0 : 1]}</div>
+          <div class="h-full">
+            {childrenArray[childrenArray.length <= 1 ? 0 : 1]}
+          </div>
         </animated.section>
       </div>
     </animated.div>

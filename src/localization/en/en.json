@@ -1,7 +1,7 @@
 {
   "meHello": "Hello, I'm",
   "meTitle": "I'm a fullstack junior web developer.",
-  "meDescription": "I'm Maciej, a 20-year-old Polish programmer. I'm a strange guy who likes to create strange things and bring them to life. I like solving problems and finding the best solutions. When I'm not playing with code, I'm playing with my cat.",
+  "meDescription": "I'm Maciej, a 21-year-old Polish programmer. I'm a strange guy who likes to create strange things and bring them to life. I like solving problems and finding the best solutions. When I'm not playing with code, I'm playing with my cat.",
 
   "hAbout": "About Me",
   "hWorks": "View my work",
@@ -16,6 +16,8 @@
   "wSource": "Source code",
   "wSite": "Website",
   "wTeam": "Teamwork",
+  "wDesc": "Description",
+  "wImgs": "Images",
 
   "w1Short": "Create clean and readable code in Visual Studio Code.",
   "w1Long": "This extension encourages you to write short lines of code, notifying you when you exceed the limit.",

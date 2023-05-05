@@ -8,6 +8,7 @@ import MobileMenu from "sections/mobileMenu/MobileMenu";
 
 import "./i18n";
 import "./index.css";
+import ProjectView from "cmp/popups/ProjectView";
 
 render(
   <>
@@ -15,6 +16,7 @@ render(
     <About />
     <CV />
     <MobileMenu />
+    <ProjectView />
   </>,
   document.getElementById("root") as HTMLElement,
 );

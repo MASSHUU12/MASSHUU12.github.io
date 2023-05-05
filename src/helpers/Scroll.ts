@@ -55,7 +55,7 @@ export default class Scroll {
     block = "start",
     inline = "nearest",
   }: Readonly<ScrollIntoView>): void {
-    document.querySelector(target)?.scrollIntoView({
+    document.querySelector<HTMLElement>(target)?.scrollIntoView({
       behavior,
       block,
       inline,
