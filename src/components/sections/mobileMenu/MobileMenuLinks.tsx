@@ -68,7 +68,7 @@ const MobileMenuLinks: FunctionComponent<unknown> = (): JSX.Element => {
         class="text-3xl text-white_custom"
         onClick={() => {
           toggle("mobileMenu");
-          toggle("cv");
+          window.open("/assets/gawrysiak_cv.pdf", "_blank");
         }}>
         CV
       </animated.button>

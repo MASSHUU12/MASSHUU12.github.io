@@ -54,7 +54,11 @@ const Main: FunctionComponent<unknown> = (): JSX.Element => {
             delay={250}
           />
           {/* CV */}
-          <Btn text="CV" action={() => togglePopups("cv")} delay={400} />
+          <Btn
+            text="CV"
+            action={() => window.open("/assets/gawrysiak_cv.pdf", "_blank")}
+            delay={400}
+          />
         </div>
       </section>
     </>
