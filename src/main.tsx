@@ -2,7 +2,6 @@ import { render } from "preact";
 
 import App from "./App";
 
-import CV from "cmp/popups/CV";
 import About from "cmp/popups/About";
 import MobileMenu from "sections/mobileMenu/MobileMenu";
 
@@ -14,7 +13,6 @@ render(
   <>
     <App />
     <About />
-    <CV />
     <MobileMenu />
     <ProjectView />
   </>,

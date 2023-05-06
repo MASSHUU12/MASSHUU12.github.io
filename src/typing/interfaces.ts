@@ -22,7 +22,6 @@ export interface InfoProps {
 
 export interface Popups {
   about: boolean;
-  cv: boolean;
   mobileMenu: boolean;
   projectView: boolean;
 }
