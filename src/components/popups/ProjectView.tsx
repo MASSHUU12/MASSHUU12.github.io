@@ -39,7 +39,7 @@ const ProjectView: FunctionComponent<unknown> = (): JSX.Element => {
                 )}
               </div>
               {/* Links */}
-              <div>
+              <div class="flex flex-col gap-2">
                 {data.links.map((object, index) => {
                   return (
                     <Social
@@ -48,8 +48,8 @@ const ProjectView: FunctionComponent<unknown> = (): JSX.Element => {
                       key={index}>
                       <Icon
                         icon={
-                          object.name === "github"
-                            ? "akar-icon:github-fill"
+                          object.type === "github"
+                            ? "akar-icons:github-fill"
                             : "mdi:web"
                         }
                         width="24"
