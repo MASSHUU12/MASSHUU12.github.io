@@ -6,7 +6,6 @@ export interface InfoProps {
     short_desc: string;
     description: string;
     labels: Array<string>;
-    labels_left: Array<string>;
     teamwork: boolean;
     images: Array<string>;
     links:

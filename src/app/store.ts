@@ -28,7 +28,6 @@ export const useProjectInfoStore = create<ProjectInfoProps>()(set => ({
     short_desc: "",
     description: "",
     labels: [],
-    labels_left: [],
     teamwork: false,
     images: [],
     links: [],

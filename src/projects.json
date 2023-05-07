@@ -4,7 +4,6 @@
     "short_desc": "w5Short",
     "description": "w5Long",
     "labels": ["React Native", "TypeScript", "SQLite", "Redux"],
-    "labels_left": ["wTeam"],
     "teamwork": true,
     "images": [
       "bookapp_mockup.webp",
@@ -26,7 +25,6 @@
     "short_desc": "w3Short",
     "description": "w3Long",
     "labels": ["TypeScript", "Visual Studio Code API", "VS Code Extension"],
-    "labels_left": [],
     "teamwork": false,
     "images": ["systemInfo.webp"],
     "links": [
@@ -47,7 +45,6 @@
     "short_desc": "w1Short",
     "description": "w1Long",
     "labels": ["TypeScript", "Visual Studio Code API", "VS Code Extension"],
-    "labels_left": [],
     "teamwork": false,
     "images": ["tooLong.webp"],
     "links": [
@@ -68,7 +65,6 @@
     "short_desc": "w4Short",
     "description": "w4Long",
     "labels": ["Laravel", "Bing Maps", "Kołobrzeg OpenData", "SCSS"],
-    "labels_left": ["wTeam"],
     "teamwork": true,
     "images": ["kolobrzegHotele.webp"],
     "links": [
@@ -89,7 +85,6 @@
     "short_desc": "w2Short",
     "description": "w2Long",
     "labels": ["C#", ".NET 7"],
-    "labels_left": [],
     "teamwork": false,
     "images": ["program-runner.webp"],
     "links": [
