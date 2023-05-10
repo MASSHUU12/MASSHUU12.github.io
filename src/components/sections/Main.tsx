@@ -37,7 +37,7 @@ const Main: FunctionComponent<unknown> = (): JSX.Element => {
           {t("meHello")}
           <span class="text-light_yellow"> Maciej Gawrysiak</span>.
         </animated.h1>
-        <animated.span style={title} class="text-2xl text-white_custom">
+        <animated.span style={title} class="text-2xl text-gray">
           {t("meTitle")}
         </animated.span>
         <div class="hidden md:flex md:flex-wrap">
