@@ -4,6 +4,13 @@ This is my portfolio website built using Vite, Preact, Tailwind & Zustand.
 The website showcases information about me and my projects.
 It is designed to be responsive and easy to navigate.
 
+## Table of Contents
+
+- [Portoflio](#portoflio)
+  - [Table of Contents](#table-of-contents)
+  - [Technologies used](#technologies-used)
+  - [Getting started](#getting-started)
+
 ## Technologies used
 
 - [Preact](https://preactjs.com/): A fast and lightweight alternative to React.
