@@ -30,7 +30,7 @@ const Btn: FunctionComponent<Props> = ({
     to: {
       opacity: 1,
       y: 0,
-      scale: hover ? 1.15 : 1,
+      scale: hover ? 1.1 : 1,
     },
     from: {
       opacity: 0,
