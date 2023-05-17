@@ -32,5 +32,8 @@
   "w4Long": "KołobrzegHotele to wyszukiwarka miejsc noclegowych. Strona została stworzona na potrzeby konkursu. Miasto wyłączyło część API, z którego strona korzysta, więc część funkcji może nie działać. Noclegi są wyszukiwane na podstawie kilku kategorii i tego jak ważne są dla użytkownika, np. jeśli dla kogoś najważniejsza jest bliskość plaży, a reszta jest nieistotna, to proponowane będą noclegi jak najbliżej plaży.",
 
   "w5Short": "Bookapp to aplikacja mobilna do śledzenia przeczytanych książek.",
-  "w5Long": "Aplikacja w prosty sposób pozwala na oznaczanie przeczytanych książek oraz książek \"do przeczytania\". Dzięki integracji z API openlibrary.org pozwala również na wyszukiwanie książek i sprawdzanie szczegółów na ich temat."
+  "w5Long": "Aplikacja w prosty sposób pozwala na oznaczanie przeczytanych książek oraz książek \"do przeczytania\". Dzięki integracji z API openlibrary.org pozwala również na wyszukiwanie książek i sprawdzanie szczegółów na ich temat.",
+
+  "w6Short": "Strona rozwiązująca Sudoku.",
+  "w6Long": "Strona rozwiązująca Sudoku oparta na Vite, Vue i TypeScript."
 }

@@ -32,5 +32,8 @@
   "w4Long": "KolobrzegHotels is a search engine for places to stay. The site was created for a competition. The city disabled some of the API the site uses, so some of the features may not work. Accommodations are searched based on several categories and how important they are to the user, e.g. if proximity to the beach is most important to someone and the rest is unimportant, accommodations as close to the beach as possible will be suggested.",
 
   "w5Short": "Bookapp is a mobile application to track books read.",
-  "w5Long": "The application easily allows you to mark books you have read and books \"to read\". Thanks to its integration with the openlibrary.org API, it also allows you to search for books and check details about them."
+  "w5Long": "The application easily allows you to mark books you have read and books \"to read\". Thanks to its integration with the openlibrary.org API, it also allows you to search for books and check details about them.",
+
+  "w6Short": "Sudoku solving website.",
+  "w6Long": "Sudoku solving website based on Vite, Vue and TypeScript."
 }

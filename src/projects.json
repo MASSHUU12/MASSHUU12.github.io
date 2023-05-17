@@ -94,5 +94,25 @@
         "link": "https://github.com/MASSHUU12/program-runner"
       }
     ]
+  },
+  {
+    "title": "Sudoku Solver",
+    "short_desc": "w6Short",
+    "description": "w6Long",
+    "labels": ["Vite", "Vue", "TypeScript", "Pinia", "Tailwind"],
+    "teamwork": false,
+    "images": ["sudoku-solver.webp"],
+    "links": [
+      {
+        "name": "wSource",
+        "type": "github",
+        "link": "https://github.com/MASSHUU12/sudoku-solver"
+      },
+      {
+        "name": "wSite",
+        "type": "website",
+        "link": "https://masshuu12.github.io/sudoku-solver/"
+      }
+    ]
   }
 ]
