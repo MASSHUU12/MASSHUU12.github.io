@@ -2,12 +2,12 @@ import { render } from "preact";
 
 import App from "./App";
 
-import About from "cmp/popups/About";
-import MobileMenu from "sections/mobileMenu/MobileMenu";
+import About from "@/components/popups/About";
+import ProjectView from "@/components/popups/ProjectView";
+import MobileMenu from "@/components/sections/mobileMenu/MobileMenu";
 
 import "./i18n";
 import "./index.css";
-import ProjectView from "cmp/popups/ProjectView";
 
 render(
   <>

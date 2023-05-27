@@ -1,6 +1,6 @@
 import { FunctionComponent, JSX } from "preact";
 
-import * as Sc from "helpers/Scroll";
+import * as Sc from "@/helpers/Scroll";
 
 type Props = {
   text: string;

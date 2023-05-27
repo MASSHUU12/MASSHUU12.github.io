@@ -2,9 +2,10 @@ import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { FunctionComponent, JSX } from "preact";
 
-import Popup from "cmp/common/Popup";
-import Social from "cmp/common/Social";
-import { usePopupsStore } from "src/app/store";
+import { usePopupsStore } from "@/app/store";
+
+import Popup from "@/components/common/Popup";
+import Social from "@/components/common/Social";
 
 /**
  * About popup

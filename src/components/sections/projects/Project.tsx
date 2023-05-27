@@ -3,9 +3,9 @@ import { FunctionComponent, JSX } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { animated, useSpring } from "@react-spring/web";
 
-import { usePopupsStore, useProjectInfoStore } from "src/app/store";
-import { InfoProps } from "src/typing/interfaces";
-import { workItemAnimation } from "src/animations/workAnims";
+import { InfoProps } from "@/typing/interfaces";
+import { workItemAnimation } from "@/animations/workAnims";
+import { usePopupsStore, useProjectInfoStore } from "@/app/store";
 
 /**
  * Project

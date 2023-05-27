@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 import { FunctionComponent, JSX } from "preact";
 import { animated, useSpring } from "@react-spring/web";
 
-import Scroll from "helpers/Scroll";
-import { usePopupsStore } from "src/app/store";
-import { mobileMenuAnimation } from "src/animations/mobileMenuAnims";
+import Scroll from "@/helpers/Scroll";
+import { usePopupsStore } from "@/app/store";
+import { mobileMenuAnimation } from "@/animations/mobileMenuAnims";
 
 /**
  * Component with link for MobileMenu component.

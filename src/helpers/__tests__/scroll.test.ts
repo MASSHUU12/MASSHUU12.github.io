@@ -1,4 +1,4 @@
-import Scroll from "../src/helpers/Scroll";
+import Scroll from "../Scroll";
 
 describe("Scroll", () => {
   beforeEach(() => {

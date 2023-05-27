@@ -4,20 +4,25 @@ import { useSpring, animated, config } from "@react-spring/web";
 
 type Props = {
   text: string;
+  /**
+   * The callback function to be executed when the button is clicked.
+   *
+   * @param args - Arguments passed to the action function.
+   * @returns The result of the action function.
+   */
   // eslint-disable-next-line no-unused-vars
   action: (args: unknown) => unknown;
   delay?: number;
 };
 
 /**
+ * A button component with animated effects.
  *
- *
- * @param {Props} {
- *   text,
- *   action,
- *   delay = 0,
- * }
- * @return {*}  {JSX.Element}
+ * @param props - The component props.
+ * @param props.text - The text displayed on the button.
+ * @param props.action - The callback function to be executed when the button is clicked.
+ * @param props.delay - The delay (in milliseconds) before the button animation starts.
+ * @returns The rendered button component.
  */
 const Btn: FunctionComponent<Props> = ({
   text,

@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react";
 import { FunctionComponent, JSX } from "preact";
 
-import Scroll from "helpers/Scroll";
-import { usePopupsStore } from "src/app/store";
+import Scroll from "@/helpers/Scroll";
+import { usePopupsStore } from "@/app/store";
 
 /**
  * Header component, displays content only on mobile

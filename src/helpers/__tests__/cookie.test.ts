@@ -1,4 +1,4 @@
-import Cookie from "../src/helpers/Cookie";
+import Cookie from "../Cookie";
 
 describe("Cookie", () => {
   describe("getCookie()", () => {
