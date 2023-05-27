@@ -2,10 +2,10 @@ import { FunctionComponent, JSX } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { animated, useSpring } from "@react-spring/web";
 
-import Scroll from "helpers/Scroll";
-import { usePopupsStore } from "src/app/store";
+import Scroll from "@/helpers/Scroll";
+import { usePopupsStore } from "@/app/store";
 import MobileMenuLinks from "./MobileMenuLinks";
-import { mobileMenuSlideAnimation } from "src/animations/mobileMenuAnims";
+import { mobileMenuSlideAnimation } from "@/animations/mobileMenuAnims";
 
 /**
  * Menu available only on mobile.

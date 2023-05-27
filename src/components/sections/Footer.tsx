@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react";
 import { FunctionComponent, JSX } from "preact";
 
-import Flag from "common/Flag";
-import Social from "common/Social";
+import Flag from "@/components/common/Flag";
+import Social from "@/components/common/Social";
 
 /**
  * Footer component

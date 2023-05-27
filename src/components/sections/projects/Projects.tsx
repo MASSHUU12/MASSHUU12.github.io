@@ -1,8 +1,8 @@
 import { FunctionComponent, JSX } from "preact";
 
 import Project from "./Project";
-import projects from "src/projects.json";
-import { InfoProps } from "src/typing/interfaces";
+import projects from "@/projects.json";
+import { InfoProps } from "@/typing/interfaces";
 
 /**
  *

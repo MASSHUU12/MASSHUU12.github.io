@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { FunctionComponent, JSX } from "preact";
 
-import Cookie from "helpers/Cookie";
+import Cookie from "@/helpers/Cookie";
 
 type Props = {
   flag: string;

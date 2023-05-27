@@ -8,7 +8,7 @@ import {
   toChildArray,
 } from "preact";
 
-import Scroll from "helpers/Scroll";
+import Scroll from "@/helpers/Scroll";
 import { popups } from "src/typing/types";
 import { usePopupsStore } from "src/app/store";
 

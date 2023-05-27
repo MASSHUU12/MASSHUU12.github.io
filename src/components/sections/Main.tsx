@@ -1,11 +1,11 @@
-import { FunctionComponent, JSX } from "preact";
 import { useTranslation } from "react-i18next";
+import { FunctionComponent, JSX } from "preact";
 import { animated, useSpring } from "@react-spring/web";
 
-import Btn from "common/Btn";
-import Scroll from "helpers/Scroll";
-import { usePopupsStore } from "src/app/store";
-import { slideToLeftAnim } from "src/animations/slideToLeftAnim";
+import Scroll from "@/helpers/Scroll";
+import Btn from "@/components/common/Btn";
+import { usePopupsStore } from "@/app/store";
+import { slideToLeftAnim } from "@/animations/slideToLeftAnim";
 
 /**
  * Main section

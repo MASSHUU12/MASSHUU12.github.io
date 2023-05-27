@@ -1,10 +1,12 @@
-import Popup from "cmp/common/Popup";
+import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { FunctionComponent, JSX } from "preact";
-import { usePopupsStore, useProjectInfoStore } from "src/app/store";
-import Social from "cmp/common/Social";
-import { Icon } from "@iconify/react";
-import ProjectImage from "cmp/sections/projects/ProjectImage";
+
+import { usePopupsStore, useProjectInfoStore } from "@/app/store";
+
+import Popup from "@/components/common/Popup";
+import Social from "@/components/common/Social";
+import ProjectImage from "@/components/sections/projects/ProjectImage";
 
 const ProjectView: FunctionComponent<unknown> = (): JSX.Element => {
   const enabled = usePopupsStore(state => state.projectView);

@@ -13,13 +13,7 @@ export default defineConfig({
   plugins: [preact(), tsconfigPaths(), eslint()],
   resolve: {
     alias: {
-      src: path.resolve("src/"),
-      cmp: path.resolve("./src/components"),
-      common: path.resolve("./src/components/common"),
-      sections: path.resolve("./src/components/sections"),
-      utils: path.resolve("./src/utils"),
-      features: path.resolve("./src/features"),
-      helpers: path.resolve("./src/helpers"),
+      "@": path.resolve("./src"),
     },
   },
 });

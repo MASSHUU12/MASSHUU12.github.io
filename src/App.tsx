@@ -2,12 +2,12 @@ import { useEffect } from "preact/hooks";
 import { FunctionComponent, JSX } from "preact";
 
 import i18n from "./i18n";
-import Cookie from "helpers/Cookie";
+import Cookie from "@/helpers/Cookie";
 
-import Main from "cmp/sections/Main";
-import Footer from "cmp/sections/Footer";
-import Header from "cmp/sections/Header";
-import Projects from "cmp/sections/projects/Projects";
+import Main from "@/components/sections/Main";
+import Footer from "@/components/sections/Footer";
+import Header from "@/components/sections/Header";
+import Projects from "@/components/sections/projects/Projects";
 
 const App: FunctionComponent<unknown> = (): JSX.Element => {
   useEffect(() => {
