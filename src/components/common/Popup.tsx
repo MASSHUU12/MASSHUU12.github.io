@@ -71,7 +71,10 @@ const Popup: FunctionComponent<PopupProps> = ({
       onClick={(e: MouseEvent) => close(e)}
       style={bgAnimation}
       class="bg-transparent flex justify-center items-center h-full">
-      <div class="flex flex-col md:flex-row justify-center items-center w-full h-full md:w-10/12 shadow-xl">
+      <div
+        class={`flex flex-col md:flex-row justify-center items-center md:w-10/12 shadow-xl w-full ${
+          childrenArray.length >= 2 ? "h-[50%]" : "h-full"
+        }`}>
         {/* Left section */}
         {childrenArray.length >= 2 && (
           <section class="flex-1 p-3 md:p-8 w-full h-full bg-white_custom">
