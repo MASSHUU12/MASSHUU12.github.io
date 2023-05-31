@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import { animated, useSpring } from "@react-spring/web";
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 import {
   ComponentChildren,
   FunctionComponent,
@@ -33,6 +33,7 @@ const Popup: FunctionComponent<PopupProps> = ({
   children,
   popup,
 }: PopupProps): JSX.Element => {
+  const dialog = useRef<HTMLDialogElement>();
   const toggle = usePopupsStore(state => state.toggle);
   const [isClosing, setIsClosing] = useState(false);
   const childrenArray = toChildArray(children);
@@ -40,6 +41,7 @@ const Popup: FunctionComponent<PopupProps> = ({
   // Disable scroll when popup is opened
   useEffect(() => {
     Scroll.disable();
+    dialog.current?.showModal();
   }, []);
 
   // Background animation
@@ -69,6 +71,7 @@ const Popup: FunctionComponent<PopupProps> = ({
         setIsClosing(true);
       },
       onRest: () => {
+        dialog.current?.close();
         toggle(popup);
         Scroll.enable();
       },
@@ -76,12 +79,12 @@ const Popup: FunctionComponent<PopupProps> = ({
   };
 
   return (
-    // Background
-    <animated.div
+    <animated.dialog
+      ref={dialog}
       style={bgAnimation}
-      class="flex justify-center items-center fixed top-0 left-0 w-full h-full bg-dim backdrop-blur-sm"
-      onClick={close}>
-      <div class="flex flex-col md:flex-row justify-center items-center w-full h-full md:max-h-[70%] md:w-10/12 shadow-2xl">
+      onClick={close}
+      class="bg-transparent flex justify-center items-center h-full">
+      <div class="flex flex-col md:flex-row justify-center items-center w-full h-full md:w-10/12 shadow-2xl">
         {/* Left section */}
         {childrenArray.length >= 2 && (
           <animated.section
@@ -102,7 +105,7 @@ const Popup: FunctionComponent<PopupProps> = ({
           </div>
         </animated.section>
       </div>
-    </animated.div>
+    </animated.dialog>
   );
 };
 
