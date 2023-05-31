@@ -51,7 +51,9 @@ const Popup: FunctionComponent<PopupProps> = ({
   }, []);
 
   // Play reverted animations and close popup
-  const close = (): void => {
+  const close = (e: MouseEvent): void => {
+    if (e.target !== e.currentTarget) return;
+
     api.update({
       reverse: true,
       onRest: () => {
@@ -66,7 +68,7 @@ const Popup: FunctionComponent<PopupProps> = ({
   return (
     <animated.dialog
       ref={dialog}
-      onClick={close}
+      onClick={(e: MouseEvent) => close(e)}
       style={bgAnimation}
       class="bg-transparent flex justify-center items-center h-full">
       <div class="flex flex-col md:flex-row justify-center items-center w-full h-full md:w-10/12 shadow-xl">
@@ -79,7 +81,12 @@ const Popup: FunctionComponent<PopupProps> = ({
         {/* Right section */}
         <section class="flex-1 p-3 md:p-8 w-full h-full bg-blue_gray">
           <div class="flex flex-row justify-end items-center">
-            <Icon icon="carbon:close" color="white" width="32" />
+            <Icon
+              onClick={(e: MouseEvent) => close(e)}
+              icon="carbon:close"
+              color="white"
+              width="32"
+            />
           </div>
           <div class="h-full">
             {childrenArray[childrenArray.length <= 1 ? 0 : 1]}
