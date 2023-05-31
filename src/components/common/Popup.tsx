@@ -70,7 +70,7 @@ const Popup: FunctionComponent<PopupProps> = ({
       ref={dialog}
       onClick={(e: MouseEvent) => close(e)}
       style={bgAnimation}
-      class="bg-transparent flex justify-center items-center h-full">
+      class="grid place-items-center h-full bg-transparent p-0">
       <div
         class={`flex flex-col md:flex-row justify-center items-center md:w-10/12 shadow-xl w-full ${
           childrenArray.length >= 2 ? "h-[50%]" : "h-full"
