@@ -35,6 +35,9 @@ const About: FunctionComponent<unknown> = (): JSX.Element => {
             <Social href="https://github.com/MASSHUU12" text="MASSHUU12">
               <Icon icon="brandico:github" width="24" />
             </Social>
+            <Social href="https://leetcode.com/MASSHUU/" text="MASSHUU">
+              <Icon icon="simple-icons:leetcode" width="24" />
+            </Social>
             <Social href="https://t.me/MASSHUU" text="MASSHUU">
               <Icon icon="akar-icons:telegram-fill" width="24" />
             </Social>
