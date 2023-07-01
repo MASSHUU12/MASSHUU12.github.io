@@ -28,5 +28,5 @@ jobs:
           git config --global user.name "MASSHUU12"
           git config --global user.email "gawrysiak.maciej@protonmail.com"
           git add .
-          git commit -m "Update dependencies"
+          git commit -m "Weekly Dependency Update"
           git push
