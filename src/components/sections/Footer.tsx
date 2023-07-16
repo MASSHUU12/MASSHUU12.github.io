@@ -11,9 +11,9 @@ import Social from "@/components/common/Social";
  */
 const Footer: FunctionComponent<unknown> = (): JSX.Element => {
   return (
-    <footer class="mb-4">
-      <div class="w-full flex md:flex-row md:gap-0 gap-2 flex-col justify-between font-extralight">
-        <div class="flex flex-col gap-2">
+    <footer class="my-4">
+      <div class="flex md:flex-row md:gap-0 gap-3 flex-col justify-between font-extralight">
+        <div class="flex flex-col gap-3">
           <Social href="mailto:gawrysiak.maciej@pm.me" text="Email">
             <Icon icon="ic:outline-alternate-email" width="24" />
           </Social>
@@ -29,7 +29,7 @@ const Footer: FunctionComponent<unknown> = (): JSX.Element => {
             <Icon icon="akar-icons:telegram-fill" width="24" />
           </Social>
         </div>
-        <div class="flex items-end gap-2">
+        <div class="flex items-end gap-3">
           <Flag flag="twemoji:flag-for-flag-poland" locale="pl" />
           <Flag flag="twemoji:flag-for-flag-united-states" locale="en" />
         </div>

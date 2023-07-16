@@ -70,9 +70,9 @@ const Popup: FunctionComponent<PopupProps> = ({
       ref={dialog}
       onClick={(e: MouseEvent) => close(e)}
       style={bgAnimation}
-      class="grid place-items-center h-full bg-transparent p-0">
+      class="grid place-items-center h-full bg-transparent p-0 cursor-pointer">
       <div
-        class={`flex flex-col md:flex-row justify-center items-center md:w-10/12 shadow-xl w-full ${
+        class={`flex flex-col md:flex-row justify-center items-center md:w-10/12 shadow-xl w-full cursor-default ${
           childrenArray.length >= 2 ? "h-[50%]" : "h-full"
         }`}>
         {/* Left section */}
@@ -83,6 +83,7 @@ const Popup: FunctionComponent<PopupProps> = ({
         )}
         {/* Right section */}
         <section class="flex-1 p-3 md:p-8 w-full h-full bg-blue_gray">
+          {/* Close button */}
           <div class="flex flex-row justify-end items-center">
             <Icon
               onClick={(e: MouseEvent) => close(e)}
