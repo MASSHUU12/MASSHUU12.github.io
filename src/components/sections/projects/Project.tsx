@@ -57,7 +57,7 @@ const Project: FunctionComponent<InfoProps> = ({
     <>
       <animated.div
         style={styles}
-        className="w-[55vw] max-h-[20vw] mb-8 flex flex-row justify-center cursor-pointer p-8 rounded-md max-md:relative max-md:w-[85vw] max-md:h-[45vh] max-md:max-h-[unset] max-md:mb-6 max-md:p-0 max-md:overflow-hidden"
+        className="w-[55vw] flex flex-row cursor-pointer rounded-md max-md:relative max-md:w-[85vw] max-md:h-[45vh] max-md:max-h-[unset] max-md:overflow-hidden"
         id={`w${keyID}`}
         onClick={() => {
           // Open project view.
@@ -67,18 +67,22 @@ const Project: FunctionComponent<InfoProps> = ({
         onMouseEnter={() => setMouseOver(true)}
         onMouseLeave={() => setMouseOver(false)}>
         <div className="w-[60%] flex flex-col justify-center max-md:w-full max-md:bg-[unset] max-md:shadow-lg max-md:pl-6 max-md:relative -bottom-12">
+          {/* Teamwork */}
           {item.teamwork && (
             <h3 class="text-xs mb-3 text-light_yellow max-md:text-white_custom">
               {t("wTeam")}
             </h3>
           )}
+          {/* Title */}
           <h2 class="text-xl mb-4 text-aqua max-md:text-light_yellow">
             {t(item.title)}
           </h2>
-          <p class="text-sm p-5 shadow-lg bg-light_yellow text-blue_gray max-md:text-white_custom max-md:bg-[unset] max-md:shadow-none max-md:p-0 max-md:mr-4 font-semibold">
+          {/* Short description */}
+          <p class="text-sm p-5 shadow-md bg-light_yellow text-blue_gray max-md:text-white_custom max-md:bg-[unset] max-md:shadow-none max-md:p-0 max-md:mr-4 font-semibold">
             {t(item.short_desc)}
           </p>
-          <div class="mt-4 flex flex-wrap gap-2">
+          {/* Labels */}
+          <div class="mt-4 flex flex-wrap gap-4 h-fit">
             {item.labels.map((label, index) => {
               return (
                 <span class="text-gray" key={index}>
@@ -90,7 +94,7 @@ const Project: FunctionComponent<InfoProps> = ({
         </div>
         <div class="w-[75%] relative -left-8 -z-10 flex justify-center items-center max-md:absolute max-md:h-full max-md:w-full max-md:left-0 max-md:after:absolute max-md:after:w-full max-md:after:h-full max-md:after:bg-gradient-to-b max-md:after:from-transparent max-md:after:via-black/50 max-md:after:to-zinc-900">
           <img
-            class="w-full grayscale shadow-lg duration-300 transition-[filter] hover:grayscale-0 active:grayscale-0 max-md:h-full max-md:w-fit max-md:filter-none"
+            class="object-cover grayscale shadow-lg duration-300 transition-[filter] hover:grayscale-0 active:grayscale-0 max-md:h-full max-md:w-fit max-md:filter-none"
             src={`/assets/projects/${item.images[0]}`}
             alt={`${item.title}'s project image`}
           />
