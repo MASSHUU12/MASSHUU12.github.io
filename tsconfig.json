@@ -21,7 +21,8 @@
       "react": ["./node_modules/preact/compat/"],
       "react-dom": ["./node_modules/preact/compat/"],
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["vite/client", "vitest/globals"]
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

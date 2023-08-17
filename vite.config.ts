@@ -1,3 +1,6 @@
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
+
 import path from "path";
 import { defineConfig } from "vite";
 import eslint from "vite-plugin-eslint";
@@ -12,5 +15,11 @@ export default defineConfig({
     alias: {
       "@": path.resolve("./src"),
     },
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    css: true,
+    setupFiles: "./src/test/setup.ts",
   },
 });

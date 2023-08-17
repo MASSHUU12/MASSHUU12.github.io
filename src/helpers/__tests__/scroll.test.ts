@@ -1,3 +1,12 @@
+import {
+  expect,
+  test,
+  describe,
+  vi,
+  beforeAll,
+  afterAll,
+  beforeEach,
+} from "vitest";
 import Scroll from "../Scroll";
 
 describe("Scroll", () => {
@@ -7,13 +16,13 @@ describe("Scroll", () => {
   });
 
   describe("enable", () => {
-    it("should enable scrolling on the body by default", () => {
+    test("should enable scrolling on the body by default", () => {
       Scroll.enable();
 
       expect(document.body.style.overflow).toBe("");
     });
 
-    it("should enable scrolling on the specified element", () => {
+    test("should enable scrolling on the specified element", () => {
       const div = document.createElement("div");
       document.body.appendChild(div);
 
@@ -22,7 +31,7 @@ describe("Scroll", () => {
       expect(document.querySelector("div")?.style.overflow).toBe("");
     });
 
-    it("should not throw an error if the element is not found", () => {
+    test("should not throw an error if the element is not found", () => {
       expect(() => {
         Scroll.enable("#nonexistent");
       }).not.toThrow();
@@ -30,13 +39,13 @@ describe("Scroll", () => {
   });
 
   describe("disable", () => {
-    it("should disable scrolling on the body by default", () => {
+    test("should disable scrolling on the body by default", () => {
       Scroll.disable();
 
       expect(document.body.style.overflow).toBe("hidden");
     });
 
-    it("should disable scrolling on the specified element", () => {
+    test("should disable scrolling on the specified element", () => {
       const div = document.createElement("div");
       div.id = "myDiv";
       document.body.appendChild(div);
@@ -46,7 +55,7 @@ describe("Scroll", () => {
       expect(document.getElementById("myDiv")?.style.overflow).toBe("hidden");
     });
 
-    it("should not throw an error if the element is not found", () => {
+    test("should not throw an error if the element is not found", () => {
       expect(() => {
         Scroll.disable("#nonexistent");
       }).not.toThrow();
@@ -54,19 +63,19 @@ describe("Scroll", () => {
   });
 
   describe("intoView", () => {
-    const mockScrollIntoView = jest.fn();
+    const mockScrollIntoView = vi.fn();
 
     beforeAll(() => {
       Object.defineProperty(global.document, "querySelector", {
-        value: jest.fn(() => ({ scrollIntoView: mockScrollIntoView })),
+        value: vi.fn(() => ({ scrollIntoView: mockScrollIntoView })),
       });
     });
 
     afterAll(() => {
-      jest.restoreAllMocks();
+      vi.restoreAllMocks();
     });
 
-    it("should scroll to the target element using the default options", () => {
+    test("should scroll to the target element using the default options", () => {
       const div = document.createElement("div");
       div.id = "target";
       div.style.height = "2000px";
@@ -82,7 +91,7 @@ describe("Scroll", () => {
       expect(window.scrollY).toBeGreaterThanOrEqual(0); // the window should have scrolled
     });
 
-    it("should scroll to the target element using the specified options", () => {
+    test("should scroll to the target element using the specified options", () => {
       const div = document.createElement("div");
       div.id = "target";
       div.style.height = "2000px";
