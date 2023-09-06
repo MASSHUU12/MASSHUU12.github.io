@@ -19,6 +19,12 @@ export interface InfoProps {
   keyID: number;
 }
 
+export interface ProjectInfoProps extends InfoProps {
+  // eslint-disable-next-line no-unused-vars
+  setData: (data: InfoProps) => void;
+  deleteData: () => void;
+}
+
 export interface Popups {
   about: boolean;
   mobileMenu: boolean;

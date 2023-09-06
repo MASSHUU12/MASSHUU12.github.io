@@ -1,7 +1,11 @@
 import { create } from "zustand";
 
 import { popups } from "src/typing/types";
-import { InfoProps, PopupsStore } from "src/typing/interfaces";
+import {
+  InfoProps,
+  PopupsStore,
+  ProjectInfoProps,
+} from "src/typing/interfaces";
 
 export const usePopupsStore = create<PopupsStore>()(set => ({
   about: false,
@@ -15,12 +19,6 @@ export const usePopupsStore = create<PopupsStore>()(set => ({
     });
   },
 }));
-
-interface ProjectInfoProps extends InfoProps {
-  // eslint-disable-next-line no-unused-vars
-  setData: (data: InfoProps) => void;
-  deleteData: () => void;
-}
 
 export const useProjectInfoStore = create<ProjectInfoProps>()(set => ({
   item: {
