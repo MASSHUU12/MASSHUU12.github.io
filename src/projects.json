@@ -5,6 +5,7 @@
     "description": "w5Long",
     "labels": ["React Native", "TypeScript", "SQLite", "Redux"],
     "teamwork": true,
+    "category": "mobile",
     "images": [
       "bookapp_mockup.webp",
       "bookapp_main.webp",
@@ -26,6 +27,7 @@
     "description": "w3Long",
     "labels": ["TypeScript", "Visual Studio Code API", "VS Code Extension"],
     "teamwork": false,
+    "category": "vs-code",
     "images": ["systemInfo.webp"],
     "links": [
       {
@@ -46,6 +48,7 @@
     "description": "w1Long",
     "labels": ["TypeScript", "Visual Studio Code API", "VS Code Extension"],
     "teamwork": false,
+    "category": "vs-code",
     "images": ["tooLong.webp"],
     "links": [
       {
@@ -66,6 +69,7 @@
     "description": "w4Long",
     "labels": ["Laravel", "Bing Maps", "Kołobrzeg OpenData", "SCSS"],
     "teamwork": true,
+    "category": "web",
     "images": ["kolobrzegHotele.webp"],
     "links": [
       {
@@ -86,6 +90,7 @@
     "description": "w2Long",
     "labels": ["C#", ".NET 7"],
     "teamwork": false,
+    "category": "desktop",
     "images": ["program-runner.webp"],
     "links": [
       {
@@ -101,6 +106,7 @@
     "description": "w6Long",
     "labels": ["Vite", "Vue", "TypeScript", "Pinia", "Tailwind"],
     "teamwork": false,
+    "category": "web",
     "images": ["sudoku-solver.webp"],
     "links": [
       {
