@@ -7,6 +7,7 @@ export interface InfoProps {
     description: string;
     labels: Array<string>;
     teamwork: boolean;
+    category: projectCategory | string;
     images: Array<string>;
     links:
       | {
