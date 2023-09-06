@@ -26,6 +26,22 @@ const Projects: FunctionComponent<unknown> = (): JSX.Element => {
     store.setCategory((e.target as HTMLSelectElement).value as projectCategory);
   }
 
+  /**
+   * Renders a single project item based on the current category filter.
+   *
+   * @param {InfoProps["item"]} item - The project item to display.
+   * @param {number} keyID - The unique key identifier for the project item.
+   * @return {*}  {JSX.Element} - The rendered project item.
+   */
+  function displayProjects({ item, keyID }: InfoProps): JSX.Element {
+    // If the category of the item doesn't match the current category filter, don't display it.
+    // If the current category filter is "all", display all items.
+    if (item.category !== store.category && store.category !== "all")
+      return <></>;
+
+    return <Project key={keyID} item={item} keyID={keyID} />;
+  }
+
   return (
     <section id="works" class="grid place-items-center gap-8">
       {/* Category selection */}
@@ -49,9 +65,9 @@ const Projects: FunctionComponent<unknown> = (): JSX.Element => {
       </div>
 
       {/* Map through items and displays them. */}
-      {projects.map((item: InfoProps["item"], index: number) => (
-        <Project key={index} item={item} keyID={index} />
-      ))}
+      {projects.map((item: InfoProps["item"], index: number) =>
+        displayProjects({ item, keyID: index }),
+      )}
     </section>
   );
 };
