@@ -4,6 +4,7 @@ import { popups } from "src/typing/types";
 import {
   InfoProps,
   PopupsStore,
+  ProjectCategory,
   ProjectInfoProps,
 } from "src/typing/interfaces";
 
@@ -36,5 +37,12 @@ export const useProjectInfoStore = create<ProjectInfoProps>()(set => ({
   },
   deleteData: (): void => {
     set({});
+  },
+}));
+
+export const useProjectCategoryStore = create<ProjectCategory>(set => ({
+  category: "All",
+  setCategory(category) {
+    set({ category });
   },
 }));
