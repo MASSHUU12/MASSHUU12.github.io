@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { FunctionComponent, JSX } from "preact";
 
 import Project from "./Project";
@@ -10,19 +11,23 @@ import { InfoProps } from "@/typing/interfaces";
  * @return {*} {JSX.Element}
  */
 const Projects: FunctionComponent<unknown> = (): JSX.Element => {
+  const { t } = useTranslation();
+
   return (
     <section id="works" class="grid place-items-center gap-8">
       {/* Category selection */}
       <div class="flex flex-row items-center gap-6">
-        <h2 class="text-xl text-white_custom">Projects</h2>
+        <h2 class="text-xl text-white_custom">{t("wProj")}</h2>
         <label for="category" class="sr-only">
-          Select category
+          {t("wSelect")}
         </label>
         <select class="px-4 py-2 text-base border-none rounded-md shadow-sm cursor-pointer bg-white_custom sm:text-sm">
-          <option value="all">All</option>
-          <option value="web">Web</option>
-          <option value="mobile">Mobile</option>
-          <option value="desktop">Desktop</option>
+          <option value="all" selected>
+            {t("wCAll")}
+          </option>
+          <option value="web">{t("wCWeb")}</option>
+          <option value="mobile">{t("wCMob")}</option>
+          <option value="desktop">{t("wCDes")}</option>
         </select>
       </div>
 
