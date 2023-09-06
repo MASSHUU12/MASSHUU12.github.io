@@ -18,6 +18,14 @@
   "wTeam": "Teamwork",
   "wDesc": "Description",
   "wImgs": "Images",
+  "wProj": "Projects",
+  "wSelect": "Select category",
+
+  "wCAll": "All",
+  "wCWeb": "Web",
+  "wCMob": "Mobile",
+  "wCDes": "Desktop",
+  "wCVS": "VSCode Extension",
 
   "w1Short": "Create clean and readable code in Visual Studio Code.",
   "w1Long": "This extension encourages you to write short lines of code, notifying you when you exceed the limit.",
