@@ -41,7 +41,7 @@ export const useProjectInfoStore = create<ProjectInfoProps>()(set => ({
 }));
 
 export const useProjectCategoryStore = create<ProjectCategory>(set => ({
-  category: "All",
+  category: "all",
   setCategory(category) {
     set({ category });
   },

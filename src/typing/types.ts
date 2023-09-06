@@ -1,2 +1,2 @@
 export type popups = "about" | "mobileMenu" | "projectView";
-export type projectCategory = "All" | "Web" | "Mobile" | "Desktop";
+export type projectCategory = "all" | "web" | "mobile" | "desktop";
