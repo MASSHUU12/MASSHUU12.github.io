@@ -1,7 +1,8 @@
 import { useState } from "preact/hooks";
 import { FunctionComponent, JSX } from "preact";
 import { animated, useSpring } from "@react-spring/web";
-import { createImagePath, isURL } from "@/helpers/Helpers";
+
+import { createImagePath } from "@/helpers/Helpers";
 
 type Props = {
   image: unknown;
