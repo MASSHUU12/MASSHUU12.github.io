@@ -93,9 +93,9 @@ const Project: FunctionComponent<InfoProps> = ({
             })}
           </div>
         </div>
-        <div class="w-[75%] relative -left-8 -z-10 flex justify-center items-center max-md:absolute max-md:h-full max-md:w-full max-md:left-0 max-md:after:absolute max-md:after:w-full max-md:after:h-full max-md:after:bg-gradient-to-b max-md:after:from-transparent max-md:after:via-black/50 max-md:after:to-zinc-900">
+        <div class="relative -left-8 -z-10 max-md:flex max-md:justify-start max-md:items-center max-md:absolute max-md:h-full max-md:w-full max-md:left-0 max-md:after:absolute max-md:after:w-full max-md:after:h-full max-md:after:bg-gradient-to-b max-md:after:from-transparent max-md:after:via-black/50 max-md:after:to-zinc-900">
           <img
-            class="object-cover grayscale shadow-lg duration-300 transition-[filter] hover:grayscale-0 active:grayscale-0 max-md:h-full max-md:w-fit max-md:filter-none"
+            class="h-48 w-96 object-cover shadow-lg max-md:h-full max-md:w-fit"
             src={createImagePath(item.images[0])}
             alt={`${item.title}'s project image`}
           />
