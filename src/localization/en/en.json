@@ -43,5 +43,9 @@
   "w5Long": "The application easily allows you to mark books you have read and books \"to read\". Thanks to its integration with the openlibrary.org API, it also allows you to search for books and check details about them.",
 
   "w6Short": "Sudoku solving website.",
-  "w6Long": "Sudoku solving website based on Vite, Vue and TypeScript."
+  "w6Long": "Sudoku solving website based on Vite, Vue and TypeScript.",
+
+  "w7Short": "A simple interaction system for Godot 4.",
+
+  "w8Short": "Basic scene loader with support for loading screens for Godot 4."
 }
