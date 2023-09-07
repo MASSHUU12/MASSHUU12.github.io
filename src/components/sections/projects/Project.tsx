@@ -6,6 +6,7 @@ import { animated, useSpring } from "@react-spring/web";
 import { InfoProps } from "@/typing/interfaces";
 import { workItemAnimation } from "@/animations/workAnims";
 import { usePopupsStore, useProjectInfoStore } from "@/app/store";
+import { createImagePath } from "@/helpers/Helpers";
 
 /**
  * Project
@@ -95,7 +96,7 @@ const Project: FunctionComponent<InfoProps> = ({
         <div class="w-[75%] relative -left-8 -z-10 flex justify-center items-center max-md:absolute max-md:h-full max-md:w-full max-md:left-0 max-md:after:absolute max-md:after:w-full max-md:after:h-full max-md:after:bg-gradient-to-b max-md:after:from-transparent max-md:after:via-black/50 max-md:after:to-zinc-900">
           <img
             class="object-cover grayscale shadow-lg duration-300 transition-[filter] hover:grayscale-0 active:grayscale-0 max-md:h-full max-md:w-fit max-md:filter-none"
-            src={`/assets/projects/${item.images[0]}`}
+            src={createImagePath(item.images[0])}
             alt={`${item.title}'s project image`}
           />
         </div>
