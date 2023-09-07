@@ -60,7 +60,7 @@ const Projects: FunctionComponent<unknown> = (): JSX.Element => {
           <option value="web">{t("wCWeb")}</option>
           <option value="mobile">{t("wCMob")}</option>
           <option value="desktop">{t("wCDes")}</option>
-          <option value="vs-code">{t("wCVS")}</option>
+          <option value="extension">{t("wCEx")}</option>
         </select>
       </div>
 
