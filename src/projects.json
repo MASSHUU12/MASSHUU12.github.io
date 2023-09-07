@@ -27,7 +27,7 @@
     "description": "w3Long",
     "labels": ["TypeScript", "Visual Studio Code API", "VS Code Extension"],
     "teamwork": false,
-    "category": "vs-code",
+    "category": "extension",
     "images": ["systemInfo.webp"],
     "links": [
       {
@@ -48,7 +48,7 @@
     "description": "w1Long",
     "labels": ["TypeScript", "Visual Studio Code API", "VS Code Extension"],
     "teamwork": false,
-    "category": "vs-code",
+    "category": "extension",
     "images": ["tooLong.webp"],
     "links": [
       {
