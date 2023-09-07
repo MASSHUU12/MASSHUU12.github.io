@@ -1,7 +1,7 @@
 import { useState } from "preact/hooks";
 import { FunctionComponent, JSX } from "preact";
 import { animated, useSpring } from "@react-spring/web";
-import { isURL } from "@/helpers/Helpers";
+import { createImagePath, isURL } from "@/helpers/Helpers";
 
 type Props = {
   image: unknown;
@@ -26,17 +26,12 @@ const ProjectImage: FunctionComponent<Props> = ({
     scale: mouseOver ? 1.1 : 1,
   });
 
-  function createImagePath(): string {
-    if (isURL(image as string)) return image as string;
-    return `/assets/projects/${image}`;
-  }
-
   return (
     <animated.img
       style={styles}
       class={classes}
       loading="lazy"
-      src={createImagePath()}
+      src={createImagePath(image as string)}
       alt={`${title} image`}
       onMouseEnter={() => setMouseOver(true)}
       onMouseLeave={() => setMouseOver(false)}
