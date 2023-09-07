@@ -22,12 +22,58 @@
     ]
   },
   {
+    "title": "Godot Interaction System",
+    "short_desc": "w7Short",
+    "description": "w7Short",
+    "labels": ["Godot Engine", "GDScript"],
+    "teamwork": false,
+    "category": "extension",
+    "images": [
+      "https://raw.githubusercontent.com/MASSHUU12/godot-interaction-system/main/icon.png"
+    ],
+    "links": [
+      {
+        "name": "wSource",
+        "type": "github",
+        "link": "https://github.com/MASSHUU12/godot-interaction-system"
+      },
+      {
+        "name": "wSite",
+        "type": "website",
+        "link": "https://godotengine.org/asset-library/asset/2036"
+      }
+    ]
+  },
+  {
+    "title": "Godot Scene Loader",
+    "short_desc": "w8Short",
+    "description": "w8Short",
+    "labels": ["Godot Engine", "GDScript"],
+    "teamwork": false,
+    "category": "extension",
+    "images": [
+      "https://raw.githubusercontent.com/MASSHUU12/godot-scene-loader/master/icon.png"
+    ],
+    "links": [
+      {
+        "name": "wSource",
+        "type": "github",
+        "link": "https://github.com/MASSHUU12/godot-scene-loader"
+      },
+      {
+        "name": "wSite",
+        "type": "website",
+        "link": "https://godotengine.org/asset-library/asset/2035"
+      }
+    ]
+  },
+  {
     "title": "System Info",
     "short_desc": "w3Short",
     "description": "w3Long",
     "labels": ["TypeScript", "Visual Studio Code API", "VS Code Extension"],
     "teamwork": false,
-    "category": "vs-code",
+    "category": "extension",
     "images": ["systemInfo.webp"],
     "links": [
       {
@@ -48,7 +94,7 @@
     "description": "w1Long",
     "labels": ["TypeScript", "Visual Studio Code API", "VS Code Extension"],
     "teamwork": false,
-    "category": "vs-code",
+    "category": "extension",
     "images": ["tooLong.webp"],
     "links": [
       {

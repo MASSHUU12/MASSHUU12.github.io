@@ -25,7 +25,7 @@
   "wCWeb": "Web",
   "wCMob": "Mobilne",
   "wCDes": "Komputer",
-  "wCVS": "Rozszerzenie VSCode",
+  "wCEx": "Rozszerzenie",
 
   "w1Short": "Twórz czysty i czytelny kod w Visual Studio Code.",
   "w1Long": "To rozszerzenie zachęca do pisania krótkich linii kodu, powiadamiając Cię, gdy przekroczysz limit.",
@@ -43,5 +43,9 @@
   "w5Long": "Aplikacja w prosty sposób pozwala na oznaczanie przeczytanych książek oraz książek \"do przeczytania\". Dzięki integracji z API openlibrary.org pozwala również na wyszukiwanie książek i sprawdzanie szczegółów na ich temat.",
 
   "w6Short": "Strona rozwiązująca Sudoku.",
-  "w6Long": "Strona rozwiązująca Sudoku oparta na Vite, Vue i TypeScript."
+  "w6Long": "Strona rozwiązująca Sudoku oparta na Vite, Vue i TypeScript.",
+
+  "w7Short": "Prosty system interakcji dla Godot 4.",
+
+  "w8Short": "Podstawowy system ładowania scen ze wsparciem dla ekranów ładowania."
 }

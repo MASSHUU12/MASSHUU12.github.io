@@ -2,6 +2,8 @@ import { useState } from "preact/hooks";
 import { FunctionComponent, JSX } from "preact";
 import { animated, useSpring } from "@react-spring/web";
 
+import { createImagePath } from "@/helpers/Helpers";
+
 type Props = {
   image: unknown;
   title: string;
@@ -30,7 +32,7 @@ const ProjectImage: FunctionComponent<Props> = ({
       style={styles}
       class={classes}
       loading="lazy"
-      src={`/assets/projects/${image}`}
+      src={createImagePath(image as string)}
       alt={`${title} image`}
       onMouseEnter={() => setMouseOver(true)}
       onMouseLeave={() => setMouseOver(false)}
