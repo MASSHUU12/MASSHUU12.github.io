@@ -5,27 +5,28 @@ import i18n from "./i18n";
 import Cookie from "@/helpers/Cookie";
 
 import Main from "@/components/sections/Main";
+import Footer from "@/components/sections/Footer";
 
-const App: FunctionComponent<unknown> = (): JSX.Element => {
+const App: FunctionComponent<void> = (): JSX.Element => {
 	useEffect(() => {
-		const cookieLanguage: string = Cookie.getCookie("lang");
+		const languageFromCookie: string = Cookie.getCookie("lang");
 
 		// Check if cookie with language is already set
-		if (cookieLanguage !== "") {
-			i18n.changeLanguage(cookieLanguage);
+		if (languageFromCookie !== "") {
+			i18n.changeLanguage(languageFromCookie);
 			return;
 		}
 
-		// If not, detect language
-		const userLanguage: string = navigator.language.split("-")[0];
+		const detectedLanguage: string = navigator.language.split("-")[0];
 
-		i18n.changeLanguage(userLanguage);
-		Cookie.setCookie("lang", userLanguage);
+		i18n.changeLanguage(detectedLanguage);
+		Cookie.setCookie("lang", detectedLanguage);
 	}, []);
 
 	return (
 		<main>
 			<Main />
+			<Footer />
 		</main>
 	);
 };
