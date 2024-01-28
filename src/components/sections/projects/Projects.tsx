@@ -16,13 +16,6 @@ const Projects: FunctionComponent<unknown> = (): JSX.Element => {
 		store.setCategory((e.target as HTMLSelectElement).value as projectCategory);
 	}
 
-	/**
-	 * Renders a single project item based on the current category filter.
-	 *
-	 * @param {InfoProps["item"]} item - The project item to display.
-	 * @param {number} keyID - The unique key identifier for the project item.
-	 * @return {*}  {JSX.Element} - The rendered project item.
-	 */
 	function displayProject({ item, keyID }: InfoProps): JSX.Element {
 		if (item.category !== store.category && store.category !== "all") return <></>;
 
@@ -30,7 +23,7 @@ const Projects: FunctionComponent<unknown> = (): JSX.Element => {
 	}
 
 	return (
-		<section id="works" class="grid place-items-center gap-8">
+		<section id="works" class="grid place-items-center gap-4 mb-20">
 			{/* Category selection */}
 			<div class="flex flex-row items-center gap-6">
 				<h2 class="text-xl text-white_custom">{t("wProj")}</h2>
