@@ -4,7 +4,7 @@ import { FunctionComponent, JSX } from "preact";
 import Flag from "@/components/common/Flag";
 import Social from "@/components/common/Social";
 
-const Footer: FunctionComponent<void> = (): JSX.Element => {
+const Footer: FunctionComponent<unknown> = (): JSX.Element => {
 	return (
 		<footer class="mb-4">
 			<div class="flex md:flex-row md:gap-0 gap-3 flex-col justify-between font-extralight">
