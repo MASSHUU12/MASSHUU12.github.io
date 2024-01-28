@@ -7,7 +7,7 @@ import Btn from "@/components/common/Btn";
 import { usePopupsStore } from "@/app/store";
 import { slideToLeftAnim } from "@/animations/slideToLeftAnim";
 
-const Main: FunctionComponent<unknown> = (): JSX.Element => {
+const Main: FunctionComponent<void> = (): JSX.Element => {
 	const { t } = useTranslation();
 	const togglePopups = usePopupsStore(state => state.toggle);
 
