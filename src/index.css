@@ -4,22 +4,60 @@
 @tailwind components;
 @tailwind utilities;
 
+/* START RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
-  font-family: "JetBrains Mono", monospace;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  hanging-punctuation: first last;
+  color-scheme: dark light;
 }
 
 body {
-  margin: 0;
+  min-height: 100svh;
 }
 
-a:hover,
-svg:hover,
-button:hover {
-  filter: brightness(85%);
-  cursor: pointer;
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
 }
 
-dialog::backdrop {
-  background-color: rgba(26, 25, 32, 0.5);
-  backdrop-filter: blur(4px);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 75ch;
+  text-wrap: pretty;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+
+/* END RESET */
+
+* {
+  font-family: "JetBrains Mono", monospace;
 }
