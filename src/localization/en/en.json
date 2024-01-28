@@ -1,51 +1,52 @@
 {
-  "meHello": "Hello, I'm",
-  "meTitle": "I'm a fullstack junior web developer.",
-  "meDescription": "I'm Maciej, a 21-year-old Polish programmer. I'm a strange guy who likes to create strange things and bring them to life. I like solving problems and finding the best solutions. When I'm not playing with code, I'm playing with my cat.",
+	"meHello": "Hello, I'm",
+	"meTitle": "I am a junior software developer.",
+	"meDescription": "I'm Maciej, a 21-year-old Polish programmer. I'm a strange guy who likes to create strange things and bring them to life. I like solving problems and finding the best solutions. When I'm not playing with code, I'm playing with my cat.",
 
-  "hAbout": "About Me",
-  "hWorks": "View my work",
+	"hAbout": "About Me",
+	"hWorks": "View my work",
 
-  "aContact": "Contact",
+	"aContact": "Contact",
 
-  "fTop": "Top",
-  "fAtt": "SVG Background by",
+	"fTop": "Top",
+	"fAtt": "SVG Background by",
 
-  "wSus": "Suspended.",
-  "wShare": "I can share the source code.",
-  "wSource": "Source code",
-  "wSite": "Website",
-  "wTeam": "Teamwork",
-  "wDesc": "Description",
-  "wImgs": "Images",
-  "wProj": "Projects",
-  "wSelect": "Select category",
+	"wSus": "Suspended.",
+	"wShare": "I can share the source code.",
+	"wSource": "Source code",
+	"wSite": "Website",
+	"wTeam": "Teamwork",
+	"wDesc": "Description",
+	"wImgs": "Images",
+	"wProj": "Projects",
+	"wSelect": "Select category",
 
-  "wCAll": "All",
-  "wCWeb": "Web",
-  "wCMob": "Mobile",
-  "wCDes": "Desktop",
-  "wCEx": "Extension",
+	"wCAll": "All",
+	"wCWeb": "Web",
+	"wCMob": "Mobile",
+	"wCDes": "Desktop",
+	"wCEx": "Extension",
 
-  "w1Short": "Create clean and readable code in Visual Studio Code.",
-  "w1Long": "This extension encourages you to write short lines of code, notifying you when you exceed the limit.",
+	"w1Short": "Create clean and readable code in Visual Studio Code.",
+	"w1Long": "This extension encourages you to write short lines of code, notifying you when you exceed the limit.",
 
-  "w2Short": "CLI tool that allows users to run multiple programs or commands at once. ",
-  "w2Long": "Program Runner is a CLI tool written in C# that allows users to run multiple programs or commands at once. The tool reads a list of programs/commands from a JSON file and executes them in parallel.",
+	"w2Short": "CLI tool that allows users to run multiple programs or commands at once. ",
+	"w2Long": "Program Runner is a CLI tool written in C# that allows users to run multiple programs or commands at once. The tool reads a list of programs/commands from a JSON file and executes them in parallel.",
 
-  "w3Short": "Get up-to-date information about your computer resource usage in Visual Studio Code.",
-  "w3Long": "Get up-to-date information about your computer resource usage in Visual Studio Code.",
+	"w3Short": "Get up-to-date information about your computer resource usage in Visual Studio Code.",
+	"w3Long": "Get up-to-date information about your computer resource usage in Visual Studio Code.",
 
-  "w4Short": "Kolobrzeg accommodation search engine.",
-  "w4Long": "KolobrzegHotels is a search engine for places to stay. The site was created for a competition. The city disabled some of the API the site uses, so some of the features may not work. Accommodations are searched based on several categories and how important they are to the user, e.g. if proximity to the beach is most important to someone and the rest is unimportant, accommodations as close to the beach as possible will be suggested.",
+	"w4Short": "Kolobrzeg accommodation search engine.",
+	"w4Long": "KolobrzegHotels is a search engine for places to stay. The site was created for a competition. The city disabled some of the API the site uses, so some of the features may not work. Accommodations are searched based on several categories and how important they are to the user, e.g. if proximity to the beach is most important to someone and the rest is unimportant, accommodations as close to the beach as possible will be suggested.",
 
-  "w5Short": "Bookapp is a mobile application to track books read.",
-  "w5Long": "The application easily allows you to mark books you have read and books \"to read\". Thanks to its integration with the openlibrary.org API, it also allows you to search for books and check details about them.",
+	"w5Short": "Bookapp is a mobile application to track books read.",
+	"w5Long": "The application easily allows you to mark books you have read and books \"to read\". Thanks to its integration with the openlibrary.org API, it also allows you to search for books and check details about them.",
 
-  "w6Short": "Sudoku solving website.",
-  "w6Long": "Sudoku solving website based on Vite, Vue and TypeScript.",
+	"w6Short": "Sudoku solving website.",
+	"w6Long": "Sudoku solving website based on Vite, Vue and TypeScript.",
 
-  "w7Short": "A simple interaction system for Godot 4.",
+	"w7Short": "A simple interaction system for Godot 4.",
 
-  "w8Short": "Basic scene loader with support for loading screens for Godot 4."
+	"w8Short": "YAT is an plugin that provides a customizable, in-game terminal for your Godot (C#) project.",
+	"w8Long": "YAT stands for Yet Another Terminal. The goal of this project is to create a real terminal integrated with Godot that allows you to perform actions whether in the game, editor, or user system. This is intended to facilitate game development, debugging, and prototyping."
 }

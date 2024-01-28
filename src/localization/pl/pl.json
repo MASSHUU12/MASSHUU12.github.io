@@ -1,51 +1,52 @@
 {
-  "meHello": "Hej, jestem",
-  "meTitle": "Jestem fullstack junior web deweloperem.",
-  "meDescription": "Mam na imię Maciej, jestem 21-letnim programistą z polski. Jestem dziwnym facetem, który lubi tworzyć dziwne rzeczy i wprowadzać je do życia. Lubię rozwiązywać problemy i znajdować najlepsze rozwiązania. Kiedy nie bawię się kodem, bawię się z moim kotem.",
+	"meHello": "Hej, jestem",
+	"meTitle": "Jestem młodszym programistą.",
+	"meDescription": "Mam na imię Maciej, jestem 21-letnim programistą z polski. Jestem dziwnym facetem, który lubi tworzyć dziwne rzeczy i wprowadzać je do życia. Lubię rozwiązywać problemy i znajdować najlepsze rozwiązania. Kiedy nie bawię się kodem, bawię się z moim kotem.",
 
-  "hAbout": "O Mnie",
-  "hWorks": "Sprawdź moje prace",
+	"hAbout": "O Mnie",
+	"hWorks": "Sprawdź moje prace",
 
-  "aContact": "Kontakt",
+	"aContact": "Kontakt",
 
-  "fTop": "Do góry",
-  "fAtt": "Tło SVG dzięki",
+	"fTop": "Do góry",
+	"fAtt": "Tło SVG dzięki",
 
-  "wSus": "Zawieszone.",
-  "wShare": "Mogę udostępnić kod źródłowy.",
-  "wSource": "Kod źródłowy",
-  "wSite": "Strona",
-  "wTeam": "Praca zespołowa",
-  "wDesc": "Opis",
-  "wImgs": "Zdjęcia",
-  "wProj": "Projekty",
-  "wSelect": "Wybierz kategorię",
+	"wSus": "Zawieszone.",
+	"wShare": "Mogę udostępnić kod źródłowy.",
+	"wSource": "Kod źródłowy",
+	"wSite": "Strona",
+	"wTeam": "Praca zespołowa",
+	"wDesc": "Opis",
+	"wImgs": "Zdjęcia",
+	"wProj": "Projekty",
+	"wSelect": "Wybierz kategorię",
 
-  "wCAll": "Wszystko",
-  "wCWeb": "Web",
-  "wCMob": "Mobilne",
-  "wCDes": "Komputer",
-  "wCEx": "Rozszerzenie",
+	"wCAll": "Wszystko",
+	"wCWeb": "Web",
+	"wCMob": "Mobilne",
+	"wCDes": "Komputer",
+	"wCEx": "Rozszerzenie",
 
-  "w1Short": "Twórz czysty i czytelny kod w Visual Studio Code.",
-  "w1Long": "To rozszerzenie zachęca do pisania krótkich linii kodu, powiadamiając Cię, gdy przekroczysz limit.",
+	"w1Short": "Twórz czysty i czytelny kod w Visual Studio Code.",
+	"w1Long": "To rozszerzenie zachęca do pisania krótkich linii kodu, powiadamiając Cię, gdy przekroczysz limit.",
 
-  "w2Short": "Narzędzie CLI, które umożliwia użytkownikom uruchamianie wielu programów lub poleceń jednocześnie.",
-  "w2Long": "Program Runner to narzędzie CLI napisane w C#, które pozwala użytkownikom na uruchamianie wielu programów lub poleceń jednocześnie. Narzędzie odczytuje listę programów/poleceń z pliku JSON i wykonuje je równolegle.",
+	"w2Short": "Narzędzie CLI, które umożliwia użytkownikom uruchamianie wielu programów lub poleceń jednocześnie.",
+	"w2Long": "Program Runner to narzędzie CLI napisane w C#, które pozwala użytkownikom na uruchamianie wielu programów lub poleceń jednocześnie. Narzędzie odczytuje listę programów/poleceń z pliku JSON i wykonuje je równolegle.",
 
-  "w3Short": "Uzyskaj aktualne informacje o wykorzystaniu zasobów komputera w Visual Studio Code.",
-  "w3Long": "Uzyskaj aktualne informacje o wykorzystaniu zasobów komputera w Visual Studio Code.",
+	"w3Short": "Uzyskaj aktualne informacje o wykorzystaniu zasobów komputera w Visual Studio Code.",
+	"w3Long": "Uzyskaj aktualne informacje o wykorzystaniu zasobów komputera w Visual Studio Code.",
 
-  "w4Short": "Wyszukiwarka noclegów w Kołobrzegu.",
-  "w4Long": "KołobrzegHotele to wyszukiwarka miejsc noclegowych. Strona została stworzona na potrzeby konkursu. Miasto wyłączyło część API, z którego strona korzysta, więc część funkcji może nie działać. Noclegi są wyszukiwane na podstawie kilku kategorii i tego jak ważne są dla użytkownika, np. jeśli dla kogoś najważniejsza jest bliskość plaży, a reszta jest nieistotna, to proponowane będą noclegi jak najbliżej plaży.",
+	"w4Short": "Wyszukiwarka noclegów w Kołobrzegu.",
+	"w4Long": "KołobrzegHotele to wyszukiwarka miejsc noclegowych. Strona została stworzona na potrzeby konkursu. Miasto wyłączyło część API, z którego strona korzysta, więc część funkcji może nie działać. Noclegi są wyszukiwane na podstawie kilku kategorii i tego jak ważne są dla użytkownika, np. jeśli dla kogoś najważniejsza jest bliskość plaży, a reszta jest nieistotna, to proponowane będą noclegi jak najbliżej plaży.",
 
-  "w5Short": "Bookapp to aplikacja mobilna do śledzenia przeczytanych książek.",
-  "w5Long": "Aplikacja w prosty sposób pozwala na oznaczanie przeczytanych książek oraz książek \"do przeczytania\". Dzięki integracji z API openlibrary.org pozwala również na wyszukiwanie książek i sprawdzanie szczegółów na ich temat.",
+	"w5Short": "Bookapp to aplikacja mobilna do śledzenia przeczytanych książek.",
+	"w5Long": "Aplikacja w prosty sposób pozwala na oznaczanie przeczytanych książek oraz książek \"do przeczytania\". Dzięki integracji z API openlibrary.org pozwala również na wyszukiwanie książek i sprawdzanie szczegółów na ich temat.",
 
-  "w6Short": "Strona rozwiązująca Sudoku.",
-  "w6Long": "Strona rozwiązująca Sudoku oparta na Vite, Vue i TypeScript.",
+	"w6Short": "Strona rozwiązująca Sudoku.",
+	"w6Long": "Strona rozwiązująca Sudoku oparta na Vite, Vue i TypeScript.",
 
-  "w7Short": "Prosty system interakcji dla Godot 4.",
+	"w7Short": "Prosty system interakcji dla Godot 4.",
 
-  "w8Short": "Podstawowy system ładowania scen ze wsparciem dla ekranów ładowania."
+	"w8Short": "YAT to plugin, który zapewnia konfigurowalny terminal w grze dla projektów tworzonych w Godot (C#).",
+	"w8Long": "YAT to skrót od Yet Another Terminal. Celem tego projektu jest stworzenie prawdziwego terminala zintegrowanego z Godotem, który pozwala na wykonywanie akcji w grze, edytorze lub systemie użytkownika. Ma to ułatwić tworzenie gier, debugowanie oraz prototypowanie."
 }
