@@ -9,7 +9,7 @@ import Footer from "@/components/sections/Footer";
 import Projects from "@/components/sections/projects/Projects";
 import About from "./components/popups/About";
 
-const App: FunctionComponent<void> = (): JSX.Element => {
+const App: FunctionComponent<unknown> = (): JSX.Element => {
 	useEffect(() => {
 		const languageFromCookie: string = Cookie.getCookie("lang");
 
