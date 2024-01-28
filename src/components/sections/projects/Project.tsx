@@ -1,108 +1,103 @@
+import { Icon } from "@iconify/react";
 import { useTranslation } from "react-i18next";
 import { FunctionComponent, JSX } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { animated, useSpring } from "@react-spring/web";
 
 import { InfoProps } from "@/typing/interfaces";
-import { workItemAnimation } from "@/animations/workAnims";
-import { usePopupsStore, useProjectInfoStore } from "@/app/store";
+import Social from "@/components/common/Social";
 import { createImagePath } from "@/helpers/Helpers";
+import { workItemAnimation } from "@/animations/workAnims";
 
-/**
- * Project
- *
- * @param {InfoProps} { item, keyID }
- * @return {*}  {JSX.Element}
- */
-const Project: FunctionComponent<InfoProps> = ({
-  item,
-  keyID,
-}: InfoProps): JSX.Element => {
-  const [mouseOver, setMouseOver] = useState(false);
-  const [animPlayed, setAnimPlayed] = useState(false);
-  const state = usePopupsStore(state => state);
-  const setData = useProjectInfoStore(state => state.setData);
+const Project: FunctionComponent<InfoProps> = ({ item, keyID }: InfoProps): JSX.Element => {
+	const [animPlayed, setAnimPlayed] = useState(false);
+	const [open, toggle] = useState(false);
 
-  const { t } = useTranslation();
+	const { t } = useTranslation();
+	const animation = useSpring(workItemAnimation(animPlayed));
 
-  // Item animation.
-  const styles = useSpring(workItemAnimation(animPlayed, mouseOver));
+	const observerCallback = (entries: IntersectionObserverEntry[]): void => {
+		entries.forEach(entry => {
+			// If item is visible play animation.
+			if (entry.isIntersecting) setAnimPlayed(true);
+		});
+	};
 
-  // Checks whether the observed changes require running an animation.
-  const observerCallback = (entries: IntersectionObserverEntry[]): void => {
-    entries.forEach(entry => {
-      // If item is visible play animation.
-      if (entry.isIntersecting) {
-        setAnimPlayed(true);
-      }
-    });
-  };
+	useEffect(() => {
+		// Create observer which will be checking if item is visible.
+		const observer = new IntersectionObserver(observerCallback, {
+			root: null,
+			rootMargin: "0px",
+			threshold: 0.15, // Consider item 'visible' if 15% of it is shown.
+		});
 
-  useEffect(() => {
-    // Create observer which will be checking if item is visible.
-    const observer = new IntersectionObserver(observerCallback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.15, // Consider item 'visible' if 15% of it is shown.
-    });
+		const selector = document.querySelector(`#w${keyID}`);
 
-    const selector = document.querySelector(`#w${keyID}`);
+		if (selector === null) return;
 
-    if (selector === null) return;
+		observer.observe(selector);
+	}, [keyID, animPlayed]);
 
-    // Look for items.
-    observer.observe(selector);
-  }, [keyID, animPlayed]);
-
-  return (
-    <>
-      <animated.div
-        style={styles}
-        className="w-[55vw] flex flex-row cursor-pointer rounded-md max-md:relative max-md:w-[85vw] max-md:h-[45vh] max-md:max-h-[unset] max-md:overflow-hidden"
-        id={`w${keyID}`}
-        onClick={() => {
-          // Open project view.
-          setData({ item, keyID });
-          state.toggle("projectView");
-        }}
-        onMouseEnter={() => setMouseOver(true)}
-        onMouseLeave={() => setMouseOver(false)}>
-        <div className="w-[60%] flex flex-col justify-center max-md:w-full max-md:bg-[unset] max-md:shadow-lg max-md:pl-6 max-md:relative -bottom-12">
-          {/* Teamwork */}
-          {item.teamwork && (
-            <h3 class="text-xs mb-3 text-light_yellow max-md:text-white_custom">
-              {t("wTeam")}
-            </h3>
-          )}
-          {/* Title */}
-          <h2 class="text-xl mb-4 text-aqua max-md:text-light_yellow">
-            {t(item.title)}
-          </h2>
-          {/* Short description */}
-          <p class="text-sm p-5 shadow-md bg-light_yellow text-blue_gray max-md:text-white_custom max-md:bg-[unset] max-md:shadow-none max-md:p-0 max-md:mr-4 font-semibold">
-            {t(item.short_desc)}
-          </p>
-          {/* Labels */}
-          <div class="mt-4 flex flex-wrap gap-4 h-fit">
-            {item.labels.map((label, index) => {
-              return (
-                <span class="text-gray" key={index}>
-                  {t(label)}
-                </span>
-              );
-            })}
-          </div>
-        </div>
-        <div class="relative -left-8 -z-10 max-md:flex max-md:justify-start max-md:items-center max-md:absolute max-md:h-full max-md:w-full max-md:left-0 max-md:after:absolute max-md:after:w-full max-md:after:h-full max-md:after:bg-gradient-to-b max-md:after:from-transparent max-md:after:via-black/50 max-md:after:to-zinc-900">
-          <img
-            class="h-48 w-96 object-cover shadow-lg max-md:h-full max-md:w-fit"
-            src={createImagePath(item.images[0])}
-            alt={`${item.title}'s project image`}
-          />
-        </div>
-      </animated.div>
-    </>
-  );
+	return (
+		<>
+			<animated.div
+				style={animation}
+				className="flex flex-col w-full cursor-pointer select-none"
+				id={`w${keyID}`}
+				onClick={() => toggle(!open)}>
+				<div className="w-[70ch] flex flex-col transition transform duration-300 ease-in-out hover:scale-[1.02]">
+					{/* Teamwork */}
+					{item.teamwork && <h3 class="text-xs mb-2 text-light_yellow">{t("wTeam")}</h3>}
+					{/* Title */}
+					<h2 class="text-xl mb-4 text-aqua">{t(item.title)}</h2>
+					{/* Short description */}
+					<p class="text-sm p-5 shadow-md bg-light_yellow text-blue_gray font-semibold">
+						{t(item.short_desc)}
+					</p>
+					{/* Labels */}
+					<div class="mt-2 flex flex-wrap gap-4">
+						{item.labels.map((label, index) => {
+							return (
+								<span class="text-gray" key={index}>
+									{t(label)}
+								</span>
+							);
+						})}
+					</div>
+				</div>
+				{/* Details */}
+				<div
+					style={`transition: grid-template-rows 300ms; grid-template-rows: ${open ? "1" : "0"}fr;`}
+					class="grid my-6">
+					<div className="overflow-hidden">
+						<div class="flex flex-row gap-4">
+							<img
+								class="h-52 shadow-lg"
+								src={createImagePath(item.images[0])}
+								loading="lazy"
+								alt={`${item.title}'s project image`}
+							/>
+							{/* Links */}
+							<div class="flex flex-col gap-2">
+								{item.links.map((object, index) => {
+									return (
+										<Social href={object.link} text={t(object.name)} key={index}>
+											<Icon
+												icon={object.type === "github" ? "akar-icons:github-fill" : "mdi:web"}
+												width="24"
+												color="#348899"
+											/>
+										</Social>
+									);
+								})}
+							</div>
+						</div>
+						<p class="font-thin mt-4">{t(item.description)}</p>
+					</div>
+				</div>
+			</animated.div>
+		</>
+	);
 };
 
 export default Project;
