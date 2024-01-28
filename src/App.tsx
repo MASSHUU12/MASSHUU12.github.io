@@ -6,38 +6,33 @@ import Cookie from "@/helpers/Cookie";
 
 import Main from "@/components/sections/Main";
 import Footer from "@/components/sections/Footer";
-import Header from "@/components/sections/Header";
 import Projects from "@/components/sections/projects/Projects";
+import About from "./components/popups/About";
 
-const App: FunctionComponent<unknown> = (): JSX.Element => {
-  useEffect(() => {
-    const cookieLanguage = Cookie.getCookie("lang");
+const App: FunctionComponent<void> = (): JSX.Element => {
+	useEffect(() => {
+		const languageFromCookie: string = Cookie.getCookie("lang");
 
-    // Check if cookie with language is already set
-    if (cookieLanguage !== "") {
-      // If there is cookie, set language with value of it
-      i18n.changeLanguage(cookieLanguage);
-      return;
-    }
+		// Check if cookie with language is already set
+		if (languageFromCookie !== "") {
+			i18n.changeLanguage(languageFromCookie);
+			return;
+		}
 
-    // If not, detect language
-    const userLanguage = navigator.language.split("-")[0];
+		const detectedLanguage: string = navigator.language.split("-")[0];
 
-    // Set website language
-    i18n.changeLanguage(userLanguage);
+		i18n.changeLanguage(detectedLanguage);
+		Cookie.setCookie("lang", detectedLanguage);
+	}, []);
 
-    // Set cookie with language
-    Cookie.setCookie("lang", userLanguage);
-  }, []);
-
-  return (
-    <>
-      <Header />
-      <Main />
-      <Projects />
-      <Footer />
-    </>
-  );
+	return (
+		<main>
+			<Main />
+			<Projects />
+			<Footer />
+			<About />
+		</main>
+	);
 };
 
 export default App;
