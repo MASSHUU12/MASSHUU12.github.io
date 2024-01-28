@@ -45,7 +45,7 @@ const Project: FunctionComponent<InfoProps> = ({ item, keyID }: InfoProps): JSX.
 				className="flex flex-col w-full cursor-pointer select-none"
 				id={`w${keyID}`}
 				onClick={() => toggle(!open)}>
-				<div className="w-[70ch] flex flex-col transition transform duration-300 ease-in-out hover:scale-[1.02]">
+				<div className="max-w-[70ch] flex flex-col transition transform duration-300 ease-in-out hover:scale-[1.02]">
 					{/* Teamwork */}
 					{item.teamwork && <h3 class="text-xs mb-2 text-light_yellow">{t("wTeam")}</h3>}
 					{/* Title */}
@@ -69,10 +69,10 @@ const Project: FunctionComponent<InfoProps> = ({ item, keyID }: InfoProps): JSX.
 				<div
 					style={`transition: grid-template-rows 300ms; grid-template-rows: ${open ? "1" : "0"}fr;`}
 					class="grid my-6">
-					<div className="overflow-hidden">
-						<div class="flex flex-row gap-4">
+					<div className="overflow-hidden cursor-default">
+						<div class="flex sm:flex-row flex-col gap-4">
 							<img
-								class="h-52 shadow-lg"
+								class="sm:h-52 shadow-lg"
 								src={createImagePath(item.images[0])}
 								loading="lazy"
 								alt={`${item.title}'s project image`}

@@ -51,11 +51,12 @@ const Popup: FunctionComponent<PopupProps> = ({ children, popup }: PopupProps): 
 	return (
 		<animated.dialog
 			ref={dialog}
+			autofocus
 			onClick={(e: MouseEvent) => close(e)}
 			style={bgAnimation}
-			class="grid place-items-center h-svh w-svw bg-transparent m-0 p-0 cursor-pointer">
+			class="grid place-items-center h-svh w-svw bg-transparent cursor-pointer">
 			<div
-				class={`flex flex-col md:flex-row justify-center items-center md:w-10/12 shadow-xl w-full cursor-default ${
+				class={`flex flex-col sm:flex-row justify-center items-center sm:w-10/12 shadow-xl w-full cursor-default ${
 					childrenArray.length >= 2 ? "h-[50%]" : "h-full"
 				}`}>
 				{/* Left section */}
