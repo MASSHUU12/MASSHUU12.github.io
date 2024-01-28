@@ -6,6 +6,7 @@ import Cookie from "@/helpers/Cookie";
 
 import Main from "@/components/sections/Main";
 import Footer from "@/components/sections/Footer";
+import Projects from "@/components/sections/projects/Projects";
 
 const App: FunctionComponent<void> = (): JSX.Element => {
 	useEffect(() => {
@@ -26,6 +27,7 @@ const App: FunctionComponent<void> = (): JSX.Element => {
 	return (
 		<main>
 			<Main />
+			<Projects />
 			<Footer />
 		</main>
 	);
