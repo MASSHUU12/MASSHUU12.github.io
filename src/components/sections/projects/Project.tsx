@@ -38,9 +38,11 @@ const Project: FunctionComponent<InfoProps> = ({ item, keyID }: InfoProps): JSX.
 		observer.observe(selector);
 	}, [keyID, animPlayed]);
 
+	const AnimatedDiv = animated.div as any;
+
 	return (
 		<>
-			<animated.div
+			<AnimatedDiv
 				style={animation}
 				className="flex flex-col w-full cursor-pointer select-none"
 				id={`w${keyID}`}
@@ -95,7 +97,7 @@ const Project: FunctionComponent<InfoProps> = ({ item, keyID }: InfoProps): JSX.
 						<p class="font-thin mt-4">{t(item.description)}</p>
 					</div>
 				</div>
-			</animated.div>
+			</AnimatedDiv>
 		</>
 	);
 };

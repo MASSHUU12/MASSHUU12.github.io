@@ -48,8 +48,10 @@ const Popup: FunctionComponent<PopupProps> = ({ children, popup }: PopupProps): 
 		api.start();
 	};
 
+	const AnimatedDialog = animated.dialog as any;
+
 	return (
-		<animated.dialog
+		<AnimatedDialog
 			ref={dialog}
 			autofocus
 			onClick={(e: MouseEvent) => close(e)}
@@ -72,7 +74,7 @@ const Popup: FunctionComponent<PopupProps> = ({ children, popup }: PopupProps): 
 					<div class="h-full">{childrenArray[childrenArray.length <= 1 ? 0 : 1]}</div>
 				</section>
 			</div>
-		</animated.dialog>
+		</AnimatedDialog>
 	);
 };
 

@@ -35,8 +35,10 @@ const Btn: FunctionComponent<Props> = ({ text, action, delay = 0 }: Props): JSX.
 		delay,
 	});
 
+	const AnimatedButton = animated.button as any;
+
 	return (
-		<animated.button
+		<AnimatedButton
 			type="button"
 			style={animConfig}
 			className="font-light bg-transparent text-white_custom text-2xl underline decoration-aqua"
@@ -44,7 +46,7 @@ const Btn: FunctionComponent<Props> = ({ text, action, delay = 0 }: Props): JSX.
 			onMouseOver={() => setHover(true)}
 			onMouseLeave={() => setHover(false)}>
 			{text}
-		</animated.button>
+		</AnimatedButton>
 	);
 };
 
