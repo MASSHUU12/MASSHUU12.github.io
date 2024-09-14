@@ -8,31 +8,35 @@ import Main from "@/components/sections/Main";
 import Footer from "@/components/sections/Footer";
 import Projects from "@/components/sections/projects/Projects";
 import About from "./components/popups/About";
+import { CssBaseline } from "@mui/material";
 
 const App: FunctionComponent<unknown> = (): JSX.Element => {
-	useEffect(() => {
-		const languageFromCookie: string = Cookie.getCookie("lang");
+  useEffect(() => {
+    const languageFromCookie: string = Cookie.getCookie("lang");
 
-		// Check if cookie with language is already set
-		if (languageFromCookie !== "") {
-			i18n.changeLanguage(languageFromCookie);
-			return;
-		}
+    // Check if cookie with language is already set
+    if (languageFromCookie !== "") {
+      i18n.changeLanguage(languageFromCookie);
+      return;
+    }
 
-		const detectedLanguage: string = navigator.language.split("-")[0];
+    const detectedLanguage: string = navigator.language.split("-")[0];
 
-		i18n.changeLanguage(detectedLanguage);
-		Cookie.setCookie("lang", detectedLanguage);
-	}, []);
+    i18n.changeLanguage(detectedLanguage);
+    Cookie.setCookie("lang", detectedLanguage);
+  }, []);
 
-	return (
-		<main>
-			<Main />
-			<Projects />
-			<Footer />
-			<About />
-		</main>
-	);
+  return (
+    <>
+      <CssBaseline />
+      <main>
+        <Main />
+        <Projects />
+        <Footer />
+        <About />
+      </main>
+    </>
+  );
 };
 
 export default App;
