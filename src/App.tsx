@@ -10,6 +10,16 @@ import Projects from "@/components/sections/projects/Projects";
 import About from "./components/popups/About";
 import { Box, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 
+declare module "@mui/material/styles" {
+  interface Palette {
+    plum: Palette["primary"];
+  }
+
+  interface PaletteOptions {
+    plum?: PaletteOptions["primary"];
+  }
+}
+
 const App: FunctionComponent<unknown> = (): JSX.Element => {
   const theme = createTheme({
     palette: {
@@ -19,6 +29,9 @@ const App: FunctionComponent<unknown> = (): JSX.Element => {
       },
       secondary: {
         main: "#ffad28",
+      },
+      plum: {
+        main: "#962D3E",
       },
     },
   });
