@@ -8,9 +8,21 @@ import Main from "@/components/sections/Main";
 import Footer from "@/components/sections/Footer";
 import Projects from "@/components/sections/projects/Projects";
 import About from "./components/popups/About";
-import { CssBaseline } from "@mui/material";
+import { Box, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 
 const App: FunctionComponent<unknown> = (): JSX.Element => {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#354853",
+        contrastText: "#fffefa",
+      },
+      secondary: {
+        main: "#ffad28",
+      },
+    },
+  });
+
   useEffect(() => {
     const languageFromCookie: string = Cookie.getCookie("lang");
 
@@ -27,15 +39,18 @@ const App: FunctionComponent<unknown> = (): JSX.Element => {
   }, []);
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
-      <main>
+      <Box
+        component="main"
+        bgcolor="primary.main"
+        px={{ xs: "8%", md: "15%", xl: "25%" }}>
         <Main />
         <Projects />
         <Footer />
         <About />
-      </main>
-    </>
+      </Box>
+    </ThemeProvider>
   );
 };
 
