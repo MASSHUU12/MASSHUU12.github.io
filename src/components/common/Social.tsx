@@ -1,42 +1,26 @@
-import { FunctionComponent, JSX } from "preact";
+import { Link, Typography } from "@mui/material";
+import { JSX } from "preact";
 
 type Props = {
   href: string;
   text: string;
   children?: JSX.Element;
-  classes?: string;
 };
 
-/**
- * Custom link with chosen icon.
- *
- * @param {*} {
- *   href,
- *   text,
- *   children,
- *   classes,
- * }
- * @return {*}  {JSX.Element}
- */
-const Social: FunctionComponent<Props> = ({
-  href,
-  text,
-  children,
-  classes,
-}: Props): JSX.Element => {
+function Social({ href, text, children }: Props): JSX.Element {
   return (
-    <a
+    <Link
       href={href}
       target="_blank"
       rel="noreferrer"
-      class={
-        classes ??
-        "flex items-center no-underline text-white_custom w-fit gap-3"
-      }>
+      display="flex"
+      flexDirection="row"
+      gap={1}
+      color="primary.contrastText">
       {children}
-      <span>{text}</span>
-    </a>
+      <Typography variant="subtitle1">{text}</Typography>
+    </Link>
   );
-};
+}
 
 export default Social;
