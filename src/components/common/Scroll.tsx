@@ -1,6 +1,6 @@
-import { FunctionComponent, JSX } from "preact";
-
 import * as Sc from "@/helpers/Scroll";
+import { Link } from "@mui/material";
+import { JSX } from "preact";
 
 type Props = {
   text: string;
@@ -8,29 +8,15 @@ type Props = {
   behavior?: "smooth" | "auto";
 };
 
-/**
- *
- *
- * @param {Props} {
- *   text,
- *   to,
- *   behavior = "smooth",
- * }
- * @return {*}  {JSX.Element}
- */
-const Scroll: FunctionComponent<Props> = ({
-  text,
-  to,
-  behavior = "smooth",
-}: Props): JSX.Element => {
+function Scroll({ text, to, behavior = "smooth" }: Props): JSX.Element {
   return (
-    <a
+    <Link
       href="/"
       rel="noreferrer"
       onClick={() => Sc.default.intoView({ target: to, behavior })}>
       {text}
-    </a>
+    </Link>
   );
-};
+}
 
 export default Scroll;
