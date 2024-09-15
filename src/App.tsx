@@ -1,14 +1,12 @@
-import { useEffect } from "preact/hooks";
-import { FunctionComponent, JSX } from "preact";
-
-import i18n from "./i18n";
-import Cookie from "@/helpers/Cookie";
-
-import Main from "@/components/sections/Main";
 import Footer from "@/components/sections/Footer";
+import Main from "@/components/sections/Main";
 import Projects from "@/components/sections/projects/Projects";
-import About from "./components/popups/About";
+import Cookie from "@/helpers/Cookie";
 import { Box, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import { JSX } from "preact";
+import { useEffect } from "preact/hooks";
+import About from "./components/popups/About";
+import i18n from "./i18n";
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -20,7 +18,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-const App: FunctionComponent<unknown> = (): JSX.Element => {
+function App(): JSX.Element {
   const theme = createTheme({
     palette: {
       primary: {
@@ -65,6 +63,6 @@ const App: FunctionComponent<unknown> = (): JSX.Element => {
       </Box>
     </ThemeProvider>
   );
-};
+}
 
 export default App;

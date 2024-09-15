@@ -3,10 +3,10 @@ import Popup from "@/components/common/Popup";
 import Social from "@/components/common/Social";
 import { Icon } from "@iconify/react";
 import { Stack, Typography } from "@mui/material";
-import { FunctionComponent, JSX } from "preact";
+import { JSX } from "preact";
 import { useTranslation } from "react-i18next";
 
-const About: FunctionComponent<unknown> = (): JSX.Element => {
+function About(): JSX.Element {
   const { t } = useTranslation();
   const about = usePopupsStore(state => state.about);
 
@@ -53,6 +53,6 @@ const About: FunctionComponent<unknown> = (): JSX.Element => {
       )}
     </>
   );
-};
+}
 
 export default About;

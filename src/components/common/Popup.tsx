@@ -7,12 +7,7 @@ import {
   Slide,
 } from "@mui/material";
 import { TransitionProps } from "@mui/material/transitions";
-import {
-  ComponentChildren,
-  FunctionComponent,
-  JSX,
-  toChildArray,
-} from "preact";
+import { ComponentChildren, JSX, toChildArray } from "preact";
 import { forwardRef } from "preact/compat";
 import { useEffect, useState } from "preact/hooks";
 
@@ -27,9 +22,7 @@ const Transition = forwardRef<
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const Popup: FunctionComponent<PopupProps> = ({
-  children,
-}: PopupProps): JSX.Element => {
+function Popup({ children }: PopupProps): JSX.Element {
   const childrenArray = toChildArray(children);
 
   useEffect(() => {
@@ -106,6 +99,6 @@ const Popup: FunctionComponent<PopupProps> = ({
       </DialogContent>
     </Dialog>
   );
-};
+}
 
 export default Popup;
