@@ -1,81 +1,111 @@
 import { Icon } from "@iconify/react";
-import { useEffect, useRef } from "preact/hooks";
-import { animated, useSpring } from "@react-spring/web";
-import { ComponentChildren, FunctionComponent, JSX, toChildArray } from "preact";
-
-import Scroll from "@/helpers/Scroll";
-import { popups } from "src/typing/types";
-import { usePopupsStore } from "src/app/store";
+import {
+  Box,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  Slide,
+} from "@mui/material";
+import { TransitionProps } from "@mui/material/transitions";
+import {
+  ComponentChildren,
+  FunctionComponent,
+  JSX,
+  toChildArray,
+} from "preact";
+import { forwardRef } from "preact/compat";
+import { useEffect, useState } from "preact/hooks";
 
 interface PopupProps {
-	children: ComponentChildren;
-	popup: popups;
+  children: ComponentChildren;
 }
 
-const Popup: FunctionComponent<PopupProps> = ({ children, popup }: PopupProps): JSX.Element => {
-	const dialog = useRef<HTMLDialogElement>();
-	const childrenArray = toChildArray(children);
-	const popupsStore = usePopupsStore(state => state);
-	const [bgAnimation, api] = useSpring(() => ({
-		from: {
-			y: window.innerHeight,
-			opacity: 0.75,
-		},
-		to: {
-			y: 0,
-			opacity: 1,
-		},
-	}));
+const Transition = forwardRef<
+  HTMLElement,
+  TransitionProps & { children: JSX.Element }
+>((props, ref) => {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
 
-	// Disable scroll when popup is opened
-	useEffect(() => {
-		Scroll.disable();
-		dialog.current?.showModal();
-	}, []);
+const Popup: FunctionComponent<PopupProps> = ({
+  children,
+}: PopupProps): JSX.Element => {
+  const childrenArray = toChildArray(children);
 
-	// Play reverted animations and close popup
-	const close = (e: MouseEvent): void => {
-		if (e.target !== e.currentTarget) return;
+  useEffect(() => {
+    handleOpen();
+  }, []);
 
-		api.update({
-			reverse: true,
-			onRest: () => {
-				Scroll.enable();
-				dialog.current?.close();
-				popupsStore.toggle(popup);
-			},
-		});
-		api.start();
-	};
+  const [open, setOpen] = useState(false);
 
-	const AnimatedDialog = animated.dialog as any;
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
-	return (
-		<AnimatedDialog
-			ref={dialog}
-			autofocus
-			onClick={(e: MouseEvent) => close(e)}
-			style={bgAnimation}
-			class="grid place-items-center h-svh w-svw bg-transparent cursor-pointer">
-			<div
-				class={`flex flex-col sm:flex-row justify-center items-center sm:w-10/12 shadow-xl w-full cursor-default ${
-					childrenArray.length >= 2 ? "h-[50%]" : "h-full"
-				}`}>
-				{/* Left section */}
-				{childrenArray.length >= 2 && (
-					<section class="flex-1 p-3 md:p-8 w-full h-full bg-white_custom">{childrenArray[0]}</section>
-				)}
-				{/* Right section */}
-				<section class="flex-1 p-3 md:p-8 w-full h-full bg-blue_gray">
-					{/* Close button */}
-					<div class="flex flex-row justify-end items-center">
-						<Icon onClick={(e: MouseEvent) => close(e)} icon="carbon:close" color="white" width="32" />
-					</div>
-					<div class="h-full">{childrenArray[childrenArray.length <= 1 ? 0 : 1]}</div>
-				</section>
-			</div>
-		</AnimatedDialog>
-	);
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <Dialog
+      open={open}
+      TransitionComponent={Transition}
+      keepMounted
+      onClose={handleClose}
+      aria-describedby="alert-dialog-slide-description"
+      autofocus
+      fullWidth
+      maxWidth="md">
+      <DialogContent
+        sx={{
+          p: 0,
+          display: "flex",
+          flexDirection: {
+            xs: "column",
+            md: "row",
+          },
+        }}>
+        {/* Left section */}
+        {childrenArray.length >= 2 && (
+          <Box
+            component="section"
+            sx={{
+              p: {
+                xs: 2,
+                md: 4,
+              },
+              flex: 1,
+            }}>
+            {childrenArray[0]}
+          </Box>
+        )}
+        {/* Right section */}
+        <Box bgcolor="primary.main" sx={{ flex: 1 }}>
+          {/* Close button */}
+          <DialogActions>
+            <Box sx={{ cursor: "pointer" }}>
+              <Icon
+                onClick={handleClose}
+                icon="carbon:close"
+                color="white"
+                width="32"
+              />
+            </Box>
+          </DialogActions>
+          <Box
+            component="section"
+            sx={{
+              p: {
+                xs: 2,
+                md: 4,
+              },
+            }}>
+            {childrenArray[childrenArray.length <= 1 ? 0 : 1]}
+          </Box>
+        </Box>
+      </DialogContent>
+    </Dialog>
+  );
 };
 
 export default Popup;
