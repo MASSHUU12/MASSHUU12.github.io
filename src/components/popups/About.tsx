@@ -2,6 +2,7 @@ import { usePopupsStore } from "@/app/store";
 import Popup from "@/components/common/Popup";
 import Social from "@/components/common/Social";
 import { Icon } from "@iconify/react";
+import { Stack, Typography } from "@mui/material";
 import { FunctionComponent, JSX } from "preact";
 import { useTranslation } from "react-i18next";
 
@@ -14,11 +15,20 @@ const About: FunctionComponent<unknown> = (): JSX.Element => {
       {about && (
         <Popup>
           <>
-            <h1 class="text-3xl text-plum">{t("hAbout")}.</h1>
-            <span class="text-sm text-blue_gray italic">{t("meTitle")}</span>
-            <p class="text-black mt-4">{t("meDescription")}</p>
+            <Typography variant="h4" color="plum">
+              {t("hAbout")}.
+            </Typography>
+            <Typography
+              variant="caption"
+              color="textPrimary"
+              sx={{ fontStyle: "italic" }}>
+              {t("meTitle")}
+            </Typography>
+            <Typography variant="body1" mt={1}>
+              {t("meDescription")}
+            </Typography>
           </>
-          <div class="flex flex-col gap-3">
+          <Stack direction="column" gap={2}>
             <Social
               href="mailto:gawrysiak.maciej@proton.me"
               text="gawrysiak.maciej@proton.me">
@@ -38,7 +48,7 @@ const About: FunctionComponent<unknown> = (): JSX.Element => {
               text="Linkedin">
               <Icon icon="brandico:linkedin-rect" width="24" />
             </Social>
-          </div>
+          </Stack>
         </Popup>
       )}
     </>
