@@ -1,4 +1,4 @@
-export type popups = "about" | "mobileMenu" | "projectView";
+export type popups = "about";
 export type projectCategory =
   | "all"
   | "web"
