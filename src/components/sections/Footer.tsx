@@ -1,7 +1,7 @@
 import Flag from "@/components/common/Flag";
 import Social from "@/components/common/Social";
 import { Icon } from "@iconify/react";
-import { Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import { JSX } from "preact";
 
 function Footer(): JSX.Element {
@@ -11,7 +11,7 @@ function Footer(): JSX.Element {
         justifyContent="space-between"
         direction={{ xs: "column", md: "row" }}
         gap={{ xs: 3, md: 0 }}>
-        <Stack direction="column" gap={3}>
+        <Stack direction="column" gap={2}>
           <Social href="mailto:gawrysiak.maciej@pm.me" text="Email">
             <Icon icon="ic:outline-alternate-email" width="24" />
           </Social>
@@ -32,7 +32,7 @@ function Footer(): JSX.Element {
           <Flag flag="twemoji:flag-for-flag-united-states" locale="en" />
         </Stack>
       </Stack>
-      <hr class="my-4 text-dim" />
+      <Divider sx={{ marginY: 1 }} aria-hidden="true" />
       <Typography variant="subtitle1" color="primary.contrastText">
         Maciej Gawrysiak
       </Typography>
