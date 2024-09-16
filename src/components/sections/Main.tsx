@@ -1,6 +1,6 @@
 import { slideToLeftAnim } from "@/animations/slideToLeftAnim";
 import { usePopupsStore } from "@/app/store";
-import Btn from "@/components/common/Btn";
+import TransitionButton from "@/components/common/TransitionButton";
 import Scroll from "@/helpers/Scroll";
 import { Stack } from "@mui/material";
 import { animated, useSpring } from "@react-spring/web";
@@ -44,17 +44,17 @@ function Main(): JSX.Element {
           {t("meTitle")}
         </AnimatedSpan>
         <Stack direction="row" gap={3}>
-          <Btn
+          <TransitionButton
             text={t("hAbout")}
             action={() => togglePopups("about")}
             delay={100}
           />
-          <Btn
+          <TransitionButton
             text={t("hWorks")}
             action={() => Scroll.intoView({ target: "#works" })}
             delay={250}
           />
-          <Btn
+          <TransitionButton
             text="CV"
             action={() => window.open("/assets/gawrysiak_cv.pdf", "_blank")}
             delay={400}
