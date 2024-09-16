@@ -8,7 +8,7 @@ type Props = {
   behavior?: "smooth" | "auto";
 };
 
-function Scroll({ text, to, behavior = "smooth" }: Props): JSX.Element {
+function ScrollLink({ text, to, behavior = "smooth" }: Props): JSX.Element {
   return (
     <Link
       href="/"
@@ -19,4 +19,4 @@ function Scroll({ text, to, behavior = "smooth" }: Props): JSX.Element {
   );
 }
 
-export default Scroll;
+export default ScrollLink;
