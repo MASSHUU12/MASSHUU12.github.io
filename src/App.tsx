@@ -11,10 +11,14 @@ import i18n from "./i18n";
 declare module "@mui/material/styles" {
   interface Palette {
     plum: Palette["primary"];
+    gray: Palette["primary"];
+    lightYellow: Palette["primary"];
   }
 
   interface PaletteOptions {
     plum?: PaletteOptions["primary"];
+    gray?: PaletteOptions["primary"];
+    lightYellow?: PaletteOptions["primary"];
   }
 }
 
@@ -30,6 +34,12 @@ function App(): JSX.Element {
       },
       plum: {
         main: "#962D3E",
+      },
+      gray: {
+        main: "#979C9C",
+      },
+      lightYellow: {
+        main: "#f2ebc7",
       },
     },
   });

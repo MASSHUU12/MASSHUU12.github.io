@@ -1,9 +1,7 @@
-import { slideToLeftAnim } from "@/animations/slideToLeftAnim";
 import { usePopupsStore } from "@/app/store";
 import TransitionButton from "@/components/common/TransitionButton";
 import Scroll from "@/helpers/Scroll";
-import { Stack } from "@mui/material";
-import { animated, useSpring } from "@react-spring/web";
+import { keyframes, Stack, SxProps, Theme, Typography } from "@mui/material";
 import { JSX } from "preact";
 import { useTranslation } from "react-i18next";
 
@@ -11,18 +9,26 @@ function Main(): JSX.Element {
   const { t } = useTranslation();
   const togglePopups = usePopupsStore(state => state.toggle);
 
-  const nameAnimation = useSpring({
-    ...slideToLeftAnim,
-    delay: 300,
+  const slideToLeftAnimation = keyframes({
+    "0%": {
+      transform: "translateX(100px)",
+      opacity: 0,
+    },
+    "100%": {
+      transform: "translateX(0px)",
+      opacity: 1,
+    },
   });
 
-  const titleAnimation = useSpring({
-    ...slideToLeftAnim,
-    delay: 450,
-  });
-
-  const AnimatedH1 = animated.h1 as any;
-  const AnimatedSpan = animated.span as any;
+  const setupAnimation = (delay: number): SxProps<Theme> => {
+    return {
+      transform: "translateY(100px)",
+      opacity: 0,
+      animation: `${slideToLeftAnimation} 750ms`,
+      animationDelay: `${delay}ms`,
+      animationFillMode: "forwards",
+    };
+  };
 
   return (
     <>
@@ -30,19 +36,23 @@ function Main(): JSX.Element {
         direction="column"
         alignItems="center"
         justifyContent="center"
-        gap={3}
+        gap={1}
         sx={{ height: "100svh" }}>
-        <AnimatedH1
-          style={nameAnimation}
-          class="text-4xl md:text-5xl text-white_custom md:text-center">
+        <Typography
+          variant="h3"
+          component="h1"
+          color="primary.contrastText"
+          sx={setupAnimation(300)}>
           {t("meHello")}
-          <span class="text-light_yellow"> Maciej Gawrysiak</span>.
-        </AnimatedH1>
-        <AnimatedSpan
-          style={titleAnimation}
-          class="text-xl md:text-2xl text-gray">
+          <Typography variant="h3" component="span" color="lightYellow">
+            {" "}
+            Maciej Gawrysiak
+          </Typography>
+          .
+        </Typography>
+        <Typography variant="h6" color="gray" sx={setupAnimation(450)}>
           {t("meTitle")}
-        </AnimatedSpan>
+        </Typography>
         <Stack direction="row" gap={3}>
           <TransitionButton
             text={t("hAbout")}
