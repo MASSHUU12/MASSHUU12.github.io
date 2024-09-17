@@ -39,7 +39,7 @@ function Projects(): JSX.Element {
   };
 
   return (
-    <Stack id="works" gap={1} mb={12} alignItems="center">
+    <Stack id="works" gap={4} mb={8} alignItems="center">
       <ToggleButtonGroup
         sx={{
           backgroundColor: "lightYellow.main",
