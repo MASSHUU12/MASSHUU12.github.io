@@ -1,105 +1,133 @@
-import { Icon } from "@iconify/react";
-import { useTranslation } from "react-i18next";
-import { FunctionComponent, JSX } from "preact";
-import { useEffect, useState } from "preact/hooks";
-import { animated, useSpring } from "@react-spring/web";
-
-import { InfoProps } from "@/typing/interfaces";
 import Social from "@/components/common/Social";
 import { createImagePath } from "@/helpers/Helpers";
-import { workItemAnimation } from "@/animations/workAnims";
+import { InfoProps } from "@/typing/interfaces";
+import { Icon } from "@iconify/react";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  keyframes,
+  Stack,
+  Typography,
+} from "@mui/material";
+import { JSX } from "preact";
+import { useEffect, useState } from "preact/hooks";
+import { useTranslation } from "react-i18next";
 
-const Project: FunctionComponent<InfoProps> = ({ item, keyID }: InfoProps): JSX.Element => {
-	const [animPlayed, setAnimPlayed] = useState(false);
-	const [open, toggle] = useState(false);
+function Project({ item, keyID }: InfoProps): JSX.Element {
+  const [componentSeen, setComponentSeen] = useState(false);
+  const { t } = useTranslation();
+  const fadein = keyframes({
+    "0%": {
+      transform: "translateY(75px)",
+      opacity: 0,
+    },
+    "100%": {
+      transform: "translateY(0px)",
+      opacity: 1,
+    },
+  });
 
-	const { t } = useTranslation();
-	const animation = useSpring(workItemAnimation(animPlayed));
+  const observerCallback = (entries: IntersectionObserverEntry[]): void => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setComponentSeen(true);
+    });
+  };
 
-	const observerCallback = (entries: IntersectionObserverEntry[]): void => {
-		entries.forEach(entry => {
-			// If item is visible play animation.
-			if (entry.isIntersecting) setAnimPlayed(true);
-		});
-	};
+  useEffect(() => {
+    const observer = new IntersectionObserver(observerCallback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.15, // Consider item visible if 15% of it is shown.
+    });
 
-	useEffect(() => {
-		// Create observer which will be checking if item is visible.
-		const observer = new IntersectionObserver(observerCallback, {
-			root: null,
-			rootMargin: "0px",
-			threshold: 0.15, // Consider item 'visible' if 15% of it is shown.
-		});
+    const selector = document.querySelector(`#w${keyID}`);
+    if (selector === null) return;
 
-		const selector = document.querySelector(`#w${keyID}`);
+    observer.observe(selector);
+  }, [keyID, componentSeen]);
 
-		if (selector === null) return;
-
-		observer.observe(selector);
-	}, [keyID, animPlayed]);
-
-	const AnimatedDiv = animated.div as any;
-
-	return (
-		<>
-			<AnimatedDiv
-				style={animation}
-				className="flex flex-col w-full cursor-pointer select-none"
-				id={`w${keyID}`}
-				onClick={() => toggle(!open)}>
-				<div className="max-w-[70ch] flex flex-col transition transform duration-300 ease-in-out hover:scale-[1.02]">
-					{/* Teamwork */}
-					{item.teamwork && <h3 class="text-xs mb-2 text-light_yellow">{t("wTeam")}</h3>}
-					{/* Title */}
-					<h2 class="text-xl mb-4 text-aqua">{t(item.title)}</h2>
-					{/* Short description */}
-					<p class="text-sm p-5 shadow-md bg-light_yellow text-blue_gray font-semibold">
-						{t(item.short_desc)}
-					</p>
-					{/* Labels */}
-					<div class="mt-2 flex flex-wrap gap-4">
-						{item.labels.map((label, index) => {
-							return (
-								<span class="text-gray" key={index}>
-									{t(label)}
-								</span>
-							);
-						})}
-					</div>
-				</div>
-				{/* Details */}
-				<div
-					style={`transition: grid-template-rows 300ms; grid-template-rows: ${open ? "1" : "0"}fr;`}
-					class="grid my-6">
-					<div className="overflow-hidden cursor-default">
-						<div class="flex sm:flex-row flex-col gap-4">
-							<img
-								class="sm:h-52 shadow-lg"
-								src={createImagePath(item.images[0])}
-								loading="lazy"
-								alt={`${item.title}'s project image`}
-							/>
-							{/* Links */}
-							<div class="flex flex-col gap-2">
-								{item.links.map((object, index) => {
-									return (
-										<Social href={object.link} text={t(object.name)} key={index}>
-											<Icon
-												icon={object.type === "github" ? "akar-icons:github-fill" : "mdi:web"}
-												width="24"
-												color="#348899"
-											/>
-										</Social>
-									);
-								})}
-							</div>
-						</div>
-						<p class="font-thin mt-4">{t(item.description)}</p>
-					</div>
-				</div>
-			</AnimatedDiv>
-		</>
-	);
-};
+  return (
+    <Accordion
+      id={`w${keyID}`}
+      sx={{
+        width: "100%",
+        backgroundColor: "primary.main",
+        boxShadow: "none",
+        transform: "translateY(75px)",
+        opacity: 0,
+        animation: componentSeen ? `${fadein} 1000ms` : undefined,
+        animationFillMode: "forwards",
+        transition: "scale 0.2s ease-in-out",
+        "&:hover": {
+          scale: 1.01,
+        },
+        // Remove ExpansionPanel
+        "&:before": {
+          display: "none",
+        },
+      }}>
+      <AccordionSummary aria-controls={`${item.title} content`}>
+        <Stack gap={1}>
+          {item.teamwork && (
+            <Typography variant="body2" color="lightYellow">
+              {t("wTeam")}
+            </Typography>
+          )}
+          <Typography variant="h5" color="primary.contrastText">
+            {t(item.title)}
+          </Typography>
+          <Typography
+            variant="body1"
+            color="primary.main"
+            bgcolor="lightYellow.main"
+            sx={{ p: 1 }}>
+            {t(item.short_desc)}
+          </Typography>
+          <Stack direction="row" gap={1}>
+            {item.labels.map((label, index) => (
+              <Typography variant="subtitle2" color="gray" key={index}>
+                {t(label)}
+              </Typography>
+            ))}
+          </Stack>
+        </Stack>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Stack direction={{ xs: "column", md: "row" }} gap={2}>
+          <img
+            // TODO: Remove Tailwind styling
+            class="sm:h-52 shadow-lg"
+            src={createImagePath(item.images[0])}
+            loading="lazy"
+            alt={`${item.title}'s project image`}
+          />
+          <Stack gap={1}>
+            {item.links.map((object, index) => (
+              <Social href={object.link} text={t(object.name)} key={index}>
+                <Icon
+                  icon={
+                    object.type === "github"
+                      ? "akar-icons:github-fill"
+                      : "mdi:web"
+                  }
+                  width="24"
+                />
+              </Social>
+            ))}
+          </Stack>
+        </Stack>
+        <Typography
+          variant="body1"
+          color="primary.contrastText"
+          sx={{
+            mt: 2,
+          }}>
+          {t(item.description)}
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
+  );
+}
 
 export default Project;
