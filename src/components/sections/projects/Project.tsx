@@ -68,7 +68,7 @@ function Project({ item, keyID }: InfoProps): JSX.Element {
         },
       }}>
       <AccordionSummary aria-controls={`${item.title} content`}>
-        <Stack gap={1}>
+        <Stack gap={1} width="100%">
           {item.teamwork && (
             <Typography variant="body2" color="lightYellow">
               {t("wTeam")}
