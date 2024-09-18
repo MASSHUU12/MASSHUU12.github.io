@@ -1,12 +1,12 @@
 import Flag from "@/components/common/Flag";
 import Social from "@/components/common/Social";
 import { Icon } from "@iconify/react";
-import { Divider, Stack, Typography } from "@mui/material";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 import { JSX } from "preact";
 
 function Footer(): JSX.Element {
   return (
-    <footer class="pb-4">
+    <Box component="footer" sx={{ pb: 1 }}>
       <Stack
         justifyContent="space-between"
         direction={{ xs: "column", md: "row" }}
@@ -36,7 +36,7 @@ function Footer(): JSX.Element {
       <Typography variant="subtitle1" color="primary.contrastText">
         Maciej Gawrysiak
       </Typography>
-    </footer>
+    </Box>
   );
 }
 

@@ -6,7 +6,9 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Box,
   keyframes,
+  Paper,
   Stack,
   Typography,
 } from "@mui/material";
@@ -95,13 +97,24 @@ function Project({ item, keyID }: InfoProps): JSX.Element {
       </AccordionSummary>
       <AccordionDetails>
         <Stack direction={{ xs: "column", md: "row" }} gap={2}>
-          <img
-            // TODO: Remove Tailwind styling
-            class="sm:h-52 shadow-lg"
-            src={createImagePath(item.images[0])}
-            loading="lazy"
-            alt={`${item.title}'s project image`}
-          />
+          <Paper
+            elevation={4}
+            sx={{
+              maxWidth: { sx: "100%", md: "70%" },
+              backgroundColor: "transparent",
+            }}>
+            <Box
+              component="img"
+              sx={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+              src={createImagePath(item.images[0])}
+              loading="lazy"
+              alt={`${item.title}'s project image`}
+            />
+          </Paper>
           <Stack gap={1}>
             {item.links.map((object, index) => (
               <Social href={object.link} text={t(object.name)} key={index}>
