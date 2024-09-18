@@ -100,7 +100,7 @@ function Project({ item, keyID }: InfoProps): JSX.Element {
           <Paper
             elevation={4}
             sx={{
-              maxWidth: { sx: "100%", md: "70%" },
+              maxWidth: { sx: "100%", md: "50%" },
               backgroundColor: "transparent",
             }}>
             <Box
