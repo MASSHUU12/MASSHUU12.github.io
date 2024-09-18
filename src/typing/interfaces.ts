@@ -34,8 +34,6 @@ export interface ProjectCategory {
 
 export interface Popups {
   about: boolean;
-  mobileMenu: boolean;
-  projectView: boolean;
 }
 
 export interface PopupsStore extends Popups {
