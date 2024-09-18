@@ -66,7 +66,12 @@ function Main(): JSX.Element {
           />
           <TransitionButton
             text="CV"
-            action={() => window.open("/assets/gawrysiak_cv.pdf", "_blank")}
+            action={() =>
+              window.open(
+                "https://drive.proton.me/urls/3JCRFVVAEG#PUR7N5brZpv3",
+                "_blank",
+              )
+            }
             delay={400}
           />
         </Stack>
