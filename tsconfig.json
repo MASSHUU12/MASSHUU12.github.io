@@ -1,64 +1,49 @@
 {
-	"compilerOptions": {
-		// Base options
-		"esModuleInterop": false,
-		"skipLibCheck": true,
-		"target": "ESNext",
-		"allowJs": false,
-		"resolveJsonModule": true,
-		"moduleDetection": "force",
-		"isolatedModules": true,
-		// Strictness
-		"strict": true,
-		"noUncheckedIndexedAccess": false,
-		"allowUnusedLabels": false,
-		"allowUnreachableCode": false,
-		"exactOptionalPropertyTypes": true,
-		"noFallthroughCasesInSwitch": true,
-		"noImplicitOverride": true,
-		"noImplicitReturns": true,
-		"noPropertyAccessFromIndexSignature": false,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"forceConsistentCasingInFileNames": true,
-		// Transpiling
-		"moduleResolution": "Node",
-		"module": "ESNext",
-		// Running in DOM
-		"lib": [
-			"DOM",
-			"DOM.Iterable",
-			"ESNext"
-		],
-		// Other
-		"useDefineForClassFields": true,
-		"allowSyntheticDefaultImports": true,
-		"noEmit": true,
-		"jsx": "react-jsx",
-		"jsxImportSource": "preact",
-		"baseUrl": "./",
-		"paths": {
-			"react": [
-				"./node_modules/preact/compat/"
-			],
-			"react-dom": [
-				"./node_modules/preact/compat/"
-			],
-			"@/*": [
-				"./src/*"
-			]
-		},
-		"types": [
-			"vite/client",
-			"vitest/globals"
-		]
-	},
-	"include": [
-		"src"
-	],
-	"references": [
-		{
-			"path": "./tsconfig.node.json"
-		}
-	]
+  "compilerOptions": {
+    // Base options
+    "esModuleInterop": false,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "allowJs": false,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    // Strictness
+    "strict": true,
+    "noUncheckedIndexedAccess": false,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
+    // Transpiling
+    "moduleResolution": "Node",
+    "module": "ESNext",
+    // Running in DOM
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    // Other
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "baseUrl": "./",
+    "paths": {
+      "react": ["./node_modules/preact/compat/"],
+      "react-dom": ["./node_modules/preact/compat/"],
+      "@/*": ["./src/*"]
+    },
+    "types": ["vite/client"]
+  },
+  "include": ["src"],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
